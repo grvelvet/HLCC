@@ -92,3 +92,58 @@ HLCC is compiled as a 32-bit `version.dll` proxy placed next to `hl.exe`:
   ```powershell
   powershell -ExecutionPolicy Bypass -File package_release.ps1
   ```
+
+---
+
+## 7. Subtitle & Title Translation Guide
+
+### Files to Translate
+
+| Game | Subtitles Source (English) | HUD Titles Reference |
+| :--- | :--- | :--- |
+| Half-Life (`valve`) | `valve/subtitles_en.tsv` (1,806 keys) | `valve/titles_ru.tsv` (66 keys) |
+| Blue Shift (`bshift`) | `bshift/subtitles_en.tsv` (455 keys) | `bshift/titles_ru.tsv` (28 keys) |
+| Opposing Force (`gearbox`) | `gearbox/subtitles_en.tsv` (557 keys) | `gearbox/titles_ru.tsv` (35 keys) |
+
+> Because `subtitles.ini` sets `fallback_dir=valve`, shared Half-Life lines are automatically inherited by `bshift` and `gearbox` and do not need to be duplicated.
+
+### TSV Format & Encoding Rules
+- Save all files as **UTF-8 without BOM** (LF or CRLF line endings).
+- **`subtitles_<lang>.tsv`**: 3 tab-separated (`\t`) columns — `KEY<TAB>DURATION_MS<TAB>TEXT`.
+  - Keep `KEY` and `DURATION_MS` unchanged (`0` = auto-calculated duration). Never put literal tabs or newlines inside `TEXT`.
+- **`titles_<lang>.tsv`**: 2 tab-separated (`\t`) columns — `KEY<TAB>TEXT_WITH_\n` (use literal `\n` for multi-line cards; `#` lines are comments).
+
+### Speaker & SFX Tags
+- **Spoken lines** begin with a bracketed speaker tag (e.g. `[Scientist]`, `[Security]`, `[HECU]`, `[Black Ops]`, `[Otis]`, `[Rosenberg]`, `[G-Man]`, `[HEV]`, `[Announcement]`). Translate the label consistently while keeping `[...]`.
+- **Sound effects (SFX)** are wrapped completely in brackets (e.g. `[Headcrab screech]`).
+- **Role colors** are matched by the **sound key** (not the translated tag text), so colors work in any language automatically.
+
+### Testing & Validation
+1. Place `subtitles_<lang>.tsv` and `titles_<lang>.tsv` in `valve/`, `bshift/`, `gearbox/`, and update `[Files]` in `subtitles.ini`:
+   ```ini
+   [Files]
+   language=auto
+   fallback_dir=valve
+   subtitles_pattern=subtitles_de.tsv
+   titles_pattern=titles_de.tsv
+   ```
+2. Run `subtitles_reload` in the console (or wait ~1s for hot-reload).
+3. Validate 1:1 key parity and encoding before release:
+   ```python
+   python -c "
+   lang = 'de'
+   for mod in ['valve', 'bshift', 'gearbox']:
+       en = {l.split('\t')[0] for l in open(f'{mod}/subtitles_en.tsv', encoding='utf-8') if l.strip() and not l.lstrip().startswith('#')}
+       raw = open(f'{mod}/subtitles_{lang}.tsv', 'rb').read()
+       assert not raw.startswith(b'\xef\xbb\xbf'), f'{mod}: remove UTF-8 BOM'
+       tr = {}
+       for i, l in enumerate(raw.decode('utf-8').splitlines(), 1):
+           if not l.strip() or l.lstrip().startswith('#'): continue
+           p = l.split('\t')
+           assert len(p) == 3 and p[1].isdigit() and p[2].strip(), f'{mod}:{i} invalid row'
+           assert p[0] not in tr, f'{mod}:{i} duplicate key {p[0]}'
+           tr[p[0]] = True
+       assert en == set(tr), f'{mod}: key diff'
+       print(f'{mod}: OK ({len(tr)} keys)')
+   "
+   ```
