@@ -1,16 +1,13 @@
+# Half-Life Closed Captions
 <p align="center">
   <img src="docs/hlcc_logo.jpg" alt="HLCC — Closed Captions Engine" width="640">
 </p>
-
-# HLCC — Half-Life Closed Captions (C++23)
 
 <p align="center">
   <a href="#english">English</a> | <a href="#русский">Русский</a>
 </p>
 
 ---
-
-## English
 
 A proxy plugin mod subtitles (`version.dll`) for the **Half-Life**, **Opposing Force**, and **Blue Shift** Steam trilogy without modifying original game files:
 
@@ -62,11 +59,9 @@ powershell -ExecutionPolicy Bypass -File package_release.ps1
 
 ---
 
-## Русский
-
 Мод-плагин субтитров (`version.dll`) для Steam-трилогии **Half-Life**, **Opposing Force** и **Blue Shift** без изменения файлов игры:
 
-- **Субтитры в стиле HL2:** речь NPC, радио, VOX, костюм (HEV/PCV) и важные игровые SFX с защитой от спама.
+- **Субтитры в стиле HL2:** полностью переведенная на русский язык речь NPC, радио, VOX, костюм и броня (HEV/PCV).
 - **Учёт дистанции и преград:** фильтрация звуков за глухими стенами, корректная работа через стекло и в скриптовых сценах.
 - **Два стиля рендера (OpenGL):** динамическая плашка (`default`) или фиксированное окно с плавным скроллом (`hl2`).
 - **Автолокализация (EN/RU):** переключение языка по настройкам Steam, перевод заголовков глав и автотайминги по `.wav` для сторонних озвучек.
