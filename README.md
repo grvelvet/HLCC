@@ -13,7 +13,7 @@
 - **Авто-тайминги по `.wav` (`auto_wav_timing`):** опциональный расчёт длительности по реальным `.wav`-файлам (удобно для сторонних озвучек).
 
 ## Установка (из GitHub Releases)
-1. Скачайте архив `HLCC-Beta-win32.zip` со страницы **Releases**.
+1. Скачайте архив `HLCC-win32.zip` со страницы **Releases**.
 2. Распакуйте содержимое в корневую папку **Half-Life** (рядом с `hl.exe`) с заменой файлов.
 3. Запускайте игру в режиме **OpenGL**.
 4. **Для Linux / Steam Deck (Steam Proton):** в свойствах игры включите **Proton** (нативный Linux-билд `hl_linux` не загружает `version.dll`) и добавьте в параметры запуска:
@@ -28,7 +28,7 @@
 - `gearbox/` — базы субтитров и заголовков для Opposing Force
 - `bshift/` — базы субтитров и заголовков для Blue Shift
 - `subtitles.ini` — конфигурация по умолчанию
-- `package_release.ps1` — скрипт сборки готового архива `release/HLCC-Beta-win32.zip` для GitHub Releases
+- `package_release.ps1` — скрипт сборки готового архива `release/HLCC-win32.zip` для GitHub Releases
 - `MODDER_GUIDE.md` — архитектура проекта и руководство для мододелов (EN)
 - `TRANSLATION_GUIDE.md` — руководство по переводу субтитров на другие языки (EN)
 - `PORTING_BS_OP4_AGENT_GUIDE.md` — руководство по портированию (включая чек-лист для Blue Shift)
@@ -49,8 +49,8 @@ build.bat
 
 ## Сборка через GitHub Actions
 В `.github/workflows/build.yml` настроена автоматическая сборка на `windows-latest` с тем же тулчейном **LLVM-MinGW (UCRT)**:
-- При любом `push` / `pull_request` / ручном запуске (`workflow_dispatch`) проверяются TSV-базы, собирается `version.dll` через `src/build.bat` и выгружается артефакт `HLCC-Beta-win32`.
-- При пуше тега вида `v*` (например, `git tag v0.1.0-beta && git push origin v0.1.0-beta`) автоматически создаётся **GitHub Release** с прикреплённым `HLCC-Beta-win32.zip`.
+- При любом `push` / `pull_request` / ручном запуске (`workflow_dispatch`) проверяются TSV-базы, собирается `version.dll` через `src/build.bat` и выгружается артефакт `HLCC-win32`.
+- При пуше тега вида `v*` (например, `git tag v1.0b && git push origin v1.0b`) автоматически создаётся **GitHub Release** с прикреплённым `HLCC-win32.zip`.
 
 ## Статистика проекта
 
@@ -90,7 +90,7 @@ build.bat
 | Файл | Размер |
 | :--- | ---: |
 | `version.dll` | 1 812 480 Б |
-| `release/HLCC-Beta-win32.zip` | 839 071 Б |
+| `release/HLCC-win32.zip` | 841 202 Б |
 | `subtitles.ini` | 5 037 Б |
 | `MODDER_GUIDE.md` | 6 986 Б |
 | `TRANSLATION_GUIDE.md` | 4 896 Б |

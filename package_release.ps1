@@ -1,7 +1,7 @@
 $ErrorActionPreference = "Stop"
 $root = $PSScriptRoot
 $stage = Join-Path $root "release\staging"
-$zipPath = Join-Path $root "release\HLCC-Beta-win32.zip"
+$zipPath = Join-Path $root "release\HLCC-win32.zip"
 
 if (!(Test-Path (Join-Path $root "version.dll"))) {
     throw "version.dll not found. Run src\build.bat first."
