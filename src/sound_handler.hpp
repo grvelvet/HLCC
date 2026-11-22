@@ -187,7 +187,24 @@ void HandleSound(int entnum, int entchannel, bool isStatic, sfx_t* sfx, float* o
     std::string norm;
     const subs::SubtitleEntry* entry = g_db.FindSubtitle(sfx->name, norm);
     if (!entry) {
+        bool logMiss = g_cfg.debug_log && !norm.empty() &&
+                       (sfx->name[0] == '!' || norm.starts_with("scientist/") ||
+                        norm.starts_with("barney/") || norm.starts_with("hgrunt/") ||
+                        norm.starts_with("fgrunt/") || norm.starts_with("otis/") ||
+                        norm.starts_with("rosenberg/") || norm.starts_with("gman/") ||
+                        norm.starts_with("fvox/") || norm.starts_with("vox/") ||
+                        norm.starts_with("holo/") || norm.starts_with("ops/") ||
+                        norm.starts_with("drill/") || norm.starts_with("intro/") ||
+                        norm.starts_with("radio/"));
         ReleaseSRWLockShared(&g_lock);
+        if (logMiss) {
+            AcquireSRWLockExclusive(&g_lock);
+            bool first = g_loggedMissingSounds.insert(norm).second;
+            ReleaseSRWLockExclusive(&g_lock);
+            if (first) {
+                LogMsg("[sfx-miss] raw='%s' norm='%s'", sfx->name, norm.c_str());
+            }
+        }
         return;
     }
     auto [color, cat] = g_cfg.Classify(norm, entry->text);
@@ -195,6 +212,7 @@ void HandleSound(int entnum, int entchannel, bool isStatic, sfx_t* sfx, float* o
     bool catEnabled = g_cfg.IsCategoryEnabled(cat);
     float minVol = isSfx ? g_cfg.sfx_min_volume : g_cfg.min_volume;
     float maxDist = isSfx ? g_cfg.sfx_max_distance : g_cfg.max_distance;
+    float noOccMaxDist = g_cfg.no_occlusion_max_distance;
     bool checkOcc = g_cfg.check_occlusion;
     uint32_t durMs = ComputeCaptionDurationMs(entry->duration_ms, entry->text);
     bool autoWavTiming = g_cfg.auto_wav_timing;
@@ -210,7 +228,7 @@ void HandleSound(int entnum, int entchannel, bool isStatic, sfx_t* sfx, float* o
         }
     }
 
-    if (!catEnabled || (g_isAddonWithoutHev && cat == subs::RoleCat::HEV) || fvol < minVol || wtext.empty()) {
+    if (!catEnabled || fvol < minVol || wtext.empty()) {
         LogMsg("[sfx-skip] filtered raw='%s' norm='%s' cat=%d vol=%.2f", sfx->name, norm.c_str(), (int)cat, fvol);
         return;
     }
@@ -239,7 +257,7 @@ void HandleSound(int entnum, int entchannel, bool isStatic, sfx_t* sfx, float* o
                      norm.starts_with("bo_") || norm.starts_with("ops/"));
     bool isNoOcc = g_cfg.IsNoOcclusionPrefix(norm);
     float effMaxDist = isHgrunt ? std::max(maxDist, 1100.0f)
-                     : (isNoOcc ? std::max(maxDist, g_isBshiftGame ? 2000.0f : 1500.0f) : maxDist);
+                     : (isNoOcc ? std::max(maxDist, noOccMaxDist) : maxDist);
 
     float dist = 0.0f;
     if (!isGlobal && origin && g_hasViewOrg) {
@@ -424,7 +442,7 @@ bool TryTriggerRestoredHev(HevCue cue, const char* sentenceName) {
     const ULONGLONG nowMs = g_gameMs;
     const ULONGLONG nativeGapMs = (cue == kHevPowerRestored) ? 3500ULL : 1800ULL;
     const ULONGLONG cueCooldownMs = (cue == kHevPowerRestored) ? 45000ULL : 15000ULL;
-    bool ok = g_cfg.restore_unused_hev && !g_isMModGame && !g_isAddonWithoutHev && g_cfg.enable_hev && g_hevVoiceEnabled &&
+    bool ok = g_cfg.restore_unused_hev && g_cfg.enable_hev && g_hevVoiceEnabled &&
               nowMs >= 2000 &&
               (g_lastNativeHevMs == 0 || nowMs - g_lastNativeHevMs >= nativeGapMs) &&
               (g_lastNativeHevEndMs == 0 || nowMs >= g_lastNativeHevEndMs + nativeGapMs) &&

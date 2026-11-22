@@ -48,6 +48,7 @@ struct Config {
     // [Filtering]
     float max_distance = 650.0f;
     float glass_max_distance = 320.0f;
+    float no_occlusion_max_distance = 1500.0f;
     float min_volume = 0.05f;
     bool check_occlusion = true;
     bool enable_vox = true;
@@ -134,8 +135,8 @@ struct Config {
     int max_lines_per_caption = 3;
 
     // [HUD]
-    bool hud_compact_armor = true;
-    float hud_scale = 1.5f;
+    bool hud_compact_armor = false;
+    float hud_scale = 1.0f;
     bool enable_gl_flashlight = true;
     float gl_flashlight_intensity = 1.0f;
     bool gl_flashlight_hide_vanilla = true;
@@ -313,14 +314,58 @@ struct Config {
         }
     }
 
+    bool ApplySettingKey(const std::string& k, std::string_view v) {
+        if (k == "max_distance") max_distance = std::max(0.0f, ParseFloat(v, max_distance));
+        else if (k == "glass_max_distance") glass_max_distance = std::max(0.0f, ParseFloat(v, glass_max_distance));
+        else if (k == "no_occlusion_max_distance") no_occlusion_max_distance = std::max(0.0f, ParseFloat(v, no_occlusion_max_distance));
+        else if (k == "min_volume") min_volume = std::clamp(ParseFloat(v, min_volume), 0.0f, 1.0f);
+        else if (k == "check_occlusion") check_occlusion = (ParseInt(v, check_occlusion ? 1 : 0) != 0);
+        else if (k == "enable_vox") enable_vox = (ParseInt(v, enable_vox ? 1 : 0) != 0);
+        else if (k == "enable_hev") enable_hev = (ParseInt(v, enable_hev ? 1 : 0) != 0);
+        else if (k == "restore_unused_hev") restore_unused_hev = (ParseInt(v, restore_unused_hev ? 1 : 0) != 0);
+        else if (k == "auto_wav_timing") auto_wav_timing = (ParseInt(v, auto_wav_timing ? 1 : 0) != 0);
+        else if (k == "enable_npc") enable_npc = (ParseInt(v, enable_npc ? 1 : 0) != 0);
+        else if (k == "enable_sfx") enable_sfx = (ParseInt(v, enable_sfx ? 1 : 0) != 0);
+        else if (k == "sfx_max_distance") sfx_max_distance = std::max(0.0f, ParseFloat(v, sfx_max_distance));
+        else if (k == "sfx_min_volume") sfx_min_volume = std::clamp(ParseFloat(v, sfx_min_volume), 0.0f, 1.0f);
+        else if (k == "sfx_cooldown_ms") sfx_cooldown_ms = std::clamp(ParseInt(v, sfx_cooldown_ms), 200, 10000);
+        else if (k == "max_sfx_captions") max_sfx_captions = std::clamp(ParseInt(v, max_sfx_captions), 1, 6);
+        else if (k == "debug_log") debug_log = (ParseInt(v, debug_log ? 1 : 0) != 0);
+        else if (k == "sfx_creature_groups") sfx_creature_groups = ParseCsvList(v);
+        else if (k == "no_occlusion_prefixes") no_occlusion_prefixes = ParseCsvList(v);
+        else if (k == "style") style = (Lower(v) == "hl2") ? "hl2" : "default";
+        else if (k == "font_name" && !v.empty()) font_name = std::string(v);
+        else if (k == "font_size") font_size = std::clamp(ParseInt(v, font_size), 0, 96);
+        else if (k == "bottom_margin_pct") bottom_margin_pct = std::clamp(ParseInt(v, bottom_margin_pct), 2, 45);
+        else if (k == "max_width_pct") max_width_pct = std::clamp(ParseInt(v, max_width_pct), 20, 95);
+        else if (k == "bg_color") bg_color = ParseRgb(v, bg_color);
+        else if (k == "bg_alpha") bg_alpha = std::clamp(ParseInt(v, bg_alpha), 0, 255);
+        else if (k == "bg_radius") bg_radius = std::clamp(ParseInt(v, bg_radius), 0, 24);
+        else if (k == "max_lines") max_lines = std::clamp(ParseInt(v, max_lines), 1, 10);
+        else if (k == "max_lines_per_caption") max_lines_per_caption = std::clamp(ParseInt(v, max_lines_per_caption), 0, 10);
+        else if (k == "hud_compact_armor") hud_compact_armor = (ParseInt(v, hud_compact_armor ? 1 : 0) != 0);
+        else if (k == "hud_scale") hud_scale = std::clamp(ParseFloat(v, hud_scale), 1.0f, 2.5f);
+        else if (k == "enable_gl_flashlight") enable_gl_flashlight = (ParseInt(v, enable_gl_flashlight ? 1 : 0) != 0);
+        else if (k == "gl_flashlight_intensity") gl_flashlight_intensity = std::clamp(ParseFloat(v, gl_flashlight_intensity), 0.2f, 2.5f);
+        else if (k == "gl_flashlight_hide_vanilla") gl_flashlight_hide_vanilla = (ParseInt(v, gl_flashlight_hide_vanilla ? 1 : 0) != 0);
+        else if (k == "language" && !v.empty()) ApplyLanguage(v);
+        else if (k == "fallback_dir" && !v.empty()) fallback_dir = std::string(v);
+        else if (k == "subtitles_pattern" && !v.empty()) subtitles_pattern = std::string(v);
+        else if (k == "titles_pattern" && !v.empty()) titles_pattern = std::string(v);
+        else return false;
+        return true;
+    }
+
     /**
      * @brief Loads and validates subtitles.ini with safe fallback defaults.
      *
-     * Resets all fields to defaults before parsing so hot-reloading a deleted
-     * or commented-out key restores its default value cleanly. Missing, empty,
-     * or out-of-range values are clamped or fall back to built-in defaults.
+     * Supports per-mod override sections [Mod:<gameDir>] applied after global
+     * sections (liblist fallback_dir first, then active gameDir) so mod-specific
+     * behavior is data-driven rather than hardcoded in C++.
      */
-    std::expected<void, std::string> LoadIni(const std::string& path) {
+    std::expected<void, std::string> LoadIni(const std::string& path,
+                                             std::string_view activeGameDir = {},
+                                             std::string_view liblistFallbackDir = {}) {
         *this = Config{};
         InitDefaultExceptions();
         std::ifstream f(path, std::ios::binary);
@@ -331,6 +376,10 @@ struct Config {
         named_colors.clear();
         roles.clear();
         bool has_roles_section = false;
+        std::string activeLower = Lower(activeGameDir);
+        std::string fbLower = Lower(liblistFallbackDir);
+        std::vector<std::pair<std::string, std::string>> fbModOverrides;
+        std::vector<std::pair<std::string, std::string>> activeModOverrides;
         std::string section, line;
         while (std::getline(f, line)) {
             if (!line.empty() && line.back() == '\r') line.pop_back();
@@ -346,46 +395,15 @@ struct Config {
             std::string k = Lower(TrimView(t.substr(0, eq)));
             std::string_view v = TrimView(t.substr(eq + 1));
 
-            if (section == "filtering") {
-                if (k == "max_distance") max_distance = std::max(0.0f, ParseFloat(v, max_distance));
-                else if (k == "glass_max_distance") glass_max_distance = std::max(0.0f, ParseFloat(v, glass_max_distance));
-                else if (k == "min_volume") min_volume = std::clamp(ParseFloat(v, min_volume), 0.0f, 1.0f);
-                else if (k == "check_occlusion") check_occlusion = (ParseInt(v, check_occlusion ? 1 : 0) != 0);
-                else if (k == "enable_vox") enable_vox = (ParseInt(v, enable_vox ? 1 : 0) != 0);
-                else if (k == "enable_hev") enable_hev = (ParseInt(v, enable_hev ? 1 : 0) != 0);
-                else if (k == "restore_unused_hev") restore_unused_hev = (ParseInt(v, restore_unused_hev ? 1 : 0) != 0);
-                else if (k == "auto_wav_timing") auto_wav_timing = (ParseInt(v, auto_wav_timing ? 1 : 0) != 0);
-                else if (k == "enable_npc") enable_npc = (ParseInt(v, enable_npc ? 1 : 0) != 0);
-                else if (k == "enable_sfx") enable_sfx = (ParseInt(v, enable_sfx ? 1 : 0) != 0);
-                else if (k == "sfx_max_distance") sfx_max_distance = std::max(0.0f, ParseFloat(v, sfx_max_distance));
-                else if (k == "sfx_min_volume") sfx_min_volume = std::clamp(ParseFloat(v, sfx_min_volume), 0.0f, 1.0f);
-                else if (k == "sfx_cooldown_ms") sfx_cooldown_ms = std::clamp(ParseInt(v, sfx_cooldown_ms), 200, 10000);
-                else if (k == "max_sfx_captions") max_sfx_captions = std::clamp(ParseInt(v, max_sfx_captions), 1, 6);
-                else if (k == "debug_log") debug_log = (ParseInt(v, debug_log ? 1 : 0) != 0);
-                else if (k == "sfx_creature_groups") sfx_creature_groups = ParseCsvList(v);
-                else if (k == "no_occlusion_prefixes") no_occlusion_prefixes = ParseCsvList(v);
-            } else if (section == "visual") {
-                if (k == "style") style = (Lower(v) == "hl2") ? "hl2" : "default";
-                else if (k == "font_name" && !v.empty()) font_name = std::string(v);
-                else if (k == "font_size") font_size = std::clamp(ParseInt(v, font_size), 0, 96);
-                else if (k == "bottom_margin_pct") bottom_margin_pct = std::clamp(ParseInt(v, bottom_margin_pct), 2, 45);
-                else if (k == "max_width_pct") max_width_pct = std::clamp(ParseInt(v, max_width_pct), 20, 95);
-                else if (k == "bg_color") bg_color = ParseRgb(v, bg_color);
-                else if (k == "bg_alpha") bg_alpha = std::clamp(ParseInt(v, bg_alpha), 0, 255);
-                else if (k == "bg_radius") bg_radius = std::clamp(ParseInt(v, bg_radius), 0, 24);
-                else if (k == "max_lines") max_lines = std::clamp(ParseInt(v, max_lines), 1, 10);
-                else if (k == "max_lines_per_caption") max_lines_per_caption = std::clamp(ParseInt(v, max_lines_per_caption), 0, 10);
-            } else if (section == "hud") {
-                if (k == "hud_compact_armor") hud_compact_armor = (ParseInt(v, hud_compact_armor ? 1 : 0) != 0);
-                else if (k == "hud_scale") hud_scale = std::clamp(ParseFloat(v, hud_scale), 1.0f, 2.5f);
-                else if (k == "enable_gl_flashlight") enable_gl_flashlight = (ParseInt(v, enable_gl_flashlight ? 1 : 0) != 0);
-                else if (k == "gl_flashlight_intensity") gl_flashlight_intensity = std::clamp(ParseFloat(v, gl_flashlight_intensity), 0.2f, 2.5f);
-                else if (k == "gl_flashlight_hide_vanilla") gl_flashlight_hide_vanilla = (ParseInt(v, gl_flashlight_hide_vanilla ? 1 : 0) != 0);
-            } else if (section == "files") {
-                if (k == "language" && !v.empty()) ApplyLanguage(v);
-                else if (k == "fallback_dir" && !v.empty()) fallback_dir = std::string(v);
-                else if (k == "subtitles_pattern" && !v.empty()) subtitles_pattern = std::string(v);
-                else if (k == "titles_pattern" && !v.empty()) titles_pattern = std::string(v);
+            if (section == "filtering" || section == "visual" || section == "hud" || section == "files") {
+                ApplySettingKey(k, v);
+            } else if (section.starts_with("mod:")) {
+                std::string modName = Lower(TrimView(std::string_view(section).substr(4)));
+                if (!fbLower.empty() && modName == fbLower && modName != activeLower) {
+                    fbModOverrides.emplace_back(std::move(k), std::string(v));
+                } else if (!activeLower.empty() && modName == activeLower) {
+                    activeModOverrides.emplace_back(std::move(k), std::string(v));
+                }
             } else if (section == "colors") {
                 Rgb c = ParseRgb(v, default_color);
                 named_colors[k] = c;
@@ -410,6 +428,12 @@ struct Config {
                 else rule.cat = RoleCat::NPC;
                 roles.push_back(std::move(rule));
             }
+        }
+        for (const auto& [ok, ov] : fbModOverrides) {
+            ApplySettingKey(ok, ov);
+        }
+        for (const auto& [ok, ov] : activeModOverrides) {
+            ApplySettingKey(ok, ov);
         }
         if (!has_roles_section || roles.empty()) {
             InitDefaultRoles();

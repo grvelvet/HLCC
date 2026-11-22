@@ -94,6 +94,7 @@ std::string g_lastCapKey;
 ULONGLONG g_lastCapMs = 0;
 std::unordered_map<std::string, ULONGLONG> g_sfxCooldowns;
 std::unordered_map<std::string, uint32_t> g_wavDurationCache;
+std::unordered_set<std::string> g_loggedMissingSounds;
 
 bool IsSfxCat(subs::RoleCat c) noexcept {
     return c == subs::RoleCat::SFX || c == subs::RoleCat::SFX_DANGER;
@@ -115,10 +116,6 @@ bool g_resetRequested = false;
 // so captions freeze while the game is paused / in the menu.
 ULONGLONG g_gameMs = 1;
 float g_clockPrevTime = -1.0f;
-bool g_isMModGame = false;
-bool g_isAddonWithoutHev = false;
-bool g_isGearboxGame = false;
-bool g_isBshiftGame = false;
 bool g_inClientHudCall = false;
 int g_prevHealthMaxX = 0;
 int g_curHealthMaxX = 0;
@@ -320,21 +317,18 @@ std::string ParseCmdlineGameDir() {
 
 void ReloadAllFromDisk(bool reloadDb) {
     AcquireSRWLockExclusive(&g_lock);
-    if (auto res = g_cfg.LoadIni(g_iniPath); !res) {
+    std::string fbDir = subs::Database::ReadLiblistFallbackDir(g_exeDir + "\\" + g_activeGameDir);
+    if (auto res = g_cfg.LoadIni(g_iniPath, g_activeGameDir, fbDir); !res) {
         LogMsg("[ini] %s", res.error().c_str());
     }
     if (reloadDb) {
         g_wavDurationCache.clear();
+        g_loggedMissingSounds.clear();
         g_db.ReloadAll(g_exeDir, g_activeGameDir, g_cfg);
-        std::string gdLower = subs::Config::Lower(g_activeGameDir);
-        std::string fbLower = subs::Config::Lower(subs::Database::ReadLiblistFallbackDir(g_exeDir + "\\" + g_activeGameDir));
-        g_isMModGame = (gdLower == "hl1mmod" || fbLower == "hl1mmod");
-        g_isAddonWithoutHev = (gdLower == "bshift" || gdLower == "gearbox" ||
-                               fbLower == "bshift" || fbLower == "gearbox");
-        g_isGearboxGame = (gdLower == "gearbox" || fbLower == "gearbox");
-        g_isBshiftGame = (gdLower == "bshift" || fbLower == "bshift");
-        LogMsg("[reload] gameDir=%s mmod=%d noHev=%d subs=%zu titles=%zu roles=%zu",
-               g_activeGameDir.c_str(), (int)g_isMModGame, (int)g_isAddonWithoutHev,
+        LogMsg("[reload] gameDir=%s fb=%s hudScale=%.2f compact=%d flash=%d hev=%d restoreHev=%d subs=%zu titles=%zu roles=%zu",
+               g_activeGameDir.c_str(), fbDir.c_str(), g_cfg.hud_scale,
+               (int)g_cfg.hud_compact_armor, (int)g_cfg.enable_gl_flashlight,
+               (int)g_cfg.enable_hev, (int)g_cfg.restore_unused_hev,
                g_db.subtitles.size(), g_db.titles.size(), g_cfg.roles.size());
     }
     ReleaseSRWLockExclusive(&g_lock);

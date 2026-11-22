@@ -9,7 +9,7 @@
  * then composites the 4 screen-corner HUD regions scaled by hud_scale
  * anchored to their respective corners while leaving the center crosshair 1:1.
  *
- * Active only in bshift / gearbox when hud_scale > 1.01.
+ * Active whenever hud_scale > 1.01 in subtitles.ini (or its [Mod:<dir>] profile).
  */
 
 #include "app_state.hpp"

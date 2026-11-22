@@ -354,7 +354,7 @@ void RenderSubtitlesOverlay() {
 }
 
 BOOL WINAPI Hook_WglSwapBuffers(HDC hdc) {
-    if (!g_isGearboxGame && g_cfg.enable_gl_flashlight && g_screenW > 0 && g_screenH > 0 && g_gl.Load().has_value()) {
+    if (g_cfg.enable_gl_flashlight && g_screenW > 0 && g_screenH > 0 && g_gl.Load().has_value()) {
         if (HGLRC ctx = g_gl.wglGetCurrentContext()) {
             AcquireSRWLockShared(&g_lock);
             bool active = !IsGamePausedLocked(GetTickCount64()) && IsFlashlightActiveLocked();
@@ -379,8 +379,7 @@ int __cdecl Hook_HUD_Redraw(float time, int intermission) {
     g_curHealthMaxX = 0;
     g_curArmorMinX = 100000;
 
-    bool useFbo = (g_isBshiftGame || g_isGearboxGame) &&
-                  !intermission && g_cfg.hud_scale > 1.01f &&
+    bool useFbo = !intermission && g_cfg.hud_scale > 1.01f &&
                   g_screenW >= 800 && g_screenH >= 600 && g_gl.Load().has_value();
     bool captured = false;
     if (useFbo) {

@@ -6,7 +6,7 @@
  *  - hw.dll:       S_StartDynamicSound, S_StartStaticSound, Host_Loadgame_f
  *  - opengl32.dll: wglSwapBuffers (renders subtitle/title/HUD overlays)
  *  - client.dll:   Initialize, HUD_Redraw, V_CalcRefdef, HUD_Reset, UserMsgs, SPR_*
- *                  (UserMsg/SPR hooks are active only when g_isGearboxGame is true).
+ *                  (SPR/FillRGBA/TriAPI hooks are active when HUD scaling or compact armor is enabled).
  */
 
 #include "app_state.hpp"
@@ -75,7 +75,7 @@ void OnWeapPickup(int weapId) {
     AcquireSRWLockExclusive(&g_lock);
     const ULONGLONG nowMs = g_gameMs;
     uint32_t bit = (1u << weapId);
-    bool ok = g_cfg.restore_unused_hev && !g_isMModGame && !g_isAddonWithoutHev && g_cfg.enable_hev && g_hevVoiceEnabled &&
+    bool ok = g_cfg.restore_unused_hev && g_cfg.enable_hev && g_hevVoiceEnabled &&
               nowMs >= 1000 && (g_announcedWeaponsMask & bit) == 0 &&
               (g_lastNativeHevEndMs == 0 || nowMs >= g_lastNativeHevEndMs + 1000ULL);
     if (ok) {
@@ -118,7 +118,7 @@ dlight_t* __cdecl Hook_CL_AllocDlight(int key) {
             g_dlightFlashStreak = 1;
         }
         g_dlightFlashMs = now;
-        suppressVanilla = !g_isGearboxGame && g_cfg.enable_gl_flashlight && g_cfg.gl_flashlight_hide_vanilla &&
+        suppressVanilla = g_cfg.enable_gl_flashlight && g_cfg.gl_flashlight_hide_vanilla &&
                           !g_glFlashlight.HasFailed() && IsFlashlightActiveLocked();
         ReleaseSRWLockExclusive(&g_lock);
         if (suppressVanilla) {
@@ -164,7 +164,6 @@ void __cdecl Hook_SPR_Set(int hPic, int r, int g, int b) {
 
 int CompactHudAdjustX(int x, int y, int approxW, bool isHudElem) {
     if (!isHudElem || !g_cfg.hud_compact_armor) return x;
-    if (!g_isBshiftGame && !g_isGearboxGame) return x;
     if (g_screenW < 800 || g_screenH <= 0) return x;
     if (y < g_screenH - 80 || x < 0 || x >= g_screenW / 2) return x;
 
@@ -273,7 +272,7 @@ void HookClientEngfuncs(cl_enginefunc_t* eng) {
             LogMsg("[gl-flash] Hooked CL_AllocDlight at %p -> %p", pAlloc, orig);
         }
     }
-    if (g_isGearboxGame || g_isBshiftGame) {
+    if (g_cfg.hud_compact_armor || g_cfg.hud_scale > 1.01f) {
         PatchEngSlot(eng->pfnSPR_Load,         g_origSprLoad,        Hook_SPR_Load);
         PatchEngSlot(eng->pfnSPR_Set,          g_origSprSet,         Hook_SPR_Set);
         PatchEngSlot(eng->pfnSPR_Draw,         g_origSprDraw,        Hook_SPR_Draw);
@@ -287,13 +286,33 @@ void HookClientEngfuncs(cl_enginefunc_t* eng) {
     }
 }
 
-cl_enginefunc_t* FindClientEngfuncs(void* pInit) {
+cl_enginefunc_t* FindClientEngfuncs(HMODULE cl, void* pInit) {
     if (!pInit) return nullptr;
-    std::span<const uint8_t> code{static_cast<const uint8_t*>(pInit), 64};
-    for (size_t i = 0; i + 6 < code.size(); ++i) {
+    std::span<const uint8_t> code{static_cast<const uint8_t*>(pInit), 160};
+    for (size_t i = 0; i + 6 < std::min<size_t>(code.size(), 64); ++i) {
         if (code[i] == 0xBF && code[i + 5] == 0xF3 && code[i + 6] == 0xA5) {
             uintptr_t addr = hook::ReadUnaligned<uintptr_t>(code.subspan(i + 1, sizeof(uintptr_t)));
             if (addr > 0x10000) return reinterpret_cast<cl_enginefunc_t*>(addr);
+        }
+    }
+    if (!cl) return nullptr;
+    auto* dos = reinterpret_cast<const IMAGE_DOS_HEADER*>(cl);
+    if (dos->e_magic != IMAGE_DOS_SIGNATURE) return nullptr;
+    auto* nt = reinterpret_cast<const IMAGE_NT_HEADERS*>(
+        reinterpret_cast<const uint8_t*>(cl) + dos->e_lfanew);
+    if (nt->Signature != IMAGE_NT_SIGNATURE) return nullptr;
+    uintptr_t base = reinterpret_cast<uintptr_t>(cl);
+    uintptr_t end  = base + nt->OptionalHeader.SizeOfImage;
+    for (size_t i = 0; i + 5 <= code.size(); ++i) {
+        uint8_t op = code[i];
+        if (op == 0x68 || (op >= 0xB8 && op <= 0xBF)) {
+            uintptr_t addr = hook::ReadUnaligned<uintptr_t>(code.subspan(i + 1, sizeof(uintptr_t)));
+            if (addr >= base + 0x1000 && addr + sizeof(cl_enginefunc_t) <= end) {
+                auto* cand = reinterpret_cast<cl_enginefunc_t*>(addr);
+                if (cand->pfnGetScreenInfo && cand->pfnHookUserMsg && cand->pfnGetGameDirectory) {
+                    return cand;
+                }
+            }
         }
     }
     return nullptr;
@@ -319,7 +338,7 @@ int __cdecl Hook_Initialize(cl_enginefunc_t* pEnginefuncs, int iVersion) {
                    (void*)pEnginefuncs->pfnTextMessageGet, (void*)g_origTextMsgGet);
         }
         if (HMODULE cl = GetModuleHandleA("client.dll")) {
-            if (cl_enginefunc_t* clientEng = FindClientEngfuncs((void*)GetProcAddress(cl, "Initialize"))) {
+            if (cl_enginefunc_t* clientEng = FindClientEngfuncs(cl, (void*)GetProcAddress(cl, "Initialize"))) {
                 HookClientEngfuncs(clientEng);
             }
         }
@@ -390,7 +409,7 @@ void TryHookClient(HMODULE cl) {
     g_curSprIsHud = false;
     void* pCalc   = (void*)GetProcAddress(cl, "V_CalcRefdef");
     void* pReset  = (void*)GetProcAddress(cl, "HUD_Reset");
-    cl_enginefunc_t* clientEng = FindClientEngfuncs(pInit);
+    cl_enginefunc_t* clientEng = FindClientEngfuncs(cl, pInit);
     if (clientEng && clientEng->pfnGetScreenInfo) {
         HookClientEngfuncs(clientEng);
     }
