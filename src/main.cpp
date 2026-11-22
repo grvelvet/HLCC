@@ -235,7 +235,10 @@ void __cdecl Hook_TriEnd() {
 }
 
 int __cdecl Hook_DrawCharacter(int x, int y, int number, int r, int g, int b) {
-    if (g_hudFbo.IsCapturing()) {
+    // Keep colored HUD pickup-history numbers on the far right inside the FBO
+    // so they scale 1.5x alongside their icons, while bypassing FBO for credits/titles.
+    bool isRightHudNumber = (g_screenW > 0 && x >= (g_screenW * 88) / 100 && !(r == g && g == b));
+    if (g_hudFbo.IsCapturing() && !isRightHudNumber) {
         g_hudFbo.PauseCapture();
         int res = g_origDrawChar ? g_origDrawChar(x, y, number, r, g, b) : 0;
         g_hudFbo.ResumeCapture();
