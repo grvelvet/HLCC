@@ -228,6 +228,16 @@ void __cdecl Hook_TriEnd() {
     if (g_hudFbo.IsCapturing()) g_hudFbo.ResumeCapture();
 }
 
+int __cdecl Hook_DrawCharacter(int x, int y, int number, int r, int g, int b) {
+    if (g_hudFbo.IsCapturing()) {
+        g_hudFbo.PauseCapture();
+        int res = g_origDrawChar ? g_origDrawChar(x, y, number, r, g, b) : 0;
+        g_hudFbo.ResumeCapture();
+        return res;
+    }
+    return g_origDrawChar ? g_origDrawChar(x, y, number, r, g, b) : 0;
+}
+
 int __cdecl Hook_pfnHookUserMsg(const char* szMsgName, void* pfn) {
     if (szMsgName && pfn) {
         auto hookMsg = [&](const char* name, FnUserMsg& orig, void* detour) -> bool {
@@ -279,6 +289,7 @@ void HookClientEngfuncs(cl_enginefunc_t* eng) {
         PatchEngSlot(eng->pfnSPR_DrawHoles,    g_origSprDrawHoles,   Hook_SPR_DrawHoles);
         PatchEngSlot(eng->pfnSPR_DrawAdditive, g_origSprDrawAdditive, Hook_SPR_DrawAdditive);
         PatchEngSlot(eng->pfnFillRGBA,         g_origFillRgba,       Hook_FillRGBA);
+        PatchEngSlot(eng->pfnDrawCharacter,    g_origDrawChar,       Hook_DrawCharacter);
         if (eng->pTriAPI) {
             PatchEngSlot(eng->pTriAPI->Begin, g_origTriBegin, Hook_TriBegin);
             PatchEngSlot(eng->pTriAPI->End,   g_origTriEnd,   Hook_TriEnd);
