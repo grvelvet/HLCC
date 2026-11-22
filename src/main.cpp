@@ -125,6 +125,12 @@ dlight_t* __cdecl Hook_CL_AllocDlight(int key) {
             std::memset(&g_dummyFlashDlight, 0, sizeof(g_dummyFlashDlight));
             return &g_dummyFlashDlight;
         }
+    } else if (g_flashlightMsgOn) {
+        static int s_loggedOtherKey = -999999;
+        if (s_loggedOtherKey != key) {
+            s_loggedOtherKey = key;
+            LogMsg("[gl-flash] dlight key=%d (localIdx=%d)", key, localIdx);
+        }
     }
     return g_origAllocDlight ? g_origAllocDlight(key) : &g_dummyFlashDlight;
 }

@@ -35,6 +35,19 @@ struct GlFlashApi {
     static constexpr unsigned int kCurrentProgram   = 0x8B8D;
     static constexpr unsigned int kDepthComponent24 = 0x81A6;
     static constexpr unsigned int kDepthComponent   = 0x1902;
+    static constexpr unsigned int kDepth24Stencil8  = 0x88F0;
+    static constexpr unsigned int kDepthStencil     = 0x84F9;
+    static constexpr unsigned int kUnsignedInt248   = 0x84FA;
+    static constexpr unsigned int kFramebuffer      = 0x8D40;
+    static constexpr unsigned int kReadFramebuffer  = 0x8CA8;
+    static constexpr unsigned int kDrawFramebuffer  = 0x8CA9;
+    static constexpr unsigned int kFramebufferBind  = 0x8CA6;
+    static constexpr unsigned int kColorAttachment0 = 0x8CE0;
+    static constexpr unsigned int kDepthAttachment  = 0x8D00;
+    static constexpr unsigned int kDepthStencilAtt  = 0x821A;
+    static constexpr unsigned int kFboComplete      = 0x8CD5;
+    static constexpr unsigned int kColorBufferBit   = 0x00004000;
+    static constexpr unsigned int kDepthBufferBit   = 0x00000100;
     static constexpr unsigned int kClampToEdge      = 0x812F;
     static constexpr unsigned int kNearest          = 0x2600;
     static constexpr unsigned int kUnsignedInt      = 0x1405;
@@ -62,6 +75,12 @@ struct GlFlashApi {
     void(APIENTRY* glGetIntegerv)(unsigned int, int*) = nullptr;
     void(APIENTRY* glReadPixels)(int, int, int, int, unsigned int, unsigned int, void*) = nullptr;
     unsigned int(APIENTRY* glGetError)() = nullptr;
+    void(APIENTRY* glGenFramebuffers)(int, unsigned int*) = nullptr;
+    void(APIENTRY* glDeleteFramebuffers)(int, const unsigned int*) = nullptr;
+    void(APIENTRY* glBindFramebuffer)(unsigned int, unsigned int) = nullptr;
+    void(APIENTRY* glFramebufferTexture2D)(unsigned int, unsigned int, unsigned int, unsigned int, int) = nullptr;
+    unsigned int(APIENTRY* glCheckFramebufferStatus)(unsigned int) = nullptr;
+    void(APIENTRY* glBlitFramebuffer)(int, int, int, int, int, int, int, int, unsigned int, unsigned int) = nullptr;
 
     bool triedLoad = false;
     bool ok = false;
@@ -100,6 +119,16 @@ struct GlFlashApi {
         glGetIntegerv        = reinterpret_cast<decltype(glGetIntegerv)>(gp("glGetIntegerv"));
         glReadPixels         = reinterpret_cast<decltype(glReadPixels)>(gp("glReadPixels"));
         glGetError           = reinterpret_cast<decltype(glGetError)>(gp("glGetError"));
+        auto gpExt = [&](const char* a, const char* b) -> void* {
+            void* p = gp(a);
+            return p ? p : gp(b);
+        };
+        glGenFramebuffers        = reinterpret_cast<decltype(glGenFramebuffers)>(gpExt("glGenFramebuffers", "glGenFramebuffersEXT"));
+        glDeleteFramebuffers     = reinterpret_cast<decltype(glDeleteFramebuffers)>(gpExt("glDeleteFramebuffers", "glDeleteFramebuffersEXT"));
+        glBindFramebuffer        = reinterpret_cast<decltype(glBindFramebuffer)>(gpExt("glBindFramebuffer", "glBindFramebufferEXT"));
+        glFramebufferTexture2D   = reinterpret_cast<decltype(glFramebufferTexture2D)>(gpExt("glFramebufferTexture2D", "glFramebufferTexture2DEXT"));
+        glCheckFramebufferStatus = reinterpret_cast<decltype(glCheckFramebufferStatus)>(gpExt("glCheckFramebufferStatus", "glCheckFramebufferStatusEXT"));
+        glBlitFramebuffer        = reinterpret_cast<decltype(glBlitFramebuffer)>(gpExt("glBlitFramebuffer", "glBlitFramebufferEXT"));
 
         ok = (glCreateShader && glShaderSource && glCompileShader && glGetShaderiv &&
               glCreateProgram && glAttachShader && glLinkProgram && glGetProgramiv &&
@@ -174,25 +203,68 @@ public:
         gl.glDisable(glfont::GlApi::kFog);
         gl.glDepthMask(0);
 
-        // Copy backbuffer color & depth into dedicated screen textures
-        api_.glActiveTexture(glfont::GlApi::kTexture0);
-        gl.glEnable(glfont::GlApi::kTexture2D);
-        gl.glBindTexture(glfont::GlApi::kTexture2D, colorTex_);
-        api_.glCopyTexSubImage2D(glfont::GlApi::kTexture2D, 0, 0, 0, 0, 0, w, h);
+        // Copy or resolve (MSAA FBO -> single-sample FBO) backbuffer color & depth
+        int curFb = 0;
+        if (api_.glGetIntegerv) {
+            api_.glGetIntegerv(GlFlashApi::kFramebufferBind, &curFb);
+        }
+        bool usedBlit = false;
+        if (curFb != 0 && resolveFbo_ != 0 && api_.glBlitFramebuffer && api_.glBindFramebuffer) {
+            usedBlit = true;
+            if (api_.glGetError) while (api_.glGetError() != 0) {}
+            api_.glBindFramebuffer(GlFlashApi::kReadFramebuffer, static_cast<unsigned int>(curFb));
+            api_.glBindFramebuffer(GlFlashApi::kDrawFramebuffer, resolveFbo_);
+            api_.glBlitFramebuffer(0, 0, w, h, 0, 0, w, h,
+                                   GlFlashApi::kColorBufferBit | GlFlashApi::kDepthBufferBit,
+                                   GlFlashApi::kNearest);
+            unsigned int blitErr = api_.glGetError ? api_.glGetError() : 0;
+            if (blitErr != 0 && !useDepthStencil_) {
+                api_.glBindFramebuffer(GlFlashApi::kFramebuffer, static_cast<unsigned int>(curFb));
+                useDepthStencil_ = true;
+                AttachResolveFbo(gl, w, h);
+                api_.glBindFramebuffer(GlFlashApi::kReadFramebuffer, static_cast<unsigned int>(curFb));
+                api_.glBindFramebuffer(GlFlashApi::kDrawFramebuffer, resolveFbo_);
+                api_.glBlitFramebuffer(0, 0, w, h, 0, 0, w, h,
+                                       GlFlashApi::kColorBufferBit | GlFlashApi::kDepthBufferBit,
+                                       GlFlashApi::kNearest);
+                blitErr = api_.glGetError ? api_.glGetError() : 0;
+            }
+            if (!loggedDepthOnce_ && api_.glReadPixels) {
+                loggedDepthOnce_ = true;
+                api_.glBindFramebuffer(GlFlashApi::kReadFramebuffer, resolveFbo_);
+                float cd = -1.0f;
+                api_.glReadPixels(w / 2, h / 2, 1, 1, GlFlashApi::kDepthComponent, 0x1406 /* GL_FLOAT */, &cd);
+                LogMsg("[gl-flash] render diag (blit ds=%d): w=%d h=%d fb=%d prevProg=%d centerDepth=%.6f err=0x%X",
+                       (int)useDepthStencil_, w, h, curFb, prevProg, cd, blitErr);
+            }
+            api_.glBindFramebuffer(GlFlashApi::kFramebuffer, static_cast<unsigned int>(curFb));
 
-        api_.glActiveTexture(glfont::GlApi::kTexture0 + 1);
-        gl.glEnable(glfont::GlApi::kTexture2D);
-        gl.glBindTexture(glfont::GlApi::kTexture2D, depthTex_);
-        api_.glCopyTexSubImage2D(glfont::GlApi::kTexture2D, 0, 0, 0, 0, 0, w, h);
+            api_.glActiveTexture(glfont::GlApi::kTexture0);
+            gl.glEnable(glfont::GlApi::kTexture2D);
+            gl.glBindTexture(glfont::GlApi::kTexture2D, colorTex_);
 
-        if (!loggedDepthOnce_ && api_.glReadPixels && api_.glGetError) {
-            loggedDepthOnce_ = true;
-            float cd = -1.0f;
-            api_.glReadPixels(w / 2, h / 2, 1, 1, GlFlashApi::kDepthComponent, 0x1406 /* GL_FLOAT */, &cd);
-            int fb = -1;
-            if (api_.glGetIntegerv) api_.glGetIntegerv(0x8CA6 /* GL_FRAMEBUFFER_BINDING */, &fb);
-            LogMsg("[gl-flash] render diag: w=%d h=%d fb=%d prevProg=%d centerDepth=%.6f err=0x%X",
-                   w, h, fb, prevProg, cd, api_.glGetError());
+            api_.glActiveTexture(glfont::GlApi::kTexture0 + 1);
+            gl.glEnable(glfont::GlApi::kTexture2D);
+            gl.glBindTexture(glfont::GlApi::kTexture2D, depthTex_);
+        }
+        if (!usedBlit) {
+            api_.glActiveTexture(glfont::GlApi::kTexture0);
+            gl.glEnable(glfont::GlApi::kTexture2D);
+            gl.glBindTexture(glfont::GlApi::kTexture2D, colorTex_);
+            api_.glCopyTexSubImage2D(glfont::GlApi::kTexture2D, 0, 0, 0, 0, 0, w, h);
+
+            api_.glActiveTexture(glfont::GlApi::kTexture0 + 1);
+            gl.glEnable(glfont::GlApi::kTexture2D);
+            gl.glBindTexture(glfont::GlApi::kTexture2D, depthTex_);
+            api_.glCopyTexSubImage2D(glfont::GlApi::kTexture2D, 0, 0, 0, 0, 0, w, h);
+
+            if (!loggedDepthOnce_ && api_.glReadPixels && api_.glGetError) {
+                loggedDepthOnce_ = true;
+                float cd = -1.0f;
+                api_.glReadPixels(w / 2, h / 2, 1, 1, GlFlashApi::kDepthComponent, 0x1406 /* GL_FLOAT */, &cd);
+                LogMsg("[gl-flash] render diag: w=%d h=%d fb=%d prevProg=%d centerDepth=%.6f err=0x%X",
+                       w, h, curFb, prevProg, cd, api_.glGetError());
+            }
         }
 
         gl.glMatrixMode(glfont::GlApi::kProjection);
@@ -240,15 +312,52 @@ public:
     }
 
 private:
+    void AttachResolveFbo(const glfont::GlApi& gl, int w, int h) {
+        gl.glBindTexture(glfont::GlApi::kTexture2D, depthTex_);
+        gl.glTexParameteri(glfont::GlApi::kTexture2D, glfont::GlApi::kTexMinFilter, GlFlashApi::kNearest);
+        gl.glTexParameteri(glfont::GlApi::kTexture2D, glfont::GlApi::kTexMagFilter, GlFlashApi::kNearest);
+        gl.glTexParameteri(glfont::GlApi::kTexture2D, glfont::GlApi::kTexWrapS, GlFlashApi::kClampToEdge);
+        gl.glTexParameteri(glfont::GlApi::kTexture2D, glfont::GlApi::kTexWrapT, GlFlashApi::kClampToEdge);
+        if (useDepthStencil_) {
+            gl.glTexImage2D(glfont::GlApi::kTexture2D, 0, GlFlashApi::kDepth24Stencil8, w, h, 0,
+                            GlFlashApi::kDepthStencil, GlFlashApi::kUnsignedInt248, nullptr);
+        } else {
+            gl.glTexImage2D(glfont::GlApi::kTexture2D, 0, GlFlashApi::kDepthComponent24, w, h, 0,
+                            GlFlashApi::kDepthComponent, GlFlashApi::kUnsignedInt, nullptr);
+        }
+        gl.glBindTexture(glfont::GlApi::kTexture2D, 0);
+
+        if (api_.glGenFramebuffers && api_.glBindFramebuffer && api_.glFramebufferTexture2D) {
+            int prev = 0;
+            if (api_.glGetIntegerv) api_.glGetIntegerv(GlFlashApi::kFramebufferBind, &prev);
+            if (!resolveFbo_) api_.glGenFramebuffers(1, &resolveFbo_);
+            api_.glBindFramebuffer(GlFlashApi::kFramebuffer, resolveFbo_);
+            api_.glFramebufferTexture2D(GlFlashApi::kFramebuffer, GlFlashApi::kColorAttachment0,
+                                        glfont::GlApi::kTexture2D, colorTex_, 0);
+            api_.glFramebufferTexture2D(GlFlashApi::kFramebuffer,
+                                        useDepthStencil_ ? GlFlashApi::kDepthStencilAtt : GlFlashApi::kDepthAttachment,
+                                        glfont::GlApi::kTexture2D, depthTex_, 0);
+            if (api_.glCheckFramebufferStatus &&
+                api_.glCheckFramebufferStatus(GlFlashApi::kFramebuffer) != GlFlashApi::kFboComplete) {
+                if (api_.glDeleteFramebuffers) api_.glDeleteFramebuffers(1, &resolveFbo_);
+                resolveFbo_ = 0;
+            }
+            api_.glBindFramebuffer(GlFlashApi::kFramebuffer, static_cast<unsigned int>(prev));
+        }
+    }
+
     bool EnsureResources(const glfont::GlApi& gl, HGLRC ctx, int w, int h) {
         if (ctx != ctx_) {
             ctx_ = ctx;
             prog_ = 0;
             colorTex_ = 0;
             depthTex_ = 0;
+            resolveFbo_ = 0;
+            useDepthStencil_ = false;
             texW_ = 0;
             texH_ = 0;
             shaderFailed_ = false;
+            loggedDepthOnce_ = false;
         }
         if (shaderFailed_) return false;
 
@@ -262,6 +371,10 @@ private:
         if (texW_ != w || texH_ != h || colorTex_ == 0 || depthTex_ == 0) {
             if (colorTex_) gl.glDeleteTextures(1, &colorTex_);
             if (depthTex_) gl.glDeleteTextures(1, &depthTex_);
+            if (resolveFbo_ && api_.glDeleteFramebuffers) {
+                api_.glDeleteFramebuffers(1, &resolveFbo_);
+                resolveFbo_ = 0;
+            }
             gl.glGenTextures(1, &colorTex_);
             gl.glGenTextures(1, &depthTex_);
 
@@ -272,16 +385,9 @@ private:
             gl.glTexParameteri(glfont::GlApi::kTexture2D, glfont::GlApi::kTexWrapT, GlFlashApi::kClampToEdge);
             gl.glTexImage2D(glfont::GlApi::kTexture2D, 0, glfont::GlApi::kRgba, w, h, 0,
                             glfont::GlApi::kRgba, glfont::GlApi::kUnsignedByte, nullptr);
-
-            gl.glBindTexture(glfont::GlApi::kTexture2D, depthTex_);
-            gl.glTexParameteri(glfont::GlApi::kTexture2D, glfont::GlApi::kTexMinFilter, GlFlashApi::kNearest);
-            gl.glTexParameteri(glfont::GlApi::kTexture2D, glfont::GlApi::kTexMagFilter, GlFlashApi::kNearest);
-            gl.glTexParameteri(glfont::GlApi::kTexture2D, glfont::GlApi::kTexWrapS, GlFlashApi::kClampToEdge);
-            gl.glTexParameteri(glfont::GlApi::kTexture2D, glfont::GlApi::kTexWrapT, GlFlashApi::kClampToEdge);
-            gl.glTexImage2D(glfont::GlApi::kTexture2D, 0, GlFlashApi::kDepthComponent24, w, h, 0,
-                            GlFlashApi::kDepthComponent, GlFlashApi::kUnsignedInt, nullptr);
-
             gl.glBindTexture(glfont::GlApi::kTexture2D, 0);
+
+            AttachResolveFbo(gl, w, h);
             texW_ = w;
             texH_ = h;
         }
@@ -442,6 +548,8 @@ void main() {
     GlFlashApi::GLhandle prog_ = 0;
     unsigned int colorTex_ = 0;
     unsigned int depthTex_ = 0;
+    unsigned int resolveFbo_ = 0;
+    bool useDepthStencil_ = false;
     int texW_ = 0;
     int texH_ = 0;
     int uColor_ = -1;

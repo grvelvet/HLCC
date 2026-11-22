@@ -354,7 +354,16 @@ void RenderSubtitlesOverlay() {
 }
 
 BOOL WINAPI Hook_WglSwapBuffers(HDC hdc) {
-    if (g_cfg.enable_gl_flashlight && g_screenW > 0 && g_screenH > 0 && g_gl.Load().has_value()) {
+    if (g_hudFboCapturedThisFrame && g_screenW > 0 && g_screenH > 0 && g_gl.Load().has_value()) {
+        g_hudFboCapturedThisFrame = false;
+        g_hudFbo.CompositeScaled(g_gl, g_screenW, g_screenH, g_cfg.hud_scale);
+    }
+    RenderSubtitlesOverlay();
+    return g_origWglSwapBuffers ? g_origWglSwapBuffers(hdc) : TRUE;
+}
+
+int __cdecl Hook_HUD_Redraw(float time, int intermission) {
+    if (g_cfg.enable_gl_flashlight && !intermission && g_screenW > 0 && g_screenH > 0 && g_gl.Load().has_value()) {
         if (HGLRC ctx = g_gl.wglGetCurrentContext()) {
             AcquireSRWLockShared(&g_lock);
             bool active = !IsGamePausedLocked(GetTickCount64()) && IsFlashlightActiveLocked();
@@ -365,15 +374,6 @@ BOOL WINAPI Hook_WglSwapBuffers(HDC hdc) {
             }
         }
     }
-    if (g_hudFboCapturedThisFrame && g_screenW > 0 && g_screenH > 0 && g_gl.Load().has_value()) {
-        g_hudFboCapturedThisFrame = false;
-        g_hudFbo.CompositeScaled(g_gl, g_screenW, g_screenH, g_cfg.hud_scale);
-    }
-    RenderSubtitlesOverlay();
-    return g_origWglSwapBuffers ? g_origWglSwapBuffers(hdc) : TRUE;
-}
-
-int __cdecl Hook_HUD_Redraw(float time, int intermission) {
     g_prevHealthMaxX = g_curHealthMaxX;
     g_prevArmorMinX = g_curArmorMinX;
     g_curHealthMaxX = 0;
@@ -430,6 +430,18 @@ int __cdecl Hook_HUD_Redraw(float time, int intermission) {
     g_clockPrevTime = curClientTime;
     const ULONGLONG nowMs = g_gameMs;
 
+    if (g_hasViewOrg) {
+        for (auto& c : g_captions) {
+            if (c.hasOrigin && c.fadeDist > 0.0f && c.expire_ms > nowMs + 250ULL) {
+                float dx = c.origin[0] - g_viewOrg[0];
+                float dy = c.origin[1] - g_viewOrg[1];
+                float dz = c.origin[2] - g_viewOrg[2];
+                if (dx * dx + dy * dy + dz * dz > c.fadeDist * c.fadeDist) {
+                    c.expire_ms = nowMs + 250ULL;
+                }
+            }
+        }
+    }
     std::erase_if(g_captions, [nowMs](const ActiveCaption& c) { return c.expire_ms <= nowMs; });
     bool firePowerRestored = false;
     if (g_pendingHevPowerAtMs != 0 && nowMs >= g_pendingHevPowerAtMs) {

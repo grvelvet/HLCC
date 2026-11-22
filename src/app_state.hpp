@@ -53,6 +53,9 @@ struct ActiveCaption {
     std::string key;           // normalized sound key
     int entnum = -1;           // emitting entity (-1 = unknown)
     int channel = -1;          // engine sound channel
+    bool hasOrigin = false;
+    float origin[3] = {0.0f, 0.0f, 0.0f};
+    float fadeDist = 0.0f;     // >0: smoothly fade out if player moves beyond this distance
     std::vector<CaptionPage> pages;
     int cachedWrapW = 0;
     int cachedMaxLines = -1;

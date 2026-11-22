@@ -334,6 +334,13 @@ void HandleSound(int entnum, int entchannel, bool isStatic, sfx_t* sfx, float* o
     cap.key = norm;
     cap.entnum = entnum;
     cap.channel = entchannel;
+    if (!isGlobal && !isNoOcc && origin && !originZero) {
+        cap.hasOrigin = true;
+        cap.origin[0] = origin[0];
+        cap.origin[1] = origin[1];
+        cap.origin[2] = origin[2];
+        cap.fadeDist = effMaxDist * 1.35f;
+    }
     g_captions.push_back(std::move(cap));
     while (g_captions.size() > 16) g_captions.pop_front();
     ReleaseSRWLockExclusive(&g_lock);
