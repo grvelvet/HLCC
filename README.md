@@ -20,7 +20,7 @@ A proxy plugin mod subtitles (`version.dll`) for the **Half-Life**, **Opposing F
 ### Preview
 ![HLCC Preview](docs/screenshots/preview.gif)
 
-| English (`default`) | Русский (`default`) | Combat / Multi-role |
+| English (`hl2`) | Русский (`hl2`) | Combat / Multi-role (`default`) |
 | :---: | :---: | :---: |
 | ![English](docs/screenshots/preview_en.jpg) | ![Russian](docs/screenshots/preview_ru.jpg) | ![Combat](docs/screenshots/preview_combat.jpg) |
 
@@ -70,7 +70,7 @@ powershell -ExecutionPolicy Bypass -File package_release.ps1
 ### Скриншоты
 ![HLCC Preview](docs/screenshots/preview.gif)
 
-| English (`default`) | Русский (`default`) | Бой / несколько ролей |
+| English (`hl2`) | Русский (`hl2`) | Бой / несколько ролей (`default`) |
 | :---: | :---: | :---: |
 | ![English](docs/screenshots/preview_en.jpg) | ![Russian](docs/screenshots/preview_ru.jpg) | ![Combat](docs/screenshots/preview_combat.jpg) |
 
