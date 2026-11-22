@@ -6,7 +6,7 @@
 
 ## English
 
-A proxy plugin mod (`version.dll`) for the **Half-Life**, **Opposing Force**, and **Blue Shift** Steam trilogy without modifying original game files:
+A proxy plugin mod subtitles (`version.dll`) for the **Half-Life**, **Opposing Force**, and **Blue Shift** Steam trilogy without modifying original game files:
 
 - **HL2-Style Closed Captions:** NPC dialogue, radio, VOX, suit (HEV/PCV), and key gameplay SFX with anti-spam protection.
 - **Distance & Occlusion Filtering:** filters out sounds behind solid walls while handling glass and scripted scenes properly.
@@ -58,7 +58,7 @@ powershell -ExecutionPolicy Bypass -File package_release.ps1
 
 ## Русский
 
-Мод-плагин (`version.dll`) для Steam-трилогии **Half-Life**, **Opposing Force** и **Blue Shift** без изменения файлов игры:
+Мод-плагин субтитров (`version.dll`) для Steam-трилогии **Half-Life**, **Opposing Force** и **Blue Shift** без изменения файлов игры:
 
 - **Субтитры в стиле HL2:** речь NPC, радио, VOX, костюм (HEV/PCV) и важные игровые SFX с защитой от спама.
 - **Учёт дистанции и преград:** фильтрация звуков за глухими стенами, корректная работа через стекло и в скриптовых сценах.
