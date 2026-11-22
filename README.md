@@ -1,6 +1,12 @@
+<p align="center">
+  <img src="docs/hlcc_logo.jpg" alt="HLCC — Closed Captions Engine" width="640">
+</p>
+
 # HLCC — Half-Life Closed Captions (C++23)
 
-[English](#english) | [Русский](#русский)
+<p align="center">
+  <a href="#english">English</a> | <a href="#русский">Русский</a>
+</p>
 
 ---
 

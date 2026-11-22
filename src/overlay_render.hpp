@@ -228,7 +228,7 @@ void RenderSubtitlesOverlay() {
             glfont::FontAtlas& capAtlas = (voxReady && (cap.cat == subs::RoleCat::VOX || IsSfxCat(cap.cat)))
                 ? g_voxAtlas : g_atlas;
             auto measureCap = [&](const std::wstring& s) -> int {
-                if (!IsSfxCat(cap.cat) && !s.empty() && s[0] == L'[') {
+                if (!isHl2Style && !IsSfxCat(cap.cat) && !s.empty() && s[0] == L'[') {
                     size_t rb = s.find(L']');
                     if (rb != std::wstring::npos) {
                         glfont::FontAtlas& spAtlas = speakerReady ? g_speakerAtlas : capAtlas;
@@ -241,6 +241,18 @@ void RenderSubtitlesOverlay() {
             std::wstring hl2Full;
             if (isHl2Style) {
                 hl2Full = cap.text;
+                if (!IsSfxCat(cap.cat) && !hl2Full.empty() && hl2Full[0] == L'[') {
+                    size_t rb = hl2Full.find(L']');
+                    if (rb != std::wstring::npos) {
+                        size_t bodyStart = rb + 1;
+                        while (bodyStart < hl2Full.size() && hl2Full[bodyStart] == L' ') {
+                            ++bodyStart;
+                        }
+                        if (bodyStart < hl2Full.size()) {
+                            hl2Full.erase(0, bodyStart);
+                        }
+                    }
+                }
                 for (size_t p = 0; (p = hl2Full.find(L"||", p)) != std::wstring::npos;) {
                     hl2Full.replace(p, 2, L"\n");
                 }
