@@ -1,0 +1,85 @@
+name: Build and Release HLCC
+
+on:
+  push:
+    branches: [ main, master ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-win32:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup LLVM-MinGW (UCRT x86_64 -> i686-w64-mingw32)
+        shell: pwsh
+        run: |
+          $release = Invoke-RestMethod -Uri "https://api.github.com/repos/mstorsjo/llvm-mingw/releases/latest"
+          $asset = $release.assets | Where-Object { $_.name -match "ucrt-x86_64\.zip$" } | Select-Object -First 1
+          if (-not $asset) { throw "Could not find llvm-mingw ucrt-x86_64.zip asset" }
+          $zip = "$env:RUNNER_TEMP\llvm-mingw.zip"
+          Invoke-WebRequest -Uri $asset.browser_download_url -OutFile $zip
+          Expand-Archive -Path $zip -DestinationPath "$env:RUNNER_TEMP\llvm-mingw" -Force
+          $bin = (Get-ChildItem "$env:RUNNER_TEMP\llvm-mingw" -Directory | Select-Object -First 1).FullName + "\bin"
+          Add-Content -Path $env:GITHUB_PATH -Value $bin
+
+      - name: Validate subtitle TSV databases
+        shell: pwsh
+        run: |
+          python -c @"
+          import re
+          from pathlib import Path
+          cyr = re.compile(r'[а-яА-ЯёЁ]')
+          for mod in ['valve', 'gearbox', 'bshift']:
+              def parse(p):
+                  out = {}
+                  for i, line in enumerate(p.read_text(encoding='utf-8').splitlines(), 1):
+                      if not line.strip() or line.startswith('#'):
+                          continue
+                      parts = line.split('\t')
+                      assert len(parts) == 3, f'{p}:{i} has {len(parts)} cols'
+                      k, d, t = parts
+                      assert k not in out, f'{p}:{i} duplicate key {k}'
+                      assert int(d) > 0, f'{p}:{i} invalid duration {d}'
+                      out[k] = (int(d), t)
+                  return out
+              ru = parse(Path(mod) / 'subtitles_ru.tsv')
+              en = parse(Path(mod) / 'subtitles_en.tsv')
+              assert set(ru) == set(en), f'{mod}: key mismatch between RU and EN'
+              for k in ru:
+                  assert ru[k][0] == en[k][0], f'{mod}: duration mismatch for {k}'
+                  assert not cyr.search(en[k][1]), f'{mod}: Cyrillic found in EN for {k}'
+              print(f'{mod}: OK ({len(ru)} entries)')
+          "@
+
+      - name: Build version.dll
+        shell: cmd
+        run: |
+          cd src
+          call build.bat
+
+      - name: Package release archive
+        shell: pwsh
+        run: |
+          .\package_release.ps1
+
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: HLCC-Beta-win32
+          path: release/HLCC-Beta-win32.zip
+
+      - name: Publish GitHub Release on tag
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: release/HLCC-Beta-win32.zip
+          generate_release_notes: true

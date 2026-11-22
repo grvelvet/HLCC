@@ -1,0 +1,458 @@
+# Half-Life: Blue Shift (bshift) — English subtitles
+ba_areyoucrazy	1200	[Security] Are you crazy?
+ba_attack0	1200	[Security] Open fire!
+ba_attack1	1200	[Security] Open fire!
+ba_canal_death1	4228	[Scream]
+ba_canal_wound2	8557	[Security] Look, I'm chewed up pretty bad and I think my leg's broken. So you better go on without me. Get yourself out of here while you still can.
+ba_chat1	2797	[Security] With friends like you, man...
+ba_die1	1200	[Groan]
+ba_hello1	1200	[Security] How's it going?
+ba_hello2	1200	[Security] Hey Calhoun.
+ba_hello3	1200	[Security] Hey, how are you?
+ba_hello4	2636	[Security] Looks like we're in for a long day today.
+ba_hello5	1517	[Security] How's it going, Calhoun?
+ba_hey	1434	[Security] Hey!
+ba_holo/tr_holo_breath	9808	[Hologram] Swim up to the surface to catch your breath. You'll regain health lost from holding your breath too long once you've made it to the surface for air. Go ahead and swim on to the next section.
+ba_holo/tr_holo_done	8464	[Hologram] Congratulations on completing the Black Mesa Hazard Course for security guards. You're now certified to join the Blue Shift high security unit.
+ba_holo/tr_holo_fantastic	808	[Hologram] Great job.
+ba_holo/tr_holo_flashlight	2403	[Hologram] You'll need to use your flashlight for the next area.
+ba_holo/tr_holo_jumpdown	12794	[Hologram] Now that you're up here, there's only one way down. Find the target on the floor below and do your best to hit it. You may take some damage from the fall, but don't worry about it. We'll give you some first aid in the next section.
+ba_holo/tr_holo_lightoff	8905	[Hologram] Great. Remember, your flashlight will lose power over time, so switch it off when you don't need it. When the flashlight is off, it will recharge itself.
+ba_holo/tr_holo_nicejob	1013	[Hologram] Nice work.
+ba_holo/tr_holo_radiation	10646	[Hologram] Proximity to radiation activates a Geiger counter and radiation display in your helmet. Many other biological and chemical hazards are also indicated in your heads-up display.
+ba_pok0	1971	[Security] Can't this wait 'til we're off duty?
+ba_pok1	2314	[Security] I'm a little busy right now, Calhoun.
+ba_pok2	2077	[Security] Sorry, Calhoun. I'm on duty.
+ba_power1	5461	[Security] Hold yourself together! If we don't get the power cell charged, we're all going to die.
+ba_power2	2182	[Security] Get out of here! I can take it!
+ba_power3	1991	[Security] It's okay, sir! I can take him!
+ba_power4	2485	[Security] Hey! Hey!
+ba_power_wound1	9354	[Security] I was hoping you'd show up. You have to get this power cell charged and back up to Dr. Rosenberg. I'd help, but I'm hurt pretty bad.
+ba_power_wound2	11690	[Security] You can probably push the power cell through the fence into the charging station behind me. Let me see if I can get out of the way.
+ba_sec1_d1	6535	[Security] Hold on a minute. The door's not responding to your pass ID. Let me see if I can get it open on this side.
+ba_sec1_d2	2011	[Security] Okay, I think I got it.
+ba_sec1_d3	11165	[Security] Sorry about that, Calhoun. We've been having problems all over the facility this morning. System crashes, security malfunctions... it's a wonder this whole place hasn't shut down yet.
+ba_sec2_admin	7226	[Security] I know, sir, I know. We're doing everything we can to get the problem under control. Just give us some time to...
+ba_sec2_desk1	9056	[Security] Nice of you to show up this morning, Calhoun. Yeah, yeah, I know, problems with the access system. Hope you're ready for a long shift.
+ba_sec2_desk2	9187	[Security] Uh-oh, now what? Looks like some people are having problems with the main access lift in Sector G. Why don't you go over there and see what you can do?
+ba_sec2_nopass	4696	[Security] Calhoun, you know you can't go on duty without your sidearm and uniform.
+ba_sec2_pass	1871	[Security] Have a good one, Calhoun.
+ba_sec2_range1	1463	[Security] Here you go, Calhoun.
+ba_sec2_range2	6444	[Security] I know you're not on the schedule for a couple more days, but if you want to squeeze in a few shots in the range, there's plenty of room.
+ba_shot0	1349	[Security] Watch it, Calhoun.
+ba_shot1	2047	[Security] Don't piss me off, Calhoun.
+ba_shot2	1968	[Security] Check your fire, Calhoun.
+ba_shot3	1559	[Security] Watch where you're shooting.
+ba_shot4	2008	[Security] Watch where you point that thing.
+ba_shot5	1202	[Security] What are you trying to do?
+barney/ba_canal_death1	4228	[Scream]
+barney/ba_pain1	539	[Grunt]
+barney/ba_pain2	954	[Scream]
+barney/ba_pain3	561	[Grunt]
+ha_scream1	1200	[Scream]
+hg_alert0	2800	[HECU] Squad, we got hostiles!
+hg_alert4	2500	[HECU] Squad, neutralize hostiles!
+hg_alert5	2200	[HECU] Move in!
+hg_canal1	2974	[HECU] Man, these civvies are getting heavy.
+hg_canal2	6381	[HECU] Yeah, why are we on disposal duty anyway? Just because Shephard's team didn't make it, we have to do the crap jobs?
+hg_canal3	2174	[HECU] Well, let's get on with it.
+hg_got_barney	3240	[HECU] All right, we've got that bastard. What's the status on Freeman?
+hg_quest11	3000	[HECU] Squad, stay alert for hostiles, over.
+hgrunt/hg_canal1	2974	[HECU] Man, these civvies are getting heavy.
+hgrunt/hg_canal2	6381	[HECU] Yeah, why are we on disposal duty anyway? Just because Shephard's team didn't make it, we have to do the crap jobs?
+hgrunt/hg_canal3	2174	[HECU] Well, let's get on with it.
+hgrunt/hg_got_barney	3240	[HECU] All right, we've got that bastard. What's the status on Freeman?
+holo_4jumps	11908	[Hologram] The next four jumps get more difficult each time. Don't worry if you miss the last one a few times, just climb up and do it again. If you can make all the jumps in a continuous run, you're doing just fine.
+holo_armor	14730	[Hologram] Here you will find your standard armor vest and helmet. These will help protect you against any physical threat you may encounter while performing your duties. When your armor becomes too damaged to be useful, you'll need to find a fresh vest or helmet to protect yourself.
+holo_breakbox	7126	[Hologram] If nothing else works, you can try breaking things that block your path. Pick up the crowbar and smash your way through the boxes.
+holo_breath	9808	[Hologram] Swim up to the surface to catch your breath. You'll regain health lost from holding your breath too long once you've made it to the surface for air. Go ahead and swim on to the next section.
+holo_button	5759	[Hologram] Whenever you see one of these buttons, press it and I'll repeat instructions or show you how things are done.
+holo_charger	11521	[Hologram] Whenever your armor becomes too damaged to be useful, you'll need to find a fresh vest or helmet to protect yourself. HEV suit chargers won't help you, so just pick up a new vest or helmet and wear it.
+holo_commencing	6188	[Hologram] I'll start the sequence in five, four, three, two, one.
+holo_congrats	6362	[Hologram] Congratulations. You've completed the Black Mesa training target range. You may advance to the next area.
+holo_done	8464	[Hologram] Congratulations on completing the Black Mesa Hazard Course for security guards. You're now certified to join the Blue Shift high security unit.
+holo_drown	14327	[Hologram] Your heads-up display will let you know when oxygen becomes critical. That means you'll need to find some clean air to breathe. As you swim through this course, your blood oxygen levels will begin to drop. At the midpoint, you'll be given an opportunity to surface for air.
+holo_duck	9729	[Hologram] You'll need to duck under the next set of obstacles. When you crawl in a crouch position, you can move very silently. This can be very useful when you don't want to be heard.
+holo_fallshort	3146	[Hologram] If you keep falling short, you may be jumping too soon.
+holo_fantastic	1200	[Hologram] Great job.
+holo_flashlight	2403	[Hologram] You'll need to use your flashlight for the next area.
+holo_greatwork	1200	[Hologram] Great work.
+holo_grenade	7291	[Hologram] To fire the grenade launcher, use the alternate fire button. Some targets can only be destroyed by lobbing grenades.
+holo_hevnouse	15209	[Hologram] You may also find HEV charging stations, such as this one, throughout the facility. These stations, however, can only be used by qualified science personnel wearing powered hazardous environment equipment, so they will be inaccessible to you during your duties.
+holo_hitall	17560	[Hologram] You'll need to hit every target to complete the course. If you miss, don't worry about it, the targets will keep moving until you manage to score a hit. If you want to get through the target range as quickly as possible, try reloading during pauses instead of letting your gun run out of ammunition at a critical time.
+holo_injury	1910	[Hologram] Please proceed to the next section.
+holo_intro	11981	[Hologram] Welcome to the Black Mesa Hazard Course for security guard training. I'll be your holographic guide to assist you in your training. Begin by putting on your vest and helmet. You'll find this equipment in the next room.
+holo_jduck	10925	[Hologram] Now, try combining moves. You'll need to jump, duck, and then jump again. This should get you prepared for the next room, where you'll have to do both moves at the same time.
+holo_jump	11773	[Hologram] The first move you'll need to practice is jumping. You'll have to get over all three of these obstacles in order to proceed. It helps to get a running start. Watch me do it, then try it yourself.
+holo_jumpdown	12794	[Hologram] Now that you're up here, there's only one way down. Find the target on the floor below and do your best to hit it. You may take some damage from the fall, but don't worry about it. We'll give you some first aid in the next section.
+holo_jumpgap	5387	[Hologram] Sometimes you'll need to rely on quick reflexes to get around. Try jumping this gap on your own.
+holo_keeptrying	1672	[Hologram] Keep trying, and you'll get it.
+holo_ladder	7324	[Hologram] Walk directly into the ladder, look up, and continue moving forward. If you want to climb back down, just move backward.
+holo_leadguard	14687	[Hologram] Lead a scientist into the next room. He will open the door that leads back into the transit system. To have someone follow you, approach the person and press your use key. He will then follow you until you face him and press the use key again.
+holo_lightoff	8905	[Hologram] Great. Remember, your flashlight will lose power over time, so switch it off when you don't need it. When the flashlight is off, it will recharge itself.
+holo_medkit	18530	[Hologram] You'll find medical kits like this one throughout the Black Mesa Research Facility. To restore your health, walk up to a medkit, then press and hold your use key. Your health will recover gradually until you're at full health or until the kit is depleted. Once the light goes out, a medkit cannot be reused.
+holo_move	10960	[Hologram] Moving around in your armor may be a little tricky at first. Take a moment to get a feel for moving around. Once you get comfortable with this, proceed to the next section just around the corner.
+holo_nicejob	1200	[Hologram] Nice work.
+holo_pipeduck	17601	[Hologram] To get into these pipes, you'll need to perform a duck jump. You want to stand right at the mouth of the pipe. While moving forward, jump up and hold the jump button to go into a crouch in mid-air. It may be tricky at first, but you'll find it comes in handy to be able to jump and duck into tight areas.
+holo_pullbox	12661	[Hologram] If you can't push an obstacle out of the way, you might try pulling it. To pull a box, move up to it and press your use key. While holding down the use key, move backwards and the box will be pulled with you.
+holo_pushbox	9160	[Hologram] What you really need to do is push the box down into the pit. Pushing is easy, just move forward into the box and you can push it into position.
+holo_radiation	10646	[Hologram] Proximity to radiation activates a Geiger counter and radiation display in your helmet. Many other biological and chemical hazards are also indicated in your heads-up display.
+holo_retry	5619	[Hologram] Give it another try. Remember to move forward, jump, and while in mid-air, crouch.
+holo_runstart	2064	[Hologram] It helps to get a running start.
+holo_spinbridge	4708	[Hologram] To spin that bridge, walk up to the control wheel and press the use key.
+holo_startlift	4423	[Hologram] To start the lift, walk up to the button and press the use key while facing it.
+holo_steam	11819	[Hologram] If you pass through fire or steam, you'll see damage icons come up in your heads-up display. Directional indicators at the center of your display will show you from what direction damage is coming.
+holo_target	12051	[Hologram] Welcome to the Black Mesa training target range. You'll get a chance to fire your weapon, reload, and fire the attached grenade launcher. Collect your equipment and proceed to the firing station.
+holo_tryagain	2113	[Hologram] No harm done. Try again.
+holo_usetrain	11743	[Hologram] Press your use key to engage the train. Once engaged, move forward or backward to increase or decrease the speed of the train. Press the use key a second time to disengage from the train.
+na1	1500	[Announcement] Access granted.
+ot_1	1200	[Otis] Hey Calhoun.
+ot_2	2267	[Otis] Looks like we're in for a long day today.
+ot_3	1402	[Otis] Have a good one, Calhoun.
+ot_chat1	1200	[Otis] Hell if I know.
+ot_leftovers	1526	[Otis] I'll get the leftovers.
+ot_mmmm	1265	[Otis] Mmmm.
+ro_answer0	1200	[Rosenberg] I am not at all sure.
+ro_answer1	1282	[Rosenberg] I'm not certain.
+ro_answer10	1200	[Rosenberg] Yes.
+ro_answer11	1200	[Rosenberg] I believe so.
+ro_answer12	1200	[Rosenberg] Right.
+ro_answer13	1200	[Rosenberg] I'm sure of it.
+ro_answer14	1200	[Rosenberg] Positively.
+ro_answer15	1200	[Rosenberg] I have no doubt.
+ro_answer16	1403	[Rosenberg] Yes.
+ro_answer17	1200	[Rosenberg] Of course not.
+ro_answer18	1200	[Rosenberg] Absolutely not.
+ro_answer19	1200	[Rosenberg] No.
+ro_answer2	1200	[Rosenberg] Perhaps.
+ro_answer20	1624	[Rosenberg] I don't think so.
+ro_answer21	1918	[Rosenberg] You are completely wrong.
+ro_answer22	1200	[Rosenberg] You can't be serious.
+ro_answer23	1200	[Rosenberg] I really don't know.
+ro_answer24	1200	[Rosenberg] Don't be ridiculous.
+ro_answer25	1200	[Rosenberg] Shut up.
+ro_answer26	1613	[Rosenberg] I couldn't even venture a guess.
+ro_answer27	1672	[Rosenberg] Stop asking that question.
+ro_answer28	1816	[Rosenberg] Didn't you just ask me that?
+ro_answer29	2945	[Rosenberg] You know, you repeat yourself sometimes.
+ro_answer3	1259	[Rosenberg] Who can say?
+ro_answer4	1733	[Rosenberg] It's inconclusive.
+ro_answer5	1200	[Rosenberg] Theoretically.
+ro_answer6	1373	[Rosenberg] Why are you asking me?
+ro_answer7	2000	[Rosenberg] Kindly lower your voice.
+ro_answer8	1200	[Rosenberg] Of course.
+ro_answer9	1200	[Rosenberg] Absolutely.
+ro_curea	1367	[Rosenberg] You look terrible.
+ro_cureb	1318	[Rosenberg] You seem to be wounded.
+ro_curec	2345	[Rosenberg] You're going to need medical attention right away.
+ro_fear0	1200	[Rosenberg] Oh!
+ro_fear1	1200	[Rosenberg] Oh my!
+ro_fear2	1200	[Gasp]
+ro_fear3	1200	[Rosenberg] Oh!
+ro_fear4	1200	[Rosenberg] Oh!
+ro_fear5	1200	[Rosenberg] Oh!
+ro_goodwork	5030	[Rosenberg] Good work. Those new suits can be tricky. Please proceed to the next area.
+ro_hardlynotice	4440	[Rosenberg] Very good. I hardly noticed you. Move on to the next area.
+ro_haz_ok0	2337	[Rosenberg] Yes, I will follow you if you wish.
+ro_haz_wait0	1711	[Rosenberg] Okay, I will wait here.
+ro_heal0	1765	[Rosenberg] Let me take care of that wound for you.
+ro_heal1	1591	[Rosenberg] This should make you feel better.
+ro_heal2	2096	[Rosenberg] You need medical attention. Here.
+ro_heal3	1753	[Rosenberg] Let me give you something for the pain.
+ro_heal4	1480	[Rosenberg] Allow me to treat that injury.
+ro_hear0	1200	[Rosenberg] I hear something.
+ro_hear1	1200	[Rosenberg] Did you hear that?
+ro_hear2	1694	[Rosenberg] That sound. What is it?
+ro_idle0	2737	[Rosenberg] I predicted all of this, you know. All of it.
+ro_idle1	3169	[Rosenberg] It appears the containment system has completely failed.
+ro_idle10	3470	[Rosenberg] A failure of this magnitude is extremely improbable.
+ro_idle11	4581	[Rosenberg] Well, the dimensional breach is definitely transmitting organic matter.
+ro_idle12	4153	[Rosenberg] I hope those people in the Lambda Lab can get this under control.
+ro_idle13	1200	[Rosenberg] I hear something.
+ro_idle2	2414	[Rosenberg] Do you still say there's nothing to chaos theory?
+ro_idle3	2873	[Rosenberg] How interesting. Just look at that.
+ro_idle4	4725	[Rosenberg] Fascinating. I never suspected such things could be.
+ro_idle5	3839	[Rosenberg] Why, just look at those peculiar markings.
+ro_idle6	2774	[Rosenberg] Who is responsible for this mess?
+ro_idle7	2144	[Rosenberg] Well, there goes our grant money.
+ro_idle8	3508	[Rosenberg] Wouldn't you like to get one of these blood samples under a microscope?
+ro_idle9	4432	[Rosenberg] I suspected this could happen, but the administrator just would not listen.
+ro_inside_car	3663	[Rosenberg] Hello! I'm in here! Can anyone hear me?
+ro_killed	1200	[Scream]
+ro_letstrythis	1200	[Rosenberg] Let's try this.
+ro_monst0	2495	[Rosenberg] Why, look! Another headcrab.
+ro_monst1	2937	[Rosenberg] Another important species revealed in action.
+ro_mortal0	2334	[Rosenberg] I'm not sure how much longer I can last.
+ro_mortal1	2537	[Rosenberg] I don't think I can last much longer.
+ro_nextstation	3358	[Rosenberg] Good work. You look prepared for the next station.
+ro_nogo	1342	[Rosenberg] No, don't go that way.
+ro_ok0	1200	[Rosenberg] Let's get going.
+ro_ok1	1200	[Rosenberg] I'll be right behind you.
+ro_ok2	1800	[Rosenberg] Let's hurry. There's no time to waste.
+ro_ok3	3111	[Rosenberg] All right. Let's hope we don't run into any more of those soldiers.
+ro_ok4	1579	[Rosenberg] All right. Let's stick together.
+ro_ok5	1962	[Rosenberg] All right. You won't even know I'm here.
+ro_ok6	2525	[Rosenberg] Yes, we'll have a better chance if we stick together.
+ro_ok7	1216	[Rosenberg] Lead the way, Calhoun.
+ro_ok8	1200	[Rosenberg] Let's go.
+ro_ok9	1200	[Rosenberg] Yes, let's go.
+ro_outro1	14002	[Rosenberg] Ah, there he is! Calhoun, you've arrived! When you didn't come through right away, we thought that the... Oh no, there's something wrong here. Simmons, come look at Calhoun! His body seems to be in some sort of resonance displacement, and I...
+ro_outro2	20283	[Rosenberg] Oh, thank God you made it. I was worried that a malfunction occurred at the last moment and you might have been caught in an infinite harmonic reflux. But if that's the case, then you're lucky to be standing here. Then again, we're all lucky. Thanks to you, however, we were actually able to pull off this harebrained idea. We made it, Mr. Calhoun. We made it.
+ro_phello0	2012	[Rosenberg] Greetings.
+ro_phello1	2415	[Rosenberg] Hello.
+ro_phello2	1200	[Rosenberg] Hello there.
+ro_pidle0	2288	[Rosenberg] Someone has hidden my glasses again.
+ro_pidle1	3467	[Rosenberg] Why do we all have to wear these ridiculous ties?
+ro_pidle10	3087	[Rosenberg] I hope those containment parameters are still nominal.
+ro_pidle2	3426	[Rosenberg] I wonder if I should run that test again.
+ro_pidle3	2172	[Rosenberg] This is all within theoretical limits.
+ro_pidle4	1445	[Rosenberg] As I expected.
+ro_pidle5	1237	[Rosenberg] That's odd.
+ro_pidle6	2153	[Rosenberg] Yes, this all looks nominal.
+ro_pidle7	3314	[Rosenberg] Now, where did I leave that shutdown procedure chart?
+ro_pidle8	2593	[Rosenberg] I must remember to report that fluctuation.
+ro_pidle9	3136	[Rosenberg] Most of the simulation results are perfectly acceptable, you know.
+ro_plfear0	1200	[Rosenberg] What are you doing?
+ro_plfear1	1643	[Rosenberg] I can't take this anymore!
+ro_plfear2	1228	[Rosenberg] This is madness!
+ro_plfear3	2850	[Rosenberg] No, please! I don't want to die!
+ro_plfear4	1200	[Rosenberg] Get out of here!
+ro_pok0	3964	[Rosenberg] Please, leave me alone. I have very important work to do.
+ro_pok1	2480	[Rosenberg] Don't you have your own job to be doing?
+ro_pok2	3272	[Rosenberg] Excuse me, but I'm rather busy right now.
+ro_pok3	4811	[Rosenberg] Don't you have more important things to be doing than keeping me from my work?
+ro_pok4	4778	[Rosenberg] Why do you security guards always insist on bothering us?
+ro_pok5	3159	[Rosenberg] Shouldn't you be guarding something right now?
+ro_pok6	4061	[Rosenberg] Shouldn't you be guarding some donuts and coffee right about now?
+ro_pok7	1391	[Rosenberg] I can't be bothered right now.
+ro_pquest0	3063	[Rosenberg] Have you been able to get the beverage machine to work yet?
+ro_pquest1	3586	[Rosenberg] Did you submit your status report to the Administrator today?
+ro_pquest10	3238	[Rosenberg] Do you think we should delay for another recalibration?
+ro_pquest11	3029	[Rosenberg] You aren't going soft on that ethics issue again, are you?
+ro_pquest12	3932	[Rosenberg] All displacement modulators were tuned today, weren't they?
+ro_pquest13	1885	[Rosenberg] Do you know who ate all the donuts?
+ro_pquest14	1849	[Rosenberg] Have you seen my coffee cup?
+ro_pquest15	1523	[Rosenberg] Is anyone else getting hungry?
+ro_pquest16	4139	[Rosenberg] Don't you think we should recalculate those resonance dampening factors again?
+ro_pquest17	2500	[Rosenberg] Are you sure you checked the eigen attenuators?
+ro_pquest2	3837	[Rosenberg] Are you running those tunneling lattice calculations again?
+ro_pquest3	3624	[Rosenberg] This should shake up those grand unification boys, hmm?
+ro_pquest4	3677	[Rosenberg] Are you one hundred percent sure that theory of yours is correct?
+ro_pquest5	3120	[Rosenberg] I am rather looking forward to this analysis, aren't you?
+ro_pquest6	3146	[Rosenberg] Wouldn't it be fantastic to get some pure readings for a change?
+ro_pquest7	2313	[Rosenberg] Any ideas on the origin of that new sample?
+ro_pquest8	3291	[Rosenberg] This analysis is going to run perfectly today, don't you think?
+ro_pquest9	4365	[Rosenberg] Aren't you a bit worried about that exponential cascade scenario we discussed?
+ro_question0	3041	[Rosenberg] Have you ever seen anything like this?
+ro_question1	3953	[Rosenberg] I'd give my right hemisphere for a few hours of sleep.
+ro_question10	2559	[Rosenberg] Did you hear something?
+ro_question11	2093	[Rosenberg] Do you smell what I smell?
+ro_question12	2708	[Rosenberg] Fat lot of good that PhD does me now, huh?
+ro_question13	2865	[Rosenberg] Don't you think we should wait here for a while?
+ro_question14	3410	[Rosenberg] Do you recall any of those emergency survival procedures?
+ro_question15	4614	[Rosenberg] These crab creatures have a unique parasitic strategy, don't you think?
+ro_question16	3356	[Rosenberg] I believe this will make for a notable paper, don't you?
+ro_question17	1922	[Rosenberg] Shouldn't we try to capture a specimen?
+ro_question18	5427	[Rosenberg] Are you seriously suggesting that all of these beings are here to dine on us?
+ro_question19	3333	[Rosenberg] Do you suspect some alien subterfuge behind this failure?
+ro_question2	1639	[Rosenberg] Are you thinking what I'm thinking?
+ro_question20	2646	[Rosenberg] Do you think we should appeal to the alien authorities?
+ro_question21	4929	[Rosenberg] The military cleanup is just a paranoid rumor, isn't it?
+ro_question22	5149	[Rosenberg] The alien species can't possibly all be hostile... can they?
+ro_question23	2204	[Rosenberg] Did you understand that last announcement?
+ro_question24	1571	[Rosenberg] Do you smell something burning?
+ro_question25	3502	[Rosenberg] You have no idea what is going on, do you?
+ro_question26	2962	[Rosenberg] Well, do you have any idea what to do next?
+ro_question3	1822	[Rosenberg] Will we ever make it out of here?
+ro_question4	1671	[Rosenberg] Are you sure this is the right way?
+ro_question5	1750	[Rosenberg] It can't get any worse than this.
+ro_question6	2624	[Rosenberg] Surely someone will come and rescue us.
+ro_question7	2475	[Rosenberg] Don't you find this all rather fascinating?
+ro_question8	3295	[Rosenberg] Well, I think it's rather stimulating, don't you?
+ro_question9	3428	[Rosenberg] It's highly probable that our luck will change, don't you agree?
+ro_scared0	2148	[Rosenberg] My God, what are you doing?
+ro_scared1	1753	[Rosenberg] Stop attacking immediately!
+ro_scared2	2345	[Rosenberg] Are you insane? He's a friend!
+ro_scream0	1200	[Rosenberg] Oh!
+ro_scream1	1200	[Rosenberg] Oh my!
+ro_scream2	1200	[Gasp]
+ro_scream3	1200	[Rosenberg] Oh!
+ro_scream4	1200	[Rosenberg] Oh!
+ro_scream5	1200	[Rosenberg] Oh!
+ro_smell0	4112	[Rosenberg] I believe something smells quite foul here.
+ro_smell1	2511	[Rosenberg] I hope that odor isn't coming from you.
+ro_smell2	2483	[Rosenberg] Hmm, what a peculiar odor.
+ro_smell3	2094	[Rosenberg] What is that stench?
+ro_stare0	1403	[Rosenberg] Yes.
+ro_stare1	1639	[Rosenberg] Are you thinking what I'm thinking?
+ro_stare2	3502	[Rosenberg] You have no idea what is going on, do you?
+ro_stop0	2694	[Rosenberg] Wait up, Calhoun. I'm afraid I need to rest.
+ro_stop1	2694	[Rosenberg] Hold on, Calhoun. I need to take a break.
+ro_stop2	2212	[Rosenberg] I need to rest a bit before I could go on.
+ro_stop3	3280	[Rosenberg] Slow down, Calhoun. I can't keep up at this pace.
+ro_stop4	3152	[Rosenberg] Hold on, Calhoun. You'll have to slow down a bit.
+ro_tele_almost1	1585	[Rosenberg] We're almost there.
+ro_tele_almost2	1231	[Rosenberg] We're almost there.
+ro_tele_final01	13526	[Rosenberg] Calhoun, you did it! We've already begun preparing the device with the fresh power cell you sent up. This time, however, the process is going to be a bit more complex, so I'll need you to help me in the main room. Let's hurry, there's no time to waste.
+ro_tele_final02	21502	[Rosenberg] All right. I'll stay down here to monitor the system levels and direct the procedure. I need you to climb up to the control room and activate the main power. Once the process has started, you'll also need to release the damping locks each time the system has charged, in order to open the displacement field. But don't worry, Mr. Calhoun, the process is simple, and I'll let you know when you need to do something.
+ro_tele_final03	4087	[Rosenberg] What are you waiting for, Calhoun? Get up to the control room and locate the main power switch!
+ro_tele_final04	3007	[Rosenberg] Please hurry, Mr. Calhoun! We don't have much time!
+ro_tele_final05	7361	[Rosenberg] Very good. Stand by, Calhoun. Once the system is initialized, it'll take a few moments for the interpolating resonance coils to achieve focus.
+ro_tele_final06	10542	[Rosenberg] Everything is looking nom— Oh no! The primary coolant line has been ruptured! Calhoun, go to the valve located on the catwalk and release the pressure! Hurry, before the system overheats!
+ro_tele_final07	8243	[Rosenberg] This is no time for games, Calhoun! If the secondary coolant pipes burst, the machine will explode! You must crank the valve on the catwalk now!
+ro_tele_final08	3593	[Rosenberg] Good! Now keep turning the crank until the pressure level reaches normal.
+ro_tele_final09	5201	[Rosenberg] Don't let the pressure reach critical, Calhoun! You must continue cranking until the level reads nominal.
+ro_tele_final10	11006	[Rosenberg] Good work, Calhoun. That was close. The system has stabilized and the main capacitors are charging. When the main charge meter reaches full, I'll need you to open the displacement field from the control room.
+ro_tele_final11	9149	[Rosenberg] Simmons, can you hear me? Get the rest of the team together and prepare to teleport. Remember, we can only send one person at a time, so be patient.
+ro_tele_final12	5352	[Rosenberg] Wait for it, Calhoun! You can't open the displacement field until the charge has reached its maximum.
+ro_tele_final13	4917	[Rosenberg] I told you to wait until the system was fully charged. Be patient, Calhoun.
+ro_tele_final14	5004	[Rosenberg] Okay, the system is fully charged. Throw the switch located at the window of the control room.
+ro_tele_final15	4203	[Rosenberg] Go ahead, Calhoun. Throw the displacement field switch. What are you waiting for?
+ro_tele_final16	4946	[Rosenberg] Calhoun, our time is running out! Go to the window of the control room and throw the switch!
+ro_tele_final17	4888	[Rosenberg] It's too late! The system is collapsing! You've killed us all, Calhoun!
+ro_tele_final18	4307	[Rosenberg] Very good, Calhoun. I'll begin charging the system for the next teleport event.
+ro_tele_final19	6236	[Rosenberg] Almost there. All right, we've reached full charge again. Open the field, Calhoun!
+ro_tele_final20	2432	[Rosenberg] Excellent! The next jumper can go through now.
+ro_tele_final21	2630	[Rosenberg] Let's keep going. Main capacitors charging.
+ro_tele_final22	2653	[Rosenberg] Okay, it's ready. Throw the switch again!
+ro_tele_final23	1620	[Rosenberg] You must go now, Simmons!
+ro_tele_final24	1200	[Rosenberg] Oh no!
+ro_tele_final25	11471	[Rosenberg] I'm going to go through next, but don't worry, Mr. Calhoun. I've set the system to automatically start the charging sequence once I've made it through. Just wait for the levels to reach full again and open the field like you've been doing.
+ro_tele_final26	1228	[Rosenberg] All right, it's ready.
+ro_tele_final27	3297	[Rosenberg] Good luck, Mr. Calhoun. I'll see you on the other side!
+ro_tele_final28	2682	[Rosenberg] There, the field is open. Go now, Walter!
+ro_tele_nocell	12423	[Rosenberg] I'm glad to see you're all right, Mr. Calhoun, but we really need another power cell if we expect to get out of here. You'll have to go back down there, find a power cell, and send it back up to us fully charged. We're all depending on you.
+ro_tele_power1	26471	[Rosenberg] Good job, Mr. Calhoun. We began to worry when you didn't come back for some time, but it looks as though you were able to get the device operational. The signal we're getting is very strong, but I'm afraid I have some bad news. The power reserves were just enough to open the field for your trip to the border world. If we plan on keeping the teleporter open long enough to calculate a safe exit point and allow time for everyone to go through, someone will have to go to the lower level and retrieve another power cell.
+ro_tele_power2	6211	[Rosenberg] A few of our colleagues went down there a while ago, but we haven't heard from them since. I can only fear for the worst.
+ro_tele_power3	15662	[Rosenberg] I hate to keep putting you in this position, but you must realize that if someone doesn't go down there, then none of us will get out of here alive. Besides, you're the best equipped to deal with any dangers that may be waiting. Here, I'll show you to the access elevator that leads to the power generator. Follow me.
+ro_tele_power4	5145	[Rosenberg] Calhoun, where are you? We need you to go down below and find us another power cell!
+ro_tele_power5	13212	[Rosenberg] Ah, here we are. Down below are the old power generators that were used to service this lab. You should find what we're looking for down there. Once you've located a new power cell, make sure it's charged and send it up the freight lift. Good luck.
+ro_tele_xen01	7221	[Rosenberg] Excellent, Walter. Finish aligning the power cell matrix and I'll see if I can get the system online in the main room. Now, there's no time to waste.
+ro_tele_xen02	3071	[Rosenberg] Well, it looks like the equipment is in better shape than I expected.
+ro_tele_xen03a	21362	[Rosenberg] Unfortunately, this older technology does not have the ability to target an Earth destination in its current state. You see, Mr. Calhoun, teleportation isn't as easy as going from point A to point B. We've discovered a strange border world that was somehow involved in the process, which kept us from accurately predicting where any given teleportation event would lead to back on Earth.
+ro_tele_xen03b	15047	[Rosenberg] Some of the more promising research on the matter led to a device that could be attached to the strange crystalline structures we found on this border world. Now, this device could then be used as a focal point and a relay to aid in the teleportation. Well, in theory that is.
+ro_tele_xen04	16974	[Rosenberg] We lost contact with the survey group shortly after the device was in place. We later discovered other methods of aiming the fields, but all of the equipment in this lab uses the older technology. In order for any of us to get out of here alive, someone will have to go to the border world and activate the device.
+ro_tele_xen05	5933	[Rosenberg] I'm afraid you're the only one who can do this, seeing as how everyone else will be needed to operate the equipment.
+ro_tele_xen06	22024	[Rosenberg] We should be able to get you fairly close to where the survey team had set up, but I fear the likelihood of running into alien creatures is very high. Once you find the device, simply power it on and align the emitters until the signal reaches maximum strength. We'll reopen the teleporter for your return once we receive the signal, but you must hurry back, as we can only keep it open for a short amount of time.
+ro_tele_xen07	8789	[Rosenberg] All right, I'm going to initiate the teleporter charging sequence now. Be ready, Mr. Calhoun. Once the field is open, it will become unstable very quickly.
+ro_tele_xen08	5172	[Rosenberg] The primary capacitors have reached full charge. Simmons, release the damping locks and open the field!
+ro_tele_xen09	3251	[Rosenberg] The field, it's open! Calhoun, enter the teleporter!
+ro_tele_xen10	4725	[Rosenberg] You must make the jump now, Calhoun! The displacement field can't sustain itself much longer!
+ro_tele_xen11	6803	[Rosenberg] You fool, you've taken too long! The impulse reflection rotors are burning up! I can't shut it down! Run!
+ro_tele_xen12	2640	[Rosenberg] Simmons, can you hear me? It's ready!
+ro_to_teleport	13235	[Rosenberg] We should have chosen the Lambda Reactor for an escape, but the crew there is bent on fighting the creatures, with all their hopes set on someone named Freeman. Let those fools try and fight a battle they can't win. I just want to get out of here.
+ro_too_slow	2020	[Rosenberg] You fool, you've taken too long!
+ro_wait0	2688	[Rosenberg] Don't leave me here, Calhoun. We need to stick together.
+ro_wait1	2606	[Rosenberg] This is no time to rest. We must keep going.
+ro_wait2	1200	[Rosenberg] I'll wait here.
+ro_wait3	1898	[Rosenberg] I'll stay here, but hurry back.
+ro_wait4	3959	[Rosenberg] Yes, maybe you should go on ahead for a bit. Just don't forget about me.
+ro_wait5	3646	[Rosenberg] I may be slowing you down, but you'll need me to get into the lab.
+ro_wait6	2873	[Rosenberg] We have no time to take a break. We must keep going.
+ro_wait7	4180	[Rosenberg] Please don't leave me here, Calhoun. I'll be defenseless if those soldiers find me.
+ro_wound0	2879	[Rosenberg] I seem to be wounded, but I can keep going.
+ro_wound1	2723	[Rosenberg] I'm not doing too well, but I can make it.
+ro_xen_call1	3889	[Rosenberg] Calhoun, you must hurry! We can't keep the portal open much longer!
+ro_xen_call2	4714	[Rosenberg] If you can hear me, Calhoun, you must hurry! The teleporter charge is running out!
+ro_xen_call3	3889	[Rosenberg] It's too late! The field is collapsing! Calhoun!
+ro_yard_access1	3785	[Rosenberg] Yes, here it is. We'll need to break through this to get to the elevator.
+ro_yard_access2	3013	[Rosenberg] I see you've already found the elevator. Let's hurry then.
+ro_yard_almost2	1200	[Rosenberg] Follow me.
+ro_yard_almost3	2595	[Rosenberg] Let's stick together. We're almost there.
+ro_yard_follow1	1200	[Rosenberg] Follow me.
+ro_yard_follow2	1434	[Rosenberg] Calhoun, follow me.
+ro_yard_hurry02	1585	[Rosenberg] Please hurry, Mr. Calhoun.
+ro_yard_notime1	1382	[Rosenberg] Now there's no time to waste.
+ro_yard_rose1	6293	[Rosenberg] Yes, I'm Dr. Rosenberg. Although I'm not very proud to admit it, seen as though I'm partially responsible for all of this.
+ro_yard_rose2	38882	[Rosenberg] How did you know my name? Oh, I see. Poor Harold. Yes, our plan was to get to one of the old prototype labs. It involved something that very few people in the facility are authorized to know about. The same technology that brought about this catastrophe could also be our only way out. You see, I was involved in the very early work on teleporter technology, long before the Lambda Complex was even built. There may be enough equipment in the old lab to piece together a device that would allow us to teleport outside of the facility, as improbable as that may sound to someone like yourself. Of course, none of that does a whole lot of good while we're stuck in here.
+ro_yard_rose3	7663	[Rosenberg] Hmm, perhaps I could help boost you through that vent in the ceiling. If you're lucky, you might be able to take those soldiers by surprise.
+ro_yard_rose4	9671	[Rosenberg] All right. Now we'll need to head back to the area where you met Harold. The access to the old lab should still be there, but we may have to break through some of the newer construction to get to it.
+ro_yard_scanner	5724	[Rosenberg] Well, I hope the old security system is still active. With any luck, my fingerprint ID is still valid and on file.
+rosenberg/ro_xen_call1	3889	[Rosenberg] Calhoun, you must hurry! We can't keep the portal open much longer!
+rosenberg/ro_xen_call2	4714	[Rosenberg] If you can hear me, Calhoun, you must hurry! The teleporter charge is running out!
+rosenberg/ro_xen_call3	3889	[Rosenberg] It's too late! The field is collapsing! Calhoun!
+sc_acc_die	1200	[Scream]
+sc_acc_scream1	1375	[Scream]
+sc_acc_scream2	1200	[Scientist] No!
+sc_accident1	10074	[Scientist] Well, it's about time. We don't pay you people to mosey around at your own convenience. Make this thing work so we can get on with this miserable day.
+sc_accident2	12631	[Scientist] Oh, no. It's probably those Anomalous Materials people again. Always pushing their equipment too hard, dabbling in who knows what. I'd be surprised if there's one good brain among them.
+sc_accident3	3108	[Scientist] Well, don't just stand there! Do something!
+sc_canals1	8751	[Scientist] Yes, of course, the drainage canal. I think that empties out somewhere near the freight yard. If we're lucky, we can make our way out of the facility from there.
+sc_canals2	17279	[Scientist] Calhoun! How did you get through the power lock? Well, it doesn't matter. The only other way out of here is through the canal. If you do make it to the surface, don't tell anyone I'm down here. I think they're trying to kill us all. Now get out of here! The canal is where you want to be.
+sc_canals3	4886	[Scientist] No, it's too late. I can't do it. I can't. We'll never make it.
+sc_canals4	6415	[Scientist] Please, leave me alone. I don't want them to hear us. If you want to escape, go through the canal.
+sc_cough	1345	[Cough]
+sc_gmorning	1736	[Scientist] Good morning, Gordon.
+sc_goodwork	2783	[Scientist] Good work. Please proceed to the next area.
+sc_hello0	2350	[Scientist] Thank God, a security guard.
+sc_hello1	2742	[Scientist] Thank God, someone with a weapon.
+sc_hello2	2990	[Scientist] It's good to see another living human being.
+sc_hello3	1953	[Scientist] Can you help me get out of here?
+sc_hello4	3850	[Scientist] Excellent! Someone who knows how to use a gun.
+sc_hello5	3574	[Scientist] Oh my, for a second I thought you were one of them.
+sc_m1	1200	[Scientist] All right.
+sc_m2	1200	[Scientist] This should help.
+sc_m3	1200	[Scientist] Let me help you.
+sc_m4	2382	[Scientist] Okay, I hope you know what you're doing.
+sc_m5	1200	[Scientist] Let's try this.
+sc_maint	10767	[Scientist] If you're waiting for the tram to Sector G, then you're probably better off walking it. I overheard someone say that all the trams on this end of the facility are having problems.
+sc_ok0	2639	[Scientist] Yes, you seem like someone I can trust.
+sc_ok1	4338	[Scientist] I suppose a security guard should know what he's doing. Let's go.
+sc_ok2	1715	[Scientist] I'll be right behind you.
+sc_ok3	2375	[Scientist] Well, if you think I can help.
+sc_ok4	3590	[Scientist] With my brains and your brawn, we'll make an excellent team.
+sc_ok5	1860	[Scientist] Fine. You won't even know I'm here.
+sc_ok6	2097	[Scientist] I certainly hope you know what you're doing.
+sc_ok7	1200	[Scientist] Lead the way.
+sc_ok8	1200	[Scientist] Let's go.
+sc_ok9	1200	[Scientist] Yes, let's go.
+sc_phello0	2012	[Scientist] Greetings.
+sc_phello1	2415	[Scientist] Hello.
+sc_phello2	1200	[Scientist] Hello there.
+sc_pok0	3964	[Scientist] Please, leave me alone. I have very important work to do.
+sc_pok1	2480	[Scientist] Don't you have your own job to be doing?
+sc_pok2	3272	[Scientist] Excuse me, but I'm rather busy right now.
+sc_pok3	4811	[Scientist] Don't you have more important things to be doing than keeping me from my work?
+sc_pok4	4778	[Scientist] Why do you security guards always insist on bothering us?
+sc_pok5	3159	[Scientist] Shouldn't you be guarding something right now?
+sc_pok6	4061	[Scientist] Shouldn't you be guarding some donuts and coffee right about now?
+sc_pok7	1391	[Scientist] I can't be bothered right now.
+sc_power1	4720	[Scientist] Those things! They're everywhere! We've got to get out of here!
+sc_power2	3965	[Scientist] Look out!
+sc_power_alt1	5253	[Scientist] Hold yourself together! If we don't get the power cells charged, then we'll never make it out of here.
+sc_power_alt2	2618	[Scientist] Get out of here! I can take it.
+sc_power_wound1	8705	[Scientist] I was hoping you'd show up. You must get this power cell charged and back up to Dr. Rosenberg. I'd help, but I'm hurt pretty bad.
+sc_power_wound2	11867	[Scientist] You can probably push the power cell through the fence into the charging station behind me. Let me see if I can get out of the way.
+sc_runaway	1910	[Scream]
+sc_runaway2	1326	[Scream]
+sc_sec2_admin1	7067	[Scientist] I can't access my files. I can't answer my mail. I haven't even been able to get into my office.
+sc_sec2_admin2	12708	[Scientist] Time? I don't have any more time! If I'm not able to get my report to the administrator in the next hour, then my job will be in serious jeopardy, and I'll make sure that mine is not the only one.
+sc_stop2	2302	[Scientist] I'm going to stay here and wait for my colleagues.
+sc_stop3	1492	[Scientist] You are going to have to leave me here.
+sc_tele_work1	20993	[Scientist] We were able to contact a number of other remaining scientists, so with any luck, some of them may make it here as well. We would have chosen the Lambda Reactor for an escape, but the crew there is bent on fighting the creatures, with all their hopes set on someone named Freeman. Let those fools try and fight a battle they can't win. I just want to get out of here.
+sc_tele_work2	8841	[Walter] Dr. Rosenberg, thank God you made it. We've managed to piece together some of the larger equipment, but you'll need to oversee the rest of the construction.
+sc_tele_xen1	71803	[Scientist] Once we were able to consistently create the teleporter field, we ran into new problems. You see, Mr. Calhoun, teleportation isn't as simple as going from point A to point B. We discovered a strange border world that was somehow involved in the process, and this kept us from accurately predicting where any given teleportation event would lead to back on Earth. Some of the more promising research on the matter led to a device that could be attached to the strange crystalline structures we found in this border world. This device could then be used as a focal point and a relay to aid in the teleportation. Well, in theory, that is. We lost contact with the survey group shortly after the device was in place. We later discovered other methods of aiming the fields, but all of the equipment in this lab uses the older technology. In order for any of us to get out of here alive, someone will need to go to the border world and activate the device. I'm afraid you're the only one that can do this, seeing as how everyone else will be needed to run the equipment. We should be able to get you fairly close to where the survey team had set up, but I fear the likelihood of running into alien creatures is very high. Be careful.
+sc_yard_box1	5016	[Scientist] No, I'm afraid I'm not Dr. Rosenberg. But you'll still help me, won't you?
+sc_yard_box1a	2664	[Scientist] No, I'm afraid I'm not Dr. Rosenberg.
+sc_yard_box1b	1424	[Scientist] I'm not Dr. Rosenberg.
+sc_yard_box2	2782	[Scientist] Okay, I'll wait out here and watch for trouble.
+sc_yard_box3	2462	[Scientist] Help! Someone let us out of here!
+sc_yard_box4	2334	[Scientist] Hello? Can anyone hear me?
+sc_yard_wound1	20248	[Harold] I appreciate your help, but I'm afraid those bastards did their damage already. If you were trying to reach the freight yards in hope of escaping, then just forget about it. The military is rounding up everyone and everything they can find, and either killing them or bringing them up here for questioning. So much for a rescue.
+sc_yard_wound2	21647	[Harold] A colleague and I came up with our own plan for escape, and we were on our way to one of the old prototype labs when we ran into them. But listen to me. If you still want to get out of here alive, your only hope may be to find my friend. If you can get past the soldiers, find Dr. Rosenberg. With him, you may have a chance to get out of this place.
+tram/ba_tram0	15592	[Announcement] Good morning, and welcome to the Black Mesa Transit System. This automated train is provided for the comfort and convenience of Black Mesa residents and visitors to the Black Mesa Research Facility.
+tram/ba_tram1	20985	[Announcement] The time is 8:42 a.m. Current topside temperature is 91 degrees, with an estimated high today of 105. The Black Mesa compound is maintained at 68 degrees at all times.
+tram/ba_tram2	10124	[Announcement] This train is inbound from the Area 8 Topside Dormitories to the Central Transit Hub in Area 9.
+tram/ba_tram3	33396	[Announcement] Please keep your limbs inside the train at all times. Do not attempt to open the doors until the train has come to a complete halt at the station platform. In the event of an emergency, passengers are to remain seated and await further instruction. If it is necessary to exit the train, disabled passengers should be evacuated first. Please stay away from electrified rails, and proceed to an emergency station until assistance arrives.
+tram/ba_tram4	24689	[Announcement] If your intended destination is a high-security area beyond Sector C, you will need to board a high-security train at the Central Transit Hub. If you have not yet submitted your identity to the retinal clearance system, you must report to Black Mesa personnel for processing before you will be admitted to the high-security branch of the transit system.
+tram/ba_tram5	29063	[Announcement] If you wish to transfer to the Sector B or C medium-security lines, you may do so before you reach the Central Transit Hub at the Area 9 security checkpoint. Access to the medium-security branch of the transit system is for employees of the Black Mesa Research Facility and authorized visitors only, and requires that you wear your security badge at all times.
+tram/ba_tram6	15290	[Announcement] This train is now transferring to the Sector C line of the transit system. This is a medium-security area of the Black Mesa facility. Be sure to wear your identification badge at all times.
+tram/ba_tram7	4458	[Announcement] Now arriving at Area 3 Security Facilities.
+vox_elev1	9120	[Announcement] Warning. Main power failure on levels three, five, and eight.
+vox_elev2	8493	[Announcement] Warning. Extreme electromagnetic field hazard in Sector C.
+
+# === CONTEXTUAL SFX SUBTITLES (HL2-STYLE) ===
+debris/alien_teleport	2200	[Teleportation]
+misc/doors_shut	1730	[Doors lock]
+misc/main_elevator_fall	2144	[Elevator cables snap]
+misc/tele_open_short	2200	[Portal opens]

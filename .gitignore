@@ -1,0 +1,19 @@
+# Build outputs & release archives
+version.dll
+release/
+*.o
+*.obj
+*.pdb
+*.exp
+*.lib
+*.zip
+
+# Runtime logs
+subtitles_debug.log
+*.log
+
+# IDE / OS
+.vs/
+.vscode/
+Thumbs.db
+desktop.ini

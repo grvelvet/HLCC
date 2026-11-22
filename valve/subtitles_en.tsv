@@ -1,0 +1,1814 @@
+# Half-Life English Subtitles (adapted for vanilla Half-Life, UTF-8 TSV: key\tduration_ms\ttext)
+ba_1sat	3136	[Security] Get the reactor complex open so we can get down to safety.
+ba_3sat	1467	[Security] Well, pass it over then!
+ba_5sat	1333	[Security] Hmm, what about this guy?
+ba_6sat	2960	[Security] Hey! Eat this, you bastard!
+ba_7sat	2977	[Security] Heeey! Aaaah!
+ba_again	8128	[Security] I'm telling you... ugh... you have to get to the generator... ugh...
+ba_alive	15492	[Security] Hey, it's no good up there, everything's sealed off tight. The only way out is to find someone with scanner access who can open the front door. I'm pretty sure there's a few scientists hiding somewhere in the labs. Maybe if we team up, we can track 'em down and get 'em to let us out.
+ba_answer0	1200	[Security] No way, man.
+ba_answer1	1200	[Security] I reckon so.
+ba_answer10	1313	[Security] I don't figure.
+ba_answer11	1800	[Security] I wouldn't even guess.
+ba_answer12	1200	[Security] Hard to say.
+ba_answer13	1200	[Security] I just don't know.
+ba_answer14	1200	[Security] Nope.
+ba_answer15	1200	[Security] No sir.
+ba_answer16	1200	[Security] Can't figure it.
+ba_answer17	1200	[Security] Maybe.
+ba_answer18	1200	[Security] No telling.
+ba_answer19	1961	[Security] Be quiet.
+ba_answer2	1200	[Security] Sounds right.
+ba_answer20	1800	[Security] You talk too much.
+ba_answer21	1800	[Security] You already asked me that.
+ba_answer3	1200	[Security] Yes sir.
+ba_answer4	1200	[Security] You bet.
+ba_answer5	1200	[Security] You got it.
+ba_answer6	1200	[Security] Yup.
+ba_answer7	1200	[Security] Don't ask me.
+ba_answer8	1800	[Security] I wouldn't bet on it.
+ba_answer9	1205	[Security] I don't buy it.
+ba_arg1a	2902	[Security] All this is happening because of you scientists!
+ba_arg2a	2230	[Security] That's right, you're the ones who created these mutants!
+ba_arg3a	1920	[Security] Shut up. Someone's coming.
+ba_assn	5221	[Security] Freeman, right? I've got a message for you. Make sure you don't... Aaaagh!
+ba_attack0	2972	[Security] Open fire!
+ba_attack1	2972	[Security] Fire!
+ba_attack2	1200	[Security] Stand back!
+ba_attack3	1610	[Security] What the hell is that thing?!
+ba_attack4	1720	[Security] Die, you bloodsucker!
+ba_attack5	1687	[Security] Aim for the head!
+ba_bullsquid	4991	[Security] Hey, what the hell are you doing down here? Get topside! I heard troops are coming in to save us!
+ba_button	2800	[Security] Come on, Gordon, you trying to get me into trouble?
+ba_climb	3121	[Security] Elevators are out of order, but we can still climb.
+ba_curea	1800	[Security] Hey, better let me check those wounds.
+ba_cureb	2088	[Security] You need a medic.
+ba_curec	3179	[Security] That's a real bad wound, fella.
+ba_desk	16871	[Security] Hey, Mr. Freeman. I had a bunch of messages for you, but we had a system crash about twenty minutes ago and I'm still trying to find my files. Just one of those days, I guess. They were having some problems down in the test chamber too, but I think that's all straightened out. They told me to make sure you headed down there as soon as you got into your hazard suit.
+ba_glad	6377	[Security] Gordon! Man, am I glad to see you! What the hell are these things? And why are they wearing science team uniforms?
+ba_haz_ok0	1200	[Security] Okay, I'll follow you.
+ba_haz_wait0	1200	[Security] Okay, I'll wait here.
+ba_headdown	3372	[Security] Wrong airlock, Mr. Freeman. You know I can't let you through here.
+ba_hear0	1200	[Security] I hear something.
+ba_hear1	1800	[Security] Sounds like someone's out there.
+ba_hear2	1618	[Security] Doesn't sound good.
+ba_hello0	1800	[Security] Hey, nice suit!
+ba_hello1	1200	[Security] Howdy!
+ba_hello2	1200	[Security] How you doing?
+ba_hello3	1200	[Security] Hey, buddy.
+ba_hello4	1200	[Security] Hey, fella.
+ba_hello5	1200	[Security] Hey, buddy.
+ba_hello6	1200	[Security] Hey, fella.
+ba_helpme	9062	[Security] Help me... Help me... Somebody please help me, I'm... I'm dying here... Please help me...
+ba_hevno	4244	[Security] Sorry, Mr. Freeman, I've got strict orders not to let you through without your hazard suit.
+ba_hevyes	2604	[Security] Go right on through, sir. Looks like you're in for it today.
+ba_hub1a	13450	[Security] Mister, if you can get the power back on, this train'll take us straight to the surface. I'd try it myself, but it's a long way down to the generator room, and there's... things in the way.
+ba_hub2a	4021	[Security] I... I'm not gonna make it. You'd better go on without me.
+ba_idle0	1610	[Security] What is that thing?
+ba_idle1	2536	[Security] I could sure go for a cold one right about now.
+ba_idle10	3128	[Security] Let's take a breather here.
+ba_idle2	3395	[Security] I'd sure like to know the guy responsible for this.
+ba_idle3	2675	[Security] What a mess.
+ba_idle4	2090	[Security] Hope our luck turns soon.
+ba_idle5	2196	[Security] Sure is a big place.
+ba_idle6	3264	[Security] Should make for good target practice.
+ba_idle7	2702	[Security] I got a bad feeling about this.
+ba_idle8	2425	[Security] Sure hope we don't walk into an ambush.
+ba_idle9	2365	[Security] Just gotta survive.
+ba_kill0	1200	[Security] Got one!
+ba_kill1	1544	[Security] Another one down!
+ba_kill2	2091	[Security] Butt-ugly thing!
+ba_kill3	1876	[Security] Did you see that?!
+ba_kill4	1800	[Security] That was close!
+ba_kill5	2208	[Security] Take that!
+ba_kill6	1200	[Security] Come on, bring it on!
+ba_late	2332	[Security] Morning, Mr. Freeman. Looks like you're running late.
+ba_launch	29025	[Security] Freeman, I've been waiting for you. One of your scientist buddies asked me to give you a message. You're supposed to take this old rail system up to some kind of satellite rocket. I don't know where it is, and the old man was so scared he wouldn't make it out alive that he didn't tell me. The main thing is, the military aborted the launch, so when you find the rocket, you'll have to get up to the control room and launch it yourself. He said something about the Lambda team needing that satellite in orbit if they're ever gonna clean up this mess.
+ba_letmeout	5034	[Security] Hey! Heey! Hey, let me out of here!
+ba_lightson	1876	[Security] I'll turn the lights on and you can try again.
+ba_longnite	8711	[Security] Man, and I thought I'd had a long night — you look awful. I don't think the day's gonna get any easier, either. Look, I'll wait right here, and you... you go on ahead if you need to.
+ba_mad0	1375	[Security] Step off!
+ba_mad1	1492	[Security] Just try it!
+ba_mad2	2721	[Security] You asking for it?!
+ba_mad3	2622	[Security] I've had about enough!
+ba_mad4	1800	[Security] This is your last mistake!
+ba_mad5	1800	[Security] Don't make me shoot!
+ba_mad6	1916	[Security] I've had it!
+ba_mortal0	3895	[Security] Sorry, sir... I can't hold out any longer.
+ba_ok0	2530	[Security] Let's team up, we'll have a better chance together.
+ba_ok1	2297	[Security] We'll do a lot better together.
+ba_ok2	1800	[Security] I'm with you, buddy.
+ba_ok3	2287	[Security] We'd better stick together.
+ba_ok4	2939	[Security] Glad to lend a hand.
+ba_ok5	1200	[Security] Let's go.
+ba_ok6	1985	[Security] Let's move it.
+ba_pok0	2283	[Security] Sorry, I can't leave my post.
+ba_pok1	2253	[Security] I'm on duty.
+ba_pok2	1800	[Security] Maybe some other time.
+ba_pok3	2011	[Security] Catch you later.
+ba_portstay	4875	[Security] I'll stay down here. If I see anything that doesn't belong, I'll start shooting.
+ba_question0	3520	[Security] If I were topside right now, I'd sure love to knock back a cold one.
+ba_question1	2420	[Security] You wouldn't happen to know the way out of here, would you?
+ba_question10	1858	[Security] Did you hear that?
+ba_question11	2374	[Security] Half our crew's dead already.
+ba_question12	2280	[Security] Something's moving over there.
+ba_question13	1800	[Security] What are you thinking about right now?
+ba_question14	3132	[Security] Just hope I don't lose a leg to these things.
+ba_question2	2086	[Security] Think it can get any worse?
+ba_question3	2805	[Security] Sure glad I've got my .38 on me today.
+ba_question4	2710	[Security] What were you guys working on in there, anyway?
+ba_question5	1800	[Security] Know a shortcut out?
+ba_question6	2015	[Security] What the hell is going on here?
+ba_question7	1800	[Security] I don't know about you, but I'm not scared.
+ba_question8	2310	[Security] They sure didn't cover this in our drills.
+ba_question9	1800	[Security] I think we're getting closer to the exit.
+ba_rpg	8944	[Security] Today's your lucky day. There's an RPG inside — laser-guided and everything. If you can figure out how to get in there, you'll be able to fight these bastards on even terms.
+ba_scared0	1200	[Security] Don't hurt 'em!
+ba_scared1	2500	[Security] Leave 'em alone!
+ba_shot0	1800	[Security] Whoa there, watch it with that!
+ba_shot1	1598	[Security] What did I ever do to you?!
+ba_shot2	1800	[Security] Watch where you're aiming!
+ba_shot3	1202	[Security] What are you doing?!
+ba_shot4	2797	[Security] Hey, I'm on your side!
+ba_shot5	1800	[Security] Don't piss me off!
+ba_slew	3882	[Security] They say as soon as we get topside, the military's gonna take care of us.
+ba_smell0	2784	[Security] Smells like something died in here.
+ba_smell1	2165	[Security] What's that stink?
+ba_smell2	1620	[Security] Ugh, what a stench.
+ba_sniped	3465	[Security] I'm hit! Keep your head down! A sniper got me!
+ba_stare0	1200	[Security] Yup.
+ba_stare1	1200	[Security] Yes sir.
+ba_stare2	1200	[Security] How's it going?
+ba_stare3	1200	[Security] Hey, fella.
+ba_steril	1221	[Security] Quick, in here!
+ba_stop0	1412	[Security] Stop!
+ba_stop1	3212	[Security] Hold it!
+ba_stop2	1200	[Security] Freeze!
+ba_surface	4223	[Security] Hey, don't count on the cavalry finding us down here. Head for the surface!
+ba_survey2a	2878	[Security] So this is the guy? We thought you'd never make it!
+ba_survey4a	1648	[Security] Yeah, you'd better finish that thing off.
+ba_survey6a	4073	[Security] Enough to know that if you don't destroy it, there won't be much left to come back to.
+ba_survey8a	3699	[Security] Don't forget to gear up. I'll cover you while you wait for that portal to warm up.
+ba_tau1a	1945	[Security] What is that thing? Some kind of weapon?
+ba_tau3a	1832	[Security] Man, why aren't we using it?
+ba_tau5a	1727	[Security] Wh-what do you mean by 'overcharge'?
+ba_teach	10598	[Security] These sterilizers come in pretty handy. If you ever get in a jam, just duck into one of these booths and hit the big button. They're supposed to kill microorganisms, but, heh, they work on the big ugly stuff too.
+ba_tentacle	5226	[Security] Hey! Hey, over here! Eat lead, you outer-space octopus!
+ba_topside	4320	[Security] Help might be on the way, but I'm not gonna sit around waiting for it. We need to get topside!
+ba_wait0	2401	[Security] Gotta go help the others.
+ba_wait1	1200	[Security] I'll wait here.
+ba_wait2	1800	[Security] Looks like I'm just slowing you down.
+ba_wait3	1800	[Security] Okay, I'll stay here.
+ba_wait4	1200	[Security] See you later.
+ba_wait5	1667	[Security] I'll stand guard.
+ba_whisper	3017	[Security] Quiet! That thing can hear us.
+ba_wound0	2050	[Security] I'm hit!
+ba_wound1	2225	[Security] I'm hit bad!
+ba_zombie2	1990	[Security] It's okay, sir, I can handle 'em.
+ba_zombie4	1950	[Security] Aaagh! Oh, shit!
+barney/aimforhead	1687	[Security] Aim for the head!
+barney/aintscared	1800	[Security] I don't know about you, but I'm not scared.
+barney/alreadyasked	1800	[Security] You already asked me that.
+barney/ambush	2425	[Security] Sure hope we don't walk into an ambush.
+barney/ba_another	1544	[Security] Another one down!
+barney/ba_attack2	1200	[Security] Take that!
+barney/ba_bring	1200	[Security] Come on, bring it on!
+barney/ba_buttugly	2091	[Security] Butt-ugly thing!
+barney/ba_close	1800	[Security] That was close!
+barney/ba_die1	1200	[Security] (dying groan)
+barney/ba_die3	1200	[Security] (dying groan)
+barney/ba_dontmake	1800	[Security] Don't make me shoot!
+barney/ba_dotoyou	1598	[Security] What did I ever do to you?!
+barney/ba_duty	2253	[Security] I'm on duty.
+barney/ba_endline	1800	[Security] This is your last mistake!
+barney/ba_firepl	2208	[Security] Take that!
+barney/ba_friends	2797	[Security] Hey, I'm on your side!
+barney/ba_gotone	1200	[Security] Got one!
+barney/ba_iwish	1492	[Security] Just try it!
+barney/ba_later	2011	[Security] Catch you later.
+barney/ba_pissme	1800	[Security] Don't piss me off!
+barney/ba_post	2283	[Security] Sorry, I can't leave my post.
+barney/ba_raincheck	1800	[Security] Maybe some other time.
+barney/ba_seethat	1876	[Security] Did you see that?!
+barney/ba_somuch	2622	[Security] I've had about enough!
+barney/ba_stepoff	1375	[Security] Step off!
+barney/ba_uwish	2721	[Security] You asking for it?!
+barney/ba_watchit	1800	[Security] Watch where you're aiming!
+barney/ba_whatyou	1202	[Security] What are you doing?!
+barney/ba_whoathere	1800	[Security] Whoa there, watch it with that!
+barney/badfeeling	2702	[Security] I got a bad feeling about this.
+barney/beertopside	3520	[Security] If I were topside right now, I'd sure love to knock back a cold one.
+barney/bequiet	1961	[Security] Be quiet.
+barney/bigmess	2675	[Security] What a mess.
+barney/bigplace	2196	[Security] Sure is a big place.
+barney/c1a0_ba_button	2800	[Security] Come on, Gordon, you trying to get me into trouble?
+barney/c1a0_ba_desk	16871	[Security] Hey, Mr. Freeman. I had a bunch of messages for you, but we had a system crash about twenty minutes ago and I'm still trying to find my files. Just one of those days, I guess. They were having some problems down in the test chamber too, but I think that's all straightened out. They told me to make sure you headed down there as soon as you got into your hazard suit.
+barney/c1a0_ba_headdown	3372	[Security] Wrong airlock, Mr. Freeman. You know I can't let you through here.
+barney/c1a0_ba_hevno	4244	[Security] Sorry, Mr. Freeman, I've got strict orders not to let you through without your hazard suit.
+barney/c1a0_ba_hevyes	2604	[Security] Go right on through, sir. Looks like you're in for it today.
+barney/c1a0_ba_late	2332	[Security] Morning, Mr. Freeman. Looks like you're running late.
+barney/c1a1_ba_glad	6377	[Security] Gordon! Man, am I glad to see you! What the hell are these things? And why are they wearing science team uniforms?
+barney/c1a2_ba_2zomb	1990	[Security] It's okay, sir, I can handle 'em.
+barney/c1a2_ba_4zomb	1950	[Security] Aaagh! Oh, shit!
+barney/c1a2_ba_bullsquid	4991	[Security] Hey, what the hell are you doing down here? Get topside! I heard troops are coming in to save us!
+barney/c1a2_ba_climb	3121	[Security] Elevators are out of order, but we can still climb.
+barney/c1a2_ba_slew	3882	[Security] They say as soon as we get topside, the military's gonna take care of us.
+barney/c1a2_ba_surface	4223	[Security] Hey, don't count on the cavalry finding us down here. Head for the surface!
+barney/c1a2_ba_top	4320	[Security] Help might be on the way, but I'm not gonna sit around waiting for it. We need to get topside!
+barney/c1a4_ba_octo1	5226	[Security] Hey! Hey, over here! Eat lead, you outer-space octopus!
+barney/c1a4_ba_octo3	2977	[Security] Heeey! Aaaah!
+barney/c1a4_ba_octo4	2960	[Security] Hey! Eat this, you bastard!
+barney/c1a4_ba_wisp	3017	[Security] Quiet! That thing can hear us.
+barney/c2a1_ba_again	8128	[Security] I'm telling you... ugh... you have to get to the generator... ugh...
+barney/c2a1_ba_hub1a	13450	[Security] Mister, if you can get the power back on, this train'll take us straight to the surface. I'd try it myself, but it's a long way down to the generator room, and there's... things in the way.
+barney/c2a1_ba_hub2a	4021	[Security] I... I'm not gonna make it. You'd better go on without me.
+barney/c2a2_ba_launch	29025	[Security] Freeman, I've been waiting for you. One of your scientist buddies asked me to give you a message. You're supposed to take this old rail system up to some kind of satellite rocket. I don't know where it is, and the old man was so scared he wouldn't make it out alive that he didn't tell me. The main thing is, the military aborted the launch, so when you find the rocket, you'll have to get up to the control room and launch it yourself. He said something about the Lambda team needing that satellite in orbit if they're ever gonna clean up this mess.
+barney/c2a3_ba_assn	5221	[Security] Freeman, right? I've got a message for you. Make sure you don't... Aaaagh!
+barney/c2a4_ba_1tau	1945	[Security] What is that thing? Some kind of weapon?
+barney/c2a4_ba_3tau	1832	[Security] Man, why aren't we using it?
+barney/c2a4_ba_5tau	1727	[Security] Wh-what do you mean by 'overcharge'?
+barney/c2a4_ba_alive	15492	[Security] Hey, it's no good up there, everything's sealed off tight. The only way out is to find someone with scanner access who can open the front door. I'm pretty sure there's a few scientists hiding somewhere in the labs. Maybe if we team up, we can track 'em down and get 'em to let us out.
+barney/c2a4_ba_arg1a	2902	[Security] All this is happening because of you scientists!
+barney/c2a4_ba_arg3a	2230	[Security] That's right, you're the ones who created these mutants!
+barney/c2a4_ba_arg5a	1920	[Security] Shut up. Someone's coming.
+barney/c2a4_ba_longnite	8711	[Security] Man, and I thought I'd had a long night — you look awful. I don't think the day's gonna get any easier, either. Look, I'll wait right here, and you... you go on ahead if you need to.
+barney/c2a4_ba_steril	1221	[Security] Quick, in here!
+barney/c2a4_ba_teach	10598	[Security] These sterilizers come in pretty handy. If you ever get in a jam, just duck into one of these booths and hit the big button. They're supposed to kill microorganisms, but, heh, they work on the big ugly stuff too.
+barney/c2a5_ba_helpme	9062	[Security] Help me... Help me... Somebody please help me, I'm... I'm dying here... Please help me...
+barney/c2a5_ba_letout	5034	[Security] Hey! Heey! Hey, let me out of here!
+barney/c2a5_ba_rpg	8944	[Security] Today's your lucky day. There's an RPG inside — laser-guided and everything. If you can figure out how to get in there, you'll be able to fight these bastards on even terms.
+barney/c2a5_ba_sniped	3465	[Security] I'm hit! Keep your head down! A sniper got me!
+barney/c3a1_ba_1sat	3136	[Security] Get the reactor complex open so we can get down to safety.
+barney/c3a1_ba_3sat	1467	[Security] Well, pass it over then!
+barney/c3a1_ba_5sat	1333	[Security] Hmm, what about this guy?
+barney/c3a2_ba_2surv	2878	[Security] So this is the guy? We thought you'd never make it!
+barney/c3a2_ba_4surv	1648	[Security] Yeah, you'd better finish that thing off.
+barney/c3a2_ba_6surv	4073	[Security] Enough to know that if you don't destroy it, there won't be much left to come back to.
+barney/c3a2_ba_8surv	3699	[Security] Don't forget to gear up. I'll cover you while you wait for that portal to warm up.
+barney/c3a2_ba_stay	4875	[Security] I'll stay down here. If I see anything that doesn't belong, I'll start shooting.
+barney/cantfigure	1200	[Security] Can't figure it.
+barney/checkwounds	1800	[Security] Hey, better let me check those wounds.
+barney/coldone	2536	[Security] I could sure go for a cold one right about now.
+barney/crewdied	2374	[Security] Half our crew's dead already.
+barney/diebloodsucker	1720	[Security] Die, you bloodsucker!
+barney/dobettertogether	2297	[Security] We'll do a lot better together.
+barney/dontaskme	1200	[Security] Don't ask me.
+barney/dontbet	1800	[Security] I wouldn't bet on it.
+barney/dontbuyit	1205	[Security] I don't buy it.
+barney/dontfigure	1313	[Security] I don't figure.
+barney/dontguess	1800	[Security] I wouldn't even guess.
+barney/donthurtem	1200	[Security] Don't hurt 'em!
+barney/getanyworse	2086	[Security] Think it can get any worse?
+barney/gettingcloser	1800	[Security] I think we're getting closer to the exit.
+barney/gladof38	2805	[Security] Sure glad I've got my .38 on me today.
+barney/gladtolendhand	2939	[Security] Glad to lend a hand.
+barney/guyresponsible	3395	[Security] I'd sure like to know the guy responsible for this.
+barney/hardtosay	1200	[Security] Hard to say.
+barney/haybuddy	1200	[Security] Hey, buddy.
+barney/hayfella	1200	[Security] Hey, fella.
+barney/hearsomething	1200	[Security] I hear something.
+barney/hellonicesuit	1800	[Security] Hey, nice suit!
+barney/helpothers	2401	[Security] Gotta go help the others.
+barney/heybuddy	1200	[Security] Hey, buddy.
+barney/heyfella	1200	[Security] Hey, fella.
+barney/hitbad	2225	[Security] I'm hit bad!
+barney/howdy	1200	[Security] Howdy!
+barney/howyoudoing	1200	[Security] How you doing?
+barney/icanhear	1800	[Security] Sounds like someone's out there.
+barney/illwait	1800	[Security] Okay, I'll stay here.
+barney/imdead	3895	[Security] Sorry, sir... I can't hold out any longer.
+barney/imhit	2050	[Security] I'm hit!
+barney/imwithyou	1800	[Security] I'm with you, buddy.
+barney/ireckon	1200	[Security] I reckon so.
+barney/iwaithere	1200	[Security] I'll wait here.
+barney/justdontknow	1200	[Security] I just don't know.
+barney/leavealone	2500	[Security] Leave 'em alone!
+barney/letsgo	1200	[Security] Let's go.
+barney/letsmoveit	1985	[Security] Let's move it.
+barney/luckwillturn	2090	[Security] Hope our luck turns soon.
+barney/maybe	1200	[Security] Maybe.
+barney/missingleg	3132	[Security] Just hope I don't lose a leg to these things.
+barney/nodrill	2310	[Security] They sure didn't cover this in our drills.
+barney/nope	1200	[Security] Nope.
+barney/nosir	1200	[Security] No sir.
+barney/notelling	1200	[Security] No telling.
+barney/noway	1200	[Security] No way, man.
+barney/openfire	2972	[Security] Open fire!
+barney/realbadwound	3179	[Security] That's a real bad wound, fella.
+barney/seeya	1200	[Security] See you later.
+barney/slowingyoudown	1800	[Security] Looks like I'm just slowing you down.
+barney/somethingdied	2784	[Security] Smells like something died in here.
+barney/somethingmoves	2280	[Security] Something's moving over there.
+barney/somethingstinky	2165	[Security] What's that stink?
+barney/soundsbad	1618	[Security] Doesn't sound good.
+barney/soundsright	1200	[Security] Sounds right.
+barney/standback	1200	[Security] Stand back!
+barney/standguard	1667	[Security] I'll stand guard.
+barney/stench	1620	[Security] Ugh, what a stench.
+barney/stop1	1412	[Security] Stop!
+barney/stop2	3212	[Security] Hold it!
+barney/stophere	3128	[Security] Let's take a breather here.
+barney/survive	2365	[Security] Just gotta survive.
+barney/targetpractice	3264	[Security] Should make for good target practice.
+barney/teamup1	2287	[Security] We'd better stick together.
+barney/teamup2	2530	[Security] Let's team up, we'll have a better chance together.
+barney/thinking	1800	[Security] What are you thinking about right now?
+barney/wayout	2420	[Security] You wouldn't happen to know the way out of here, would you?
+barney/whatisthat	1610	[Security] What is that thing?
+barney/whatsgoingon	2015	[Security] What the hell is going on here?
+barney/workingonstuff	2710	[Security] What were you guys working on in there, anyway?
+barney/yessir	1200	[Security] Yes sir.
+barney/youbet	1200	[Security] You bet.
+barney/yougotit	1200	[Security] You got it.
+barney/youhearthat	1858	[Security] Did you hear that?
+barney/youneedmedic	2088	[Security] You need a medic.
+barney/youtalkmuch	1800	[Security] You talk too much.
+barney/yup	1200	[Security] Yup.
+c1a0_0	7300	[Announcement] Agent Coomer, report to topside tactical operations center.
+c1a0_1	6550	[Announcement] Inspection team, to radioactive materials handling bay.
+c1a0_10	8100	[Announcement] Doctor Freeman, to anomalous materials test lab immediately.
+c1a0_11	8250	[Announcement] Attention. Experimental propulsion lab test fire in ninety minutes.
+c1a0_12	5250	[Announcement] Hydro plant now operating at sixty percent.
+c1a0_13	6300	[Announcement] Black Mesa topside temperature is ninety-three degrees Fahrenheit.
+c1a0_14	6850	[Announcement] Launch officer reports: Alpha satellite deploy is nominal.
+c1a0_15	6850	[Announcement] Doctor Birdwell reports: superconducting interchange is activated.
+c1a0_16	8200	[Announcement] Attention. Report any security violation to administration sub-level one.
+c1a0_17	6800	[Announcement] Attention. Service personnel please clear helicopter hangar one.
+c1a0_18	6200	[Announcement] Shield inspection crew reports: primary reactor nominal.
+c1a0_19	6700	[Announcement] Transportation control reports: all systems on time.
+c1a0_2	6950	[Announcement] Agent sixteen, report to administration sub-level two.
+c1a0_20	7350	[Announcement] Doctor Victor, report to supercooled laser lab please.
+c1a0_21	6850	[Announcement] Sergeant Guthrie, report to topside motor pool immediately.
+c1a0_22	5850	[Announcement] Uranium shipment inspection team, to Sector D.
+c1a0_3	6450	[Announcement] Doctor Johnson, please call observation tank one.
+c1a0_4	6800	[Announcement] Doctor West, please report to Lambda reactor complex.
+c1a0_5	5800	[Announcement] Doctor Cross, call seven-two-nine please.
+c1a0_6	6050	[Announcement] Sergeant Bailey, to topside checkpoint Bravo.
+c1a0_7	7300	[Announcement] Cryogenic safety crew, report status at eleven hundred please.
+c1a0_8	7400	[Announcement] Coded message for Captain Black, command and communication center.
+c1a0_9	9100	[Announcement] Sector C science personnel, report to anomalous materials test lab.
+c1a0_start	11700	[Announcement] Welcome to the Black Mesa Research Facility.
+c1a1_0	9300	[Announcement] Warning: high energy detonation detected in materials lab.
+c1a1_1	7200	[Announcement] Attention: security personnel to Sector C immediately.
+c1a1_10	7900	[Announcement] Attention: any Sector C science personnel, please report status.
+c1a1_11	8450	[Announcement] Attention: Sector C science personnel, please report status immediately.
+c1a1_2	8100	[Announcement] Warning: unauthorized biological forms detected in Sector C.
+c1a1_3	8850	[Announcement] Warning: unauthorized biological forms detected in coolant maintenance area.
+c1a1_4	8300	[Announcement] Any damage control team to Sector C immediately.
+c1a1_5	6650	[Announcement] Warning: Sector C elevator failure. Do not use.
+c1a1_6	7350	[Announcement] Biohazard warning in Sectors B and C.
+c1a1_7	8000	[Announcement] Attention: Sector C science personnel, evacuate area immediately.
+c1a1_8	7500	[Announcement] Warning: flooding detected on sub-level three, Sector B.
+c1a1_9	8950	[Announcement] Warning: anomalous energy field detected in administration center.
+c1a2_0	7100	[Announcement] Emergency cleanup team to biological waste processing plant.
+c1a2_1	7950	[Announcement] Attention: administration personnel, evacuate Sector D immediately.
+c1a2_10	7800	[Announcement] Attention: electric shock hazard detected in administration center.
+c1a2_11	8150	[Announcement] Security officer reports medical emergency, administration center.
+c1a2_2	6100	[Announcement] Attention: security personnel to Sector D.
+c1a2_3	5350	[Announcement] Service team, check elevator one, Sector C.
+c1a2_4	8600	[Announcement] Warning: unauthorized biological forms detected in ventilation system.
+c1a2_5	6300	[Announcement] Lieutenant Backman and cleanup team, to sub-level three.
+c1a2_6	7950	[Announcement] Danger: turret defense systems activated, Sector D.
+c1a2_7	9050	[Announcement] Security officer reports men down in Sector D, medical help required.
+c1a2_8	9250	[Announcement] Extreme danger: all turret defense systems activated, Sector D.
+c1a2_9	7650	[Announcement] Turret repair personnel, to high security materials storage area.
+c1a3_0	8850	[Announcement] Attention: all science personnel report topside for immediate questioning.
+c1a3_1	8650	[Announcement] All personnel evacuate high security materials storage facility.
+c1a3_10	9000	[Announcement] Attention: Black Mesa announcement system now under military command.
+c1a3_2	7200	[Announcement] Emergency uranium containment team, to Sector D.
+c1a3_3	7150	[Announcement] Turret maintenance team, to central command and communication center.
+c1a3_4	8100	[Announcement] Military personnel, prosecute Kilo-India-Lima with extreme force.
+c1a3_5	8300	[Announcement] Attention: this announcement system now under military command.
+c1a3_6	8700	[Announcement] Search and destroy force Bravo reports secondary objective terminated.
+c1a3_7	8350	[Announcement] Bravo force reports Hotel-Sierra-Mike facility is secured.
+c1a3_8	8350	[Announcement] Attention, all military personnel: atomic-biological-chemical alert.
+c1a3_9	9150	[Announcement] Attention, all military personnel: extreme atomic-biological-chemical alert.
+c1a3_lock	12750	[Announcement] Security door engaged: five, four, three, two, one. Lockout activated.
+c1a3_warn	7700	[Announcement] Attention: security lockout alert. Security door will engage.
+c1a4_0	7050	[Announcement] Attention: experimental rocket test fire disengaged.
+c1a4_1	6400	[Announcement] Repair crew, report to track control, Sector E.
+c1a4_2	6050	[Announcement] Maintenance team Blue, check heat exchange coolant level.
+c1a4_3	7250	[Announcement] Maintenance team Green, check voltage on cable seven-two-nine.
+c1a4_4	9600	[Announcement] Medical team to materials storage facility: Team Bravo reports men down.
+c1a4_5	7500	[Announcement] Alpha force, move out, science personnel resistance extreme.
+c1a4_6	9150	[Announcement] Attention: all Black Mesa security personnel wanted for immediate questioning.
+c1a4_7	9950	[Announcement] Attention: Gordon Freeman, report to military personnel for immediate security check.
+c1a4_8	9050	[Announcement] Warning: hostile biological forms detected in track control, Sector E.
+c2a1_0	7250	[Announcement] Warning: track power failure. Check lower-level power plant.
+c2a1_1	7200	[Announcement] Maintenance team Yellow, please service relay three hundred ninety-four.
+c2a1_2	9250	[Announcement] Attention: Gordon Freeman, report to military personnel for immediate security check.
+c2a1_3	6550	[Announcement] Delta team reports launch control secured.
+c2a1_4	7900	[Announcement] Danger: turret defense systems activated, Silo E.
+c2a1_5	5950	[Announcement] Sector E track control, please report status.
+c2a1_6	6600	[Announcement] Echo force reports perimeter breach, Sector E.
+c2a1_7	10500	[Announcement] Attention, search and destroy force: go to code three. Eliminate all biological forms.
+c2a1_8	9500	[Announcement] Danger: unauthorized detonation detected in experimental propulsion lab.
+c2a2_0	6750	[Announcement] Attention: clear Silo E launch area immediately.
+c2a2_1	7900	[Announcement] Containment inspection team, to advanced biological research lab.
+c2a2_2	7500	[Announcement] Medical team to Sector E: Echo team has men down.
+c2a2_3	9500	[Announcement] Alert, military personnel: you are authorized to shoot the renegade on sight.
+c2a2_4	8850	[Announcement] Alert, squad in Silo E: Freeman may be operating inside your perimeter.
+c2a2_5	5900	[Announcement] Launch control train activity detected.
+c2a2_6	9150	[Announcement] Medical team to Sector E: Echo team squad failed to reach checkpoint.
+c2a2_7	6850	[Announcement] Satellite rocket loading bay reports status green.
+c2a2_launch	13400	[Announcement] Satellite launch system activated: five, four, three, two, one — launch is go!
+c2a4_0	6100	[Announcement] Warning: emergency containment system activated.
+c2a4_1	6300	[Announcement] Alert: biological containment breach detected.
+c2a4_10	13350	[Announcement] Alert, topside containment force: use any force to prosecute Gordon Freeman, you are authorized to shoot on sight.
+c2a4_11	8000	[Announcement] Alert, topside containment force: Freeman may approach your perimeter.
+c2a4_12	6550	[Announcement] Gordon, all science personnel will be terminated until you surrender.
+c2a4_2	6800	[Announcement] Warning: biological sterilization system activated.
+c2a4_3	10500	[Announcement] Attention: hostile alien military force detected, advanced biological research lab.
+c2a4_4	10200	[Announcement] Search and destroy force reports backup required, engaged with extreme resistance.
+c2a4_5	8750	[Announcement] Topside containment force alert: hostile alien military force detected.
+c2a4_6	5350	[Announcement] High power laser status is green.
+c2a4_7	7650	[Announcement] Alien containment system failure, use sterilization chamber.
+c2a4_8	8800	[Announcement] Attention, all topside military personnel: clear helicopter hangar four.
+c2a4_9	8000	[Announcement] Hostile alien breach: topside checkpoint Alpha, checkpoint Delta.
+c2a4_ster	5100	[Announcement] Sterilization system activated.
+c3a1_0	5650	[Announcement] Warning: primary antenna failure detected.
+c3a1_1	7550	[Announcement] Clear topside motor pool for emergency medical helicopter.
+c3a1_2	6850	[Announcement] Warning: topside armory security bypass detected.
+c3a1_3	7600	[Announcement] Warning: radiation leak detected in primary antenna area.
+c3a1_4	10850	[Announcement] Search and destroy force Kilo: Central Command reports hostile alien force inside perimeter.
+c3a1_5	7600	[Announcement] Message for Gordon Freeman: you will not escape this time.
+c3a1_6	7450	[Announcement] Attention all units: renegade Freeman is now your primary target.
+c3a1_7	8150	[Announcement] Alert remaining containment force: Freeman may have experimental weapon.
+c3a1_8	9250	[Announcement] All personnel evacuate Lambda Complex, extreme dimensional malfunction detected.
+c3a1_9	9900	[Announcement] Fire control team to topside armory, checkpoint Delta, topside hydro plant.
+c3a2_0	7200	[Announcement] Warning: cross-dimensional power field activity detected.
+c3a2_1	9650	[Announcement] Warning: unauthorized biological force detected in cross-dimensional power field.
+c3a2_2	9250	[Announcement] All personnel evacuate Lambda Complex, extreme dimensional malfunction detected.
+c3a2_3	8700	[Announcement] Unauthorized activity detected in main reactor core.
+c3a2_4	9800	[Announcement] Danger: high energy exchange detected in radioactive materials handling bay.
+c3a2_5	7300	[Announcement] Biological force detected in primary coolant system.
+c3a2_6	6550	[Announcement] Lambda Complex reports dimensional contamination.
+c3a2_7	7700	[Announcement] Lambda Complex reports dimensional containment system failure.
+c3a2_core	8650	[Announcement] Attention Lambda Complex personnel: primary core activated.
+c3a2_portal	10400	[Announcement] Warning: cross-dimensional portal device power level is one hundred twenty percent.
+c3a2_target	4650	[Announcement] Satellite target system engaged.
+ctr0	1500	[Announcement] Zero.
+ctr1	1550	[Announcement] One second.
+ctr10	2350	[Announcement] Ten seconds remaining.
+ctr11	1500	[Announcement] Eleven.
+ctr12	1500	[Announcement] Twelve.
+ctr13	1500	[Announcement] Thirteen.
+ctr14	1500	[Announcement] Fourteen.
+ctr15	2650	[Announcement] Fifteen seconds remaining.
+ctr16	1500	[Announcement] Sixteen.
+ctr17	1550	[Announcement] Seventeen.
+ctr18	1500	[Announcement] Eighteen.
+ctr19	1500	[Announcement] Nineteen.
+ctr2	1500	[Announcement] Two.
+ctr20	2400	[Announcement] Twenty seconds remaining.
+ctr3	1600	[Announcement] Three seconds.
+ctr4	1500	[Announcement] Four.
+ctr5	2500	[Announcement] Five seconds remaining.
+ctr6	1500	[Announcement] Six.
+ctr7	1500	[Announcement] Seven.
+ctr8	1500	[Announcement] Eight.
+ctr9	1500	[Announcement] Nine.
+db0	5250	[Announcement] Danger: liquid biohazard leak in immediate area.
+db1	5900	[Announcement] Danger: coolant leak, severe biohazard now in this area.
+db2	5100	[Announcement] Danger: liquid biohazard released, evacuate area.
+db3	5000	[Announcement] Danger: biohazard detected in immediate area.
+dc0	5650	[Announcement] Danger: chemical leak, area now a high health hazard.
+dc1	4900	[Announcement] Danger: chemical coolant leak, health hazard zone.
+dc2	6750	[Announcement] Danger: chemical containment breach, all personnel evacuate this area.
+dc3	3350	[Announcement] Danger: supercooled chemical leak.
+dc4	3450	[Announcement] Danger: supercooled helium leak.
+dr0	3450	[Announcement] Danger: radiation leak detected.
+dr1	3700	[Announcement] Danger: radiation hazard detected.
+dr2	4100	[Announcement] Danger: high radiation level detected.
+dr3	6000	[Announcement] Danger: severe radiation hazard, evacuate area immediately.
+dr4	5900	[Announcement] Danger: safety violation, extreme radiation level detected.
+ea0	2050	[Announcement] Access granted.
+ea1	2000	[Announcement] Access permitted.
+ea2	1750	[Announcement] Entry granted.
+ea3	1750	[Announcement] Entry permitted.
+ea4	2400	[Announcement] Access authorized.
+ea5	2150	[Announcement] Entry is permitted.
+ea6	2400	[Announcement] Access authorized.
+ea7	3400	[Announcement] Access to facility granted.
+ea8	2050	[Announcement] Access granted.
+echem0	3600	[Announcement] Chemical leak containment door open.
+econ0	3950	[Announcement] Emergency containment door disengaged.
+ed0	3100	[Announcement] Security lock disengaged.
+ed1	2700	[Announcement] Security clear, proceed.
+ed2	2900	[Announcement] Security lockout released.
+ed3	3100	[Announcement] Secure override accepted.
+ed4	3150	[Announcement] Security access acknowledged.
+ed5	3200	[Announcement] Security system disengaged.
+ed6	3050	[Announcement] Door security disengaged.
+ef0	3100	[Announcement] Emergency blast door open.
+ef1	3750	[Announcement] Emergency blast shield deactivated.
+ef3	3550	[Announcement] Blast containment shield is open.
+efire0	3150	[Announcement] Fire containment door open.
+eh0	3400	[Announcement] Maintenance area access granted.
+eh1	2950	[Announcement] Maintenance area door open.
+erad0	3450	[Announcement] Radiation containment door open.
+fuel_off	7000	[Announcement] Fuel and power must be engaged to activate rocket test fire.
+gm_1choose	1801	[G-Man] Time to choose.
+gm_1mumble	2524	[G-Man] (Muffled) ...we cannot allow this...
+gm_2choose	1590	[G-Man] It's time to choose.
+gm_2mumble	2273	[G-Man] (Muffled) ...this is not my problem...
+gm_3mumble	2632	[G-Man] (Muffled) ...I don't think anyone will...
+gm_4mumble	3596	[G-Man] (Muffled) ...I have other things to do...
+gm_5mumble	2737	[G-Man] (Muffled) ...my employers don't agree...
+gm_6mumble	3802	[G-Man] (Muffled) ...a scientist and a charlatan, that's all...
+gm_nasty	12698	[G-Man] The borderworld, Xen, is in our control for the time being, thanks to you. Quite a nasty piece of work you managed over there. I am impressed.
+gm_otherwise	13214	[G-Man] Otherwise... well... I can offer you a battle you have no chance of winning. Rather an anticlimax, after what you've just survived.
+gm_potential	20117	[G-Man] That's why I'm here, Mr. Freeman. I have recommended your services to my... employers, and they have authorized me to offer you a job. They agree with me that you have limitless... potential.
+gm_regret	2674	[G-Man] Well... it seems we won't be rushing.
+gm_stepin	13499	[G-Man] You've proved yourself a decisive man, so I don't expect you'll have any trouble deciding what to do. If you're interested, just step into the portal and I will take that as a yes.
+gm_suit	16507	[G-Man] Gordon Freeman in the flesh. Or rather, in the hazard suit. I took the liberty of relieving you of your weapons; most of them were government property. As for the suit, I think you've earned it.
+gm_wise	5105	[G-Man] Wisely done, Mr. Freeman. I will see you up ahead.
+gm_wontwork	3354	[G-Man] Well, it looks like we won't be working together.
+gman/gman_choose1	1801	[G-Man] Time to choose.
+gman/gman_choose2	1590	[G-Man] It's time to choose.
+gman/gman_mumble1	2524	[G-Man] (Muffled) ...we cannot allow this...
+gman/gman_mumble2	2273	[G-Man] (Muffled) ...this is not my problem...
+gman/gman_mumble3	2632	[G-Man] (Muffled) ...I don't think anyone will...
+gman/gman_mumble4	3596	[G-Man] (Muffled) ...I have other things to do...
+gman/gman_mumble5	2737	[G-Man] (Muffled) ...my employers don't agree...
+gman/gman_mumble6	3802	[G-Man] (Muffled) ...a scientist and a charlatan, that's all...
+gman/gman_nasty	12698	[G-Man] The borderworld, Xen, is in our control for the time being, thanks to you. Quite a nasty piece of work you managed over there. I am impressed.
+gman/gman_noreg	2674	[G-Man] Well... it seems we won't be rushing.
+gman/gman_nowork	3354	[G-Man] Well, it looks like we won't be working together.
+gman/gman_otherwise	13214	[G-Man] Otherwise... well... I can offer you a battle you have no chance of winning. Rather an anticlimax, after what you've just survived.
+gman/gman_potential	20117	[G-Man] That's why I'm here, Mr. Freeman. I have recommended your services to my... employers, and they have authorized me to offer you a job. They agree with me that you have limitless... potential.
+gman/gman_stepin	13499	[G-Man] You've proved yourself a decisive man, so I don't expect you'll have any trouble deciding what to do. If you're interested, just step into the portal and I will take that as a yes.
+gman/gman_suit	16507	[G-Man] Gordon Freeman in the flesh. Or rather, in the hazard suit. I took the liberty of relieving you of your weapons; most of them were government property. As for the suit, I think you've earned it.
+gman/gman_wise	5105	[G-Man] Wisely done, Mr. Freeman. I will see you up ahead.
+hev_0p	8786	[HEV] Warning: power below five percent.
+hev_10p	7448	[HEV] Power restored: fifty five percent.
+hev_11p	6248	[HEV] Power restored: sixty percent.
+hev_12p	7448	[HEV] Power restored: sixty five percent.
+hev_13p	6248	[HEV] Power restored: seventy percent.
+hev_14p	7448	[HEV] Power restored: seventy five percent.
+hev_15p	6248	[HEV] Power restored: eighty percent.
+hev_16p	7448	[HEV] Power restored: eighty five percent.
+hev_17p	6248	[HEV] Power restored: ninety percent.
+hev_18p	7448	[HEV] Power restored: ninety five percent.
+hev_19p	6952	[HEV] Power level is one hundred percent.
+hev_1p	6248	[HEV] Power restored: ten percent.
+hev_2p	6248	[HEV] Power restored: fifteen percent.
+hev_3p	6248	[HEV] Power restored: twenty percent.
+hev_44ammo	5034	[HEV] .357 ammo acquired.
+hev_44pistol	4906	[HEV] .357 revolver acquired.
+hev_4p	7448	[HEV] Power restored: twenty five percent.
+hev_5p	6248	[HEV] Power restored: thirty percent.
+hev_6p	7448	[HEV] Power restored: thirty five percent.
+hev_7p	6248	[HEV] Power restored: forty percent.
+hev_8p	7448	[HEV] Power restored: forty five percent.
+hev_9mm	4562	[HEV] 9mm ammo acquired.
+hev_9p	6248	[HEV] Power restored: fifty percent.
+hev_a0	11328	[HEV] Welcome to the HEV Mark IV protective system.
+hev_a1	5915	[HEV] Power-assist movement activated.
+hev_a10	3914	[HEV] Have a very safe day.
+hev_a2	6602	[HEV] Reactive armor activated.
+hev_a3	6618	[HEV] Atmospheric contaminant sensors activated.
+hev_a4	9334	[HEV] Vital signs monitoring activated.
+hev_a5	6042	[HEV] Munitions level monitoring activated.
+hev_a6	5776	[HEV] Communications interface activated.
+hev_a7	6107	[HEV] Weapon selection system activated.
+hev_a8	5905	[HEV] Automatic medical systems engaged.
+hev_a9	5752	[HEV] Power level is one hundred percent.
+hev_aax	40026	[HEV] Welcome to the HEV Mark IV protective system. Reactive armor activated. Atmospheric contaminant sensors activated. Vital signs monitoring activated. Automatic medical systems engaged. Defensive weapon selection system activated. Munitions level monitoring activated. Communications interface online. Have a very safe day.
+hev_agrenade	4507	[HEV] Assault grenades acquired.
+hev_aim_off	5435	[HEV] Targeting system deactivated.
+hev_aim_on	5435	[HEV] Targeting system activated.
+hev_amo0	3252	[HEV] Ammunition depleted.
+hev_assault	7900	[HEV] MP5 submachine gun acquired.
+hev_battery	4746	[HEV] Suit battery acquired.
+hev_bolts	5764	[HEV] Crossbow bolts acquired.
+hev_buckshot	4594	[HEV] Shotgun shells acquired.
+hev_d00	3848	[HEV] Power restored.
+hev_d01	6606	[HEV] HEV shutdown.
+hev_dead0	11193	[HEV] Vital signs ceased.
+hev_dead1	9993	[HEV] Vital signs ceased.
+hev_det0	6689	[HEV] Biohazard detected.
+hev_det1	7352	[HEV] Chemical detected.
+hev_det2	8103	[HEV] Radiation detected.
+hev_det3	5952	[HEV] Taking biological readings.
+hev_det4	8184	[HEV] Antitoxin administered. Protection one hundred percent.
+hev_det5	12687	[HEV] Radiation detected. Antitoxin administered.
+hev_dmg0	6452	[HEV] Minor lacerations detected.
+hev_dmg1	6558	[HEV] Major lacerations detected.
+hev_dmg2	6006	[HEV] Internal bleeding detected.
+hev_dmg3	7403	[HEV] Blood toxins detected.
+hev_dmg4	6030	[HEV] Minor fracture detected.
+hev_dmg5	6030	[HEV] Major fracture detected.
+hev_dmg6	5759	[HEV] Warning: blood loss.
+hev_dmg7	6108	[HEV] Seek medical attention.
+hev_e0	4445	[HEV] Armor power depleted.
+hev_e1	3245	[HEV] Armor power depleted.
+hev_e2	5375	[HEV] HEV critical failure.
+hev_e3	3841	[HEV] HEV general failure.
+hev_e4	4154	[HEV] HEV damage.
+hev_e5	5599	[HEV] Power movement overload.
+hev_egon	5034	[HEV] Gluon gun acquired.
+hev_egonpower	4596	[HEV] Uranium ammo acquired.
+hev_fire	6638	[HEV] Warning: extreme temperature.
+hev_gauss	6576	[HEV] Tau cannon acquired.
+hev_grenade	4361	[HEV] Hand grenade acquired.
+hev_heal0	8720	[HEV] Wound sterilized. Morphine administered.
+hev_heal1	8967	[HEV] Tourniquet applied. Bleeding stopped.
+hev_heal2	5849	[HEV] Bleeding stopped.
+hev_heal3	6209	[HEV] Blood plasma administered.
+hev_heal4	6984	[HEV] Antitoxin administered.
+hev_heal5	6770	[HEV] Antidote administered.
+hev_heal6	6760	[HEV] Wound sterilized.
+hev_heal7	6760	[HEV] Morphine administered.
+hev_heal8	6362	[HEV] Medical status restored.
+hev_hlth0	5936	[HEV] Warning: health dropping.
+hev_hlth1	5300	[HEV] Vital signs dropping.
+hev_hlth2	6753	[HEV] Health critical.
+hev_hlth3	7206	[HEV] User death imminent.
+hev_hlth4	7416	[HEV] Vital signs dropping. Evacuate area.
+hev_hlth5	8869	[HEV] Health critical. Evacuate area.
+hev_hlth6	10576	[HEV] User death imminent. Evacuate area immediately.
+hev_hornet	3972	[HEV] Alien weapon acquired.
+hev_med0	3600	[HEV] Insufficient medical resources.
+hev_med1	7105	[HEV] Automatic medical systems engaged.
+hev_med2	6658	[HEV] Administering medical.
+hev_medkit	3123	[HEV] Medkit acquired.
+hev_pistol	5936	[HEV] 9mm pistol acquired.
+hev_rpg	5045	[HEV] RPG launcher acquired.
+hev_rpgammo	4240	[HEV] RPG rockets acquired.
+hev_satchel	5550	[HEV] Satchel charge acquired.
+hev_shock	5917	[HEV] Warning: shock damage.
+hev_shotgun	3347	[HEV] Shotgun acquired.
+hev_squeek	3972	[HEV] Alien weapon acquired.
+hev_tripmine	5984	[HEV] Laser tripmine acquired.
+hev_v0	4015	[HEV] Voice communication on.
+hev_v1	3905	[HEV] Voice communication off.
+hev_xbow	5341	[HEV] Crossbow acquired.
+hg_alert0	3350	[HECU] Squad, we got Freeman!
+hg_alert1	1550	[HECU] Target!
+hg_alert2	1600	[HECU] Movement!
+hg_alert3	3300	[HECU] Shit, we got hostiles!
+hg_alert4	3150	[HECU] Squad, get Freeman!
+hg_alert5	3700	[HECU] Squad, neutralize Freeman!
+hg_alert6	2200	[HECU] Move in!
+hg_answer0	2800	[HECU] Roger that.
+hg_answer1	1600	[HECU] Yes, sir.
+hg_answer2	2450	[HECU] Affirmative, sir.
+hg_answer3	1700	[HECU] Negative.
+hg_answer4	1550	[HECU] Roger.
+hg_answer5	2450	[HECU] OK, Control.
+hg_answer6	3450	[HECU] That is affirmative.
+hg_charge0	2350	[HECU] Go, recon!
+hg_charge1	2000	[HECU] Move in!
+hg_charge2	1500	[HECU] Go!
+hg_charge3	1850	[HECU] Let's go!
+hg_check0	2700	[HECU] OK, check in.
+hg_check1	4300	[HECU] Squad, are hostiles clear?
+hg_check2	2500	[HECU] Check in, people.
+hg_check3	2600	[HECU] Lookout, check in.
+hg_check4	3450	[HECU] Recon team, check in.
+hg_check5	2800	[HECU] Movement check, over.
+hg_check6	3400	[HECU] Check your zone, over.
+hg_check7	3000	[HECU] Everything OK there?
+hg_civvies	7150	[HECU] I didn't sign on for this shit. Monsters, sure, but civilians? Who ordered this operation anyway?
+hg_clear0	2800	[HECU] All clear, sir.
+hg_clear1	2850	[HECU] Bravo post, clear.
+hg_clear10	3400	[HECU] Sir, I hear something.
+hg_clear11	4400	[HECU] Sir, zero movement, over.
+hg_clear12	3450	[HECU] Area secure, sir, over.
+hg_clear2	2750	[HECU] Delta team, clear.
+hg_clear3	4550	[HECU] No sign of hostiles, sir, over.
+hg_clear4	4300	[HECU] No sign of objective, sir, over.
+hg_clear5	3300	[HECU] No movement on this level.
+hg_clear6	3900	[HECU] Sir, sector secure, over.
+hg_clear7	4800	[HECU] Command post, team in position, over.
+hg_clear8	4300	[HECU] Recon in position, all quiet.
+hg_clear9	3950	[HECU] Lookout post, all quiet, over.
+hg_cover0	2050	[HECU] Take cover!
+hg_cover1	3950	[HECU] I need suppressing fire!
+hg_cover2	2750	[HECU] We need backup!
+hg_cover3	2700	[HECU] Too hot here!
+hg_cover4	2250	[HECU] Fall out!
+hg_cover5	2550	[HECU] Clear this area!
+hg_cover6	2050	[HECU] God damn!
+hg_cover7	2100	[HECU] Cover fire!
+hg_drag1a	2600	[HECU] Where are we taking this Freeman guy?
+hg_drag2a	2250	[HECU] Topside, for questioning.
+hg_drag3a	3900	[HECU] What the hell for? We got him right here. Let's kill him now!
+hg_drag4a	3050	[HECU] Uh, and if they find the body?
+hg_drag5a	2600	[HECU] Body? What body?
+hg_drag6a	3350	[HECU] (evil laugh)
+hg_gren0	1600	[HECU] Grenade!
+hg_gren1	2050	[HECU] Take cover!
+hg_gren2	2000	[HECU] Oh, shit!
+hg_gren3	1900	[HECU] Get down!
+hg_gren4	1900	[HECU] Oh, God!
+hg_gren5	1500	[HECU] No!
+hg_gren6	1500	[HECU] Move!
+hg_idle0	3400	[HECU] Hmm... clear.
+hg_idle1	2950	[HECU] Continue patrol.
+hg_idle2	2900	[HECU] Stay alert.
+hg_monst0	3000	[HECU] Bogies in my sector!
+hg_monst1	2750	[HECU] We got bogies!
+hg_monst2	2500	[HECU] Alien alert!
+hg_monst3	2550	[HECU] Alien movement!
+hg_quest0	3050	[HECU] Stay alert, people.
+hg_quest1	2850	[HECU] Radio check, over.
+hg_quest10	4100	[HECU] OK, mission zero-niner.
+hg_quest11	5500	[HECU] Squad, stay alert for Freeman, over.
+hg_quest2	2350	[HECU] Maintain lookout.
+hg_quest3	3200	[HECU] Squad, quiet down.
+hg_quest4	2450	[HECU] Hold position.
+hg_quest5	3150	[HECU] Sweep that sector.
+hg_quest6	4750	[HECU] Go tango sweep formation.
+hg_quest7	3600	[HECU] Echo team, mission is go.
+hg_quest8	4700	[HECU] Fire team, weapons check OK.
+hg_quest9	5050	[HECU] Fire team, objective Foxtrot-niner.
+hg_snoop1a	3050	[HECU] So who is this guy, Freeman?
+hg_snoop2a	2400	[HECU] They say he was at ground zero.
+hg_snoop3a	5450	[HECU] Science team? You think he was responsible? Sabotage, maybe?
+hg_snoop4a	5100	[HECU] Yeah, maybe. All I know for sure is he's been killing my buddies.
+hg_snoop5a	5000	[HECU] Oh yeah, he'll pay. He will definitely pay.
+hg_sucks	6750	[HECU] I killed twelve dumb-ass scientists and not one of 'em fought back. This sucks.
+hg_taunt0	4550	[HECU] We got heavy fire here!
+hg_taunt1	3200	[HECU] Roger, hold position.
+hg_taunt2	3750	[HECU] We will kick your ass!
+hg_taunt3	4150	[HECU] Mister, you are going down!
+hg_taunt4	2750	[HECU] You got nothing!
+hg_taunt5	2550	[HECU] Request backup!
+hg_throw0	3100	[HECU] Get down, fire in the hole!
+hg_throw1	3500	[HECU] Take this, bastard!
+hg_throw2	3200	[HECU] Fire in the hole!
+hg_throw3	3400	[HECU] Squad, stay down!
+hgrunt/c2a2_hg_chat1a	2649	[HECU] So who is this guy, Freeman?
+hgrunt/c2a2_hg_chat2a	1953	[HECU] They say he was at ground zero.
+hgrunt/c2a2_hg_chat3a	5044	[HECU] Science team? You think he was responsible? Sabotage, maybe?
+hgrunt/c2a2_hg_chat4a	4685	[HECU] Yeah, maybe. All I know for sure is he's been killing my buddies.
+hgrunt/c2a2_hg_chat5a	4587	[HECU] Oh yeah, he'll pay. He will definitely pay.
+hgrunt/c2a3_ambush_vox	10607	[HECU] Get him! Haha, nice hit. Alright, we got him.
+hgrunt/c2a3_hg_1drag	2171	[HECU] Where are we taking this Freeman guy?
+hgrunt/c2a3_hg_2drag	1839	[HECU] Topside, for questioning.
+hgrunt/c2a3_hg_3drag	3481	[HECU] What the hell for? We got him right here. Let's kill him now!
+hgrunt/c2a3_hg_4drag	2643	[HECU] Uh, and if they find the body?
+hgrunt/c2a3_hg_5drag	2185	[HECU] Body? What body?
+hgrunt/c2a3_hg_laugh	2944	[HECU] (evil laugh)
+hgrunt/c2a5_hg_abandon	9735	[Radio] Forget about Freeman! We are cutting our losses and pulling out! Anyone left down there now is on his own!
+hgrunt/c2a5_hg_lebuz	19282	[Radio] Come in, Cooper, do you copy? Forget about Freeman! We're abandoning the base. If you have any last bomb targets, mark them on the tactical map, otherwise get the hell out of there. Repeat: we are pulling out and commencing airstrikes. Give us targets or get below!
+hgrunt/gr_idle1	2973	[HECU] Hmm... clear.
+hgrunt/gr_idle2	2504	[HECU] Continue patrol.
+hgrunt/gr_idle3	2500	[HECU] Stay alert.
+hgrunt/hg_civvies	6732	[HECU] I didn't sign on for this shit. Monsters, sure, but civilians? Who ordered this operation anyway?
+hgrunt/hg_sucks	6346	[HECU] I killed twelve dumb-ass scientists and not one of 'em fought back. This sucks.
+holo/tr_ba_lightson	1876	[Security] I'll turn the lights back on so you can try again.
+holo/tr_ba_unuse	1200	[Security] Okay, I'll wait right here.
+holo/tr_ba_use	1200	[Security] Sure, I'll follow you.
+holo/tr_holo_3jumps	12570	[Hologram] The next three jumps get harder each time, but they are quite possible. Don't be surprised if you miss the last one once or twice. If you can make all three in one continuous run, you are doing great.
+holo/tr_holo_breakbox	9500	[Hologram] Finally, if nothing else works, try breaking the obstructions in your path. Make sure you pick up the crowbar, and simply smash your way through the debris.
+holo/tr_holo_breath	10904	[Hologram] Swim up to the surface and catch your breath. You will see the oxygen indicator on your suit display return to its previous level. Once it does, you can swim through the rest of the section.
+holo/tr_holo_button	5523	[Hologram] If you see one of these buttons, press it and I will appear to demonstrate certain moves.
+holo/tr_holo_charger	17405	[Hologram] This is a charging unit for your HEV hazardous environment suit. When your power is running low, step up to any charger and press your Use key. Your suit will recharge gradually until the charger unit is depleted. Individual batteries may also be used to recharge your HEV suit.
+holo/tr_holo_commencing	5116	[Hologram] Program commencing in 5, 4, 3, 2, 1.
+holo/tr_holo_congrats	5855	[Hologram] Congratulations. You have completed the Black Mesa target range. Please advance to the next area.
+holo/tr_holo_done	9081	[Hologram] Congratulations on completing the Black Mesa Hazard Course. You are now fully certified for use of the HEV Mark IV protective system.
+holo/tr_holo_drown	15162	[Hologram] Your HEV suit monitors blood oxygen levels, warning you when you need to find an air supply. As you swim through this course, your oxygen levels will begin to drop. At the midpoint, you will be given an opportunity to surface for air.
+holo/tr_holo_duck	9704	[Hologram] Now duck under the next set of obstacles. Please note that crouching automatically shifts your suit into stealth mode, minimizing movement noise.
+holo/tr_holo_fallshort	3536	[Hologram] If you keep falling short, you may be jumping too soon.
+holo/tr_holo_fantastic	1200	[Hologram] Fantastic.
+holo/tr_holo_flashlight	2715	[Hologram] Activate your suit flashlight for the next area.
+holo/tr_holo_greatwork	4322	[Hologram] Great work! Now there's just one more style of jumping you need to learn.
+holo/tr_holo_grenade	7095	[Hologram] To fire the grenade launcher, use your alternate fire button. Certain targets will break only when hit by grenades.
+holo/tr_holo_hitall	13594	[Hologram] To pass this test, you must hit every target. If you miss the first time, don't worry, they will come around again. Try to reload during pauses rather than waiting to run out of ammunition at a critical time.
+holo/tr_holo_injury	1879	[Hologram] Please advance to the next area.
+holo/tr_holo_intro	14110	[Hologram] Hello and welcome to the Black Mesa Hazard Course, where you'll be trained in the use of a hazardous environment suit. I am your holographic assistant. Let's begin by stepping into your suit. You can see it suspended up ahead of you.
+holo/tr_holo_jduck	10961	[Hologram] Now we will combine skills. You will need to jump, duck, and then jump again. This will prepare you for the next room, where you will have to do both moves at the same time.
+holo/tr_holo_jump	15230	[Hologram] The first move we'll practice in the Hazard Course is basic jumping. You'll attempt to get over this set of pipes using only your run and jump commands. It helps to get a running start. Watch me, and then try it yourself.
+holo/tr_holo_jumpdown	12585	[Hologram] Now that you're up here, there's only one way down. Find the target on the floor below and do your best to hit it. If you take any damage from the fall, we will administer medical care at the next station.
+holo/tr_holo_jumpgap	7570	[Hologram] Sometimes you'll need to rely on more than just your suit to get through a tight place. Try jumping this gap on your own.
+holo/tr_holo_keeptrying	1648	[Hologram] Keep trying, you'll get it.
+holo/tr_holo_ladder	7749	[Hologram] Walk directly into the ladder, look up, and continue moving forward. If you want to come back down, just move backward.
+holo/tr_holo_leadguard	12613	[Hologram] Lead a security guard into the next room. He will let you back into the transit system. You must approach a guard and press your Use key. He will follow your lead until you face him and press the Use key again.
+holo/tr_holo_lightoff	5113	[Hologram] Great. Remember your flashlight drains power, so switch it off when you don't need it.
+holo/tr_holo_longjump	14381	[Hologram] Long-jumping requires its own charging module, seen here. To activate your long jump, you will have to duck and move forward, and then launch into a jump. Once you're up on the platform, press the button and I will demonstrate the move.
+holo/tr_holo_medkit	18010	[Hologram] You'll find medkits like this one throughout the Black Mesa facility. To restore your health, walk up to a medkit and press your Use key. Your health will recover gradually until you are at full health or the kit is depleted. Once the light goes out, a medkit cannot be reused.
+holo/tr_holo_move	14041	[Hologram] Moving around in your HEV suit may be slightly disorienting at first. Take a moment to familiarize yourself with basic movement, and soon it will fit you like a second skin. I'll see you around the corner.
+holo/tr_holo_nicejob	1200	[Hologram] Nice job!
+holo/tr_holo_pipeduck	16588	[Hologram] To get into these pipes, you'll have to signal your suit to make a duck-jump. You'll want to stand right at the mouth of the pipe, and continue to press forward. Then jump up, and while you're in mid-air, go into a crouch. It's tricky, but you'll find it comes in handy.
+holo/tr_holo_pullbox	14680	[Hologram] If you can't push an obstacle out of the way, you might try pulling it. To pull a box, move up to it and press your Use key. While holding down the Use key to keep a grip on the box, move slowly backward. The box will come along with you.
+holo/tr_holo_pushbox	9439	[Hologram] What you really need to do is push that box down into the pit. Pushing is easy. Just move forward against the box, and you can push it into position.
+holo/tr_holo_radiation	8513	[Hologram] Proximity to radiation activates a Geiger counter and radiation display. Biohazards are also indicated with a luminous icon.
+holo/tr_holo_retry	6013	[Hologram] Try again. Remember to move forward, jump, and crouch while in mid-air.
+holo/tr_holo_runstart	1837	[Hologram] It helps to get a running start.
+holo/tr_holo_spinbridge	4358	[Hologram] To spin that bridge, walk up to the control wheel and press the Use key.
+holo/tr_holo_startlift	5045	[Hologram] Activate the lift: walk up to the button, look at it, and press the Use key.
+holo/tr_holo_steam	10182	[Hologram] If you pass through fire or steam, you'll see a heat damage icon light up. Directional indicators at the center of your display show you where damage is coming from.
+holo/tr_holo_target	11971	[Hologram] Welcome to the Black Mesa target range, where you will receive training in firing a weapon, reloading, and firing the attached grenade launcher. Please pick up your weapon and advance to the firing station.
+holo/tr_holo_tryagain	1838	[Hologram] That's okay. Try again.
+holo/tr_holo_usetrain	11803	[Hologram] Press your Use key to engage the train. Press forward and backward to increase or decrease the speed of the train. Press Use again to disengage from the train.
+holo/tr_sci_goodwork	5030	[Scientist] Good work. Those new suits can be tricky at first. Please proceed to the next area.
+holo/tr_sci_hardlynoticed	4440	[Scientist] Very good. I hardly noticed you. Move on to the next area.
+holo/tr_sci_nextstation	3358	[Scientist] Good work. You look ready for the next station.
+holo/tr_sci_unuse	1711	[Scientist] Fine, I'll wait here.
+holo/tr_sci_use	2337	[Scientist] Yes, I'll follow you if you wish.
+holo_3jumps	12570	[Hologram] The next three jumps get harder each time, but they are quite possible. Don't be surprised if you miss the last one once or twice. If you can make all three in one continuous run, you are doing great.
+holo_breakbox	9500	[Hologram] Finally, if nothing else works, try breaking the obstructions in your path. Make sure you pick up the crowbar, and simply smash your way through the debris.
+holo_breath	10904	[Hologram] Swim up to the surface and catch your breath. You will see the oxygen indicator on your suit display return to its previous level. Once it does, you can swim through the rest of the section.
+holo_button	5523	[Hologram] If you see one of these buttons, press it and I will appear to demonstrate certain moves.
+holo_charger	17405	[Hologram] This is a charging unit for your HEV hazardous environment suit. When your power is running low, step up to any charger and press your Use key. Your suit will recharge gradually until the charger unit is depleted. Individual batteries may also be used to recharge your HEV suit.
+holo_commencing	5116	[Hologram] Program commencing in 5, 4, 3, 2, 1.
+holo_congrats	5855	[Hologram] Congratulations. You have completed the Black Mesa target range. Please advance to the next area.
+holo_done	9081	[Hologram] Congratulations on completing the Black Mesa Hazard Course. You are now fully certified for use of the HEV Mark IV protective system.
+holo_drown	15162	[Hologram] Your HEV suit monitors blood oxygen levels, warning you when you need to find an air supply. As you swim through this course, your oxygen levels will begin to drop. At the midpoint, you will be given an opportunity to surface for air.
+holo_duck	9704	[Hologram] Now duck under the next set of obstacles. Please note that crouching automatically shifts your suit into stealth mode, minimizing movement noise.
+holo_fallshort	3536	[Hologram] If you keep falling short, you may be jumping too soon.
+holo_fantastic	1200	[Hologram] Fantastic.
+holo_flashlight	2715	[Hologram] Activate your suit flashlight for the next area.
+holo_greatwork	4322	[Hologram] Great work! Now there's just one more style of jumping you need to learn.
+holo_grenade	7095	[Hologram] To fire the grenade launcher, use your alternate fire button. Certain targets will break only when hit by grenades.
+holo_hitall	13594	[Hologram] To pass this test, you must hit every target. If you miss the first time, don't worry, they will come around again. Try to reload during pauses rather than waiting to run out of ammunition at a critical time.
+holo_injury	1879	[Hologram] Please advance to the next area.
+holo_intro	14110	[Hologram] Hello and welcome to the Black Mesa Hazard Course, where you'll be trained in the use of a hazardous environment suit. I am your holographic assistant. Let's begin by stepping into your suit. You can see it suspended up ahead of you.
+holo_jduck	10961	[Hologram] Now we will combine skills. You will need to jump, duck, and then jump again. This will prepare you for the next room, where you will have to do both moves at the same time.
+holo_jump	15230	[Hologram] The first move we'll practice in the Hazard Course is basic jumping. You'll attempt to get over this set of pipes using only your run and jump commands. It helps to get a running start. Watch me, and then try it yourself.
+holo_jumpdown	12585	[Hologram] Now that you're up here, there's only one way down. Find the target on the floor below and do your best to hit it. If you take any damage from the fall, we will administer medical care at the next station.
+holo_jumpgap	7570	[Hologram] Sometimes you'll need to rely on more than just your suit to get through a tight place. Try jumping this gap on your own.
+holo_keeptrying	1648	[Hologram] Keep trying, you'll get it.
+holo_ladder	7749	[Hologram] Walk directly into the ladder, look up, and continue moving forward. If you want to come back down, just move backward.
+holo_leadguard	12613	[Hologram] Lead a security guard into the next room. He will let you back into the transit system. You must approach a guard and press your Use key. He will follow your lead until you face him and press the Use key again.
+holo_lightoff	5113	[Hologram] Great. Remember your flashlight drains power, so switch it off when you don't need it.
+holo_longjump	14381	[Hologram] Long-jumping requires its own charging module, seen here. To activate your long jump, you will have to duck and move forward, and then launch into a jump. Once you're up on the platform, press the button and I will demonstrate the move.
+holo_medkit	18010	[Hologram] You'll find medkits like this one throughout the Black Mesa facility. To restore your health, walk up to a medkit and press your Use key. Your health will recover gradually until you are at full health or the kit is depleted. Once the light goes out, a medkit cannot be reused.
+holo_move	14041	[Hologram] Moving around in your HEV suit may be slightly disorienting at first. Take a moment to familiarize yourself with basic movement, and soon it will fit you like a second skin. I'll see you around the corner.
+holo_nicejob	1200	[Hologram] Nice job!
+holo_pipeduck	16588	[Hologram] To get into these pipes, you'll have to signal your suit to make a duck-jump. You'll want to stand right at the mouth of the pipe, and continue to press forward. Then jump up, and while you're in mid-air, go into a crouch. It's tricky, but you'll find it comes in handy.
+holo_pullbox	14680	[Hologram] If you can't push an obstacle out of the way, you might try pulling it. To pull a box, move up to it and press your Use key. While holding down the Use key to keep a grip on the box, move slowly backward. The box will come along with you.
+holo_pushbox	9439	[Hologram] What you really need to do is push that box down into the pit. Pushing is easy. Just move forward against the box, and you can push it into position.
+holo_radiation	8513	[Hologram] Proximity to radiation activates a Geiger counter and radiation display. Biohazards are also indicated with a luminous icon.
+holo_retry	6013	[Hologram] Try again. Remember to move forward, jump, and crouch while in mid-air.
+holo_runstart	1837	[Hologram] It helps to get a running start.
+holo_spinbridge	4358	[Hologram] To spin that bridge, walk up to the control wheel and press the Use key.
+holo_startlift	5045	[Hologram] Activate the lift: walk up to the button, look at it, and press the Use key.
+holo_steam	10182	[Hologram] If you pass through fire or steam, you'll see a heat damage icon light up. Directional indicators at the center of your display show you where damage is coming from.
+holo_target	11971	[Hologram] Welcome to the Black Mesa target range, where you will receive training in firing a weapon, reloading, and firing the attached grenade launcher. Please pick up your weapon and advance to the firing station.
+holo_tryagain	1838	[Hologram] That's okay. Try again.
+holo_usetrain	11803	[Hologram] Press your Use key to engage the train. Press forward and backward to increase or decrease the speed of the train. Press Use again to disengage from the train.
+na0	2000	[Announcement] Access denied.
+na1	2400	[Announcement] Access is denied.
+na10	2850	[Announcement] Sorry, you may not enter.
+na11	2950	[Announcement] Sorry, this door is locked.
+na12	3700	[Announcement] Please move away from this area.
+na13	3150	[Announcement] Please move away from door.
+na14	2650	[Announcement] You will not get in.
+na15	2950	[Announcement] Entry is not an option.
+na16	3050	[Announcement] Will we do this all day?
+na17	2550	[Announcement] Move on immediately.
+na18	2750	[Announcement] No, no, and no.
+na2	2500	[Announcement] Unauthorized access.
+na3	2000	[Announcement] Illegal access.
+na4	2350	[Announcement] This door is locked.
+na5	2500	[Announcement] Unauthorized access.
+na6	1950	[Announcement] Entry forbidden.
+na7	2200	[Announcement] Entry not permitted.
+na8	3100	[Announcement] No unauthorized personnel.
+na9	5150	[Announcement] You do not have access to this facility.
+nchem0	4000	[Announcement] Chemical leak containment door activated.
+ncon0	3700	[Announcement] Emergency containment door engaged.
+nd0	3200	[Announcement] Security lock is engaged.
+nd1	3000	[Announcement] Secure area, no entry.
+nd2	3350	[Announcement] Security lockout, no entry.
+nd3	2900	[Announcement] Secure door, no entry.
+nd4	3250	[Announcement] Security system in force.
+nd5	3850	[Announcement] Security system armed, no entry.
+nd6	2250	[Announcement] Door is secured.
+nd7	3000	[Announcement] Illegal access, move away.
+nf0	3500	[Announcement] Emergency blast door activated.
+nf1	3600	[Announcement] Emergency blast shield activated.
+nf3	3900	[Announcement] The blast containment shield is down.
+nfire0	3550	[Announcement] Fire containment door is down.
+ng0	3350	[Announcement] Sorry, this door is inoperative.
+ng1	3100	[Announcement] Sorry, door out of service.
+ng2	5200	[Announcement] Door damage detected, please call service personnel.
+nh0	3300	[Announcement] No access, maintenance area.
+nh1	4450	[Announcement] No personnel permitted in maintenance area.
+nihilanth/nil_alone	7802	[Nihilanth] Alone... not you alone... not you alone...
+nihilanth/nil_comes	3611	[Nihilanth] Comes another...
+nihilanth/nil_deceive	7608	[Nihilanth] Deceive you... will deceive you...
+nihilanth/nil_die	6724	[Nihilanth] Die... you all die... you all die...
+nihilanth/nil_done	4567	[Nihilanth] Done... what have you done...
+nihilanth/nil_freeman	5516	[Nihilanth] Freeeeman...
+nihilanth/nil_now_die	7758	[Nihilanth] Now die... now die... now...
+nihilanth/nil_thelast	5304	[Nihilanth] The last... I am the last...
+nihilanth/nil_thetruth	7063	[Nihilanth] The truth... you can never know... the truth...
+nihilanth/nil_win	4779	[Nihilanth] Win... you cannot win...
+nrad0	3850	[Announcement] Radiation containment door activated.
+power_off	4050	[Announcement] Main power is not on.
+power_on	3450	[Announcement] Main power is on.
+rf_20sec	6000	[Announcement] Twenty seconds.
+rf_30sec	9600	[Announcement] Thirty seconds remaining. Evacuate immediately.
+rf_60sec	12000	[Announcement] All systems nominal. Sixty seconds to launch.
+rf_90sec	8400	[Announcement] Ninety seconds to launch.
+rf_countdown	34800	[Announcement] Ten, nine, eight, seven, six, five, four, three, two, one — launch is go.
+rf_launch_start	20400	[Announcement] Warning: satellite rocket launch system activated. Vacate the central silo immediately.
+rf_rocket_armed	18000	[Announcement] Attention: satellite rocket loading bay reports ready. Rocket launch system armed.
+rf_sat_activate	12000	[Announcement] Launch propulsion system engaged.
+rf_success	26630	[Announcement] Satellite rocket has launched and is accelerating. Electromagnetic data collection systems engaged and aligned to dish. Have a safe and productive day.
+rf_warning	24000	[Announcement] Warning: extreme hazard of sudden thermal exposure due to rapid rocket engine decompression. Vacate the silo immediately.
+rf_warning2	20400	[Announcement] Attention: fuel booster activated. Hazard of extreme heat and flame exhaust from rocket engine.
+sc_1man	3404	[Scientist] Take me with you! I'm the one man who knows everything!
+sc_1mumble	6421	[Scientist] I've told you a hundred times, I am opposed to pushing this equipment beyond the test level.
+sc_1psurg	5712	[Scientist] We all have access to the retinal scanners. Escort us to the lobby and we can get out of the lab.
+sc_2psurg	5624	[Scientist] You'll have to shut down the surgical unit first. Peters switched it on, but I'm afraid he never made it back.
+sc_3psurg	6800	[Scientist] A fellow scientist! Thank goodness! Get us out of here before those military thugs figure out where we're hiding.
+sc_alldie	3409	[Scientist] If you let us all die, Freeman, you'll never get out of here!
+sc_answer0	1200	[Scientist] I'm not sure.
+sc_answer1	1800	[Scientist] I can't say for sure.
+sc_answer10	1200	[Scientist] Yes.
+sc_answer11	1200	[Scientist] I believe so.
+sc_answer12	1200	[Scientist] Right.
+sc_answer13	1200	[Scientist] I'm sure.
+sc_answer14	1200	[Scientist] Definitely.
+sc_answer15	1800	[Scientist] Without a doubt.
+sc_answer16	1403	[Scientist] Yes...
+sc_answer17	1200	[Scientist] Certainly not.
+sc_answer18	1200	[Scientist] Absolutely not.
+sc_answer19	1200	[Scientist] No.
+sc_answer2	1200	[Scientist] Possibly.
+sc_answer20	1624	[Scientist] I don't think so.
+sc_answer21	1918	[Scientist] Completely wrong.
+sc_answer22	1800	[Scientist] You can't be serious.
+sc_answer23	1200	[Scientist] I don't know.
+sc_answer24	1200	[Scientist] Ridiculous!
+sc_answer25	1200	[Scientist] Shut up!
+sc_answer26	1800	[Scientist] I wouldn't care to guess.
+sc_answer27	1800	[Scientist] Stop asking.
+sc_answer28	1816	[Scientist] You just asked me that.
+sc_answer29	2945	[Scientist] Don't make me repeat myself.
+sc_answer3	1800	[Scientist] Who can say for sure?
+sc_answer4	1800	[Scientist] The data is inconclusive.
+sc_answer5	1200	[Scientist] Theoretically, yes.
+sc_answer6	1800	[Scientist] Why are you asking me?
+sc_answer7	2000	[Scientist] Keep your voice down!
+sc_answer8	1200	[Scientist] Of course.
+sc_answer9	1200	[Scientist] Certainly.
+sc_arg1a	2244	[Scientist] I'm telling you, it's not our fault.
+sc_arg2a	3666	[Scientist] Nature created them — we only studied them.
+sc_atlast	1200	[Scientist] Rescued at last!
+sc_bigday	1361	[Scientist] Big day today, Freeman.
+sc_blind	4173	[Scientist] Is anyone there? I... I can't see anything.
+sc_boobie	17684	[Scientist] You're heading for the Lambda Complex, aren't you? I was on my way there myself until I ran into this and, well, simply lost my nerve. Take one look through that door and you'll see what I mean. I'm just going to sit out the catastrophe right here. If you're determined to press on, I implore you to proceed with extreme caution.
+sc_console1a	1827	[Scientist] Why didn't they listen?
+sc_console2a	2289	[Scientist] We tried to warn them.
+sc_console3a	5245	[Scientist] I never thought I'd see a resonance cascade, let alone create one.
+sc_console4a	17456	[Scientist] Gordon, you're alive! Thank God for that hazard suit. I'm afraid to move him, and all our phones are out. Please, get to the surface as soon as you can, and let someone know we're stranded down here. You'll need me to activate the retinal scanners. I'm sure the rest of the science team will gladly help you.
+sc_console5a	1200	[Scientist] Be careful, Gordon.
+sc_consolerpt	1800	[Scientist] I've already opened that door.
+sc_crit1a	2397	[Scientist] Quick! It's about to go critical!
+sc_crit2a	2568	[Scientist] What the hell is going on with our equipment?
+sc_crit3a	2537	[Scientist] It wasn't meant to do this in the first place!
+sc_ctrl1a	4496	[Scientist] Ah, Gordon, here you are. We just sent the sample down to the Test Chamber.
+sc_ctrl2a	6475	[Scientist] We've boosted the Anti-Mass Spectrometer to 105 percent. Bit of a gamble, but we need the extra resolution.
+sc_ctrl3a	7311	[Scientist] The Administrator is very concerned that we get a conclusive analysis of today's sample. I gather they went to some lengths to get it.
+sc_ctrl4a	3747	[Scientist] They're waiting for you, Gordon. In the Test Chamber.
+sc_curea	1800	[Scientist] You look terrible.
+sc_cureb	1668	[Scientist] You're injured!
+sc_curec	2673	[Scientist] You need medical attention.
+sc_dangling	3834	[Scientist] I... I can't hold on much longer...
+sc_darkroom	5837	[Scientist] I'm not sure I want to go to the surface. What if the world finds out what we were doing down here?
+sc_dis10a	8027	[Scientist] Gordon, we cannot predict how long the system can operate at this level, nor how long the reading will take. Please work as quickly as you can.
+sc_dis11a	10852	[Scientist] Uh, it's probably not a problem... probably... but I'm showing a small discrepancy in... well, no, it's well within acceptable bounds again. Sustaining sequence.
+sc_dis12a	4326	[Scientist] Nothing you need to worry about, Gordon. Go ahead.
+sc_dis13a	1567	[Scientist] Wh-what is he doing in there?
+sc_dis14a	3888	[Scientist] Get him out of there! Shut down the equipment and someone get him out!
+sc_dis15a	8322	[Scientist] Shutting down! Attempting shut down! It's not... it-it's not... it's not shutting down! It's not...
+sc_dis16a	3162	[Scientist] Gordon! Get away from the beams!
+sc_dis17a	2806	[Scientist] He waited too long! We can't contain it!
+sc_dis1a	18055	[Scientist] Now, Gordon, your suit should keep you comfortable through all this. The specimen will be delivered to you in a few moments. If you would be so good as to climb up and start the rotors, we can bring the Anti-Mass Spectrometer to eighty percent and hold it there until the carrier arrives.
+sc_dis1b	4528	[Scientist] Gordon, can't you hear me? Climb up and start the rotors, please.
+sc_dis1c	2778	[Scientist] Climb up and start the rotors.
+sc_dis1d	2809	[Scientist] Very good. We'll take it from here.
+sc_dis2a	5751	[Scientist] Power to stage one emitters in three, two, one...
+sc_dis3a	2706	[Scientist] I'm seeing predictable phase arrays.
+sc_dis4a	5360	[Scientist] Tell him to step away from the focal stage. That suit won't do him any good if he wanders into the beam.
+sc_dis5a	4164	[Scientist] Stage two emitters activating... now.
+sc_dis6a	10457	[Scientist] I've just been informed that the sample is ready, Gordon. It should be coming up to you any moment now. Look to the delivery system for your specimen.
+sc_dis7a	7108	[Scientist] Standard insertion for a non-standard specimen. Go ahead, Gordon, slot the carrier into the analysis port.
+sc_dis8a	1200	[Scientist] ...
+sc_dis9a	4431	[Scientist] Overhead capacitors to one oh five percent.
+sc_disa	6784	[Scientist] Testing... testing... Everything seems to be in order.
+sc_dying	5756	[Scientist] Fire the... rocket engine. Destroy the damned thing before it grows any larger!
+sc_elevator	9935	[Scientist] If you can climb up the elevator shaft, you should be able to reach the surface. Try to send help, and let the world know what happened.
+sc_fear0	1200	[Scientist] Noooo!
+sc_fear1	1200	[Scientist] Oh my God!
+sc_fear10	1200	[Scientist] Run!
+sc_fear11	1200	[Scientist] Mommy!
+sc_fear12	1200	[Scientist] Aaaah!
+sc_fear2	2400	[Scientist] No, not that!
+sc_fear3	1747	[Scientist] I don't want to die!
+sc_fear4	2417	[Scientist] We're never going to make it out alive!
+sc_fear5	1200	[Scientist] Good God!
+sc_fear6	1200	[Scientist] Save yourselves!
+sc_fear7	1444	[Scientist] Help!
+sc_fear8	1200	[Scientist] Oh no!
+sc_fear9	1200	[Scientist] What is that?!
+sc_flood	8777	[Scientist] Freeman, isn't it? You'll need to activate both pumps to flood the reactor, and then that access pipe down there will take you to the core. Time is short!
+sc_fool	1335	[Scientist] Freeman, you fool!
+sc_forever	2387	[Scientist] Hurry, Freeman, I can't hold it open forever!
+sc_gener	7956	[Scientist] This is my hiding spot, and I'm not moving until the situation is drastically improved. Now go away, and don't tell anyone I'm here.
+sc_getaway	3614	[Scientist] Get away from there, Freeman! I'm expecting an important message!
+sc_gluon2a	10487	[Scientist] Are you in weapon development too? I built the gluon gun, but I just can't bring myself to use it on a living creature. You don't look as though you have any trouble killing things.
+sc_gmorn	1736	[Scientist] Good morning, Gordon.
+sc_goodwork	5030	[Scientist] Nice job. Those new suits can be tricky at first. Proceed to the next area.
+sc_hardlynotice	4440	[Scientist] Very good. I hardly noticed you. Move on to the next area.
+sc_haz_ok0	2337	[Scientist] Yes, I'll follow you if you wish.
+sc_haz_wait0	1711	[Scientist] Fine, I'll wait here.
+sc_heal0	2472	[Scientist] Let me help you.
+sc_heal1	1815	[Scientist] This shot will make you feel better.
+sc_heal2	3873	[Scientist] You need help. Try this.
+sc_heal3	3793	[Scientist] You look awful. Hold still.
+sc_heal4	2867	[Scientist] You're hurt, let me help.
+sc_heal5	1800	[Scientist] Here, this should ease the pain.
+sc_heal6	1815	[Scientist] Hold still, I'll treat that wound.
+sc_heal7	1897	[Scientist] Take this, you'll feel better right away.
+sc_hear0	1200	[Scientist] I hear something.
+sc_hear1	1200	[Scientist] Did you hear that?
+sc_hear2	1694	[Scientist] What's that noise?
+sc_hello0	1200	[Scientist] Hello!
+sc_hello1	3543	[Scientist] Freeman! Who would have thought you'd still be alive?
+sc_hello2	1332	[Scientist] Ah, a fellow scientist.
+sc_hello3	2012	[Scientist] Greetings!
+sc_hello4	2415	[Scientist] Hello.
+sc_hello5	3109	[Scientist] Good to see you.
+sc_hello6	4396	[Scientist] Ah, you have one of the new HEV suits. That should be very useful.
+sc_hello7	4303	[Scientist] Greetings on behalf of the facility.
+sc_hello8	3632	[Scientist] Did you get caught up in this mess too?
+sc_icky	17300	[Scientist] Did you see it? They said it was hauled from the Challenger Deep, but I'm positive that beast never swam in terrestrial waters until a week ago. There's a tranquilizer gun in the shark cage, but I'm not sure it would work on this species. You're welcome to try.
+sc_idle0	2737	[Scientist] I predicted all of this, you know!
+sc_idle1	3169	[Scientist] The containment system has completely failed.
+sc_idle10	3470	[Scientist] Highly unlikely.
+sc_idle11	4580	[Scientist] Well, the dimensional rift is certainly permitting organic matter to pass through.
+sc_idle12	4153	[Scientist] If we can make it to the Lambda Complex, they'll help us.
+sc_idle13	1200	[Scientist] I hear something.
+sc_idle2	2414	[Scientist] A textbook case of chaos theory.
+sc_idle3	2873	[Scientist] How interesting...
+sc_idle4	4724	[Scientist] Fascinating! I never suspected such things could be.
+sc_idle5	3839	[Scientist] Oh, just look at those peculiar markings!
+sc_idle6	2774	[Scientist] Who is responsible for this mess?
+sc_idle7	2144	[Scientist] There goes our grant money.
+sc_idle8	3507	[Scientist] Wouldn't you like to get one of those blood samples under a microscope?
+sc_idle9	4432	[Scientist] The Administrator said everything was under control...
+sc_lebuz	13808	[Scientist] Thank you, Mr. Freeman. You are Gordon Freeman, aren't you? The one they're expecting at the Lambda Complex? If you can figure out how to get past that Gargantua on the landing pad and through the bunker door over there, you'll be right at the threshold of the Lambda Labs.
+sc_letout	23230	[Scientist] All right, I'll let you out, but I warn you, it's hell out there. It's completely under military control. You'll have to sneak and fight your way from one end to the other, and I don't think you'll run into many of our colleagues along the way. Still, if you survive and somehow cross the facility, you'll end up at the Lambda Complex, where the rest of the science team has taken shelter. I wouldn't venture there myself, but I'll let them know you're coming.
+sc_letyouin	1800	[Scientist] I'll open the door for you right now!
+sc_linger	8213	[Scientist] Don't linger, Mr. Freeman! You've activated the pumps. Now get down that access pipe, flood the core, and get up to the labs without delay!
+sc_ljump	14756	[Scientist] This, Mr. Freeman, is a Long Jump Module, created expressly for navigation in the world beyond. I certainly hope you received Long Jump training, because once you're in Xen, you will need it. I would advise you to practice before crossing over.
+sc_lock1a	5788	[Scientist] I'm afraid we'll be deviating a bit from standard analysis procedures today, Gordon.
+sc_lock2a	7067	[Scientist] Yes, but with good reason. This is a rare opportunity for us. This is the purest sample we've seen yet.
+sc_lock3a	2446	[Scientist] And potentially the most unstable!
+sc_lock4a	4509	[Scientist] Now, now, if you follow standard insertion procedures, everything will be fine.
+sc_lock5a	10487	[Scientist] I don't know how you can say that. Although I will admit that the possibility of a resonance cascade scenario is extremely unlikely, I remain uncomfortable with the...
+sc_lock6a	8132	[Scientist] Gordon doesn't need to hear all this, he's a highly trained professional! We've assured the Administrator that nothing will go wrong.
+sc_lock7a	5136	[Scientist] Ah, yes, you're right. Gordon, we have complete confidence in you.
+sc_lock8a	2756	[Scientist] Well, go ahead. Let's let him in now.
+sc_lock9a	1200	[Scientist] At last!
+sc_lounge	10040	[Scientist] Gordon, if I'd known it was you, I'd have let you in. Everyone's heading for the surface, but I think they're crazy not to stay put. Someone is bound to come by and rescue us.
+sc_monst0	2495	[Scientist] Look, a headcrab!
+sc_monst1	2937	[Scientist] What a valuable specimen!
+sc_mortal0	2094	[Scientist] I'm badly wounded...
+sc_mortal1	3144	[Scientist] I don't feel well at all...
+sc_nextstation	3358	[Scientist] Good job. Looks like you're ready for the next station.
+sc_nogo	1800	[Scientist] Don't go in there, it's dangerous!
+sc_notthat	2255	[Scientist] Please, leave the console buttons alone!
+sc_notyet	1200	[Scientist] Not yet, Freeman!
+sc_ok0	3590	[Scientist] We'll make a great team!
+sc_ok1	1970	[Scientist] Good to see a fellow scientist.
+sc_ok2	1860	[Scientist] All right, I'm coming with you.
+sc_ok3	2097	[Scientist] I hope you know what you're doing.
+sc_ok4	1200	[Scientist] Lead on, I'm right behind you.
+sc_ok5	1200	[Scientist] Let's go.
+sc_ok6	1800	[Scientist] Yes, let's get out of here.
+sc_ok7	1200	[Scientist] Yes, of course.
+sc_ok8	1200	[Scientist] All right.
+sc_overhere	1794	[Scientist] Hey, over here!
+sc_phello0	3474	[Scientist] Hello, Freeman.
+sc_phello1	2012	[Scientist] Greetings!
+sc_phello2	3109	[Scientist] Good to see you.
+sc_phello3	2252	[Scientist] Good afternoon.
+sc_phello4	2415	[Scientist] Hello.
+sc_phello5	1200	[Scientist] Hi.
+sc_phello6	1200	[Scientist] Ah, Freeman!
+sc_pidle0	2288	[Scientist] Now where did I put my glasses...
+sc_pidle1	3467	[Scientist] Why do we all have to wear these ridiculous ties?
+sc_pidle10	3087	[Scientist] I hope everything goes nominally.
+sc_pidle2	3426	[Scientist] Initiating test...
+sc_pidle3	2172	[Scientist] All limits within tolerance.
+sc_pidle4	1800	[Scientist] Everything is proceeding as expected.
+sc_pidle5	1237	[Scientist] Hmm, that's odd...
+sc_pidle6	2153	[Scientist] Readings are nominal.
+sc_pidle7	3314	[Scientist] The shutdown schedule is off.
+sc_pidle8	2593	[Scientist] I'd better report these flux fluctuations.
+sc_pidle9	3136	[Scientist] The simulation didn't predict spikes like this.
+sc_plfear0	1959	[Scientist] What are you doing?!
+sc_plfear1	1864	[Scientist] I can't take this anymore!
+sc_plfear2	2601	[Scientist] This is madness!
+sc_plfear3	1203	[Scientist] No, please!
+sc_plfear4	3056	[Scientist] Get out of here!
+sc_plfear5	1380	[Scientist] Excuse me, I'm leaving!
+sc_pok0	3076	[Scientist] Leave me alone.
+sc_pok1	1800	[Scientist] Don't interrupt my work.
+sc_pok2	2569	[Scientist] I'm very busy right now.
+sc_pok3	2860	[Scientist] We'll talk after the test.
+sc_pok4	2820	[Scientist] I have to be somewhere else.
+sc_portal	13127	[Scientist] Okay, I can open the portal now. The process is complicated, and once it's begun I must not be interrupted or I'll have to start all over again. Don't enter the beam until I give the signal. Understand? Here goes.
+sc_portopen	2143	[Scientist] It's ready! You must go, now!
+sc_position	2722	[Scientist] We're almost there, Freeman. Get yourself in position.
+sc_poweroff	5533	[Scientist] I hope nobody expects me to go start up the generator. Smithers went down there and never came back.
+sc_poweron	5555	[Scientist] Splendid! Someone's restored all power. We'll have the engine running again in no time.
+sc_pquest0	3063	[Scientist] Care for some coffee? Or something stronger?
+sc_pquest1	3585	[Scientist] Have you submitted your status report to the Administrator today?
+sc_pquest10	3238	[Scientist] Another delay on the launch...
+sc_pquest11	3029	[Scientist] Ethical standards are surprisingly lax today.
+sc_pquest12	3932	[Scientist] Has the equipment been calibrated today?
+sc_pquest13	1885	[Scientist] Who ate all the donuts?
+sc_pquest14	1849	[Scientist] Have you seen my coffee cup?
+sc_pquest15	1523	[Scientist] Hungry already?
+sc_pquest16	4138	[Scientist] Don't you think we should recalculate those resonance dampening factors?
+sc_pquest17	2500	[Scientist] Check the signal attenuation.
+sc_pquest2	3837	[Scientist] Doing those crystal lattice tunneling calculations again?
+sc_pquest3	3624	[Scientist] These readings don't fit a unified theory.
+sc_pquest4	3677	[Scientist] The theory is sound overall, but there are discrepancies.
+sc_pquest5	3120	[Scientist] We'll have to run the analysis again.
+sc_pquest6	3146	[Scientist] The readings are remarkably clean today.
+sc_pquest7	2313	[Scientist] We've received a new specimen.
+sc_pquest8	3291	[Scientist] Fine day for an experiment.
+sc_pquest9	4365	[Scientist] The main thing is to avoid a resonance cascade.
+sc_question0	3041	[Scientist] Have you ever seen anything like this?
+sc_question1	3953	[Scientist] I'd give my right lobe for a few hours of sleep.
+sc_question10	2559	[Scientist] Do you hear something?
+sc_question11	2093	[Scientist] Do you smell that?
+sc_question12	2915	[Scientist] Why did I ever get a PhD?
+sc_question13	2865	[Scientist] Maybe we should wait here?
+sc_question14	3410	[Scientist] Our chances of survival are dwindling.
+sc_question15	4614	[Scientist] Watch out, those headcrabs jump right for your head.
+sc_question16	3356	[Scientist] This would make a brilliant paper.
+sc_question17	2585	[Scientist] I wish I could capture a specimen for study.
+sc_question18	5427	[Scientist] Are you seriously suggesting all these creatures came here to dine on us?
+sc_question19	3333	[Scientist] Don't fall for their tricks.
+sc_question2	1800	[Scientist] What are you thinking about?
+sc_question20	2646	[Scientist] Remarkable anatomy on these creatures.
+sc_question21	4929	[Scientist] Rumor has it they sent a cleanup crew in here.
+sc_question22	5149	[Scientist] Surely not all alien species can be hostile, right?
+sc_question23	2255	[Scientist] The public address announcer is still working.
+sc_question24	1800	[Scientist] Smells like something's burning.
+sc_question25	3502	[Scientist] You have no idea what's going on, do you?
+sc_question26	2962	[Scientist] What could possibly happen next?
+sc_question3	2145	[Scientist] Do you think we'll ever get out?
+sc_question4	1800	[Scientist] Is this the right way out?
+sc_question5	1800	[Scientist] Things certainly can't get any worse.
+sc_question6	2624	[Scientist] I wonder if anyone's going to rescue us?
+sc_question7	2475	[Scientist] Extraordinary!
+sc_question8	3295	[Scientist] How scientifically intriguing...
+sc_question9	3428	[Scientist] I hope our luck turns around soon.
+sc_rescued	2650	[Scientist] Rescued at last! Thank God you're here!
+sc_rocket	5756	[Scientist] Fire the... rocket engine. Destroy the damned thing before it grows any larger!
+sc_sample	2536	[Scientist] The sample was just delivered to the Test Chamber.
+sc_scared0	1959	[Scientist] What are you doing?!
+sc_scared1	1800	[Scientist] Stop attacking me!
+sc_scared2	2615	[Scientist] Are you insane?!
+sc_scream0	1200	[Scientist] (scream)
+sc_scream1	1200	[Scientist] (scream)
+sc_scream10	1267	[Scientist] (scream of terror)
+sc_scream11	1200	[Scientist] (scream)
+sc_scream12	1200	[Scientist] (scream)
+sc_scream13	1200	[Scientist] (scream)
+sc_scream14	1200	[Scientist] (scream)
+sc_scream2	1200	[Scientist] (scream)
+sc_scream3	1200	[Scientist] (scream)
+sc_scream4	1200	[Scientist] (scream)
+sc_scream5	1200	[Scientist] (scream)
+sc_scream6	1200	[Scientist] (scream)
+sc_scream7	1200	[Scientist] (scream)
+sc_scream8	1200	[Scientist] (scream of pain)
+sc_scream9	1200	[Scientist] (scream)
+sc_silo1a	5057	[Scientist] For God's sake, open the silo door! They're coming for us, it's our only way out!
+sc_silo2a	2195	[Scientist] Oh my God, we're doomed!
+sc_smell0	4112	[Scientist] I believe there's a rather foul odor in here.
+sc_smell1	2511	[Scientist] Surely that smell isn't coming from you?
+sc_smell2	2483	[Scientist] What an odd smell...
+sc_smell3	2094	[Scientist] What a terrible stench.
+sc_stare0	1403	[Scientist] Yes...
+sc_stare1	1639	[Scientist] What are you thinking?
+sc_stare2	3502	[Scientist] You have no idea what's going on, do you?
+sc_stop0	1395	[Scientist] Stop!
+sc_stop1	1684	[Scientist] Wait!
+sc_stop2	2042	[Scientist] Halt!
+sc_stop3	2302	[Scientist] Not so fast!
+sc_straws	37987	[Scientist] I'm sorry, Mr. Freeman, but I couldn't risk opening that door until I was sure you'd scoured the area. This is the last entrance to the Lambda Complex — every other has been sealed off to contain the invasion. When we realized you might actually make it here, we drew straws to see who'd stay behind to let you through. Obviously, I drew the short one. My colleagues are waiting at the top of the Lambda Reactor... waiting for you, that is. The reactor's shut down right now, but you can activate it on your way up. You'll have to flood the core anyway to get into the teleportation labs. You're not authorized to know about this, of course, but I can see you already know a great deal more than any one man is supposed to.
+sc_survey1a	2331	[Scientist] Gordon Freeman, you finally found us!
+sc_survey3a	26312	[Scientist] This is the supply depot for our first survey team. Quite a few handsome specimens were collected from the Borderworld and brought back this way... uh, before the survey members themselves started being collected, that is. We suspect there is an immense portal over there, created by the intense concentration of a single powerful being. You will know it when you see it. I hate to say this, Gordon, but you must kill it, if you can.
+sc_survey5a	6531	[Scientist] Of course, you owe us nothing, Mr. Freeman. But you've come this far, and you know as much about these creatures as anyone.
+sc_survey7a	9340	[Scientist] Yes... Well, if you are ready, my colleague is waiting for you at the main portal control. He will open the gates for you, Mr. Freeman. Hurry.
+sc_tau2a	2520	[Scientist] Put that down! It's a prototype!
+sc_tau4a	3449	[Scientist] It's much too unpredictable! Don't let it overcharge!
+sc_team	1855	[Scientist] Don't shoot! I'm with the science team!
+sc_tent	3813	[Scientist] No! No! No! Get it off me! Get it off! Get it off!
+sc_thankgod	1476	[Scientist] Thank God you're here!
+sc_track	29008	[Scientist] Gordon Freeman — that is you, isn't it? The science team has been tracking your progress with the Black Mesa security system. Unfortunately, so has the military. That suit of yours is full of tracking devices. Still, it's better than going around naked in this place. It's cold in there, and you'll have to hurry. It can sap your suit power in a matter of moments. If you're trying to reach the Lambda Complex, you'd better stick to the old industrial areas, where the security system is full of holes. It's been working for me — so far, at least.
+sc_trainend	9795	[Scientist] Did you hear that? They're killing the scientists! Our own race has turned against us. I think I'll stay here and take my chances with the aliens.
+sc_transmission	8631	[Scientist] I just overheard a secure transmission. Soldiers have arrived, and they're coming to rescue us. Of course, I doubt we'll live long enough to see them.
+sc_trust	36334	[Scientist] Well, so much for the government. Their idea of containment is to kill everyone associated with the project. Judging by your hazard suit, I'd say you were part of what went wrong, isn't that right? Now look, if anyone can end this catastrophe, it's the science team in the Lambda Complex at the opposite end of the base. With the transit system out, I couldn't tell you how to get there. But there's an old decommissioned rail system somewhere out there beyond the silo complex. If you can make it through the rocket test labs, you might be able to worm your way through the old tunnels to track down whatever's left of the Lambda team. You can trust them. You can trust all of us. Good luck.
+sc_uphere	4824	[Scientist] Hello, Freeman! I'm up here. Practice your long jumps if you must, but hurry!
+sc_wait0	2063	[Scientist] I'm afraid I've become a burden to you.
+sc_wait1	1800	[Scientist] I'm only slowing you down.
+sc_wait2	1817	[Scientist] Won't you reconsider?
+sc_wait3	1800	[Scientist] Why are you leaving me here?
+sc_wait4	1200	[Scientist] I'll wait here.
+sc_wait5	1200	[Scientist] Very well, I'll stay.
+sc_wait6	1200	[Scientist] I'll wait.
+sc_wound0	3250	[Scientist] I'm wounded!
+sc_wound1	3144	[Scientist] Oh, I've been wounded!
+sc_zombie1a	2309	[Scientist] Get out of there! Run, run!
+sc_zombie3a	1200	[Scientist] Don't be a fool!
+sc_zombie5a	1200	[Scientist] Noooo!
+sc_zombie6a	3012	[Scientist] Don't just stand there, grab a pistol and shoot it!
+sci_2sat	3833	[Scientist] I'm very sorry, but those doors won't open until we sound the all-clear.
+sci_4sat	13279	[Scientist] I'd love to do that, but the air strike turned my transmitter into a pile of rubble. The cables are severed — we'd have to aim it manually, and I'm reading high radiation levels under the transmitter dome. Only a madman would go in there.
+sci_6sat	10759	[Scientist] Yes, in that suit of yours, you might survive it. All right, I'll lower the security level on the satellite access elevator so you can get up to the dome. I'll try to assist you over the intercom.
+sci_7sat	1910	[Scientist] Aaaaah!
+sci_8sat	1973	[Scientist] Aaaaaah!
+scientist/absolutely	1200	[Scientist] Absolutely.
+scientist/absolutelynot	1200	[Scientist] Absolutely not.
+scientist/administrator	4432	[Scientist] The Administrator said everything was under control...
+scientist/afellowsci	1332	[Scientist] Ah, a fellow scientist.
+scientist/alienappeal	2646	[Scientist] Remarkable anatomy on these creatures.
+scientist/alientrick	3333	[Scientist] Don't fall for their tricks.
+scientist/allnominal	2153	[Scientist] Readings are nominal.
+scientist/alright	1200	[Scientist] All right.
+scientist/analysis	3120	[Scientist] We'll have to run the analysis again.
+scientist/announcer	2255	[Scientist] The public address announcer is still working.
+scientist/areyouthink	1639	[Scientist] What are you thinking?
+scientist/asexpected	1800	[Scientist] Everything is proceeding as expected.
+scientist/beenaburden	2063	[Scientist] I'm afraid I've become a burden to you.
+scientist/beverage	3063	[Scientist] Care for some coffee? Or something stronger?
+scientist/bloodsample	3507	[Scientist] Wouldn't you like to get one of those blood samples under a microscope?
+scientist/c1a0_sci_bigday	1361	[Scientist] Big day today, Freeman.
+scientist/c1a0_sci_crit1a	2397	[Scientist] Quick! It's about to go critical!
+scientist/c1a0_sci_crit2a	2568	[Scientist] What the hell is going on with our equipment?
+scientist/c1a0_sci_crit3a	2537	[Scientist] It wasn't meant to do this in the first place!
+scientist/c1a0_sci_ctrl1a	4496	[Scientist] Ah, Gordon, here you are. We just sent the sample down to the Test Chamber.
+scientist/c1a0_sci_ctrl2a	6475	[Scientist] We've boosted the Anti-Mass Spectrometer to 105 percent. Bit of a gamble, but we need the extra resolution.
+scientist/c1a0_sci_ctrl3a	7311	[Scientist] The Administrator is very concerned that we get a conclusive analysis of today's sample. I gather they went to some lengths to get it.
+scientist/c1a0_sci_ctrl4a	3747	[Scientist] They're waiting for you, Gordon. In the Test Chamber.
+scientist/c1a0_sci_dis10a	8027	[Scientist] Gordon, we cannot predict how long the system can operate at this level, nor how long the reading will take. Please work as quickly as you can.
+scientist/c1a0_sci_dis11a	10852	[Scientist] Uh, it's probably not a problem... probably... but I'm showing a small discrepancy in... well, no, it's well within acceptable bounds again. Sustaining sequence.
+scientist/c1a0_sci_dis12a	4326	[Scientist] Nothing you need to worry about, Gordon. Go ahead.
+scientist/c1a0_sci_dis13a	1567	[Scientist] Wh-what is he doing in there?
+scientist/c1a0_sci_dis14a	3888	[Scientist] Get him out of there! Shut down the equipment and someone get him out!
+scientist/c1a0_sci_dis15a	8322	[Scientist] Shutting down! Attempting shut down! It's not... it-it's not... it's not shutting down! It's not...
+scientist/c1a0_sci_dis16a	3162	[Scientist] Gordon! Get away from the beams!
+scientist/c1a0_sci_dis17a	2806	[Scientist] He waited too long! We can't contain it!
+scientist/c1a0_sci_dis1a	18055	[Scientist] Now, Gordon, your suit should keep you comfortable through all this. The specimen will be delivered to you in a few moments. If you would be so good as to climb up and start the rotors, we can bring the Anti-Mass Spectrometer to eighty percent and hold it there until the carrier arrives.
+scientist/c1a0_sci_dis1b	4528	[Scientist] Gordon, can't you hear me? Climb up and start the rotors, please.
+scientist/c1a0_sci_dis1c	2778	[Scientist] Climb up and start the rotors.
+scientist/c1a0_sci_dis1d	2809	[Scientist] Very good. We'll take it from here.
+scientist/c1a0_sci_dis2a	5751	[Scientist] Power to stage one emitters in three, two, one...
+scientist/c1a0_sci_dis3a	2706	[Scientist] I'm seeing predictable phase arrays.
+scientist/c1a0_sci_dis4a	5360	[Scientist] Tell him to step away from the focal stage. That suit won't do him any good if he wanders into the beam.
+scientist/c1a0_sci_dis5a	4164	[Scientist] Stage two emitters activating... now.
+scientist/c1a0_sci_dis6a	10457	[Scientist] I've just been informed that the sample is ready, Gordon. It should be coming up to you any moment now. Look to the delivery system for your specimen.
+scientist/c1a0_sci_dis7a	7108	[Scientist] Standard insertion for a non-standard specimen. Go ahead, Gordon, slot the carrier into the analysis port.
+scientist/c1a0_sci_dis8a	1200	[Scientist] ...
+scientist/c1a0_sci_dis9a	4431	[Scientist] Overhead capacitors to one oh five percent.
+scientist/c1a0_sci_disa	6784	[Scientist] Testing... testing... Everything seems to be in order.
+scientist/c1a0_sci_getaway	3614	[Scientist] Get away from there, Freeman! I'm expecting an important message!
+scientist/c1a0_sci_gm	1736	[Scientist] Good morning, Gordon.
+scientist/c1a0_sci_lock1a	5788	[Scientist] I'm afraid we'll be deviating a bit from standard analysis procedures today, Gordon.
+scientist/c1a0_sci_lock2a	7067	[Scientist] Yes, but with good reason. This is a rare opportunity for us. This is the purest sample we've seen yet.
+scientist/c1a0_sci_lock3a	2446	[Scientist] And potentially the most unstable!
+scientist/c1a0_sci_lock4a	4509	[Scientist] Now, now, if you follow standard insertion procedures, everything will be fine.
+scientist/c1a0_sci_lock5a	10487	[Scientist] I don't know how you can say that. Although I will admit that the possibility of a resonance cascade scenario is extremely unlikely, I remain uncomfortable with the...
+scientist/c1a0_sci_lock6a	8132	[Scientist] Gordon doesn't need to hear all this, he's a highly trained professional! We've assured the Administrator that nothing will go wrong.
+scientist/c1a0_sci_lock7a	5136	[Scientist] Ah, yes, you're right. Gordon, we have complete confidence in you.
+scientist/c1a0_sci_lock8a	2756	[Scientist] Well, go ahead. Let's let him in.
+scientist/c1a0_sci_mumble	6421	[Scientist] I've told you a hundred times, I am opposed to pushing this equipment beyond the test level.
+scientist/c1a0_sci_samp	2536	[Scientist] They've just delivered the sample to the test chamber.
+scientist/c1a0_sci_stall	1238	[Scientist] Ahem... ahem-ahem.
+scientist/c1a1_sci_1scan	1827	[Scientist] Why didn't they listen?
+scientist/c1a1_sci_2scan	2289	[Scientist] We tried to warn them.
+scientist/c1a1_sci_3scan	5245	[Scientist] I never thought I'd see a resonance cascade, let alone create one.
+scientist/c1a1_sci_4scan	17456	[Scientist] Gordon, you're alive! Thank God for that hazard suit. I'm afraid to move him, and all our phones are out. Please, get to the surface as soon as you can, and let someone know we're stranded down here. You'll need me to activate the retinal scanners. I'm sure the rest of the science team will gladly help you.
+scientist/c1a1_sci_5scan	1200	[Scientist] Be careful, Gordon.
+scientist/c1a2_sci_1zomb	2309	[Scientist] Get out of there! Run, run!
+scientist/c1a2_sci_3zomb	1200	[Scientist] Don't be a fool!
+scientist/c1a2_sci_5zomb	1200	[Scientist] No-o-o!
+scientist/c1a2_sci_6zomb	3012	[Scientist] Don't just stand there, grab the gun and shoot him!
+scientist/c1a2_sci_dangling	3834	[Scientist] I... I can't hold on much longer...
+scientist/c1a2_sci_darkroom	5837	[Scientist] I'm not sure I want to go to the surface. What if the world finds out what we were doing down here?
+scientist/c1a2_sci_elevator	9935	[Scientist] If you can get up the elevator shaft, you should be able to reach the surface. Try to send help, and let the world know what happened.
+scientist/c1a2_sci_lounge	10040	[Scientist] Gordon, if I'd known it was you, I would have let you in. Everyone's heading for the surface, but I think they're crazy not to stay put. Someone is bound to come by and rescue us.
+scientist/c1a2_sci_transm	8631	[Scientist] I just overheard a secure transmission. Soldiers have arrived, and they're coming to rescue us. Of course, I doubt we'll live long enough to see them.
+scientist/c1a3_sci_1man	3404	[Scientist] Take me with you! I'm the one man who knows everything!
+scientist/c1a3_sci_atlast	1200	[Scientist] Rescued at last!
+scientist/c1a3_sci_rescued	2650	[Scientist] Rescued at last! Thank God you're here!
+scientist/c1a3_sci_silo1a	5057	[Scientist] For God's sake, open the silo door! They're coming for us, it's our only way out!
+scientist/c1a3_sci_silo2a	2195	[Scientist] Oh my God, we're doomed!
+scientist/c1a3_sci_team	1855	[Scientist] Don't shoot! I'm with the science team!
+scientist/c1a3_sci_thankgod	1476	[Scientist] Thank God you're here!
+scientist/c1a4_sci_blind	4173	[Scientist] Is anyone there? I... I can't see anything.
+scientist/c1a4_sci_gener	7956	[Scientist] This is my hiding spot, and I'm not moving until the situation is drastically improved. Now go away, and don't tell anyone I'm here.
+scientist/c1a4_sci_pwr	5555	[Scientist] Great! Someone's got the power back on. We'll have the engine firing in no time.
+scientist/c1a4_sci_pwroff	5533	[Scientist] I hope no one expects me to start up the generator. Smithers went down there and never came back.
+scientist/c1a4_sci_rocket	5756	[Scientist] Fire the... rocket engine. Destroy the damned thing before it grows any larger!
+scientist/c1a4_sci_tent	3813	[Scientist] No! No! No! Get it off me! Get it off! Get it off!
+scientist/c1a4_sci_trainend	9795	[Scientist] Have you heard? They're killing the scientists! Our own race has turned against us. I think I'll stay here and take my chances with the creatures.
+scientist/c1a4_sci_trust	36334	[Scientist] Well, so much for the government. Their idea of containment is to kill everyone associated with the project. Judging from your hazard suit, I'd say you were part of what went wrong, isn't that right? Now look, if anyone can end this catastrophe, it's the science team in the Lambda Complex at the opposite end of the base. With the transit system out, I couldn't tell you how to get there. But there's an old decommissioned rail system somewhere through here, beyond the silo complex. If you can make your way through the rocket test labs, you might be able to worm your way through the old tunnels to track down whatever's left of the Lambda team. You can trust them. You can trust all of us. Good luck.
+scientist/c2a3_sci_icky	17300	[Scientist] Did you see it? They said it was hauled from the Challenger Deep, but I'm positive that beast never swam in terrestrial waters until a week ago. There's a tranquilizer gun in the shark cage, but I'm not sure it would work on this species. You're welcome to try.
+scientist/c2a3_sci_track	29008	[Scientist] Gordon Freeman, isn't it? The science team has been tracking your progress with the Black Mesa security system. Unfortunately, so has the military. That suit of yours is full of tracking devices. Still, it's better than going around naked in this place. It's cold in there, and you'll have to hurry. The cold could drain your suit in no time. If you intend to reach the Lambda Complex, you'd better stick to the old industrial areas where the security system is full of holes. It's worked for me—so far, at least.
+scientist/c2a4_sci_2tau	2520	[Scientist] Put that down! It's a prototype!
+scientist/c2a4_sci_4tau	3449	[Scientist] It's much too unpredictable! Don't let it overcharge!
+scientist/c2a4_sci_alldie	3409	[Scientist] If you let us all die, Freeman, you'll never get out of here!
+scientist/c2a4_sci_arg2a	2244	[Scientist] I'm telling you, it wasn't our fault.
+scientist/c2a4_sci_arg4a	3666	[Scientist] Nature made them—we only studied them.
+scientist/c2a4_sci_letout	23230	[Scientist] All right, I'll let you out, but I'm warning you—it's hell out there. It's completely under military control. You'll have to sneak and fight your way from one end to the other, and I don't imagine you'll meet many of our peers along the way. But if you do survive and somehow make it across the base, you'll end up at the Lambda Complex, where the rest of the science team has taken shelter. I wouldn't venture there myself, but I'll let them know you're coming.
+scientist/c2a4_sci_scanner	5712	[Scientist] We all have retinal scanner access. Escort us to the lobby, and we can get out of the lab.
+scientist/c2a4_sci_sugicaloff	5624	[Scientist] You'll have to shut down the surgical unit first. Peters turned it on, but I'm afraid he never made it back.
+scientist/c2a4_sci_surgury	6800	[Scientist] A scientist! Thank God! Get us out of here before those military thugs figure out where we're hiding.
+scientist/c2a5_sci_boobie	17684	[Scientist] You're heading for the Lambda Complex, aren't you? I was going there myself until I got here and, well, simply lost my nerve. Take one look through that door and you'll see what I mean. I'm just going to sit this one out here. If you're intent on going on, then I beg you: proceed with extreme caution.
+scientist/c2a5_sci_lebuz	13808	[Scientist] Thank you, Mr. Freeman. You are Gordon Freeman, aren't you? The one they're waiting for at the Lambda Complex? If you can figure out how to get past that Gargantua on the landing pad and through the bunker door over there, you'll be right on the doorstep of the Lambda Labs.
+scientist/c3a1_sci_2sat	3833	[Scientist] I'm sorry, but those doors won't open until we send an all-clear signal.
+scientist/c3a1_sci_4sat	13279	[Scientist] I'd love to do that, but an air strike turned my transmitter into a pile of rubble. The cables are severed—we'd have to aim it manually, and I'm reading high radiation levels in the transmitter dome. Only a madman would go in there.
+scientist/c3a1_sci_6sat	10759	[Scientist] Yes, with that suit of yours, you might survive it. Very well, I'll lower the security on the satellite access elevator so you can get up to the dome. I'll try to guide you over the intercom.
+scientist/c3a1_sci_dome	9016	[Scientist] Freeman, you'll have to work fast! Aim the transmitter at the U.S. Nuclear Regulatory Commission! Repeat: aim at the USNRC!
+scientist/c3a1_sci_done	5726	[Scientist] Splendid! I'm sending the all-clear signal, and the doors should open now. We'll meet you downstairs.
+scientist/c3a2_sci_1surv	2331	[Scientist] Gordon Freeman, you've finally found us!
+scientist/c3a2_sci_2glu	10487	[Scientist] Are you in weapon development too? I built the gluon gun, but I just can't bring myself to use it on a living creature. You, on the other hand, don't look like someone who has trouble killing.
+scientist/c3a2_sci_3surv	26312	[Scientist] This is the supply depot for our first survey team. Quite a few handsome specimens were collected from the Borderworld and brought back this way... uh, before the survey members themselves started being collected, that is. We suspect there is an immense portal over there, created by the intense concentration of a single powerful being. You'll know it when you see it. I hate to say this, Gordon, but you must kill it, if you can.
+scientist/c3a2_sci_5surv	6531	[Scientist] Of course, you owe us nothing, Mr. Freeman. But you've come this far, and you know as much about these creatures as anyone.
+scientist/c3a2_sci_7surv	9340	[Scientist] Yes... Well, if you're ready, my colleague is waiting for you at the main portal controls. He will open the gates for you, Mr. Freeman. Hurry.
+scientist/c3a2_sci_flood	8777	[Scientist] Freeman, isn't it? You need to start both pumps to flood the reactor, and then that service pipe down there will take you up to the core. There's no time to waste!
+scientist/c3a2_sci_fool	1335	[Scientist] Freeman, you fool!
+scientist/c3a2_sci_forever	2387	[Scientist] Hurry up, Freeman, I can't hold it open forever!
+scientist/c3a2_sci_linger	8213	[Scientist] Don't linger, Mr. Freeman! You've got the pumps going. Now get down that service pipe, flood the core, and get up to the labs without delay!
+scientist/c3a2_sci_ljump	14756	[Scientist] This, Mr. Freeman, is a Long Jump Module, created expressly for navigation in the world beyond. I certainly hope you received Long Jump training, because once you're in Xen, you will need it. I would advise you to practice before crossing over.
+scientist/c3a2_sci_notyet	1200	[Scientist] Not yet, Freeman!
+scientist/c3a2_sci_portal	13127	[Scientist] Very well, I can open the portal now. The process is intricate, and once I begin I must not be interrupted, or I will have to start all over again. Don't enter the beam until I give the OK. Understood? I am starting now.
+scientist/c3a2_sci_portopen	2143	[Scientist] It's ready! You must go, now!
+scientist/c3a2_sci_position	2722	[Scientist] We're almost there, Freeman. Get yourself in position.
+scientist/c3a2_sci_straws	37987	[Scientist] Forgive me, Mr. Freeman, but I couldn't risk opening that door until I was sure you had scoured the area. This is the last entrance to the Lambda Complex—every other has been sealed off to contain the invasion. When we realized you might actually make it here, we drew straws to see who would stay behind to let you in. Obviously, I drew the short one. My colleagues are waiting at the top of the Lambda reactor... waiting for you, I mean. The reactor is shut down right now, but you can activate it on your way up. You'll have to flood the core anyway to get into the teleportation labs. You're not authorized to know about those, but I can see you already know a great deal more than any one man is supposed to.
+scientist/c3a2_sci_uphere	4824	[Scientist] Hello, Freeman! I'm up here. Practice your Long Jump if you must, but hurry!
+scientist/cantbeserious	1800	[Scientist] You can't be serious.
+scientist/cantbeworse	1800	[Scientist] It can't possibly get any worse.
+scientist/canttakemore	1864	[Scientist] I can't take much more of this!
+scientist/cascade	4365	[Scientist] The main thing is to avoid a resonance cascade.
+scientist/catchone	2585	[Scientist] I'd like to catch one for study.
+scientist/chaostheory	2414	[Scientist] A textbook case of chaos theory.
+scientist/checkatten	2500	[Scientist] Check the signal attenuation.
+scientist/completelywrong	1918	[Scientist] Completely wrong.
+scientist/containfail	3169	[Scientist] Total containment failure.
+scientist/correcttheory	3677	[Scientist] The theory is basically sound, though there are discrepancies.
+scientist/delayagain	3238	[Scientist] Delayed again...
+scientist/didyouhear	1200	[Scientist] Did you hear that?
+scientist/dinner	5427	[Scientist] Are you seriously suggesting that all these creatures came here to have us for dinner?
+scientist/dontgothere	1800	[Scientist] Don't go in there, it's dangerous!
+scientist/dontknow	1200	[Scientist] I don't know.
+scientist/dontwantdie	1747	[Scientist] I don't want to die!
+scientist/donuteater	1885	[Scientist] Who ate all the donuts?
+scientist/doyousmell	2093	[Scientist] Do you smell something?
+scientist/evergetout	2145	[Scientist] Do you think we'll ever get out of here?
+scientist/everseen	3041	[Scientist] Have you ever seen anything like this?
+scientist/excellentteam	3590	[Scientist] We'll make an excellent team!
+scientist/fascinating	2475	[Scientist] Fascinating!
+scientist/fellowscientist	1970	[Scientist] Good to see a fellow scientist.
+scientist/fine	1860	[Scientist] Very well, I'll come with you.
+scientist/freeman	1200	[Scientist] Ah, Freeman!
+scientist/freemanalive	3543	[Scientist] Freeman! Who would have thought you'd still be alive?
+scientist/getoutalive	2417	[Scientist] We're never getting out of here alive!
+scientist/getoutofhere	3056	[Scientist] Get out of here!
+scientist/goodpaper	3356	[Scientist] This would make an excellent paper.
+scientist/goodtoseeyou	3109	[Scientist] Good to see you.
+scientist/greetings	2252	[Scientist] Good afternoon.
+scientist/greetings2	2012	[Scientist] Greetings!
+scientist/headcrab	4614	[Scientist] Watch out, those headcrabs go for the head.
+scientist/heal1	2472	[Scientist] Let me help you.
+scientist/heal2	1815	[Scientist] This injection should make you feel better.
+scientist/heal3	1800	[Scientist] Here, this should ease the pain.
+scientist/heal4	1815	[Scientist] Hold still, let me treat that wound.
+scientist/heal5	1897	[Scientist] Take this, you'll feel better right away.
+scientist/hearsomething	2559	[Scientist] Do you hear something?
+scientist/hello	2415	[Scientist] Hello.
+scientist/hellofreeman	3474	[Scientist] Hello, Freeman.
+scientist/hellofromlab	4303	[Scientist] Greetings from the lab.
+scientist/hellothere	1200	[Scientist] Hello there!
+scientist/hideglasses	2288	[Scientist] Where did I put my glasses...
+scientist/hopenominal	3087	[Scientist] I hope everything goes nominally.
+scientist/hopeyouknow	2097	[Scientist] I hope you know what you're doing.
+scientist/howinteresting	2873	[Scientist] How interesting...
+scientist/hungryyet	1523	[Scientist] Getting hungry yet?
+scientist/ibelieveso	1200	[Scientist] I believe so.
+scientist/idontthinkso	1624	[Scientist] I don't think so.
+scientist/ihearsomething	1200	[Scientist] I hear something.
+scientist/illwait	1200	[Scientist] I'll wait.
+scientist/illwaithere	1200	[Scientist] I'll wait here.
+scientist/importantspecies	2937	[Scientist] What an important specimen!
+scientist/improbable	3470	[Scientist] Highly improbable.
+scientist/imsure	1200	[Scientist] I'm sure.
+scientist/inconclusive	1800	[Scientist] The data is inconclusive.
+scientist/inmesstoo	3632	[Scientist] You caught up in this mess too?
+scientist/ipredictedthis	2737	[Scientist] I predicted all of this, you know!
+scientist/istay	1200	[Scientist] Very well, I'll stay.
+scientist/iwounded	3250	[Scientist] I'm wounded!
+scientist/iwounded2	3144	[Scientist] Oh, I've been hit!
+scientist/iwoundedbad	2094	[Scientist] I'm badly wounded...
+scientist/justasked	1816	[Scientist] You just asked that.
+scientist/lambdalab	4153	[Scientist] If we make it to the Lambda Complex, they can help.
+scientist/leadtheway	1200	[Scientist] Lead the way, I'm right behind you.
+scientist/letsgo	1200	[Scientist] Let's go.
+scientist/letyouin	1452	[Scientist] Just a moment, I'll let you in.
+scientist/limitsok	2172	[Scientist] All limits are within tolerance.
+scientist/lowervoice	2000	[Scientist] Keep your voice down!
+scientist/luckwillchange	3428	[Scientist] I hope our luck changes soon.
+scientist/madness	2601	[Scientist] This is madness!
+scientist/needsleep	3953	[Scientist] I'd give my right hemisphere for a few hours of sleep.
+scientist/neverseen	4724	[Scientist] Astonishing! I never imagined anything like this could exist.
+scientist/newhevsuit	4396	[Scientist] Ah, you've got one of the new HEV suits. That should come in very handy.
+scientist/newsample	2313	[Scientist] They've brought us a new sample.
+scientist/nodoubt	1800	[Scientist] Beyond a shadow of a doubt.
+scientist/nogrant	2144	[Scientist] We're certainly not getting a grant after this.
+scientist/noguess	1800	[Scientist] I wouldn't care to guess.
+scientist/noidea	3502	[Scientist] You have no idea what's going on, do you?
+scientist/noo	1200	[Scientist] No-o.
+scientist/nooo	1200	[Scientist] No-o-o!
+scientist/noplease	1203	[Scientist] No, please!
+scientist/notcertain	1800	[Scientist] I can't say for certain.
+scientist/nothostile	5149	[Scientist] Surely the alien species can't all be hostile, can they?
+scientist/notsure	1200	[Scientist] Not sure.
+scientist/odorfromyou	2511	[Scientist] Is that odor coming from you?
+scientist/ofcourse	1200	[Scientist] Of course.
+scientist/ofcoursenot	1200	[Scientist] Of course not.
+scientist/organicmatter	4580	[Scientist] Well, the dimensional rift is certainly admitting organic matter.
+scientist/overhere	1794	[Scientist] Hey, over here!
+scientist/peculiarmarks	3839	[Scientist] Oh, just look at those peculiar markings!
+scientist/peculiarodor	2483	[Scientist] What a peculiar odor...
+scientist/perfectday	3291	[Scientist] A lovely day for an experiment.
+scientist/perhaps	1200	[Scientist] Perhaps.
+scientist/positively	1200	[Scientist] Positively.
+scientist/purereadings	3146	[Scientist] The readings are remarkably clean today.
+scientist/recalculate	4138	[Scientist] Don't you think we should recalculate those resonance dampening factors?
+scientist/reconsider	1817	[Scientist] Won't you reconsider?
+scientist/repeat	2945	[Scientist] Don't make me repeat myself.
+scientist/reportflux	2593	[Scientist] We should report the flux fluctuations.
+scientist/rescueus	2624	[Scientist] I wonder if anyone's going to rescue us?
+scientist/ridiculous	1200	[Scientist] Ridiculous!
+scientist/right	1200	[Scientist] Right.
+scientist/rightwayout	1800	[Scientist] Is this the right way out?
+scientist/rumorclean	4929	[Scientist] Rumor has it they've sent in a cleanup crew.
+scientist/runtest	3426	[Scientist] Running the test...
+scientist/sci_aftertest	2860	[Scientist] We'll talk after the test.
+scientist/sci_alone	3076	[Scientist] Leave me alone.
+scientist/sci_bother	1800	[Scientist] Don't bother me while I'm working.
+scientist/sci_busy	2569	[Scientist] I'm very busy right now.
+scientist/sci_die1	1407	[Scientist] (wheeze)
+scientist/sci_die2	1200	[Scientist] (wheeze)
+scientist/sci_die3	1200	[Scientist] (wheeze)
+scientist/sci_die4	1200	[Scientist] (wheeze)
+scientist/sci_fear4	1200	[Scientist] (gasp)
+scientist/sci_fear7	1200	[Scientist] Dear God!
+scientist/sci_dragoff	1200	[Scientist] Aaah! Help!
+scientist/sci_pain2	1200	[Scientist] (groan of pain)
+scientist/sci_pain6	1200	[Scientist] (cry of pain)
+scientist/sci_somewhere	2820	[Scientist] I need to be somewhere else.
+scientist/scream01	1325	[Scientist] (scream)
+scientist/scream02	1393	[Scientist] (scream)
+scientist/scream04	1973	[Scientist] Aaaaaah!
+scientist/scream05	2249	[Scientist] (long scream)
+scientist/scream07	1910	[Scientist] Aaaah!
+scientist/scream1	1978	[Scientist] (scream of terror)
+scientist/scream10	1200	[Scientist] (yelp)
+scientist/scream14	1200	[Scientist] (yelp)
+scientist/scream15	1200	[Scientist] (yelp)
+scientist/scream2	1248	[Scientist] (scream)
+scientist/scream25	1200	[Scientist] (yelp)
+scientist/scream4	1441	[Scientist] (scream)
+scientist/seeheadcrab	2495	[Scientist] Look, a headcrab!
+scientist/seencup	1849	[Scientist] Have you seen my coffee cup?
+scientist/shakeunification	3624	[Scientist] These readings don't fit into a unified theory.
+scientist/shutdownchart	3314	[Scientist] The shutdown schedule is off.
+scientist/shutup	1200	[Scientist] Shut up!
+scientist/simulation	3136	[Scientist] The simulation never predicted spikes like this.
+scientist/slowingyou	1800	[Scientist] I'm only slowing you down.
+scientist/smellburn	1800	[Scientist] Smells like something's burning.
+scientist/softethics	3029	[Scientist] Ethical standards are surprisingly lax today.
+scientist/somethingfoul	4112	[Scientist] I believe something here smells quite foul.
+scientist/sorryimleaving	1380	[Scientist] Excuse me, I'm leaving!
+scientist/startle1	1200	[Scientist] Aaah!
+scientist/startle2	1200	[Scientist] Oh God!
+scientist/startle3	1200	[Scientist] Dear God!
+scientist/startle4	1200	[Scientist] Run for your life!
+scientist/startle5	1444	[Scientist] Help!
+scientist/startle6	1200	[Scientist] Oh no!
+scientist/startle7	1200	[Scientist] What is that?!
+scientist/startle8	1200	[Scientist] Run!
+scientist/startle9	1200	[Scientist] Mother!
+scientist/statusreport	3585	[Scientist] Did you submit your status report to the Administrator today?
+scientist/stench	2094	[Scientist] What a stench.
+scientist/stimulating	3295	[Scientist] How scientifically stimulating...
+scientist/stop1	1395	[Scientist] Stop!
+scientist/stop2	1684	[Scientist] Wait!
+scientist/stop3	2042	[Scientist] Hold on!
+scientist/stop4	2302	[Scientist] Not so fast!
+scientist/stopasking	1800	[Scientist] Stop asking.
+scientist/stopattacking	1800	[Scientist] Stop attacking me!
+scientist/survival	3410	[Scientist] Our chances of survival are dwindling.
+scientist/thatsodd	1237	[Scientist] Hmm, that's odd...
+scientist/theoretically	1200	[Scientist] Theoretically, yes.
+scientist/tunedtoday	3932	[Scientist] Is the equipment calibrated today?
+scientist/tunnelcalc	3837	[Scientist] Are you running those crystal lattice tunneling calculations again?
+scientist/uselessphd	2915	[Scientist] Why did I even bother getting this Ph.D.?
+scientist/waithere	2865	[Scientist] Shall we wait here?
+scientist/weartie	3467	[Scientist] Why did I wear this ridiculous tie today?
+scientist/whatissound	1694	[Scientist] What is that sound?
+scientist/whatnext	2962	[Scientist] What could possibly be next?
+scientist/whatyoudoing	1959	[Scientist] What are you doing?!
+scientist/whocansay	1800	[Scientist] Who can say for sure?
+scientist/whoresponsible	2774	[Scientist] Who is responsible for all this?
+scientist/whyaskme	1800	[Scientist] Why are you asking me?
+scientist/whyleavehere	1800	[Scientist] Why are you leaving me here?
+scientist/yees	1403	[Scientist] Yees...
+scientist/yes	1200	[Scientist] Yes.
+scientist/yes3	1200	[Scientist] Yes, of course.
+scientist/yesletsgo	1800	[Scientist] Yes, let's go.
+scientist/youinsane	2615	[Scientist] Are you insane?!
+scientist/youlookbad	1800	[Scientist] You don't look so good.
+scientist/youneedmedic	2673	[Scientist] You need medical attention.
+scientist/youwounded	1668	[Scientist] You're wounded!
+t0	6100	[Announcement] Extreme hazard: defense system is armed in this zone.
+t1	4200	[Announcement] Hazard area: defense system activated.
+t2	4450	[Announcement] Danger: turret perimeter defense system armed.
+t3	4950	[Announcement] Extreme hazard: nearest defense system engaged.
+t4	5200	[Announcement] Danger: base defense turret system may power up.
+t5	4550	[Announcement] Danger: automatic defense system activated.
+tr_a	2650	[Announcement] Three, two, one.
+tr_b	3550	[Announcement] Target system deactivated.
+tride/c0a0_tr_arrive	5486	[Announcement] Now arriving at Sector C Test Labs and Control Facilities.
+tride/c0a0_tr_dest	38227	[Announcement] This train is inbound from Level 3 Dormitories to Sector C Test Labs and Control Facilities. If your intended destination is a high-security area beyond Sector C, you will need to return to the Central Transit Hub in Area 9 and board a high-security train. If you have not yet submitted your identity to the retinal clearance system, you must report to Black Mesa Personnel for processing before you will be permitted into the high-security branch of the transit system.
+tride/c0a0_tr_emerg	34134	[Announcement] Please keep your limbs inside the train at all times. Do not attempt to open the doors until the train has come to a complete halt at the station platform. In the event of an emergency, passengers are to remain seated and await further instruction. If it is necessary to exit the train, disabled personnel should be evacuated first. Please stay away from electrified rails, and proceed to an emergency station until assistance arrives.
+tride/c0a0_tr_exit	17118	[Announcement] Please stand back from the automated door and wait for the security officer to verify your identity. Before exiting the train, be sure to check your area for personal belongings. Thank you, and have a very safe and productive day.
+tride/c0a0_tr_gmorn	11613	[Announcement] Good morning and welcome to the Black Mesa Transit System. This automated train is provided for the security and convenience of the Black Mesa Research Facility personnel.
+tride/c0a0_tr_haz	36298	[Announcement] A reminder to all Black Mesa personnel: regular radiation and biohazard screenings are a requirement of continued employment in the Black Mesa Research Facility. Missing a scheduled urinalysis or radiation check-up is grounds for immediate termination. If you feel you have been exposed to radioactive or other hazardous materials in the course of your duties, contact your Radiation Safety Officer immediately. Work safe. Work smart. Your future depends on it.
+tride/c0a0_tr_jobs	37031	[Announcement] Do you have a friend or relative who would make a valuable addition to the Black Mesa team? Immediate openings are available in the areas of Materials Handling and Low-Clearance Security. Please contact Black Mesa Personnel for further information. If you have an associate with a background in the areas of theoretical physics, biotechnology, or other high-tech disciplines, please contact our Civilian Recruitment Division. The Black Mesa Research Facility is an equal opportunity employer.
+tride/c0a0_tr_noeat	12055	[Announcement] Due to the high toxicity of material routinely handled in the Black Mesa compound, no smoking, eating, or drinking are permitted within the Black Mesa Transit System.
+tride/c0a0_tr_time	21038	[Announcement] The time is 8:47 AM. Current topside temperature is 93 degrees, with an estimated high of 105. The Black Mesa compound is maintained at a pleasant 68 degrees at all times.
+tride/c0a0_tr_tourn	24544	[Announcement] A reminder that the Black Mesa Hazard Course Decathlon will commence this evening at nineteen hundred hours in the Level 3 facility. The semifinals for high-security personnel will be announced in a separate secure access transmission. Remember, more lives than your own may depend on your fitness.
+we0	2950	[Announcement] Warning: high voltage cable.
+we1	2800	[Announcement] Warning: high power cable.
+we2	3000	[Announcement] Warning: electric shock hazard.
+we3	3700	[Announcement] Warning: severe electric shock hazard.
+scientist/c1a0_sci_catscream	2824	[Scientist] Aaaaaah!
+scientist/c1a0_sci_gm1	1200	[Scientist] Good morning, Gordon.
+scientist/c1a0_sci_itsyou	5840	[Scientist] Oh, it's you... I thought you were another one of the Administrator's people. They're all over the place this morning.
+scientist/c1a0_sci_scanrpt	2265	[Scientist] You'll need my help to activate the retinal scanners.
+scientist/c1a0_sci_stayback	2503	[Scientist] No! Stay back! Gordon!
+scientist/c1a4_dying	5756	[Scientist] Fire the... rocket engine. Destroy the damned thing before it grows any larger!
+scientist/fusionshunt	3996	[Scientist] I certainly hope those backup fusion shunts are in good shape today.
+scientist/whoareyou	4236	[Scientist] Who are you? I've been waiting here forever hoping someone would show up.
+scientist/rumourclean	4928	[Scientist] The military cleanup is just a paranoid rumor, isn't it?
+scientist/c3a2_sci_1glu	1610	[Scientist] Psst! Over here!
+scientist/c3a2_sci_3glu	8800	[Scientist] I see you've found the gluon gun. I hope it serves you better than it did me. I built the thing, but I can't bring myself to use it on a living creature.
+scientist/c3a2_sci_shower	10053	[Scientist] Freeman! What a relief to see you! We've been tracking your progress. I stayed behind to let you into the reactor complex. You'll need me to activate the retinal scanner.
+gman/gman_noregret	20072	[G-Man] Well, it looks like we won't be working together. No regrets, Mr. Freeman, but there are a few survivors of your personal holocaust who would like the chance to meet the man responsible for the total annihilation of their race.
+gman/gman_offer	77017	[G-Man] Gordon Freeman in the flesh. Or rather, in the hazard suit. I took the liberty of relieving you of your weapons—most of them were government property. As for the suit, I think you've earned it. The Borderworld, Xen, is in our control for the time being, thanks to you. Quite a nasty piece of work you managed over there. I am impressed. That's why I'm here, Mr. Freeman. I have recommended your services to my... employers, and they have authorized me to offer you a job. They agree with me that you have limitless... potential. You've proved yourself a decisive man, so I don't expect you'll have any trouble deciding what to do. If you're interested, just step into the portal and I will take that as a yes. Otherwise... well... I can offer you a battle you have no chance of winning—rather an anticlimax after what you've just survived.
+nihilanth/nil_last	7523	[Nihilanth] The last... you are the last... you...
+nihilanth/nil_man_notman	13346	[Nihilanth] You are man... he is not man... for you he waits... for you...
+nihilanth/nil_slaves	8014	[Nihilanth] Their slaves... we are their slaves... we are...
+nihilanth/nil_thieves	6935	[Nihilanth] Thieves... you all are thieves... you all...
+barney/c1a2_ba_goforit	1941	[Security] All right, let's give it a shot.
+barney/c1a4_ba_octo2	3373	[Security] Hey! Yeah, you can't keep me down!
+barney/c2a_ba_hub1a	13450	[Security] Mister, if you can get the power on, that train'll take us straight up to the surface. I'd try it myself, but it's a long way down to the generator room, and there are... things in the way.
+hgrunt/c2a3_ambush_fx	9186	[HECU] (dull thud and body falling)
+fvox/hev_logon	10128	[HEV] Welcome to the HEV Mark IV Protective System.
+fvox/powermove_on	3515	[HEV] Power assist movement activated.
+fvox/powermove_overload	4399	[HEV] Power assist movement overload.
+fvox/powerarmor_on	4202	[HEV] High-impact reactive armor activated.
+fvox/atmospherics_on	4218	[HEV] Atmospheric contaminant sensors activated.
+fvox/vitalsigns_on	3334	[HEV] Vital sign monitoring activated.
+fvox/munitionview_on	3642	[HEV] Munition level monitoring activated.
+fvox/communications_on	3376	[HEV] Communications interface online.
+fvox/weaponselect_on	3707	[HEV] Defensive weapon selection system activated.
+fvox/automedic_on	3505	[HEV] Automatic medical systems engaged.
+fvox/power_level_is	2152	[HEV] Power level is one hundred percent.
+fvox/safe_day	2714	[HEV] Have a very safe day.
+fvox/flatline	3993	[HEV] Vital signs flatlined.
+fvox/innsuficient_medical	4514	[HEV] Insufficient medical supplies.
+fvox/administering_medical	3058	[HEV] Administering medical.
+fvox/wound_sterilized	1960	[HEV] Wound sterilized.
+fvox/morphine_shot	1960	[HEV] Morphine administered.
+fvox/torniquette_applied	3118	[HEV] Tourniquet applied.
+fvox/bleeding_stopped	2249	[HEV] Bleeding stopped.
+fvox/blood_plasma	2609	[HEV] Blood plasma administered.
+fvox/antitoxin_shot	2184	[HEV] Antitoxin administered.
+fvox/antidote_shot	1970	[HEV] Antidote administered.
+fvox/adrenaline_shot	1988	[HEV] Adrenaline administered.
+fvox/medical_repaired	2762	[HEV] Medical condition repaired.
+fvox/minor_lacerations	2852	[HEV] Minor lacerations detected.
+fvox/major_lacerations	2958	[HEV] Major lacerations detected.
+fvox/internal_bleeding	2406	[HEV] Internal bleeding detected.
+fvox/blood_toxins	3803	[HEV] Blood toxins detected.
+fvox/minor_fracture	2430	[HEV] Minor fracture detected.
+fvox/major_fracture	2430	[HEV] Major fracture detected.
+fvox/blood_loss	2159	[HEV] Warning: blood loss detected.
+fvox/seek_medic	2508	[HEV] Seek medical attention.
+fvox/health_dropping	3536	[HEV] Warning: user health is dropping.
+fvox/health_dropping2	2900	[HEV] Vital signs dropping.
+fvox/health_critical	3153	[HEV] User health critical.
+fvox/near_death	3606	[HEV] User death imminent.
+fvox/evacuate_area	2116	[HEV] Evacuate area immediately.
+fvox/shock_damage	2317	[HEV] Warning: electrical shock damage.
+fvox/heat_damage	3038	[HEV] Warning: extreme heat damage.
+fvox/targetting_system	3035	[HEV] Targeting system.
+fvox/get_battery	2346	[HEV] Suit battery acquired.
+fvox/get_medkit	1923	[HEV] Medkit acquired.
+fvox/get_pistol	3536	[HEV] 9mm pistol acquired.
+fvox/get_shotgun	2147	[HEV] Shotgun acquired.
+fvox/get_grenade	1961	[HEV] Hand grenade acquired.
+fvox/get_assault	5500	[HEV] MP5 submachine gun acquired.
+fvox/get_44pistol	2506	[HEV] .357 magnum acquired.
+fvox/get_rpg	2645	[HEV] RPG launcher acquired.
+fvox/get_satchel	3150	[HEV] Satchel charge acquired.
+fvox/get_tripmine	3584	[HEV] Laser tripmine acquired.
+fvox/get_alien_wpn	2772	[HEV] Alien weapon acquired.
+fvox/get_egon	2634	[HEV] Gluon gun acquired.
+fvox/get_gauss	4176	[HEV] Tau cannon acquired.
+fvox/get_crossbow	2941	[HEV] Crossbow acquired.
+fvox/get_9mmclip	2162	[HEV] 9mm ammo acquired.
+fvox/get_44ammo	2634	[HEV] .357 ammo acquired.
+fvox/get_buckshot	2194	[HEV] Shotgun shells acquired.
+fvox/get_bolts	3364	[HEV] Crossbow bolts acquired.
+fvox/get_rpgammo	1840	[HEV] RPG rockets acquired.
+fvox/get_assaultgren	2107	[HEV] Submachine gun grenades acquired.
+fvox/get_egonpower	2196	[HEV] Uranium ammo acquired.
+fvox/power_restored	1448	[HEV] Power restored.
+fvox/hev_shutdown	4206	[HEV] HEV suit shutdown.
+fvox/power_below	3986	[HEV] Warning: power level low.
+fvox/ammo_depleted	2052	[HEV] Ammunition depleted.
+fvox/voice_on	2815	[HEV] Voice communication activated.
+fvox/voice_off	2705	[HEV] Voice communication deactivated.
+fvox/armor_gone	2045	[HEV] Suit armor depleted.
+fvox/armor_compromised	3299	[HEV] Suit armor compromised.
+fvox/hev_critical_fail	4175	[HEV] Critical HEV suit failure.
+fvox/hev_general_fail	2641	[HEV] General HEV suit failure.
+fvox/hev_damage	2954	[HEV] HEV suit damage.
+fvox/biohazard_detected	3089	[HEV] Biohazard detected.
+fvox/chemical_detected	3752	[HEV] Chemical hazard detected.
+fvox/radiation_detected	4503	[HEV] Radiation detected.
+fvox/bio_reading	2352	[HEV] Taking biological readings.
+fvox/pain_block	2365	[HEV] Pain suppressant activated.
+fvox/weapon_pickup	1701	[HEV] Weapon acquired.
+fvox/ammo_pickup	1883	[HEV] Ammunition acquired.
+
+
+
+
+
+
+# === CONTEXTUAL SFX SUBTITLES (HL2-STYLE) ===
+agrunt/ag_alert1	1741	[Alien Grunt growls]
+agrunt/ag_alert2	1564	[Alien Grunt growls]
+agrunt/ag_alert3	1309	[Alien Grunt growls]
+agrunt/ag_alert4	1424	[Alien Grunt growls]
+agrunt/ag_alert5	1100	[Alien Grunt growls]
+ambience/alienflyby1	2200	[Alien craft flyby]
+ambience/biggun1	1100	[Distant artillery]
+ambience/biggun2	1940	[Distant artillery]
+ambience/biggun3	2200	[Distant artillery]
+ambience/bigwarning	1337	[Warning alarm]
+ambience/distantmortar1	2056	[Distant artillery]
+ambience/distantmortar2	1878	[Distant artillery]
+ambience/distantmortar3	2200	[Distant artillery]
+ambience/jetflyby1	2200	[Jet flyby]
+ambience/port_suckin1	2200	[Portal hum]
+ambience/port_suckout1	2200	[Portal hum]
+ambience/siren	2200	[Siren wails]
+ambience/warn1	1250	[Warning alarm]
+ambience/warn2	1100	[Warning alarm]
+ambience/warn3	1100	[Warning alarm]
+apache/ap_rotor1	1100	[Helicopter rotors]
+apache/ap_rotor2	2200	[Helicopter rotors]
+apache/ap_rotor3	2200	[Helicopter rotors]
+apache/ap_rotor4	2200	[Helicopter rotors]
+aslave/slv_alert1	1100	[Vortigaunt shrieks]
+aslave/slv_alert3	1100	[Vortigaunt shrieks]
+aslave/slv_alert4	1100	[Vortigaunt shrieks]
+barnacle/bcl_alert2	2200	[Barnacle snaps]
+barnacle/bcl_tongue1	1511	[Barnacle snaps]
+bullchicken/bc_acid1	1257	[Bullsquid spits acid]
+bullchicken/bc_acid2	1100	[Bullsquid spits acid]
+bullchicken/bc_attackgrowl	1127	[Bullsquid growls]
+bullchicken/bc_attackgrowl2	1272	[Bullsquid growls]
+bullchicken/bc_attackgrowl3	1432	[Bullsquid growls]
+bullchicken/bc_spithit1	1100	[Bullsquid spits acid]
+bullchicken/bc_spithit2	1100	[Bullsquid spits acid]
+bullchicken/bc_spithit3	1100	[Bullsquid spits acid]
+buttons/latchlocked1	1100	[Locked]
+buttons/latchlocked2	1100	[Locked]
+controller/con_alert1	1100	[Alien Controller shrieks]
+controller/con_alert2	1100	[Alien Controller shrieks]
+controller/con_alert3	1100	[Alien Controller shrieks]
+controller/con_attack1	1553	[Alien Controller attacks]
+controller/con_attack2	1553	[Alien Controller attacks]
+controller/con_attack3	2070	[Alien Controller attacks]
+debris/beamstart1	2200	[Portal energy surge]
+debris/beamstart10	1100	[Portal energy surge]
+debris/beamstart11	1100	[Portal energy surge]
+debris/beamstart14	1597	[Portal energy surge]
+debris/beamstart15	1630	[Portal energy surge]
+debris/beamstart2	2200	[Portal energy surge]
+debris/beamstart3	1270	[Portal energy surge]
+debris/beamstart4	1100	[Portal energy surge]
+debris/beamstart5	1154	[Portal energy surge]
+debris/beamstart6	1100	[Portal energy surge]
+debris/beamstart7	1756	[Portal energy surge]
+debris/beamstart8	1264	[Portal energy surge]
+debris/beamstart9	1100	[Portal energy surge]
+garg/gar_alert1	2200	[Gargantua roars]
+garg/gar_alert2	2200	[Gargantua roars]
+garg/gar_alert3	2024	[Gargantua roars]
+garg/gar_die1	2200	[Gargantua dies]
+garg/gar_die2	2200	[Gargantua dies]
+garg/gar_flameon1	1100	[Gargantua flamethrower]
+garg/gar_flamerun1	1238	[Gargantua flamethrower]
+gonarch/gon_alert1	1936	[Gonarch roars]
+gonarch/gon_alert2	2037	[Gonarch roars]
+gonarch/gon_alert3	2149	[Gonarch roars]
+gonarch/gon_birth1	1100	[Gonarch spawns headcrabs]
+gonarch/gon_birth2	2160	[Gonarch spawns headcrabs]
+gonarch/gon_birth3	2200	[Gonarch spawns headcrabs]
+gonarch/gon_childdie1	2200	[Gonarch dies]
+gonarch/gon_childdie2	2200	[Gonarch dies]
+gonarch/gon_childdie3	2200	[Gonarch dies]
+gonarch/gon_die1	2200	[Gonarch dies]
+hassault/hw_spinup	1151	[Minigun spins up]
+headcrab/hc_alert1	1751	[Headcrab screech]
+headcrab/hc_alert2	1100	[Headcrab screech]
+headcrab/hc_attack1	1100	[Headcrab attacks]
+headcrab/hc_attack2	1100	[Headcrab attacks]
+headcrab/hc_attack3	1100	[Headcrab attacks]
+headcrab/hc_headbite	1524	[Headcrab attacks]
+houndeye/he_alert1	1100	[Houndeye barks]
+houndeye/he_alert2	2200	[Houndeye barks]
+houndeye/he_alert3	1100	[Houndeye barks]
+houndeye/he_attack1	2200	[Houndeye charges blast]
+houndeye/he_attack2	1667	[Houndeye charges blast]
+houndeye/he_attack3	2200	[Houndeye charges blast]
+houndeye/he_blast1	1100	[Houndeye sonic blast]
+houndeye/he_blast2	1100	[Houndeye sonic blast]
+houndeye/he_blast3	1100	[Houndeye sonic blast]
+ichy/ichy_alert1	1100	[Ichthyosaur shrieks]
+ichy/ichy_alert2	1529	[Ichthyosaur shrieks]
+ichy/ichy_alert3	1953	[Ichthyosaur shrieks]
+ichy/ichy_attack1	1285	[Ichthyosaur bites]
+ichy/ichy_attack2	1100	[Ichthyosaur bites]
+ichy/ichy_bite1	1100	[Ichthyosaur bites]
+ichy/ichy_bite2	1447	[Ichthyosaur bites]
+items/medcharge4	1100	[Healing]
+items/medshotno1	1100	[Health charger empty]
+items/suitcharge1	2062	[Suit charger]
+items/suitchargeno1	1100	[Suit charger empty]
+player/geiger1	1100	[Geiger counter clicks]
+player/geiger2	1100	[Geiger counter clicks]
+player/geiger3	1100	[Geiger counter clicks]
+player/geiger4	1100	[Geiger counter clicks]
+player/geiger5	1100	[Geiger counter clicks]
+player/geiger6	1100	[Geiger counter clicks]
+player/heartbeat1	1100	[Heartbeat]
+tentacle/te_alert1	1100	[Tentacle roars]
+tentacle/te_alert2	1100	[Tentacle roars]
+tentacle/te_death2	2200	[Tentacle dies]
+tentacle/te_roar1	1527	[Tentacle roars]
+tentacle/te_roar2	1225	[Tentacle roars]
+tentacle/te_strike1	1647	[Tentacle strikes]
+tentacle/te_strike2	1100	[Tentacle strikes]
+turret/tu_alert	1100	[Turret alerts]
+turret/tu_deploy	2200	[Turret deploys]
+turret/tu_die	1888	[Turret destroyed]
+turret/tu_die2	2200	[Turret destroyed]
+turret/tu_die3	2200	[Turret destroyed]
+weapons/explode3	1301	[Explosion]
+weapons/explode4	1296	[Explosion]
+weapons/explode5	1305	[Explosion]
+weapons/mine_activate	1100	[Tripmine activated]
+weapons/mine_charge	2200	[Tripmine charging]
+weapons/mortar	2200	[Incoming mortar]
+weapons/mortarhit	2200	[Mortar explosion]
+x/nih_die2	2200	[Nihilanth dies]
+x/x_attack1	2200	[Nihilanth attacks]
+x/x_attack2	2200	[Nihilanth attacks]
+x/x_attack3	2200	[Nihilanth attacks]
+x/x_ballattack1	2200	[Nihilanth attacks]
+x/x_die1	2200	[Nihilanth dies]
+x/x_recharge1	2052	[Nihilanth recharges]
+x/x_recharge2	2200	[Nihilanth recharges]
+x/x_recharge3	1343	[Nihilanth recharges]
+x/x_teleattack1	1544	[Nihilanth attacks]
+zombie/zo_alert10	1100	[Zombie snarls]
+zombie/zo_alert20	1100	[Zombie snarls]
+zombie/zo_alert30	1100	[Zombie snarls]
+zombie/zo_attack1	2200	[Zombie attacks]
+zombie/zo_attack2	1100	[Zombie attacks]
