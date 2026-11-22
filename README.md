@@ -14,6 +14,13 @@ A proxy plugin mod (`version.dll`) for the **Half-Life**, **Opposing Force**, an
 - **Auto-Localization (EN/RU):** automatic language selection from Steam settings, chapter/title translation, and optional `.wav` auto-timing for third-party voiceovers.
 - **HUD & Graphics Enhancements:** FBO HUD scaling and compact armor layout for the expansions (`bshift`, `gearbox`), plus a 3D projected OpenGL flashlight.
 
+### Preview
+![HLCC Preview](docs/screenshots/preview.gif)
+
+| English (`default`) | Русский (`default`) | Combat / Multi-role |
+| :---: | :---: | :---: |
+| ![English](docs/screenshots/preview_en.jpg) | ![Russian](docs/screenshots/preview_ru.jpg) | ![Combat](docs/screenshots/preview_combat.jpg) |
+
 ### Installation
 1. Download `HLCC-win32.zip` from the **Releases** page.
 2. Extract its contents into the **Half-Life** root directory (next to `hl.exe`), overwriting if prompted.
@@ -58,6 +65,13 @@ powershell -ExecutionPolicy Bypass -File package_release.ps1
 - **Два стиля рендера (OpenGL):** динамическая плашка (`default`) или фиксированное окно с плавным скроллом (`hl2`).
 - **Автолокализация (EN/RU):** переключение языка по настройкам Steam, перевод заголовков глав и автотайминги по `.wav` для сторонних озвучек.
 - **Улучшения графики и HUD:** масштабирование старого HUD и фикс ванильного HUD в дополнениях (`bshift`, `gearbox`), плюс 3D OpenGL-фонарик.
+
+### Скриншоты
+![HLCC Preview](docs/screenshots/preview.gif)
+
+| English (`default`) | Русский (`default`) | Бой / несколько ролей |
+| :---: | :---: | :---: |
+| ![English](docs/screenshots/preview_en.jpg) | ![Russian](docs/screenshots/preview_ru.jpg) | ![Combat](docs/screenshots/preview_combat.jpg) |
 
 ### Установка
 1. Скачайте архив `HLCC-win32.zip` со страницы **Releases**.
