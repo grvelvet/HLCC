@@ -144,10 +144,12 @@ uint32_t ProbeWavDurationMs(const char* rawSfxName) {
     return durMs;
 }
 
-bool IsSoundOccluded(const float* origin, float dist) {
+// Returns an audibility multiplier from line-of-sight occlusion:
+// 1.0 = clear sightline, 0.70 = behind glass, 0.35 = behind solid wall/corner.
+float ComputeOcclusionFactor(const float* origin) {
     if (!g_ctx.engfuncs || !g_ctx.engfuncs->pEventAPI ||
         !g_ctx.engfuncs->pEventAPI->EV_PlayerTrace || !g_ctx.hasViewOrg) {
-        return false;
+        return 1.0f;
     }
     event_api_t* ev = g_ctx.engfuncs->pEventAPI;
     bool hasPM = (ev->EV_PushPMStates && ev->EV_PopPMStates && ev->EV_SetTraceHull);
@@ -162,14 +164,16 @@ bool IsSoundOccluded(const float* origin, float dist) {
         return false;
     };
 
+    float factor = 0.35f;
     float bestFrac = 0.0f;
-    bool clear = probePass(0x00000001 /* PM_STUDIO_IGNORE */, bestFrac);
-    if (!clear && dist <= g_ctx.captions.cfg.glass_max_distance) {
-        clear = probePass(0x00000005 /* PM_STUDIO_IGNORE | PM_GLASS_IGNORE */, bestFrac);
+    if (probePass(0x00000001 /* PM_STUDIO_IGNORE */, bestFrac)) {
+        factor = 1.0f;
+    } else if (probePass(0x00000005 /* PM_STUDIO_IGNORE | PM_GLASS_IGNORE */, bestFrac)) {
+        factor = 0.70f;
     }
 
     if (hasPM) ev->EV_PopPMStates();
-    return !clear;
+    return factor;
 }
 
 void HandleSound(int entnum, int entchannel, bool isStatic, sfx_t* sfx, float* origin,
@@ -281,30 +285,47 @@ void HandleSound(int entnum, int entchannel, bool isStatic, sfx_t* sfx, float* o
                      : (isNoOcc ? std::max(maxDist, noOccMaxDist) : maxDist);
 
     float dist = 0.0f;
+    float occFactor = 1.0f;
     float perceivedVol = fvol;
     if (!isGlobal && origin && g_ctx.hasViewOrg) {
         float dx = origin[0] - g_ctx.viewOrg[0];
         float dy = origin[1] - g_ctx.viewOrg[1];
         float dz = origin[2] - g_ctx.viewOrg[2];
         dist = std::sqrt(dx * dx + dy * dy + dz * dz);
-        if (useAttnCutoff) {
-            perceivedVol = ComputePerceivedVolume(fvol, dist, attenuation);
-        }
-        if (dist > effMaxDist) {
-            core::LogMsg("[sfx-skip] too_far raw='%s' norm='%s' dist=%.0f max=%.0f atten=%.2f",
-                         sfx->name, norm.c_str(), dist, effMaxDist, attenuation);
-            return;
-        }
-        if (useAttnCutoff && !isNoOcc && perceivedVol < minVol) {
-            core::LogMsg("[sfx-skip] too_quiet raw='%s' norm='%s' dist=%.0f vol=%.2f pvol=%.2f min=%.2f atten=%.2f",
-                         sfx->name, norm.c_str(), dist, fvol, perceivedVol, minVol, attenuation);
-            return;
-        }
+
         bool shouldCheckOcc = checkOcc && !isNoOcc && !(isHgrunt && dist <= 750.0f);
-        if (shouldCheckOcc && IsSoundOccluded(origin, dist)) {
-            core::LogMsg("[sfx-skip] occluded raw='%s' norm='%s' dist=%.0f atten=%.2f",
-                         sfx->name, norm.c_str(), dist, attenuation);
-            return;
+        if (shouldCheckOcc) {
+            occFactor = ComputeOcclusionFactor(origin);
+        }
+
+        if (useAttnCutoff) {
+            // Primary filter: perceived volume (distance attenuation * occlusion factor).
+            float ceilingDist = isNoOcc ? std::max(effMaxDist, noOccMaxDist) : std::max(effMaxDist, 1400.0f);
+            if (dist > ceilingDist) {
+                core::LogMsg("[sfx-skip] too_far raw='%s' norm='%s' dist=%.0f max=%.0f atten=%.2f",
+                             sfx->name, norm.c_str(), dist, ceilingDist, attenuation);
+                return;
+            }
+            perceivedVol = ComputePerceivedVolume(fvol, dist, attenuation);
+            if (!isNoOcc) {
+                perceivedVol *= occFactor;
+            }
+            if (!isNoOcc && perceivedVol < minVol) {
+                core::LogMsg("[sfx-skip] too_quiet raw='%s' norm='%s' dist=%.0f vol=%.2f occ=%.2f pvol=%.2f min=%.2f atten=%.2f",
+                             sfx->name, norm.c_str(), dist, fvol, occFactor, perceivedVol, minVol, attenuation);
+                return;
+            }
+        } else {
+            if (dist > effMaxDist) {
+                core::LogMsg("[sfx-skip] too_far raw='%s' norm='%s' dist=%.0f max=%.0f atten=%.2f",
+                             sfx->name, norm.c_str(), dist, effMaxDist, attenuation);
+                return;
+            }
+            if (shouldCheckOcc && occFactor < 0.5f) {
+                core::LogMsg("[sfx-skip] occluded raw='%s' norm='%s' dist=%.0f atten=%.2f",
+                             sfx->name, norm.c_str(), dist, attenuation);
+                return;
+            }
         }
     }
 
@@ -370,8 +391,9 @@ void HandleSound(int entnum, int entchannel, bool isStatic, sfx_t* sfx, float* o
         cap.origin[1] = origin[1];
         cap.origin[2] = origin[2];
         if (useAttnCutoff && attenuation > 0.01f) {
-            float audibleDist = ComputeAudibleMaxDist(fvol, minVol, attenuation);
-            cap.fadeDist = std::min(effMaxDist, audibleDist) * 1.25f;
+            float audibleDist = ComputeAudibleMaxDist(fvol * occFactor, minVol, attenuation);
+            float ceilingDist = std::max(effMaxDist, 1400.0f);
+            cap.fadeDist = std::clamp(audibleDist, 150.0f, ceilingDist) * 1.25f;
         } else {
             cap.fadeDist = effMaxDist * 1.35f;
         }
@@ -379,9 +401,9 @@ void HandleSound(int entnum, int entchannel, bool isStatic, sfx_t* sfx, float* o
     st.captions.push_back(std::move(cap));
     while (st.captions.size() > 16) st.captions.pop_front();
     ReleaseSRWLockExclusive(&st.lock);
-    core::LogMsg("[sfx-ok] raw='%s' norm='%s' ent=%d ch=%d global=%d dist=%.0f vol=%.2f pvol=%.2f atten=%.2f dur=%ums",
+    core::LogMsg("[sfx-ok] raw='%s' norm='%s' ent=%d ch=%d global=%d dist=%.0f vol=%.2f occ=%.2f pvol=%.2f atten=%.2f dur=%ums",
                  sfx->name, norm.c_str(), entnum, entchannel, static_cast<int>(isGlobal),
-                 dist, fvol, perceivedVol, attenuation, durMs);
+                 dist, fvol, occFactor, perceivedVol, attenuation, durMs);
 }
 
 void __cdecl Hook_S_StartDynamicSound(int entnum, int entchannel, sfx_t* sfx, float* origin,

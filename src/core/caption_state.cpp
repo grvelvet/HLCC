@@ -52,14 +52,21 @@ void CaptionState::AssignSpeakerNumberLocked(ActiveCaption& cap, ULONGLONG nowMs
     cap.speakerTag = tag;
     if (cap.entnum <= 0) return;
 
-    constexpr ULONGLONG kSceneTimeoutMs = 12000ULL;
-    constexpr float kSceneMaxDistSq = 500.0f * 500.0f;
+    constexpr ULONGLONG kSceneTimeoutMs = 4000ULL;
+    constexpr float kSceneMaxDistSq = 300.0f * 300.0f;
 
     auto& grp = speakerGroups[tag];
-    // Drop entities that haven't spoken recently OR are in a different room/scene (> 500u away).
+    // Drop entities that are not in the active dialogue (no active caption & silent > 4s, OR > 300u away).
+    auto hasActiveCaption = [&](int ent) {
+        return std::any_of(captions.begin(), captions.end(), [&](const ActiveCaption& c) {
+            return c.entnum == ent && c.speakerTag == tag && c.expire_ms > nowMs;
+        });
+    };
     std::erase_if(grp.entities, [&](const SpeakerEntityTrack& e) {
         if (e.entnum == cap.entnum) return false;
-        if (nowMs >= e.lastSeenMs && (nowMs - e.lastSeenMs) > kSceneTimeoutMs) return true;
+        if (!hasActiveCaption(e.entnum) && nowMs >= e.lastSeenMs && (nowMs - e.lastSeenMs) > kSceneTimeoutMs) {
+            return true;
+        }
         if (soundOrigin && e.hasOrigin) {
             float dx = e.origin[0] - soundOrigin[0];
             float dy = e.origin[1] - soundOrigin[1];
