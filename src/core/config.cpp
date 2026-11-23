@@ -30,8 +30,8 @@ void Config::InitDefaultExceptions() {
     sfx_creature_groups = {
         "headcrab", "zombie", "bullchicken", "houndeye", "barnacle",
         "aslave", "agrunt", "ichy", "controller", "garg", "gonarch",
-        "tentacle", "x", "turret", "apache", "hassault",
-        "gonome", "pitdrone", "voltigore", "shockroach", "pitworm", "geneworm"
+        "tentacle", "x", "turret", "apache", "hassault", "squeek",
+        "gonome", "pitdrone", "voltigore", "shocktrooper", "shockroach", "pitworm", "geneworm"
     };
     no_occlusion_prefixes = {
         "sc_silo", "scientist/c1a3_sci_silo", "sc_idle4", "sc_runscream",
@@ -220,12 +220,12 @@ void Config::InitDefaultRoles() {
     roles.push_back({"ba_holo/",   col("color_holo",      {140,245,220}), RoleCat::NPC});
     for (const char* p : {"headcrab/","zombie/","gonome/","pitdrone/","voltigore/","shocktrooper/","shockroach/",
                           "pitworm/","geneworm/","bullchicken/","houndeye/","agrunt/","aslave/","barnacle/",
-                          "controller/","garg/","gonarch/","tentacle/","turret/","apache/","hassault/",
+                          "ichy/","squeek/","x/","controller/","garg/","gonarch/","tentacle/","turret/","apache/","hassault/",
                           "weapons/explode","weapons/mortar","weapons/mine_","common/nuke_","ambience/warn",
                           "ambience/siren","misc/ear_ringing"}) {
         roles.push_back({p, col("color_sfx_danger", {245,140,110}), RoleCat::SFX_DANGER});
     }
-    for (const char* p : {"items/","player/","weapons/","debris/","buttons/","doors/","common/","ambience/","misc/"}) {
+    for (const char* p : {"items/","player/","weapons/","debris/","buttons/","doors/","plats/","common/","ambience/","misc/"}) {
         roles.push_back({p, col("color_sfx", {185,195,205}), RoleCat::SFX});
     }
 }
