@@ -105,7 +105,7 @@ holo_steam	11819	[Hologram] If you pass through fire or steam, you'll see damage
 holo_target	12051	[Hologram] Welcome to the Black Mesa training target range. You'll get a chance to fire your weapon, reload, and fire the attached grenade launcher. Collect your equipment and proceed to the firing station.
 holo_tryagain	2113	[Hologram] No harm done. Try again.
 holo_usetrain	11743	[Hologram] Press your use key to engage the train. Once engaged, move forward or backward to increase or decrease the speed of the train. Press the use key a second time to disengage from the train.
-na1	1500	[Announcement] Access granted.
+na1	1500	[Intercom] Access granted.
 ot_1	1200	[Otis] Hey Calhoun.
 ot_2	2267	[Otis] Looks like we're in for a long day today.
 ot_3	1402	[Otis] Have a good one, Calhoun.
@@ -440,16 +440,16 @@ sc_yard_box3	2462	[Scientist] Help! Someone let us out of here!
 sc_yard_box4	2334	[Scientist] Hello? Can anyone hear me?
 sc_yard_wound1	20248	[Harold] I appreciate your help, but I'm afraid those bastards did their damage already. If you were trying to reach the freight yards in hope of escaping, then just forget about it. The military is rounding up everyone and everything they can find, and either killing them or bringing them up here for questioning. So much for a rescue.
 sc_yard_wound2	21647	[Harold] A colleague and I came up with our own plan for escape, and we were on our way to one of the old prototype labs when we ran into them. But listen to me. If you still want to get out of here alive, your only hope may be to find my friend. If you can get past the soldiers, find Dr. Rosenberg. With him, you may have a chance to get out of this place.
-tram/ba_tram0	15592	[Announcement] Good morning, and welcome to the Black Mesa Transit System. This automated train is provided for the comfort and convenience of Black Mesa residents and visitors to the Black Mesa Research Facility.
-tram/ba_tram1	20985	[Announcement] The time is 8:42 a.m. Current topside temperature is 91 degrees, with an estimated high today of 105. The Black Mesa compound is maintained at 68 degrees at all times.
-tram/ba_tram2	10124	[Announcement] This train is inbound from the Area 8 Topside Dormitories to the Central Transit Hub in Area 9.
-tram/ba_tram3	33396	[Announcement] Please keep your limbs inside the train at all times. Do not attempt to open the doors until the train has come to a complete halt at the station platform. In the event of an emergency, passengers are to remain seated and await further instruction. If it is necessary to exit the train, disabled passengers should be evacuated first. Please stay away from electrified rails, and proceed to an emergency station until assistance arrives.
-tram/ba_tram4	24689	[Announcement] If your intended destination is a high-security area beyond Sector C, you will need to board a high-security train at the Central Transit Hub. If you have not yet submitted your identity to the retinal clearance system, you must report to Black Mesa personnel for processing before you will be admitted to the high-security branch of the transit system.
-tram/ba_tram5	29063	[Announcement] If you wish to transfer to the Sector B or C medium-security lines, you may do so before you reach the Central Transit Hub at the Area 9 security checkpoint. Access to the medium-security branch of the transit system is for employees of the Black Mesa Research Facility and authorized visitors only, and requires that you wear your security badge at all times.
-tram/ba_tram6	15290	[Announcement] This train is now transferring to the Sector C line of the transit system. This is a medium-security area of the Black Mesa facility. Be sure to wear your identification badge at all times.
-tram/ba_tram7	4458	[Announcement] Now arriving at Area 3 Security Facilities.
-vox_elev1	9120	[Announcement] Warning. Main power failure on levels three, five, and eight.
-vox_elev2	8493	[Announcement] Warning. Extreme electromagnetic field hazard in Sector C.
+tram/ba_tram0	15592	[Intercom] Good morning, and welcome to the Black Mesa Transit System. This automated train is provided for the comfort and convenience of Black Mesa residents and visitors to the Black Mesa Research Facility.
+tram/ba_tram1	20985	[Intercom] The time is 8:42 a.m. Current topside temperature is 91 degrees, with an estimated high today of 105. The Black Mesa compound is maintained at 68 degrees at all times.
+tram/ba_tram2	10124	[Intercom] This train is inbound from the Area 8 Topside Dormitories to the Central Transit Hub in Area 9.
+tram/ba_tram3	33396	[Intercom] Please keep your limbs inside the train at all times. Do not attempt to open the doors until the train has come to a complete halt at the station platform. In the event of an emergency, passengers are to remain seated and await further instruction. If it is necessary to exit the train, disabled passengers should be evacuated first. Please stay away from electrified rails, and proceed to an emergency station until assistance arrives.
+tram/ba_tram4	24689	[Intercom] If your intended destination is a high-security area beyond Sector C, you will need to board a high-security train at the Central Transit Hub. If you have not yet submitted your identity to the retinal clearance system, you must report to Black Mesa personnel for processing before you will be admitted to the high-security branch of the transit system.
+tram/ba_tram5	29063	[Intercom] If you wish to transfer to the Sector B or C medium-security lines, you may do so before you reach the Central Transit Hub at the Area 9 security checkpoint. Access to the medium-security branch of the transit system is for employees of the Black Mesa Research Facility and authorized visitors only, and requires that you wear your security badge at all times.
+tram/ba_tram6	15290	[Intercom] This train is now transferring to the Sector C line of the transit system. This is a medium-security area of the Black Mesa facility. Be sure to wear your identification badge at all times.
+tram/ba_tram7	4458	[Intercom] Now arriving at Area 3 Security Facilities.
+vox_elev1	9120	[Intercom] Warning. Main power failure on levels three, five, and eight.
+vox_elev2	8493	[Intercom] Warning. Extreme electromagnetic field hazard in Sector C.
 
 # === CONTEXTUAL SFX SUBTITLES (HL2-STYLE) ===
 debris/alien_teleport	2200	[Teleportation]

@@ -39,12 +39,20 @@ struct ActiveCaption {
     std::string key;           // normalized sound key
     int entnum = -1;           // emitting entity (-1 = unknown)
     int channel = -1;          // engine sound channel
+    bool isGenericNpc = false; // true for repeatable NPCs (Scientist, Security, HECU, ...)
+    int speakerNum = 0;        // >0 when 2+ distinct entities of the same generic role speak in a scene
+    std::wstring speakerTag;   // base tag without brackets (e.g. L"Учёный")
     bool hasOrigin = false;
     float origin[3] = {0.0f, 0.0f, 0.0f};
     float fadeDist = 0.0f;     // >0: smoothly fade out if player moves beyond this distance
     std::vector<CaptionPage> pages;
     int cachedWrapW = 0;
     int cachedMaxLines = -1;
+};
+
+struct SpeakerGroupTrack {
+    std::vector<int> entnums;
+    ULONGLONG lastSeenMs = 0;
 };
 
 struct ActiveTitle {
@@ -79,6 +87,7 @@ struct CaptionState {
     std::string lastCapKey;
     ULONGLONG lastCapMs = 0;
     std::unordered_map<std::string, ULONGLONG> sfxCooldowns;
+    std::unordered_map<std::wstring, SpeakerGroupTrack> speakerGroups;
     std::unordered_map<std::string, uint32_t> wavDurationCache;
     std::unordered_set<std::string> loggedMissingSounds;
 
@@ -91,6 +100,7 @@ struct CaptionState {
     ULONGLONG lastTimeAdvanceRealMs = 0;
 
     std::string SfxGroupKey(std::string_view norm) const;
+    void AssignSpeakerNumberLocked(ActiveCaption& cap, ULONGLONG nowMs);
     void ClearBuffersLocked();
     size_t DropForChannelLocked(int entnum, int channel, const std::string* keyFilter);
     bool IsGamePausedLocked(ULONGLONG nowRealMs) const noexcept;

@@ -186,7 +186,7 @@ void OverlayRenderer::Render(glfont::GlApi& gl, core::CaptionState& state, int s
                            static_cast<uint8_t>(rl.col.b), rl.alpha);
                 return;
             }
-            if (rl.isFirstLine && !rl.txt.empty() && rl.txt[0] == L'[') {
+            if (!isHl2Style && rl.isFirstLine && !rl.txt.empty() && rl.txt[0] == L'[') {
                 size_t rb = rl.txt.find(L']');
                 if (rb != std::wstring::npos) {
                     std::wstring speaker = rl.txt.substr(0, rb + 1);
@@ -235,7 +235,10 @@ void OverlayRenderer::Render(glfont::GlApi& gl, core::CaptionState& state, int s
             std::wstring hl2Full;
             if (isHl2Style) {
                 hl2Full = cap.text;
-                if (!core::IsSfxCat(cap.cat) && !hl2Full.empty() && hl2Full[0] == L'[') {
+                // In HL2 mode: keep [Intercom]/[Radio] (VOX, italic), [HEV], named NPCs ([Rosenberg]/[Otis]/[G-Man]),
+                // and numbered multi-NPCs ([Scientist 1]/[Scientist 2]). Strip tag only for solo generic NPCs.
+                bool stripTag = (cap.cat == subs::RoleCat::NPC && cap.isGenericNpc && cap.speakerNum == 0);
+                if (stripTag && !hl2Full.empty() && hl2Full[0] == L'[') {
                     size_t rb = hl2Full.find(L']');
                     if (rb != std::wstring::npos) {
                         size_t bodyStart = rb + 1;

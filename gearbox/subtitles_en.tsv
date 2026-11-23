@@ -30,15 +30,15 @@ bo_getdown	1584	[Black Ops] Get down! I hear something.
 bo_package	4210	[Black Ops] Tell me about it. I just want to deliver the package and get out of here.
 bo_sooner	2914	[Black Ops] Yeah. Sooner or later, the grunts are gonna figure it out.
 bootcamp/reveille	10698	[Bugle call]
-c1a0_0	5827	[Announcement] Immediate medical attention required in sector twenty-seven.
-c1a0_1	12209	[Announcement] Operations personnel report to emergency control zone for contamination cleanup, alpha seven access required.
-c1a0_2	7278	[Announcement] Attention, supply team required in lower maintenance chamber sub-sector B.
-c1a0_3	5554	[Announcement] Security breach detected in silo thirty-two.
-c1a0_4	11367	[Announcement] Warning, extreme radiation leak detected in reactor core eight, time to reach minimum safe distance, fourteen minutes.
-c1a0_5	6806	[Announcement] Doctor Guthrie report to inspection lab six immediately.
-c1a0_6	7611	[Announcement] Attention, Doctor Freeman report to research administration center for questioning.
-c1a0_7	9841	[Announcement] Remaining science personnel report to medical lab six for radiation exposure inspection.
-c1a0_8	10851	[Announcement] Warning, severe damage detected in ventilation systems under research lab two, evacuate area immediately.
+c1a0_0	5827	[Intercom] Immediate medical attention required in sector twenty-seven.
+c1a0_1	12209	[Intercom] Operations personnel report to emergency control zone for contamination cleanup, alpha seven access required.
+c1a0_2	7278	[Intercom] Attention, supply team required in lower maintenance chamber sub-sector B.
+c1a0_3	5554	[Intercom] Security breach detected in silo thirty-two.
+c1a0_4	11367	[Intercom] Warning, extreme radiation leak detected in reactor core eight, time to reach minimum safe distance, fourteen minutes.
+c1a0_5	6806	[Intercom] Doctor Guthrie report to inspection lab six immediately.
+c1a0_6	7611	[Intercom] Attention, Doctor Freeman report to research administration center for questioning.
+c1a0_7	9841	[Intercom] Remaining science personnel report to medical lab six for radiation exposure inspection.
+c1a0_8	10851	[Intercom] Warning, severe damage detected in ventilation systems under research lab two, evacuate area immediately.
 dr_add01	1953	[Drill Instructor] You eyeballing me, boy?
 dr_add02	2133	[Drill Instructor] Are you touching me, dirtbag?
 dr_add03	2165	[Drill Instructor] What is your major malfunction?
@@ -343,11 +343,11 @@ mg_heal0	1200	[Medic] This might sting a bit.
 mg_heal1	2647	[Medic] Keeping you in one piece is proving to be quite a challenge.
 mg_heal3	1950	[Medic] This ought to keep you frosty, corporal.
 mg_notheal0	2046	[Medic] Sorry, sir, that's all I can do for you.
-misc/broken_tram1	12558	[Announcement] This train is... inbound from... Sector C. Please keep your limbs in- inside the train at all times.
-misc/broken_tram2	16679	[Announcement] If you have an associate with a background in the areas of theo- theoretical physics, bio- biotechnology, or other high-tech disciplines, please contact our civilian recruitment di- division.
-misc/broken_tram3	20991	[Announcement] A re- a reminder to all Black Mesa personnel: regular radiation and biohazard sc- screenings are a requirement of continued employment in the- in the- in the Black Mesa Research Facility.
-misc/broken_tram4	10290	[Announcement] Do- do not attempt to open the doors until the tra- train has come to a complete halt at the- at the station platform.
-misc/broken_tram5	3423	[Announcement] Now arriving at— [Static]
+misc/broken_tram1	12558	[Intercom] This train is... inbound from... Sector C. Please keep your limbs in- inside the train at all times.
+misc/broken_tram2	16679	[Intercom] If you have an associate with a background in the areas of theo- theoretical physics, bio- biotechnology, or other high-tech disciplines, please contact our civilian recruitment di- division.
+misc/broken_tram3	20991	[Intercom] A re- a reminder to all Black Mesa personnel: regular radiation and biohazard sc- screenings are a requirement of continued employment in the- in the- in the Black Mesa Research Facility.
+misc/broken_tram4	10290	[Intercom] Do- do not attempt to open the doors until the tra- train has come to a complete halt at the- at the station platform.
+misc/broken_tram5	3423	[Intercom] Now arriving at— [Static]
 mp_pistol01	1200	[HECU] Thanks, Corporal.
 of1a5_barn1	1811	[Security] Have you seen the new IGA-88?
 of1a5_barn2	2743	[Security] What the hell... what is that, Doc?

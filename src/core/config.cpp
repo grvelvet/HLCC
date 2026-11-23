@@ -361,7 +361,9 @@ std::pair<Rgb, RoleCat> Config::Classify(std::string_view normKey, std::string_v
         auto it = named_colors.find(k);
         return it != named_colors.end() ? it->second : def;
     };
-    if (text.starts_with("[VOX]") || text.starts_with("[\xD0\xA1\xD0\xB8\xD1\x81\xD1\x82\xD0\xB5\xD0\xBC\xD0\xB0 \xD0\xBE\xD0\xBF\xD0\xBE\xD0\xB2\xD0\xB5\xD1\x89\xD0\xB5\xD0\xBD\xD0\xB8\xD1\x8F]")) {
+    if (text.starts_with("[VOX]") || text.starts_with("[Intercom]") ||
+        text.starts_with("[\xD0\x98\xD0\xBD\xD1\x82\xD0\xB5\xD1\x80\xD0\xBA\xD0\xBE\xD0\xBC]") ||
+        text.starts_with("[\xD0\xA1\xD0\xB8\xD1\x81\xD1\x82\xD0\xB5\xD0\xBC\xD0\xB0 \xD0\xBE\xD0\xBF\xD0\xBE\xD0\xB2\xD0\xB5\xD1\x89\xD0\xB5\xD0\xBD\xD0\xB8\xD1\x8F]")) {
         return {getCol("color_vox", {155,215,255}), RoleCat::VOX};
     }
     if (text.starts_with("[HEV]")) {

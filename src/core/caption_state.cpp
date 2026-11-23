@@ -1,11 +1,86 @@
 #include "core/caption_state.hpp"
 
+#include <algorithm>
 #include <cctype>
+#include <string_view>
 #include <vector>
 
 #include "core/log.hpp"
 
 namespace core {
+
+namespace {
+bool IsGenericSpeakerTag(std::wstring_view tag) noexcept {
+    static constexpr std::wstring_view kGenericTags[] = {
+        L"Scientist", L"Security", L"HECU", L"Black Ops", L"Medic", L"Engineer", L"Recruit",
+        L"\u0423\u0447\u0451\u043D\u044B\u0439",                                     // Учёный
+        L"\u0423\u0447\u0435\u043D\u044B\u0439",                                     // Ученый
+        L"\u041E\u0445\u0440\u0430\u043D\u043D\u0438\u043A",                         // Охранник
+        L"\u0427\u0451\u0440\u043D\u044B\u0439 \u043E\u0442\u0440\u044F\u0434",     // Чёрный отряд
+        L"\u041C\u0435\u0434\u0438\u043A",                                           // Медик
+        L"\u0418\u043D\u0436\u0435\u043D\u0435\u0440",                               // Инженер
+        L"\u041D\u043E\u0432\u043E\u0431\u0440\u0430\u043D\u0435\u0446",             // Новобранец
+    };
+    for (auto g : kGenericTags) {
+        if (tag == g) return true;
+    }
+    return false;
+}
+
+void ApplySpeakerNumberToText(ActiveCaption& cap, int num) {
+    if (num <= 0 || cap.speakerTag.empty()) return;
+    if (cap.text.empty() || cap.text[0] != L'[') return;
+    size_t rb = cap.text.find(L']');
+    if (rb == std::wstring::npos) return;
+    std::wstring numbered = L"[" + cap.speakerTag + L" " + std::to_wstring(num) + L"]";
+    cap.text.replace(0, rb + 1, numbered);
+    cap.speakerNum = num;
+    cap.pages.clear();
+}
+} // namespace
+
+void CaptionState::AssignSpeakerNumberLocked(ActiveCaption& cap, ULONGLONG nowMs) {
+    if (cap.cat != subs::RoleCat::NPC) return;
+    if (cap.text.empty() || cap.text[0] != L'[') return;
+    size_t rb = cap.text.find(L']');
+    if (rb == std::wstring::npos || rb <= 1) return;
+
+    std::wstring tag = cap.text.substr(1, rb - 1);
+    if (!IsGenericSpeakerTag(tag)) return;
+
+    cap.isGenericNpc = true;
+    cap.speakerTag = tag;
+    if (cap.entnum <= 0) return;
+
+    auto& grp = speakerGroups[tag];
+    if (grp.lastSeenMs != 0 && nowMs >= grp.lastSeenMs && (nowMs - grp.lastSeenMs) > 30000ULL) {
+        grp.entnums.clear();
+    }
+    grp.lastSeenMs = nowMs;
+
+    auto it = std::find(grp.entnums.begin(), grp.entnums.end(), cap.entnum);
+    int idx = 0;
+    if (it != grp.entnums.end()) {
+        idx = static_cast<int>(it - grp.entnums.begin()) + 1;
+    } else {
+        grp.entnums.push_back(cap.entnum);
+        idx = static_cast<int>(grp.entnums.size());
+    }
+
+    if (grp.entnums.size() >= 2) {
+        ApplySpeakerNumberToText(cap, idx);
+        // Retroactively number any already-visible caption of the same role in this scene.
+        for (auto& existing : captions) {
+            if (existing.isGenericNpc && existing.speakerNum == 0 &&
+                existing.speakerTag == tag && existing.entnum > 0) {
+                auto eit = std::find(grp.entnums.begin(), grp.entnums.end(), existing.entnum);
+                if (eit != grp.entnums.end()) {
+                    ApplySpeakerNumberToText(existing, static_cast<int>(eit - grp.entnums.begin()) + 1);
+                }
+            }
+        }
+    }
+}
 
 std::string CaptionState::SfxGroupKey(std::string_view norm) const {
     if (size_t sl = norm.find('/'); sl != std::string_view::npos) {
@@ -24,6 +99,7 @@ void CaptionState::ClearBuffersLocked() {
     lastCapKey.clear();
     lastCapMs = 0;
     sfxCooldowns.clear();
+    speakerGroups.clear();
 }
 
 size_t CaptionState::DropForChannelLocked(int entnum, int channel, const std::string* keyFilter) {

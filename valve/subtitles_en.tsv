@@ -324,190 +324,190 @@ barney/youhearthat	1858	[Security] Did you hear that?
 barney/youneedmedic	2088	[Security] You need a medic.
 barney/youtalkmuch	1800	[Security] You talk too much.
 barney/yup	1200	[Security] Yup.
-c1a0_0	7300	[Announcement] Agent Coomer, report to topside tactical operations center.
-c1a0_1	6550	[Announcement] Inspection team, to radioactive materials handling bay.
-c1a0_10	8100	[Announcement] Doctor Freeman, to anomalous materials test lab immediately.
-c1a0_11	8250	[Announcement] Attention. Experimental propulsion lab test fire in ninety minutes.
-c1a0_12	5250	[Announcement] Hydro plant now operating at sixty percent.
-c1a0_13	6300	[Announcement] Black Mesa topside temperature is ninety-three degrees Fahrenheit.
-c1a0_14	6850	[Announcement] Launch officer reports: Alpha satellite deploy is nominal.
-c1a0_15	6850	[Announcement] Doctor Birdwell reports: superconducting interchange is activated.
-c1a0_16	8200	[Announcement] Attention. Report any security violation to administration sub-level one.
-c1a0_17	6800	[Announcement] Attention. Service personnel please clear helicopter hangar one.
-c1a0_18	6200	[Announcement] Shield inspection crew reports: primary reactor nominal.
-c1a0_19	6700	[Announcement] Transportation control reports: all systems on time.
-c1a0_2	6950	[Announcement] Agent sixteen, report to administration sub-level two.
-c1a0_20	7350	[Announcement] Doctor Victor, report to supercooled laser lab please.
-c1a0_21	6850	[Announcement] Sergeant Guthrie, report to topside motor pool immediately.
-c1a0_22	5850	[Announcement] Uranium shipment inspection team, to Sector D.
-c1a0_3	6450	[Announcement] Doctor Johnson, please call observation tank one.
-c1a0_4	6800	[Announcement] Doctor West, please report to Lambda reactor complex.
-c1a0_5	5800	[Announcement] Doctor Cross, call seven-two-nine please.
-c1a0_6	6050	[Announcement] Sergeant Bailey, to topside checkpoint Bravo.
-c1a0_7	7300	[Announcement] Cryogenic safety crew, report status at eleven hundred please.
-c1a0_8	7400	[Announcement] Coded message for Captain Black, command and communication center.
-c1a0_9	9100	[Announcement] Sector C science personnel, report to anomalous materials test lab.
-c1a0_start	11700	[Announcement] Welcome to the Black Mesa Research Facility.
-c1a1_0	9300	[Announcement] Warning: high energy detonation detected in materials lab.
-c1a1_1	7200	[Announcement] Attention: security personnel to Sector C immediately.
-c1a1_10	7900	[Announcement] Attention: any Sector C science personnel, please report status.
-c1a1_11	8450	[Announcement] Attention: Sector C science personnel, please report status immediately.
-c1a1_2	8100	[Announcement] Warning: unauthorized biological forms detected in Sector C.
-c1a1_3	8850	[Announcement] Warning: unauthorized biological forms detected in coolant maintenance area.
-c1a1_4	8300	[Announcement] Any damage control team to Sector C immediately.
-c1a1_5	6650	[Announcement] Warning: Sector C elevator failure. Do not use.
-c1a1_6	7350	[Announcement] Biohazard warning in Sectors B and C.
-c1a1_7	8000	[Announcement] Attention: Sector C science personnel, evacuate area immediately.
-c1a1_8	7500	[Announcement] Warning: flooding detected on sub-level three, Sector B.
-c1a1_9	8950	[Announcement] Warning: anomalous energy field detected in administration center.
-c1a2_0	7100	[Announcement] Emergency cleanup team to biological waste processing plant.
-c1a2_1	7950	[Announcement] Attention: administration personnel, evacuate Sector D immediately.
-c1a2_10	7800	[Announcement] Attention: electric shock hazard detected in administration center.
-c1a2_11	8150	[Announcement] Security officer reports medical emergency, administration center.
-c1a2_2	6100	[Announcement] Attention: security personnel to Sector D.
-c1a2_3	5350	[Announcement] Service team, check elevator one, Sector C.
-c1a2_4	8600	[Announcement] Warning: unauthorized biological forms detected in ventilation system.
-c1a2_5	6300	[Announcement] Lieutenant Backman and cleanup team, to sub-level three.
-c1a2_6	7950	[Announcement] Danger: turret defense systems activated, Sector D.
-c1a2_7	9050	[Announcement] Security officer reports men down in Sector D, medical help required.
-c1a2_8	9250	[Announcement] Extreme danger: all turret defense systems activated, Sector D.
-c1a2_9	7650	[Announcement] Turret repair personnel, to high security materials storage area.
-c1a3_0	8850	[Announcement] Attention: all science personnel report topside for immediate questioning.
-c1a3_1	8650	[Announcement] All personnel evacuate high security materials storage facility.
-c1a3_10	9000	[Announcement] Attention: Black Mesa announcement system now under military command.
-c1a3_2	7200	[Announcement] Emergency uranium containment team, to Sector D.
-c1a3_3	7150	[Announcement] Turret maintenance team, to central command and communication center.
-c1a3_4	8100	[Announcement] Military personnel, prosecute Kilo-India-Lima with extreme force.
-c1a3_5	8300	[Announcement] Attention: this announcement system now under military command.
-c1a3_6	8700	[Announcement] Search and destroy force Bravo reports secondary objective terminated.
-c1a3_7	8350	[Announcement] Bravo force reports Hotel-Sierra-Mike facility is secured.
-c1a3_8	8350	[Announcement] Attention, all military personnel: atomic-biological-chemical alert.
-c1a3_9	9150	[Announcement] Attention, all military personnel: extreme atomic-biological-chemical alert.
-c1a3_lock	12750	[Announcement] Security door engaged: five, four, three, two, one. Lockout activated.
-c1a3_warn	7700	[Announcement] Attention: security lockout alert. Security door will engage.
-c1a4_0	7050	[Announcement] Attention: experimental rocket test fire disengaged.
-c1a4_1	6400	[Announcement] Repair crew, report to track control, Sector E.
-c1a4_2	6050	[Announcement] Maintenance team Blue, check heat exchange coolant level.
-c1a4_3	7250	[Announcement] Maintenance team Green, check voltage on cable seven-two-nine.
-c1a4_4	9600	[Announcement] Medical team to materials storage facility: Team Bravo reports men down.
-c1a4_5	7500	[Announcement] Alpha force, move out, science personnel resistance extreme.
-c1a4_6	9150	[Announcement] Attention: all Black Mesa security personnel wanted for immediate questioning.
-c1a4_7	9950	[Announcement] Attention: Gordon Freeman, report to military personnel for immediate security check.
-c1a4_8	9050	[Announcement] Warning: hostile biological forms detected in track control, Sector E.
-c2a1_0	7250	[Announcement] Warning: track power failure. Check lower-level power plant.
-c2a1_1	7200	[Announcement] Maintenance team Yellow, please service relay three hundred ninety-four.
-c2a1_2	9250	[Announcement] Attention: Gordon Freeman, report to military personnel for immediate security check.
-c2a1_3	6550	[Announcement] Delta team reports launch control secured.
-c2a1_4	7900	[Announcement] Danger: turret defense systems activated, Silo E.
-c2a1_5	5950	[Announcement] Sector E track control, please report status.
-c2a1_6	6600	[Announcement] Echo force reports perimeter breach, Sector E.
-c2a1_7	10500	[Announcement] Attention, search and destroy force: go to code three. Eliminate all biological forms.
-c2a1_8	9500	[Announcement] Danger: unauthorized detonation detected in experimental propulsion lab.
-c2a2_0	6750	[Announcement] Attention: clear Silo E launch area immediately.
-c2a2_1	7900	[Announcement] Containment inspection team, to advanced biological research lab.
-c2a2_2	7500	[Announcement] Medical team to Sector E: Echo team has men down.
-c2a2_3	9500	[Announcement] Alert, military personnel: you are authorized to shoot the renegade on sight.
-c2a2_4	8850	[Announcement] Alert, squad in Silo E: Freeman may be operating inside your perimeter.
-c2a2_5	5900	[Announcement] Launch control train activity detected.
-c2a2_6	9150	[Announcement] Medical team to Sector E: Echo team squad failed to reach checkpoint.
-c2a2_7	6850	[Announcement] Satellite rocket loading bay reports status green.
-c2a2_launch	13400	[Announcement] Satellite launch system activated: five, four, three, two, one — launch is go!
-c2a4_0	6100	[Announcement] Warning: emergency containment system activated.
-c2a4_1	6300	[Announcement] Alert: biological containment breach detected.
-c2a4_10	13350	[Announcement] Alert, topside containment force: use any force to prosecute Gordon Freeman, you are authorized to shoot on sight.
-c2a4_11	8000	[Announcement] Alert, topside containment force: Freeman may approach your perimeter.
-c2a4_12	6550	[Announcement] Gordon, all science personnel will be terminated until you surrender.
-c2a4_2	6800	[Announcement] Warning: biological sterilization system activated.
-c2a4_3	10500	[Announcement] Attention: hostile alien military force detected, advanced biological research lab.
-c2a4_4	10200	[Announcement] Search and destroy force reports backup required, engaged with extreme resistance.
-c2a4_5	8750	[Announcement] Topside containment force alert: hostile alien military force detected.
-c2a4_6	5350	[Announcement] High power laser status is green.
-c2a4_7	7650	[Announcement] Alien containment system failure, use sterilization chamber.
-c2a4_8	8800	[Announcement] Attention, all topside military personnel: clear helicopter hangar four.
-c2a4_9	8000	[Announcement] Hostile alien breach: topside checkpoint Alpha, checkpoint Delta.
-c2a4_ster	5100	[Announcement] Sterilization system activated.
-c3a1_0	5650	[Announcement] Warning: primary antenna failure detected.
-c3a1_1	7550	[Announcement] Clear topside motor pool for emergency medical helicopter.
-c3a1_2	6850	[Announcement] Warning: topside armory security bypass detected.
-c3a1_3	7600	[Announcement] Warning: radiation leak detected in primary antenna area.
-c3a1_4	10850	[Announcement] Search and destroy force Kilo: Central Command reports hostile alien force inside perimeter.
-c3a1_5	7600	[Announcement] Message for Gordon Freeman: you will not escape this time.
-c3a1_6	7450	[Announcement] Attention all units: renegade Freeman is now your primary target.
-c3a1_7	8150	[Announcement] Alert remaining containment force: Freeman may have experimental weapon.
-c3a1_8	9250	[Announcement] All personnel evacuate Lambda Complex, extreme dimensional malfunction detected.
-c3a1_9	9900	[Announcement] Fire control team to topside armory, checkpoint Delta, topside hydro plant.
-c3a2_0	7200	[Announcement] Warning: cross-dimensional power field activity detected.
-c3a2_1	9650	[Announcement] Warning: unauthorized biological force detected in cross-dimensional power field.
-c3a2_2	9250	[Announcement] All personnel evacuate Lambda Complex, extreme dimensional malfunction detected.
-c3a2_3	8700	[Announcement] Unauthorized activity detected in main reactor core.
-c3a2_4	9800	[Announcement] Danger: high energy exchange detected in radioactive materials handling bay.
-c3a2_5	7300	[Announcement] Biological force detected in primary coolant system.
-c3a2_6	6550	[Announcement] Lambda Complex reports dimensional contamination.
-c3a2_7	7700	[Announcement] Lambda Complex reports dimensional containment system failure.
-c3a2_core	8650	[Announcement] Attention Lambda Complex personnel: primary core activated.
-c3a2_portal	10400	[Announcement] Warning: cross-dimensional portal device power level is one hundred twenty percent.
-c3a2_target	4650	[Announcement] Satellite target system engaged.
-ctr0	1500	[Announcement] Zero.
-ctr1	1550	[Announcement] One second.
-ctr10	2350	[Announcement] Ten seconds remaining.
-ctr11	1500	[Announcement] Eleven.
-ctr12	1500	[Announcement] Twelve.
-ctr13	1500	[Announcement] Thirteen.
-ctr14	1500	[Announcement] Fourteen.
-ctr15	2650	[Announcement] Fifteen seconds remaining.
-ctr16	1500	[Announcement] Sixteen.
-ctr17	1550	[Announcement] Seventeen.
-ctr18	1500	[Announcement] Eighteen.
-ctr19	1500	[Announcement] Nineteen.
-ctr2	1500	[Announcement] Two.
-ctr20	2400	[Announcement] Twenty seconds remaining.
-ctr3	1600	[Announcement] Three seconds.
-ctr4	1500	[Announcement] Four.
-ctr5	2500	[Announcement] Five seconds remaining.
-ctr6	1500	[Announcement] Six.
-ctr7	1500	[Announcement] Seven.
-ctr8	1500	[Announcement] Eight.
-ctr9	1500	[Announcement] Nine.
-db0	5250	[Announcement] Danger: liquid biohazard leak in immediate area.
-db1	5900	[Announcement] Danger: coolant leak, severe biohazard now in this area.
-db2	5100	[Announcement] Danger: liquid biohazard released, evacuate area.
-db3	5000	[Announcement] Danger: biohazard detected in immediate area.
-dc0	5650	[Announcement] Danger: chemical leak, area now a high health hazard.
-dc1	4900	[Announcement] Danger: chemical coolant leak, health hazard zone.
-dc2	6750	[Announcement] Danger: chemical containment breach, all personnel evacuate this area.
-dc3	3350	[Announcement] Danger: supercooled chemical leak.
-dc4	3450	[Announcement] Danger: supercooled helium leak.
-dr0	3450	[Announcement] Danger: radiation leak detected.
-dr1	3700	[Announcement] Danger: radiation hazard detected.
-dr2	4100	[Announcement] Danger: high radiation level detected.
-dr3	6000	[Announcement] Danger: severe radiation hazard, evacuate area immediately.
-dr4	5900	[Announcement] Danger: safety violation, extreme radiation level detected.
-ea0	2050	[Announcement] Access granted.
-ea1	2000	[Announcement] Access permitted.
-ea2	1750	[Announcement] Entry granted.
-ea3	1750	[Announcement] Entry permitted.
-ea4	2400	[Announcement] Access authorized.
-ea5	2150	[Announcement] Entry is permitted.
-ea6	2400	[Announcement] Access authorized.
-ea7	3400	[Announcement] Access to facility granted.
-ea8	2050	[Announcement] Access granted.
-echem0	3600	[Announcement] Chemical leak containment door open.
-econ0	3950	[Announcement] Emergency containment door disengaged.
-ed0	3100	[Announcement] Security lock disengaged.
-ed1	2700	[Announcement] Security clear, proceed.
-ed2	2900	[Announcement] Security lockout released.
-ed3	3100	[Announcement] Secure override accepted.
-ed4	3150	[Announcement] Security access acknowledged.
-ed5	3200	[Announcement] Security system disengaged.
-ed6	3050	[Announcement] Door security disengaged.
-ef0	3100	[Announcement] Emergency blast door open.
-ef1	3750	[Announcement] Emergency blast shield deactivated.
-ef3	3550	[Announcement] Blast containment shield is open.
-efire0	3150	[Announcement] Fire containment door open.
-eh0	3400	[Announcement] Maintenance area access granted.
-eh1	2950	[Announcement] Maintenance area door open.
-erad0	3450	[Announcement] Radiation containment door open.
-fuel_off	7000	[Announcement] Fuel and power must be engaged to activate rocket test fire.
+c1a0_0	7300	[Intercom] Agent Coomer, report to topside tactical operations center.
+c1a0_1	6550	[Intercom] Inspection team, to radioactive materials handling bay.
+c1a0_10	8100	[Intercom] Doctor Freeman, to anomalous materials test lab immediately.
+c1a0_11	8250	[Intercom] Attention. Experimental propulsion lab test fire in ninety minutes.
+c1a0_12	5250	[Intercom] Hydro plant now operating at sixty percent.
+c1a0_13	6300	[Intercom] Black Mesa topside temperature is ninety-three degrees Fahrenheit.
+c1a0_14	6850	[Intercom] Launch officer reports: Alpha satellite deploy is nominal.
+c1a0_15	6850	[Intercom] Doctor Birdwell reports: superconducting interchange is activated.
+c1a0_16	8200	[Intercom] Attention. Report any security violation to administration sub-level one.
+c1a0_17	6800	[Intercom] Attention. Service personnel please clear helicopter hangar one.
+c1a0_18	6200	[Intercom] Shield inspection crew reports: primary reactor nominal.
+c1a0_19	6700	[Intercom] Transportation control reports: all systems on time.
+c1a0_2	6950	[Intercom] Agent sixteen, report to administration sub-level two.
+c1a0_20	7350	[Intercom] Doctor Victor, report to supercooled laser lab please.
+c1a0_21	6850	[Intercom] Sergeant Guthrie, report to topside motor pool immediately.
+c1a0_22	5850	[Intercom] Uranium shipment inspection team, to Sector D.
+c1a0_3	6450	[Intercom] Doctor Johnson, please call observation tank one.
+c1a0_4	6800	[Intercom] Doctor West, please report to Lambda reactor complex.
+c1a0_5	5800	[Intercom] Doctor Cross, call seven-two-nine please.
+c1a0_6	6050	[Intercom] Sergeant Bailey, to topside checkpoint Bravo.
+c1a0_7	7300	[Intercom] Cryogenic safety crew, report status at eleven hundred please.
+c1a0_8	7400	[Intercom] Coded message for Captain Black, command and communication center.
+c1a0_9	9100	[Intercom] Sector C science personnel, report to anomalous materials test lab.
+c1a0_start	11700	[Intercom] Welcome to the Black Mesa Research Facility.
+c1a1_0	9300	[Intercom] Warning: high energy detonation detected in materials lab.
+c1a1_1	7200	[Intercom] Attention: security personnel to Sector C immediately.
+c1a1_10	7900	[Intercom] Attention: any Sector C science personnel, please report status.
+c1a1_11	8450	[Intercom] Attention: Sector C science personnel, please report status immediately.
+c1a1_2	8100	[Intercom] Warning: unauthorized biological forms detected in Sector C.
+c1a1_3	8850	[Intercom] Warning: unauthorized biological forms detected in coolant maintenance area.
+c1a1_4	8300	[Intercom] Any damage control team to Sector C immediately.
+c1a1_5	6650	[Intercom] Warning: Sector C elevator failure. Do not use.
+c1a1_6	7350	[Intercom] Biohazard warning in Sectors B and C.
+c1a1_7	8000	[Intercom] Attention: Sector C science personnel, evacuate area immediately.
+c1a1_8	7500	[Intercom] Warning: flooding detected on sub-level three, Sector B.
+c1a1_9	8950	[Intercom] Warning: anomalous energy field detected in administration center.
+c1a2_0	7100	[Intercom] Emergency cleanup team to biological waste processing plant.
+c1a2_1	7950	[Intercom] Attention: administration personnel, evacuate Sector D immediately.
+c1a2_10	7800	[Intercom] Attention: electric shock hazard detected in administration center.
+c1a2_11	8150	[Intercom] Security officer reports medical emergency, administration center.
+c1a2_2	6100	[Intercom] Attention: security personnel to Sector D.
+c1a2_3	5350	[Intercom] Service team, check elevator one, Sector C.
+c1a2_4	8600	[Intercom] Warning: unauthorized biological forms detected in ventilation system.
+c1a2_5	6300	[Intercom] Lieutenant Backman and cleanup team, to sub-level three.
+c1a2_6	7950	[Intercom] Danger: turret defense systems activated, Sector D.
+c1a2_7	9050	[Intercom] Security officer reports men down in Sector D, medical help required.
+c1a2_8	9250	[Intercom] Extreme danger: all turret defense systems activated, Sector D.
+c1a2_9	7650	[Intercom] Turret repair personnel, to high security materials storage area.
+c1a3_0	8850	[Intercom] Attention: all science personnel report topside for immediate questioning.
+c1a3_1	8650	[Intercom] All personnel evacuate high security materials storage facility.
+c1a3_10	9000	[Intercom] Attention: Black Mesa announcement system now under military command.
+c1a3_2	7200	[Intercom] Emergency uranium containment team, to Sector D.
+c1a3_3	7150	[Intercom] Turret maintenance team, to central command and communication center.
+c1a3_4	8100	[Intercom] Military personnel, prosecute Kilo-India-Lima with extreme force.
+c1a3_5	8300	[Intercom] Attention: this announcement system now under military command.
+c1a3_6	8700	[Intercom] Search and destroy force Bravo reports secondary objective terminated.
+c1a3_7	8350	[Intercom] Bravo force reports Hotel-Sierra-Mike facility is secured.
+c1a3_8	8350	[Intercom] Attention, all military personnel: atomic-biological-chemical alert.
+c1a3_9	9150	[Intercom] Attention, all military personnel: extreme atomic-biological-chemical alert.
+c1a3_lock	12750	[Intercom] Security door engaged: five, four, three, two, one. Lockout activated.
+c1a3_warn	7700	[Intercom] Attention: security lockout alert. Security door will engage.
+c1a4_0	7050	[Intercom] Attention: experimental rocket test fire disengaged.
+c1a4_1	6400	[Intercom] Repair crew, report to track control, Sector E.
+c1a4_2	6050	[Intercom] Maintenance team Blue, check heat exchange coolant level.
+c1a4_3	7250	[Intercom] Maintenance team Green, check voltage on cable seven-two-nine.
+c1a4_4	9600	[Intercom] Medical team to materials storage facility: Team Bravo reports men down.
+c1a4_5	7500	[Intercom] Alpha force, move out, science personnel resistance extreme.
+c1a4_6	9150	[Intercom] Attention: all Black Mesa security personnel wanted for immediate questioning.
+c1a4_7	9950	[Intercom] Attention: Gordon Freeman, report to military personnel for immediate security check.
+c1a4_8	9050	[Intercom] Warning: hostile biological forms detected in track control, Sector E.
+c2a1_0	7250	[Intercom] Warning: track power failure. Check lower-level power plant.
+c2a1_1	7200	[Intercom] Maintenance team Yellow, please service relay three hundred ninety-four.
+c2a1_2	9250	[Intercom] Attention: Gordon Freeman, report to military personnel for immediate security check.
+c2a1_3	6550	[Intercom] Delta team reports launch control secured.
+c2a1_4	7900	[Intercom] Danger: turret defense systems activated, Silo E.
+c2a1_5	5950	[Intercom] Sector E track control, please report status.
+c2a1_6	6600	[Intercom] Echo force reports perimeter breach, Sector E.
+c2a1_7	10500	[Intercom] Attention, search and destroy force: go to code three. Eliminate all biological forms.
+c2a1_8	9500	[Intercom] Danger: unauthorized detonation detected in experimental propulsion lab.
+c2a2_0	6750	[Intercom] Attention: clear Silo E launch area immediately.
+c2a2_1	7900	[Intercom] Containment inspection team, to advanced biological research lab.
+c2a2_2	7500	[Intercom] Medical team to Sector E: Echo team has men down.
+c2a2_3	9500	[Intercom] Alert, military personnel: you are authorized to shoot the renegade on sight.
+c2a2_4	8850	[Intercom] Alert, squad in Silo E: Freeman may be operating inside your perimeter.
+c2a2_5	5900	[Intercom] Launch control train activity detected.
+c2a2_6	9150	[Intercom] Medical team to Sector E: Echo team squad failed to reach checkpoint.
+c2a2_7	6850	[Intercom] Satellite rocket loading bay reports status green.
+c2a2_launch	13400	[Intercom] Satellite launch system activated: five, four, three, two, one — launch is go!
+c2a4_0	6100	[Intercom] Warning: emergency containment system activated.
+c2a4_1	6300	[Intercom] Alert: biological containment breach detected.
+c2a4_10	13350	[Intercom] Alert, topside containment force: use any force to prosecute Gordon Freeman, you are authorized to shoot on sight.
+c2a4_11	8000	[Intercom] Alert, topside containment force: Freeman may approach your perimeter.
+c2a4_12	6550	[Intercom] Gordon, all science personnel will be terminated until you surrender.
+c2a4_2	6800	[Intercom] Warning: biological sterilization system activated.
+c2a4_3	10500	[Intercom] Attention: hostile alien military force detected, advanced biological research lab.
+c2a4_4	10200	[Intercom] Search and destroy force reports backup required, engaged with extreme resistance.
+c2a4_5	8750	[Intercom] Topside containment force alert: hostile alien military force detected.
+c2a4_6	5350	[Intercom] High power laser status is green.
+c2a4_7	7650	[Intercom] Alien containment system failure, use sterilization chamber.
+c2a4_8	8800	[Intercom] Attention, all topside military personnel: clear helicopter hangar four.
+c2a4_9	8000	[Intercom] Hostile alien breach: topside checkpoint Alpha, checkpoint Delta.
+c2a4_ster	5100	[Intercom] Sterilization system activated.
+c3a1_0	5650	[Intercom] Warning: primary antenna failure detected.
+c3a1_1	7550	[Intercom] Clear topside motor pool for emergency medical helicopter.
+c3a1_2	6850	[Intercom] Warning: topside armory security bypass detected.
+c3a1_3	7600	[Intercom] Warning: radiation leak detected in primary antenna area.
+c3a1_4	10850	[Intercom] Search and destroy force Kilo: Central Command reports hostile alien force inside perimeter.
+c3a1_5	7600	[Intercom] Message for Gordon Freeman: you will not escape this time.
+c3a1_6	7450	[Intercom] Attention all units: renegade Freeman is now your primary target.
+c3a1_7	8150	[Intercom] Alert remaining containment force: Freeman may have experimental weapon.
+c3a1_8	9250	[Intercom] All personnel evacuate Lambda Complex, extreme dimensional malfunction detected.
+c3a1_9	9900	[Intercom] Fire control team to topside armory, checkpoint Delta, topside hydro plant.
+c3a2_0	7200	[Intercom] Warning: cross-dimensional power field activity detected.
+c3a2_1	9650	[Intercom] Warning: unauthorized biological force detected in cross-dimensional power field.
+c3a2_2	9250	[Intercom] All personnel evacuate Lambda Complex, extreme dimensional malfunction detected.
+c3a2_3	8700	[Intercom] Unauthorized activity detected in main reactor core.
+c3a2_4	9800	[Intercom] Danger: high energy exchange detected in radioactive materials handling bay.
+c3a2_5	7300	[Intercom] Biological force detected in primary coolant system.
+c3a2_6	6550	[Intercom] Lambda Complex reports dimensional contamination.
+c3a2_7	7700	[Intercom] Lambda Complex reports dimensional containment system failure.
+c3a2_core	8650	[Intercom] Attention Lambda Complex personnel: primary core activated.
+c3a2_portal	10400	[Intercom] Warning: cross-dimensional portal device power level is one hundred twenty percent.
+c3a2_target	4650	[Intercom] Satellite target system engaged.
+ctr0	1500	[Intercom] Zero.
+ctr1	1550	[Intercom] One second.
+ctr10	2350	[Intercom] Ten seconds remaining.
+ctr11	1500	[Intercom] Eleven.
+ctr12	1500	[Intercom] Twelve.
+ctr13	1500	[Intercom] Thirteen.
+ctr14	1500	[Intercom] Fourteen.
+ctr15	2650	[Intercom] Fifteen seconds remaining.
+ctr16	1500	[Intercom] Sixteen.
+ctr17	1550	[Intercom] Seventeen.
+ctr18	1500	[Intercom] Eighteen.
+ctr19	1500	[Intercom] Nineteen.
+ctr2	1500	[Intercom] Two.
+ctr20	2400	[Intercom] Twenty seconds remaining.
+ctr3	1600	[Intercom] Three seconds.
+ctr4	1500	[Intercom] Four.
+ctr5	2500	[Intercom] Five seconds remaining.
+ctr6	1500	[Intercom] Six.
+ctr7	1500	[Intercom] Seven.
+ctr8	1500	[Intercom] Eight.
+ctr9	1500	[Intercom] Nine.
+db0	5250	[Intercom] Danger: liquid biohazard leak in immediate area.
+db1	5900	[Intercom] Danger: coolant leak, severe biohazard now in this area.
+db2	5100	[Intercom] Danger: liquid biohazard released, evacuate area.
+db3	5000	[Intercom] Danger: biohazard detected in immediate area.
+dc0	5650	[Intercom] Danger: chemical leak, area now a high health hazard.
+dc1	4900	[Intercom] Danger: chemical coolant leak, health hazard zone.
+dc2	6750	[Intercom] Danger: chemical containment breach, all personnel evacuate this area.
+dc3	3350	[Intercom] Danger: supercooled chemical leak.
+dc4	3450	[Intercom] Danger: supercooled helium leak.
+dr0	3450	[Intercom] Danger: radiation leak detected.
+dr1	3700	[Intercom] Danger: radiation hazard detected.
+dr2	4100	[Intercom] Danger: high radiation level detected.
+dr3	6000	[Intercom] Danger: severe radiation hazard, evacuate area immediately.
+dr4	5900	[Intercom] Danger: safety violation, extreme radiation level detected.
+ea0	2050	[Intercom] Access granted.
+ea1	2000	[Intercom] Access permitted.
+ea2	1750	[Intercom] Entry granted.
+ea3	1750	[Intercom] Entry permitted.
+ea4	2400	[Intercom] Access authorized.
+ea5	2150	[Intercom] Entry is permitted.
+ea6	2400	[Intercom] Access authorized.
+ea7	3400	[Intercom] Access to facility granted.
+ea8	2050	[Intercom] Access granted.
+echem0	3600	[Intercom] Chemical leak containment door open.
+econ0	3950	[Intercom] Emergency containment door disengaged.
+ed0	3100	[Intercom] Security lock disengaged.
+ed1	2700	[Intercom] Security clear, proceed.
+ed2	2900	[Intercom] Security lockout released.
+ed3	3100	[Intercom] Secure override accepted.
+ed4	3150	[Intercom] Security access acknowledged.
+ed5	3200	[Intercom] Security system disengaged.
+ed6	3050	[Intercom] Door security disengaged.
+ef0	3100	[Intercom] Emergency blast door open.
+ef1	3750	[Intercom] Emergency blast shield deactivated.
+ef3	3550	[Intercom] Blast containment shield is open.
+efire0	3150	[Intercom] Fire containment door open.
+eh0	3400	[Intercom] Maintenance area access granted.
+eh1	2950	[Intercom] Maintenance area door open.
+erad0	3450	[Intercom] Radiation containment door open.
+fuel_off	7000	[Intercom] Fuel and power must be engaged to activate rocket test fire.
 gm_1choose	1801	[G-Man] Time to choose.
 gm_1mumble	2524	[G-Man] (Muffled) ...we cannot allow this...
 gm_2choose	1590	[G-Man] It's time to choose.
@@ -851,44 +851,44 @@ holo_steam	10182	[Hologram] If you pass through fire or steam, you'll see a heat
 holo_target	11971	[Hologram] Welcome to the Black Mesa target range, where you will receive training in firing a weapon, reloading, and firing the attached grenade launcher. Please pick up your weapon and advance to the firing station.
 holo_tryagain	1838	[Hologram] That's okay. Try again.
 holo_usetrain	11803	[Hologram] Press your Use key to engage the train. Press forward and backward to increase or decrease the speed of the train. Press Use again to disengage from the train.
-na0	2000	[Announcement] Access denied.
-na1	2400	[Announcement] Access is denied.
-na10	2850	[Announcement] Sorry, you may not enter.
-na11	2950	[Announcement] Sorry, this door is locked.
-na12	3700	[Announcement] Please move away from this area.
-na13	3150	[Announcement] Please move away from door.
-na14	2650	[Announcement] You will not get in.
-na15	2950	[Announcement] Entry is not an option.
-na16	3050	[Announcement] Will we do this all day?
-na17	2550	[Announcement] Move on immediately.
-na18	2750	[Announcement] No, no, and no.
-na2	2500	[Announcement] Unauthorized access.
-na3	2000	[Announcement] Illegal access.
-na4	2350	[Announcement] This door is locked.
-na5	2500	[Announcement] Unauthorized access.
-na6	1950	[Announcement] Entry forbidden.
-na7	2200	[Announcement] Entry not permitted.
-na8	3100	[Announcement] No unauthorized personnel.
-na9	5150	[Announcement] You do not have access to this facility.
-nchem0	4000	[Announcement] Chemical leak containment door activated.
-ncon0	3700	[Announcement] Emergency containment door engaged.
-nd0	3200	[Announcement] Security lock is engaged.
-nd1	3000	[Announcement] Secure area, no entry.
-nd2	3350	[Announcement] Security lockout, no entry.
-nd3	2900	[Announcement] Secure door, no entry.
-nd4	3250	[Announcement] Security system in force.
-nd5	3850	[Announcement] Security system armed, no entry.
-nd6	2250	[Announcement] Door is secured.
-nd7	3000	[Announcement] Illegal access, move away.
-nf0	3500	[Announcement] Emergency blast door activated.
-nf1	3600	[Announcement] Emergency blast shield activated.
-nf3	3900	[Announcement] The blast containment shield is down.
-nfire0	3550	[Announcement] Fire containment door is down.
-ng0	3350	[Announcement] Sorry, this door is inoperative.
-ng1	3100	[Announcement] Sorry, door out of service.
-ng2	5200	[Announcement] Door damage detected, please call service personnel.
-nh0	3300	[Announcement] No access, maintenance area.
-nh1	4450	[Announcement] No personnel permitted in maintenance area.
+na0	2000	[Intercom] Access denied.
+na1	2400	[Intercom] Access is denied.
+na10	2850	[Intercom] Sorry, you may not enter.
+na11	2950	[Intercom] Sorry, this door is locked.
+na12	3700	[Intercom] Please move away from this area.
+na13	3150	[Intercom] Please move away from door.
+na14	2650	[Intercom] You will not get in.
+na15	2950	[Intercom] Entry is not an option.
+na16	3050	[Intercom] Will we do this all day?
+na17	2550	[Intercom] Move on immediately.
+na18	2750	[Intercom] No, no, and no.
+na2	2500	[Intercom] Unauthorized access.
+na3	2000	[Intercom] Illegal access.
+na4	2350	[Intercom] This door is locked.
+na5	2500	[Intercom] Unauthorized access.
+na6	1950	[Intercom] Entry forbidden.
+na7	2200	[Intercom] Entry not permitted.
+na8	3100	[Intercom] No unauthorized personnel.
+na9	5150	[Intercom] You do not have access to this facility.
+nchem0	4000	[Intercom] Chemical leak containment door activated.
+ncon0	3700	[Intercom] Emergency containment door engaged.
+nd0	3200	[Intercom] Security lock is engaged.
+nd1	3000	[Intercom] Secure area, no entry.
+nd2	3350	[Intercom] Security lockout, no entry.
+nd3	2900	[Intercom] Secure door, no entry.
+nd4	3250	[Intercom] Security system in force.
+nd5	3850	[Intercom] Security system armed, no entry.
+nd6	2250	[Intercom] Door is secured.
+nd7	3000	[Intercom] Illegal access, move away.
+nf0	3500	[Intercom] Emergency blast door activated.
+nf1	3600	[Intercom] Emergency blast shield activated.
+nf3	3900	[Intercom] The blast containment shield is down.
+nfire0	3550	[Intercom] Fire containment door is down.
+ng0	3350	[Intercom] Sorry, this door is inoperative.
+ng1	3100	[Intercom] Sorry, door out of service.
+ng2	5200	[Intercom] Door damage detected, please call service personnel.
+nh0	3300	[Intercom] No access, maintenance area.
+nh1	4450	[Intercom] No personnel permitted in maintenance area.
 nihilanth/nil_alone	7802	[Nihilanth] Alone... not you alone... not you alone...
 nihilanth/nil_comes	3611	[Nihilanth] Comes another...
 nihilanth/nil_deceive	7608	[Nihilanth] Deceive you... will deceive you...
@@ -899,20 +899,20 @@ nihilanth/nil_now_die	7758	[Nihilanth] Now die... now die... now...
 nihilanth/nil_thelast	5304	[Nihilanth] The last... I am the last...
 nihilanth/nil_thetruth	7063	[Nihilanth] The truth... you can never know... the truth...
 nihilanth/nil_win	4779	[Nihilanth] Win... you cannot win...
-nrad0	3850	[Announcement] Radiation containment door activated.
-power_off	4050	[Announcement] Main power is not on.
-power_on	3450	[Announcement] Main power is on.
-rf_20sec	6000	[Announcement] Twenty seconds.
-rf_30sec	9600	[Announcement] Thirty seconds remaining. Evacuate immediately.
-rf_60sec	12000	[Announcement] All systems nominal. Sixty seconds to launch.
-rf_90sec	8400	[Announcement] Ninety seconds to launch.
-rf_countdown	34800	[Announcement] Ten, nine, eight, seven, six, five, four, three, two, one — launch is go.
-rf_launch_start	20400	[Announcement] Warning: satellite rocket launch system activated. Vacate the central silo immediately.
-rf_rocket_armed	18000	[Announcement] Attention: satellite rocket loading bay reports ready. Rocket launch system armed.
-rf_sat_activate	12000	[Announcement] Launch propulsion system engaged.
-rf_success	26630	[Announcement] Satellite rocket has launched and is accelerating. Electromagnetic data collection systems engaged and aligned to dish. Have a safe and productive day.
-rf_warning	24000	[Announcement] Warning: extreme hazard of sudden thermal exposure due to rapid rocket engine decompression. Vacate the silo immediately.
-rf_warning2	20400	[Announcement] Attention: fuel booster activated. Hazard of extreme heat and flame exhaust from rocket engine.
+nrad0	3850	[Intercom] Radiation containment door activated.
+power_off	4050	[Intercom] Main power is not on.
+power_on	3450	[Intercom] Main power is on.
+rf_20sec	6000	[Intercom] Twenty seconds.
+rf_30sec	9600	[Intercom] Thirty seconds remaining. Evacuate immediately.
+rf_60sec	12000	[Intercom] All systems nominal. Sixty seconds to launch.
+rf_90sec	8400	[Intercom] Ninety seconds to launch.
+rf_countdown	34800	[Intercom] Ten, nine, eight, seven, six, five, four, three, two, one — launch is go.
+rf_launch_start	20400	[Intercom] Warning: satellite rocket launch system activated. Vacate the central silo immediately.
+rf_rocket_armed	18000	[Intercom] Attention: satellite rocket loading bay reports ready. Rocket launch system armed.
+rf_sat_activate	12000	[Intercom] Launch propulsion system engaged.
+rf_success	26630	[Intercom] Satellite rocket has launched and is accelerating. Electromagnetic data collection systems engaged and aligned to dish. Have a safe and productive day.
+rf_warning	24000	[Intercom] Warning: extreme hazard of sudden thermal exposure due to rapid rocket engine decompression. Vacate the silo immediately.
+rf_warning2	20400	[Intercom] Attention: fuel booster activated. Hazard of extreme heat and flame exhaust from rocket engine.
 sc_1man	3404	[Scientist] Take me with you! I'm the one man who knows everything!
 sc_1mumble	6421	[Scientist] I've told you a hundred times, I am opposed to pushing this equipment beyond the test level.
 sc_1psurg	5712	[Scientist] We all have access to the retinal scanners. Escort us to the lobby and we can get out of the lab.
@@ -1539,28 +1539,28 @@ scientist/youinsane	2615	[Scientist] Are you insane?!
 scientist/youlookbad	1800	[Scientist] You don't look so good.
 scientist/youneedmedic	2673	[Scientist] You need medical attention.
 scientist/youwounded	1668	[Scientist] You're wounded!
-t0	6100	[Announcement] Extreme hazard: defense system is armed in this zone.
-t1	4200	[Announcement] Hazard area: defense system activated.
-t2	4450	[Announcement] Danger: turret perimeter defense system armed.
-t3	4950	[Announcement] Extreme hazard: nearest defense system engaged.
-t4	5200	[Announcement] Danger: base defense turret system may power up.
-t5	4550	[Announcement] Danger: automatic defense system activated.
-tr_a	2650	[Announcement] Three, two, one.
-tr_b	3550	[Announcement] Target system deactivated.
-tride/c0a0_tr_arrive	5486	[Announcement] Now arriving at Sector C Test Labs and Control Facilities.
-tride/c0a0_tr_dest	38227	[Announcement] This train is inbound from Level 3 Dormitories to Sector C Test Labs and Control Facilities. If your intended destination is a high-security area beyond Sector C, you will need to return to the Central Transit Hub in Area 9 and board a high-security train. If you have not yet submitted your identity to the retinal clearance system, you must report to Black Mesa Personnel for processing before you will be permitted into the high-security branch of the transit system.
-tride/c0a0_tr_emerg	34134	[Announcement] Please keep your limbs inside the train at all times. Do not attempt to open the doors until the train has come to a complete halt at the station platform. In the event of an emergency, passengers are to remain seated and await further instruction. If it is necessary to exit the train, disabled personnel should be evacuated first. Please stay away from electrified rails, and proceed to an emergency station until assistance arrives.
-tride/c0a0_tr_exit	17118	[Announcement] Please stand back from the automated door and wait for the security officer to verify your identity. Before exiting the train, be sure to check your area for personal belongings. Thank you, and have a very safe and productive day.
-tride/c0a0_tr_gmorn	11613	[Announcement] Good morning and welcome to the Black Mesa Transit System. This automated train is provided for the security and convenience of the Black Mesa Research Facility personnel.
-tride/c0a0_tr_haz	36298	[Announcement] A reminder to all Black Mesa personnel: regular radiation and biohazard screenings are a requirement of continued employment in the Black Mesa Research Facility. Missing a scheduled urinalysis or radiation check-up is grounds for immediate termination. If you feel you have been exposed to radioactive or other hazardous materials in the course of your duties, contact your Radiation Safety Officer immediately. Work safe. Work smart. Your future depends on it.
-tride/c0a0_tr_jobs	37031	[Announcement] Do you have a friend or relative who would make a valuable addition to the Black Mesa team? Immediate openings are available in the areas of Materials Handling and Low-Clearance Security. Please contact Black Mesa Personnel for further information. If you have an associate with a background in the areas of theoretical physics, biotechnology, or other high-tech disciplines, please contact our Civilian Recruitment Division. The Black Mesa Research Facility is an equal opportunity employer.
-tride/c0a0_tr_noeat	12055	[Announcement] Due to the high toxicity of material routinely handled in the Black Mesa compound, no smoking, eating, or drinking are permitted within the Black Mesa Transit System.
-tride/c0a0_tr_time	21038	[Announcement] The time is 8:47 AM. Current topside temperature is 93 degrees, with an estimated high of 105. The Black Mesa compound is maintained at a pleasant 68 degrees at all times.
-tride/c0a0_tr_tourn	24544	[Announcement] A reminder that the Black Mesa Hazard Course Decathlon will commence this evening at nineteen hundred hours in the Level 3 facility. The semifinals for high-security personnel will be announced in a separate secure access transmission. Remember, more lives than your own may depend on your fitness.
-we0	2950	[Announcement] Warning: high voltage cable.
-we1	2800	[Announcement] Warning: high power cable.
-we2	3000	[Announcement] Warning: electric shock hazard.
-we3	3700	[Announcement] Warning: severe electric shock hazard.
+t0	6100	[Intercom] Extreme hazard: defense system is armed in this zone.
+t1	4200	[Intercom] Hazard area: defense system activated.
+t2	4450	[Intercom] Danger: turret perimeter defense system armed.
+t3	4950	[Intercom] Extreme hazard: nearest defense system engaged.
+t4	5200	[Intercom] Danger: base defense turret system may power up.
+t5	4550	[Intercom] Danger: automatic defense system activated.
+tr_a	2650	[Intercom] Three, two, one.
+tr_b	3550	[Intercom] Target system deactivated.
+tride/c0a0_tr_arrive	5486	[Intercom] Now arriving at Sector C Test Labs and Control Facilities.
+tride/c0a0_tr_dest	38227	[Intercom] This train is inbound from Level 3 Dormitories to Sector C Test Labs and Control Facilities. If your intended destination is a high-security area beyond Sector C, you will need to return to the Central Transit Hub in Area 9 and board a high-security train. If you have not yet submitted your identity to the retinal clearance system, you must report to Black Mesa Personnel for processing before you will be permitted into the high-security branch of the transit system.
+tride/c0a0_tr_emerg	34134	[Intercom] Please keep your limbs inside the train at all times. Do not attempt to open the doors until the train has come to a complete halt at the station platform. In the event of an emergency, passengers are to remain seated and await further instruction. If it is necessary to exit the train, disabled personnel should be evacuated first. Please stay away from electrified rails, and proceed to an emergency station until assistance arrives.
+tride/c0a0_tr_exit	17118	[Intercom] Please stand back from the automated door and wait for the security officer to verify your identity. Before exiting the train, be sure to check your area for personal belongings. Thank you, and have a very safe and productive day.
+tride/c0a0_tr_gmorn	11613	[Intercom] Good morning and welcome to the Black Mesa Transit System. This automated train is provided for the security and convenience of the Black Mesa Research Facility personnel.
+tride/c0a0_tr_haz	36298	[Intercom] A reminder to all Black Mesa personnel: regular radiation and biohazard screenings are a requirement of continued employment in the Black Mesa Research Facility. Missing a scheduled urinalysis or radiation check-up is grounds for immediate termination. If you feel you have been exposed to radioactive or other hazardous materials in the course of your duties, contact your Radiation Safety Officer immediately. Work safe. Work smart. Your future depends on it.
+tride/c0a0_tr_jobs	37031	[Intercom] Do you have a friend or relative who would make a valuable addition to the Black Mesa team? Immediate openings are available in the areas of Materials Handling and Low-Clearance Security. Please contact Black Mesa Personnel for further information. If you have an associate with a background in the areas of theoretical physics, biotechnology, or other high-tech disciplines, please contact our Civilian Recruitment Division. The Black Mesa Research Facility is an equal opportunity employer.
+tride/c0a0_tr_noeat	12055	[Intercom] Due to the high toxicity of material routinely handled in the Black Mesa compound, no smoking, eating, or drinking are permitted within the Black Mesa Transit System.
+tride/c0a0_tr_time	21038	[Intercom] The time is 8:47 AM. Current topside temperature is 93 degrees, with an estimated high of 105. The Black Mesa compound is maintained at a pleasant 68 degrees at all times.
+tride/c0a0_tr_tourn	24544	[Intercom] A reminder that the Black Mesa Hazard Course Decathlon will commence this evening at nineteen hundred hours in the Level 3 facility. The semifinals for high-security personnel will be announced in a separate secure access transmission. Remember, more lives than your own may depend on your fitness.
+we0	2950	[Intercom] Warning: high voltage cable.
+we1	2800	[Intercom] Warning: high power cable.
+we2	3000	[Intercom] Warning: electric shock hazard.
+we3	3700	[Intercom] Warning: severe electric shock hazard.
 scientist/c1a0_sci_catscream	2824	[Scientist] Aaaaaah!
 scientist/c1a0_sci_gm1	1200	[Scientist] Good morning, Gordon.
 scientist/c1a0_sci_itsyou	5840	[Scientist] Oh, it's you... I thought you were another one of the Administrator's people. They're all over the place this morning.
