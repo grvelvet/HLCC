@@ -1147,7 +1147,7 @@ sc_question11	2093	[Scientist] Do you smell that?
 sc_question12	2915	[Scientist] Why did I ever get a PhD?
 sc_question13	2865	[Scientist] Maybe we should wait here?
 sc_question14	3410	[Scientist] Our chances of survival are dwindling.
-sc_question15	4614	[Scientist] Watch out, those headcrabs jump right for your head.
+sc_question15	4614	[Scientist] These crab creatures have a unique parasitic strategy, don't you think?
 sc_question16	3356	[Scientist] This would make a brilliant paper.
 sc_question17	2585	[Scientist] I wish I could capture a specimen for study.
 sc_question18	5427	[Scientist] Are you seriously suggesting all these creatures came here to dine on us?
@@ -1386,7 +1386,7 @@ scientist/goodpaper	3356	[Scientist] This would make an excellent paper.
 scientist/goodtoseeyou	3109	[Scientist] Good to see you.
 scientist/greetings	2252	[Scientist] Good afternoon.
 scientist/greetings2	2012	[Scientist] Greetings!
-scientist/headcrab	4614	[Scientist] Watch out, those headcrabs go for the head.
+scientist/headcrab	4614	[Scientist] These crab creatures have a unique parasitic strategy, don't you think?
 scientist/heal1	2472	[Scientist] Let me help you.
 scientist/heal2	1815	[Scientist] This injection should make you feel better.
 scientist/heal3	1800	[Scientist] Here, this should ease the pain.
