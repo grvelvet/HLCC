@@ -134,7 +134,13 @@ void CaptionState::AssignSpeakerNumberLocked(ActiveCaption& cap, ULONGLONG nowMs
 std::string CaptionState::SfxGroupKey(std::string_view norm) const {
     if (size_t sl = norm.find('/'); sl != std::string_view::npos) {
         std::string_view dir = norm.substr(0, sl);
-        if (cfg.IsCreatureSfxDir(dir)) return std::string(dir);
+        if (cfg.IsCreatureSfxDir(dir)) {
+            std::string_view base = norm.substr(sl + 1);
+            if (base.contains("die") || base.contains("death")) {
+                return std::string(dir) + ":die";
+            }
+            return std::string(dir);
+        }
     }
     while (!norm.empty() && (std::isdigit(static_cast<unsigned char>(norm.back())) || norm.back() == '_')) {
         norm.remove_suffix(1);
