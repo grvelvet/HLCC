@@ -50,9 +50,16 @@ struct ActiveCaption {
     int cachedMaxLines = -1;
 };
 
-struct SpeakerGroupTrack {
-    std::vector<int> entnums;
+struct SpeakerEntityTrack {
+    int entnum = -1;
     ULONGLONG lastSeenMs = 0;
+    bool hasOrigin = false;
+    float origin[3] = {0.0f, 0.0f, 0.0f};
+    int assignedNum = 0;
+};
+
+struct SpeakerGroupTrack {
+    std::vector<SpeakerEntityTrack> entities;
 };
 
 struct ActiveTitle {
@@ -100,7 +107,7 @@ struct CaptionState {
     ULONGLONG lastTimeAdvanceRealMs = 0;
 
     std::string SfxGroupKey(std::string_view norm) const;
-    void AssignSpeakerNumberLocked(ActiveCaption& cap, ULONGLONG nowMs);
+    void AssignSpeakerNumberLocked(ActiveCaption& cap, ULONGLONG nowMs, const float* soundOrigin = nullptr);
     void ClearBuffersLocked();
     size_t DropForChannelLocked(int entnum, int channel, const std::string* keyFilter);
     bool IsGamePausedLocked(ULONGLONG nowRealMs) const noexcept;

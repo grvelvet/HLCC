@@ -39,7 +39,7 @@ void ApplySpeakerNumberToText(ActiveCaption& cap, int num) {
 }
 } // namespace
 
-void CaptionState::AssignSpeakerNumberLocked(ActiveCaption& cap, ULONGLONG nowMs) {
+void CaptionState::AssignSpeakerNumberLocked(ActiveCaption& cap, ULONGLONG nowMs, const float* soundOrigin) {
     if (cap.cat != subs::RoleCat::NPC) return;
     if (cap.text.empty() || cap.text[0] != L'[') return;
     size_t rb = cap.text.find(L']');
@@ -52,31 +52,80 @@ void CaptionState::AssignSpeakerNumberLocked(ActiveCaption& cap, ULONGLONG nowMs
     cap.speakerTag = tag;
     if (cap.entnum <= 0) return;
 
+    constexpr ULONGLONG kSceneTimeoutMs = 12000ULL;
+    constexpr float kSceneMaxDistSq = 500.0f * 500.0f;
+
     auto& grp = speakerGroups[tag];
-    if (grp.lastSeenMs != 0 && nowMs >= grp.lastSeenMs && (nowMs - grp.lastSeenMs) > 30000ULL) {
-        grp.entnums.clear();
-    }
-    grp.lastSeenMs = nowMs;
+    // Drop entities that haven't spoken recently OR are in a different room/scene (> 500u away).
+    std::erase_if(grp.entities, [&](const SpeakerEntityTrack& e) {
+        if (e.entnum == cap.entnum) return false;
+        if (nowMs >= e.lastSeenMs && (nowMs - e.lastSeenMs) > kSceneTimeoutMs) return true;
+        if (soundOrigin && e.hasOrigin) {
+            float dx = e.origin[0] - soundOrigin[0];
+            float dy = e.origin[1] - soundOrigin[1];
+            float dz = e.origin[2] - soundOrigin[2];
+            if (dx * dx + dy * dy + dz * dz > kSceneMaxDistSq) return true;
+        }
+        return false;
+    });
 
-    auto it = std::find(grp.entnums.begin(), grp.entnums.end(), cap.entnum);
-    int idx = 0;
-    if (it != grp.entnums.end()) {
-        idx = static_cast<int>(it - grp.entnums.begin()) + 1;
+    auto it = std::find_if(grp.entities.begin(), grp.entities.end(),
+                           [&](const SpeakerEntityTrack& e) { return e.entnum == cap.entnum; });
+    if (it == grp.entities.end()) {
+        SpeakerEntityTrack t;
+        t.entnum = cap.entnum;
+        t.lastSeenMs = nowMs;
+        if (soundOrigin) {
+            t.hasOrigin = true;
+            t.origin[0] = soundOrigin[0];
+            t.origin[1] = soundOrigin[1];
+            t.origin[2] = soundOrigin[2];
+        }
+        grp.entities.push_back(t);
+        it = grp.entities.end() - 1;
     } else {
-        grp.entnums.push_back(cap.entnum);
-        idx = static_cast<int>(grp.entnums.size());
+        it->lastSeenMs = nowMs;
+        if (soundOrigin) {
+            it->hasOrigin = true;
+            it->origin[0] = soundOrigin[0];
+            it->origin[1] = soundOrigin[1];
+            it->origin[2] = soundOrigin[2];
+        }
     }
 
-    if (grp.entnums.size() >= 2) {
-        ApplySpeakerNumberToText(cap, idx);
-        // Retroactively number any already-visible caption of the same role in this scene.
-        for (auto& existing : captions) {
-            if (existing.isGenericNpc && existing.speakerNum == 0 &&
-                existing.speakerTag == tag && existing.entnum > 0) {
-                auto eit = std::find(grp.entnums.begin(), grp.entnums.end(), existing.entnum);
-                if (eit != grp.entnums.end()) {
-                    ApplySpeakerNumberToText(existing, static_cast<int>(eit - grp.entnums.begin()) + 1);
+    if (grp.entities.size() < 2) {
+        it->assignedNum = 0;
+        return;
+    }
+
+    auto allocNextNum = [&]() -> int {
+        for (int candidate = 1; ; ++candidate) {
+            bool used = false;
+            for (const auto& e : grp.entities) {
+                if (e.assignedNum == candidate) {
+                    used = true;
+                    break;
                 }
+            }
+            if (!used) return candidate;
+        }
+    };
+
+    for (auto& e : grp.entities) {
+        if (e.assignedNum == 0) {
+            e.assignedNum = allocNextNum();
+        }
+    }
+
+    ApplySpeakerNumberToText(cap, it->assignedNum);
+    // Retroactively number any already-visible caption of the same role in this scene.
+    for (auto& existing : captions) {
+        if (existing.isGenericNpc && existing.speakerNum == 0 &&
+            existing.speakerTag == tag && existing.entnum > 0) {
+            auto eit = std::find_if(grp.entities.begin(), grp.entities.end(),
+                                    [&](const SpeakerEntityTrack& e) { return e.entnum == existing.entnum; });
+            if (eit != grp.entities.end() && eit->assignedNum > 0) {
+                ApplySpeakerNumberToText(existing, eit->assignedNum);
             }
         }
     }

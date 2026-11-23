@@ -363,7 +363,7 @@ void HandleSound(int entnum, int entchannel, bool isStatic, sfx_t* sfx, float* o
     cap.key = norm;
     cap.entnum = entnum;
     cap.channel = entchannel;
-    st.AssignSpeakerNumberLocked(cap, nowMs);
+    st.AssignSpeakerNumberLocked(cap, nowMs, (origin && !originZero) ? origin : nullptr);
     if (!isGlobal && !isNoOcc && origin && !originZero) {
         cap.hasOrigin = true;
         cap.origin[0] = origin[0];
