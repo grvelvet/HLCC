@@ -1696,8 +1696,8 @@ apache/ap_rotor4	2200	[Винт вертолёта]
 aslave/slv_alert1	1100	[Хриплый рык вортигонта]
 aslave/slv_alert3	1100	[Шипение вортигонта]
 aslave/slv_alert4	1100	[Визг вортигонта]
-barnacle/bcl_alert2	2200	[Щелчок барнакла]
-barnacle/bcl_tongue1	1511	[Щелчок барнакла]
+barnacle/bcl_alert2	2200	[Шипение барнакла]
+barnacle/bcl_tongue1	1511	[Рывок языка барнакла]
 bullchicken/bc_acid1	1257	[Плевок кислотой]
 bullchicken/bc_acid2	1100	[Шипение кислоты]
 bullchicken/bc_attackgrowl	1127	[Рычание буллсквида]
@@ -1915,3 +1915,6 @@ slv_idle9	1500	[Бормотание вортигонта]
 slv_idle10	1500	[Речь вортигонта]
 debris/zap4	1500	[Электрический заряд]
 weapons/electro4	1500	[Электрический разряд]
+hgrunt/gr_die1	1400	[HECU] (предсмертный хрип)
+hgrunt/gr_die2	1400	[HECU] (предсмертный крик)
+hgrunt/gr_die3	1400	[HECU] (предсмертный стон)

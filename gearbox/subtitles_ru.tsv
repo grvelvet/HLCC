@@ -625,3 +625,9 @@ gonome/gonome_idle1	1600	[Хрип гонома]
 gonome/gonome_idle2	1600	[Глухое рычание гонома]
 gonome/gonome_idle3	1600	[Стон гонома]
 gonome/gonome_run	1600	[Гоном бросается в погоню]
+fgrunt/death1	1400	[HECU] (предсмертный хрип)
+fgrunt/death2	1400	[HECU] (предсмертный крик)
+fgrunt/death3	1400	[HECU] (предсмертный стон)
+fgrunt/death4	1400	[HECU] (предсмертный хрип)
+fgrunt/death5	1400	[HECU] (предсмертный крик)
+fgrunt/death6	1400	[HECU] (предсмертный стон)

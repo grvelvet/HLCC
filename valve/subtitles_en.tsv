@@ -1696,8 +1696,8 @@ apache/ap_rotor4	2200	[Helicopter rotors]
 aslave/slv_alert1	1100	[Vortigaunt snarl]
 aslave/slv_alert3	1100	[Vortigaunt hiss]
 aslave/slv_alert4	1100	[Vortigaunt shriek]
-barnacle/bcl_alert2	2200	[Barnacle snaps]
-barnacle/bcl_tongue1	1511	[Barnacle snaps]
+barnacle/bcl_alert2	2200	[Barnacle hiss]
+barnacle/bcl_tongue1	1511	[Barnacle tongue snap]
 bullchicken/bc_acid1	1257	[Acid spit]
 bullchicken/bc_acid2	1100	[Acid hiss]
 bullchicken/bc_attackgrowl	1127	[Bullsquid growls]
@@ -1915,3 +1915,6 @@ slv_idle9	1500	[Vortigaunt muttering]
 slv_idle10	1500	[Vortigaunt speaking]
 debris/zap4	1500	[Electrical charge]
 weapons/electro4	1500	[Electrical discharge]
+hgrunt/gr_die1	1400	[HECU] (death groan)
+hgrunt/gr_die2	1400	[HECU] (death scream)
+hgrunt/gr_die3	1400	[HECU] (death groan)
