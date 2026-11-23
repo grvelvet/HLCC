@@ -43,7 +43,8 @@ struct Config {
     float max_distance = 650.0f;
     float glass_max_distance = 320.0f;
     float no_occlusion_max_distance = 1500.0f;
-    float min_volume = 0.05f;
+    float min_volume = 0.10f;
+    bool use_attenuation_cutoff = true;
     bool check_occlusion = true;
     bool enable_vox = true;
     bool enable_hev = true;
@@ -52,7 +53,7 @@ struct Config {
     bool enable_npc = true;
     bool enable_sfx = true;
     float sfx_max_distance = 550.0f;
-    float sfx_min_volume = 0.20f;
+    float sfx_min_volume = 0.22f;
     int sfx_cooldown_ms = 1800;
     int max_sfx_captions = 2;
     bool debug_log = false;

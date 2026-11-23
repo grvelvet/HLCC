@@ -59,6 +59,21 @@ uint32_t ComputeCaptionDurationMs(uint32_t rawMs, const std::string& utf8Text) {
     return std::clamp<uint32_t>(chars * 50, 300, 4800) + 1000;
 }
 
+// Matches GoldSrc hw.dll SND_Spatialize linear attenuation (sound_nominal_clip_dist = 1000.0f).
+float ComputePerceivedVolume(float fvol, float dist, float attenuation) noexcept {
+    if (fvol <= 0.0f) return 0.0f;
+    if (attenuation <= 0.01f || dist <= 0.0f) return fvol;
+    float scale = std::clamp(1.0f - dist * (attenuation / 1000.0f), 0.0f, 1.0f);
+    return fvol * scale;
+}
+
+float ComputeAudibleMaxDist(float fvol, float minVol, float attenuation) noexcept {
+    if (attenuation <= 0.01f || fvol <= 0.0f) return 1e9f;
+    if (fvol <= minVol) return 0.0f;
+    float ratio = std::clamp(minVol / fvol, 0.0f, 1.0f);
+    return (1.0f - ratio) * (1000.0f / attenuation);
+}
+
 uint32_t ProbeWavDurationMs(const char* rawSfxName) {
     if (!rawSfxName || !*rawSfxName || rawSfxName[0] == '!') return 0;
     if (!g_ctx.engfuncs || !g_ctx.engfuncs->COM_LoadFile || !g_ctx.engfuncs->COM_FreeFile) return 0;
@@ -215,6 +230,7 @@ void HandleSound(int entnum, int entchannel, bool isStatic, sfx_t* sfx, float* o
     bool isSfx = core::IsSfxCat(cat);
     bool catEnabled = st.cfg.IsCategoryEnabled(cat);
     float minVol = isSfx ? st.cfg.sfx_min_volume : st.cfg.min_volume;
+    bool useAttnCutoff = st.cfg.use_attenuation_cutoff;
     float maxDist = isSfx ? st.cfg.sfx_max_distance : st.cfg.max_distance;
     float noOccMaxDist = st.cfg.no_occlusion_max_distance;
     bool checkOcc = st.cfg.check_occlusion;
@@ -265,14 +281,23 @@ void HandleSound(int entnum, int entchannel, bool isStatic, sfx_t* sfx, float* o
                      : (isNoOcc ? std::max(maxDist, noOccMaxDist) : maxDist);
 
     float dist = 0.0f;
+    float perceivedVol = fvol;
     if (!isGlobal && origin && g_ctx.hasViewOrg) {
         float dx = origin[0] - g_ctx.viewOrg[0];
         float dy = origin[1] - g_ctx.viewOrg[1];
         float dz = origin[2] - g_ctx.viewOrg[2];
         dist = std::sqrt(dx * dx + dy * dy + dz * dz);
+        if (useAttnCutoff) {
+            perceivedVol = ComputePerceivedVolume(fvol, dist, attenuation);
+        }
         if (dist > effMaxDist) {
             core::LogMsg("[sfx-skip] too_far raw='%s' norm='%s' dist=%.0f max=%.0f atten=%.2f",
                          sfx->name, norm.c_str(), dist, effMaxDist, attenuation);
+            return;
+        }
+        if (useAttnCutoff && !isNoOcc && perceivedVol < minVol) {
+            core::LogMsg("[sfx-skip] too_quiet raw='%s' norm='%s' dist=%.0f vol=%.2f pvol=%.2f min=%.2f atten=%.2f",
+                         sfx->name, norm.c_str(), dist, fvol, perceivedVol, minVol, attenuation);
             return;
         }
         bool shouldCheckOcc = checkOcc && !isNoOcc && !(isHgrunt && dist <= 750.0f);
@@ -343,13 +368,19 @@ void HandleSound(int entnum, int entchannel, bool isStatic, sfx_t* sfx, float* o
         cap.origin[0] = origin[0];
         cap.origin[1] = origin[1];
         cap.origin[2] = origin[2];
-        cap.fadeDist = effMaxDist * 1.35f;
+        if (useAttnCutoff && attenuation > 0.01f) {
+            float audibleDist = ComputeAudibleMaxDist(fvol, minVol, attenuation);
+            cap.fadeDist = std::min(effMaxDist, audibleDist) * 1.25f;
+        } else {
+            cap.fadeDist = effMaxDist * 1.35f;
+        }
     }
     st.captions.push_back(std::move(cap));
     while (st.captions.size() > 16) st.captions.pop_front();
     ReleaseSRWLockExclusive(&st.lock);
-    core::LogMsg("[sfx-ok] raw='%s' norm='%s' ent=%d ch=%d global=%d dist=%.0f vol=%.2f atten=%.2f dur=%ums",
-                 sfx->name, norm.c_str(), entnum, entchannel, static_cast<int>(isGlobal), dist, fvol, attenuation, durMs);
+    core::LogMsg("[sfx-ok] raw='%s' norm='%s' ent=%d ch=%d global=%d dist=%.0f vol=%.2f pvol=%.2f atten=%.2f dur=%ums",
+                 sfx->name, norm.c_str(), entnum, entchannel, static_cast<int>(isGlobal),
+                 dist, fvol, perceivedVol, attenuation, durMs);
 }
 
 void __cdecl Hook_S_StartDynamicSound(int entnum, int entchannel, sfx_t* sfx, float* origin,

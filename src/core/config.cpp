@@ -235,6 +235,7 @@ bool Config::ApplySettingKey(const std::string& k, std::string_view v) {
     else if (k == "glass_max_distance") glass_max_distance = std::max(0.0f, ParseFloat(v, glass_max_distance));
     else if (k == "no_occlusion_max_distance") no_occlusion_max_distance = std::max(0.0f, ParseFloat(v, no_occlusion_max_distance));
     else if (k == "min_volume") min_volume = std::clamp(ParseFloat(v, min_volume), 0.0f, 1.0f);
+    else if (k == "use_attenuation_cutoff") use_attenuation_cutoff = (ParseInt(v, use_attenuation_cutoff ? 1 : 0) != 0);
     else if (k == "check_occlusion") check_occlusion = (ParseInt(v, check_occlusion ? 1 : 0) != 0);
     else if (k == "enable_vox") enable_vox = (ParseInt(v, enable_vox ? 1 : 0) != 0);
     else if (k == "enable_hev") enable_hev = (ParseInt(v, enable_hev ? 1 : 0) != 0);
