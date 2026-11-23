@@ -218,8 +218,8 @@ void Config::InitDefaultRoles() {
     roles.push_back({"holo/",      col("color_holo",      {140,245,220}), RoleCat::NPC});
     roles.push_back({"holo_",      col("color_holo",      {140,245,220}), RoleCat::NPC});
     roles.push_back({"ba_holo/",   col("color_holo",      {140,245,220}), RoleCat::NPC});
-    for (const char* p : {"headcrab/","zombie/","gonome/","pitdrone/","voltigore/","shocktrooper/","shockroach/",
-                          "pitworm/","geneworm/","bullchicken/","houndeye/","agrunt/","aslave/","barnacle/",
+    for (const char* p : {"headcrab/","zombie/","gonome/","pitdrone/","voltigore/","shocktrooper/","st_","shockroach/",
+                          "pitworm/","geneworm/","bullchicken/","houndeye/","agrunt/","aslave/","slv_","barnacle/",
                           "ichy/","squeek/","x/","controller/","garg/","gonarch/","tentacle/","turret/","apache/","hassault/",
                           "weapons/explode","weapons/mortar","weapons/mine_","common/nuke_","ambience/warn",
                           "ambience/siren","misc/ear_ringing"}) {
