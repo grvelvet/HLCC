@@ -4,11 +4,22 @@
  * @file text_layout.hpp
  * @brief Word-wrapping and sentence-aware page splitting for long subtitle lines.
  *
- * Used by default style to paginate multi-line captions cleanly at clause
- * boundaries (||, periods, semicolons) without mid-sentence jumps.
+ * Pure core utility: depends only on core/caption_state.hpp and a caller-provided
+ * width-measurement functor (no OpenGL or GoldSrc dependencies).
  */
 
-#include "app_state.hpp"
+#include <algorithm>
+#include <ranges>
+#include <string>
+#include <string_view>
+#include <vector>
+
+#include "core/caption_state.hpp"
+
+namespace core {
+
+std::wstring TrimWs(const std::wstring& s);
+std::vector<std::wstring> SplitSentenceClauses(const std::wstring& s);
 
 template <typename MeasureFn>
 std::vector<std::wstring> WrapTextWith(const std::wstring& text, int maxW, const MeasureFn& measureWidth) {
@@ -39,40 +50,11 @@ std::vector<std::wstring> WrapTextWith(const std::wstring& text, int maxW, const
     return lines;
 }
 
-std::wstring TrimWs(const std::wstring& s) {
-    size_t a = 0;
-    while (a < s.size() && (s[a] == L' ' || s[a] == L'\t' || s[a] == L'\r' || s[a] == L'\n')) ++a;
-    size_t b = s.size();
-    while (b > a && (s[b - 1] == L' ' || s[b - 1] == L'\t' || s[b - 1] == L'\r' || s[b - 1] == L'\n')) --b;
-    return s.substr(a, b - a);
-}
-
-// Split a body segment on sentence boundaries (. ! ? …) into trimmed clauses.
-std::vector<std::wstring> SplitSentenceClauses(const std::wstring& s) {
-    std::vector<std::wstring> out;
-    size_t start = 0;
-    for (size_t i = 0; i + 1 < s.size(); ++i) {
-        wchar_t c = s[i];
-        bool endMark = (c == L'!' || c == L'?' || c == L'\u2026');
-        bool dotBreak = (c == L'.' && s[i + 1] == L' ' && i >= 2 && s[i - 1] != L'.');
-        if ((endMark && s[i + 1] == L' ') || dotBreak) {
-            // Avoid splitting abbreviations like "д.ф.н." where next char is lowercase.
-            if (dotBreak && i + 2 < s.size() && iswlower(s[i + 2])) continue;
-            std::wstring part = TrimWs(s.substr(start, i - start + 1));
-            if (!part.empty()) out.push_back(std::move(part));
-            start = i + 2;
-        }
-    }
-    std::wstring tail = TrimWs(s.substr(start));
-    if (!tail.empty()) out.push_back(std::move(tail));
-    return out;
-}
-
 template <typename MeasureFn>
 void AppendSubClausesFitting(const std::wstring& prefix, const std::wstring& clause,
                              int maxLines, int maxW, const MeasureFn& measureWidth,
                              std::vector<std::wstring>& out) {
-    if (WrapTextWith(prefix + clause, maxW, measureWidth).size() <= (size_t)maxLines) {
+    if (WrapTextWith(prefix + clause, maxW, measureWidth).size() <= static_cast<size_t>(maxLines)) {
         out.push_back(clause);
         return;
     }
@@ -95,7 +77,7 @@ void AppendSubClausesFitting(const std::wstring& prefix, const std::wstring& cla
 
     if (pieces.size() > 1) {
         for (const auto& p : pieces) {
-            if (WrapTextWith(prefix + p, maxW, measureWidth).size() <= (size_t)maxLines) {
+            if (WrapTextWith(prefix + p, maxW, measureWidth).size() <= static_cast<size_t>(maxLines)) {
                 out.push_back(p);
             } else {
                 // Fallback: split by words into maxLines chunks.
@@ -103,9 +85,9 @@ void AppendSubClausesFitting(const std::wstring& prefix, const std::wstring& cla
                 if (!prefix.empty() && !lines.empty() && lines[0].rfind(prefix, 0) == 0) {
                     lines[0] = lines[0].substr(prefix.size());
                 }
-                for (size_t i = 0; i < lines.size(); i += (size_t)maxLines) {
+                for (size_t i = 0; i < lines.size(); i += static_cast<size_t>(maxLines)) {
                     std::wstring chunk;
-                    for (size_t j = i; j < std::min(lines.size(), i + (size_t)maxLines); ++j) {
+                    for (size_t j = i; j < std::min(lines.size(), i + static_cast<size_t>(maxLines)); ++j) {
                         if (!chunk.empty()) chunk += L' ';
                         chunk += TrimWs(lines[j]);
                     }
@@ -121,9 +103,9 @@ void AppendSubClausesFitting(const std::wstring& prefix, const std::wstring& cla
     if (!prefix.empty() && !lines.empty() && lines[0].rfind(prefix, 0) == 0) {
         lines[0] = lines[0].substr(prefix.size());
     }
-    for (size_t i = 0; i < lines.size(); i += (size_t)maxLines) {
+    for (size_t i = 0; i < lines.size(); i += static_cast<size_t>(maxLines)) {
         std::wstring chunk;
-        for (size_t j = i; j < std::min(lines.size(), i + (size_t)maxLines); ++j) {
+        for (size_t j = i; j < std::min(lines.size(), i + static_cast<size_t>(maxLines)); ++j) {
             if (!chunk.empty()) chunk += L' ';
             chunk += TrimWs(lines[j]);
         }
@@ -136,7 +118,7 @@ std::vector<CaptionPage> BuildCaptionPages(const std::wstring& fullText, ULONGLO
                                            int maxLinesPerCap, int maxW, const MeasureFn& measureWidth) {
     bool hasManualSplit = fullText.contains(L"||");
     if (!hasManualSplit && (maxLinesPerCap <= 0 ||
-        WrapTextWith(fullText, maxW, measureWidth).size() <= (size_t)maxLinesPerCap)) {
+        WrapTextWith(fullText, maxW, measureWidth).size() <= static_cast<size_t>(maxLinesPerCap))) {
         return {{fullText, startMs, expireMs}};
     }
 
@@ -160,7 +142,7 @@ std::vector<CaptionPage> BuildCaptionPages(const std::wstring& fullText, ULONGLO
     std::vector<std::wstring> pageBodies;
     int limit = std::max(1, maxLinesPerCap);
     for (const auto& grp : manualGroups) {
-        if (maxLinesPerCap <= 0 || WrapTextWith(prefix + grp, maxW, measureWidth).size() <= (size_t)limit) {
+        if (maxLinesPerCap <= 0 || WrapTextWith(prefix + grp, maxW, measureWidth).size() <= static_cast<size_t>(limit)) {
             pageBodies.push_back(grp);
             continue;
         }
@@ -171,7 +153,7 @@ std::vector<CaptionPage> BuildCaptionPages(const std::wstring& fullText, ULONGLO
         std::wstring cur;
         for (const auto& cl : clauses) {
             std::wstring cand = cur.empty() ? cl : (cur + L" " + cl);
-            if (!cur.empty() && WrapTextWith(prefix + cand, maxW, measureWidth).size() > (size_t)limit) {
+            if (!cur.empty() && WrapTextWith(prefix + cand, maxW, measureWidth).size() > static_cast<size_t>(limit)) {
                 pageBodies.push_back(cur);
                 cur = cl;
             } else {
@@ -195,11 +177,11 @@ std::vector<CaptionPage> BuildCaptionPages(const std::wstring& fullText, ULONGLO
         if (i + 1 < pageBodies.size()) {
             size_t w = std::max<size_t>(1, pageBodies[i].size());
             ULONGLONG dur = (totalDur * w) / totalWeight;
-            if (totalDur >= (ULONGLONG)pageBodies.size() * 1500ULL) {
+            if (totalDur >= static_cast<ULONGLONG>(pageBodies.size()) * 1500ULL) {
                 dur = std::max<ULONGLONG>(dur, 1500ULL);
             }
-            ULONGLONG remainingMin = (totalDur >= (ULONGLONG)pageBodies.size() * 1200ULL)
-                                     ? (ULONGLONG)(pageBodies.size() - 1 - i) * 1200ULL : 0ULL;
+            ULONGLONG remainingMin = (totalDur >= static_cast<ULONGLONG>(pageBodies.size()) * 1200ULL)
+                                     ? static_cast<ULONGLONG>(pageBodies.size() - 1 - i) * 1200ULL : 0ULL;
             if (cursor + dur + remainingMin > expireMs && expireMs > cursor + remainingMin) {
                 dur = expireMs - cursor - remainingMin;
             }
@@ -213,7 +195,7 @@ std::vector<CaptionPage> BuildCaptionPages(const std::wstring& fullText, ULONGLO
 
 template <typename MeasureFn>
 const std::wstring& GetActiveCaptionText(ActiveCaption& cap, const MeasureFn& measureWidth,
-                                          ULONGLONG nowMs, int wrapW, int maxLinesPerCap) {
+                                         ULONGLONG nowMs, int wrapW, int maxLinesPerCap) {
     if (cap.pages.empty() || cap.cachedWrapW != wrapW || cap.cachedMaxLines != maxLinesPerCap) {
         cap.pages = BuildCaptionPages(cap.text, cap.start_ms, cap.expire_ms, maxLinesPerCap, wrapW, measureWidth);
         cap.cachedWrapW = wrapW;
@@ -225,3 +207,4 @@ const std::wstring& GetActiveCaptionText(ActiveCaption& cap, const MeasureFn& me
     return cap.pages.back().text;
 }
 
+} // namespace core

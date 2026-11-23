@@ -8,47 +8,57 @@ This document explains how **HLCC (Half-Life Closed Captions)** is structured in
 
 HLCC is compiled as a 32-bit `version.dll` proxy placed next to `hl.exe`:
 
-1. **DLL Proxy (`version_proxy.cpp`, `version.def`)**  
-   Forwards all standard Win32 `version.dll` exports to `%SystemRoot%\System32\version.dll` and calls `InitMod()` on `DLL_PROCESS_ATTACH`.
-2. **Dynamic Hook Installation (`main.cpp`, `hook_x86.hpp`)**  
+1. **DLL Proxy (`proxy/main.cpp`, `proxy/version_proxy.cpp`, `proxy/version.def`)**  
+   Forwards all standard Win32 `version.dll` exports to `%SystemRoot%\System32\version.dll` and calls `goldsrc::InitMod()` on `DLL_PROCESS_ATTACH`.
+2. **Dynamic Hook Installation (`goldsrc/engine_hooks.cpp`, `goldsrc/hook_x86.cpp`)**  
    Hooks `LoadLibraryA` to detect when `hw.dll`, `client.dll`, and `opengl32.dll` load (or attaches immediately if already loaded):
    - **`hw.dll`** (via string-xref scan): `S_StartDynamicSound`, `S_StartStaticSound`, `Host_Loadgame_f`.
    - **`client.dll`** (via `GetProcAddress` + `cl_enginefunc_t` slot patching): `Initialize`, `HUD_Redraw`, `V_CalcRefdef`, `HUD_Reset`, `pfnTextMessageGet`, `pfnHookUserMsg`, `pfnSPR_*`, `pfnFillRGBA`, `pfnDrawCharacter`, `pTriAPI->Begin`/`End`, `pEfxAPI->CL_AllocDlight`.
    - **`opengl32.dll`**: `wglSwapBuffers`.
 3. **Per-Frame Execution Flow**
-   - `V_CalcRefdef` captures camera position/angles (`g_viewOrg`, `g_viewAngles`) for distance/occlusion checks and updates flashlight sway.
-   - `S_StartDynamicSound` / `S_StartStaticSound` feed `HandleSound()` to filter, classify, and enqueue active captions (local captions smoothly fade out if the player moves far beyond `effMaxDist * 1.35`).
-   - `HUD_Redraw` renders the 3D GL flashlight (when enabled, resolving MSAA FBO depth via `glBlitFramebuffer`), then captures the vanilla sprite HUD into an offscreen RGBA8 FBO (`g_hudFbo` when `hud_scale > 1.01`) and compacts Armor closer to Health (`CompactHudAdjustX` when `hud_compact_armor=1`). Full-screen `FillRGBA` / `TriAPI` draws (such as Night Vision) and `pfnDrawCharacter` (`titles.txt` credits/messages) temporarily pause FBO capture so they render directly to the backbuffer.
-   - `wglSwapBuffers` composites the scaled HUD FBO (`CompositeScaled`) and draws the subtitle/title overlay (`RenderSubtitlesOverlay`).
+   - `V_CalcRefdef` captures camera position/angles (`g_ctx.viewOrg`, `g_ctx.viewAngles`) for distance/occlusion checks and updates flashlight sway.
+   - `S_StartDynamicSound` / `S_StartStaticSound` feed `goldsrc::HandleSound()` to filter, classify, and enqueue active captions into `core::CaptionState` (local captions smoothly fade out if the player moves far beyond `effMaxDist * 1.35`).
+   - `HUD_Redraw` renders the 3D GL flashlight (when enabled, resolving MSAA FBO depth via `glBlitFramebuffer`), then captures the vanilla sprite HUD into an offscreen RGBA8 FBO (`g_ctx.hudFbo` when `hud_scale > 1.01`) and compacts Armor closer to Health (`CompactHudAdjustX` when `hud_compact_armor=1`). Full-screen `FillRGBA` / `TriAPI` draws (such as Night Vision) and `pfnDrawCharacter` (`titles.txt` credits/messages) temporarily pause FBO capture so they render directly to the backbuffer.
+   - `wglSwapBuffers` composites the scaled HUD FBO (`CompositeScaled`) and draws the subtitle/title overlay (`render::OverlayRenderer::Render`).
 
 ---
 
 ## 2. Source Code Map (`src/`)
 
-| File | Responsibility |
+The codebase is split into four strictly layered directories with acyclic dependencies (`core/` ← `render/` ← `goldsrc/` ← `proxy/`):
+
+| Layer / File | Responsibility |
 | :--- | :--- |
-| `version_proxy.cpp`, `version.def` | Win32 `version.dll` forwarder and `DllMain` entry point. |
-| `hook_x86.hpp` | x86 inline 5-byte `JMP` trampolines and string-xref scanner for `hw.dll`. |
-| `goldsrc.hpp` | Engine ABI structs (`cl_enginefunc_t`, `triangleapi_t`, `efx_api_t`, `event_api_t`, `ref_params_t`, `sfx_t`, `pmtrace_t`, `dlight_t`, `VGuiSurface`). |
-| `main.cpp` | Hook installation, `cl_enginefunc_t` patching, user-message hooks (`Health`, `Battery`, `Damage`, `WeapPickup`, `Flashlight`), compact armor layout, and FBO bypasses. |
-| `app_state.hpp` | Thread-safe global state (`SRWLOCK`), active mod directory & `liblist.gam` fallback detection, and `ReloadAllFromDisk()`. |
-| `config.hpp` | `subtitles.ini` parser, ~1s hot-reload, `[Mod:<gameDir>]` profile overrides, role/color matching, `no_occlusion_prefixes`, `sfx_creature_groups`, and `[HUD]` options. |
-| `database.hpp` | UTF-8 TSV loader (`subtitles_*.tsv`, `titles_*.tsv`), `fallback_dir` inheritance, and key normalization (strips `!`, `*`, `#`, `sound/`, `.wav`). |
-| `sound_handler.hpp` | Caption pipeline: stop/replace handling, role filtering, distance check, 2-height `EV_PlayerTrace` occlusion (`PM_GLASS_IGNORE`), SFX cooldowns, and HEV restore cues. |
-| `text_layout.hpp`, `gl_font.hpp` | Word wrapping, pagination, GDI-backed OpenGL glyph atlas, and rounded-plate rendering (`default` and `hl2` styles). |
-| `hud_fbo_scaler.hpp` | Offscreen RGBA8 FBO HUD capture and non-overlapping corner-anchored scaling (`GL_ONE, GL_ONE` additive composite). |
-| `flashlight_gl.hpp` | Projected OpenGL 3D flashlight (`GlFlashlight`) with inertial sway and optional vanilla `CL_AllocDlight` suppression. |
-| `overlay_render.hpp` | `Hook_WglSwapBuffers`, `Hook_HUD_Redraw`, `Hook_V_CalcRefdef`, `Hook_HUD_Reset`, and `Hook_TextMessageGet` (chapter title localization). |
+| **`core/`** | **Pure subtitle logic — zero OpenGL and zero GoldSrc dependencies (compiles standalone for unit tests).** |
+| `core/log.hpp/.cpp` | Debug logger (`subtitles_debug.log`), UTF-8 → UTF-16 conversion, `-game` command-line parser. |
+| `core/config.hpp/.cpp` | `subtitles.ini` parser, `[Mod:<gameDir>]` profile overrides, Steam/Proton/Windows language auto-detection, role/color classification, `no_occlusion_prefixes`, `sfx_creature_groups`, and `[HUD]` options. |
+| `core/database.hpp/.cpp` | UTF-8 TSV loader (`subtitles_*.tsv`, `titles_*.tsv`), `fallback_dir` & `liblist.gam` inheritance, and key normalization (strips `!`, `*`, `#`, `sound/`, `.wav`). |
+| `core/caption_state.hpp/.cpp` | Thread-safe subtitle state (`SRWLOCK`), active caption/title queues, game-time pause-aware clock, SFX cooldowns, WAV duration cache, and ~1s INI hot-reload. |
+| `core/text_layout.hpp/.cpp` | Word wrapping and sentence/clause-aware pagination (`||`, punctuation boundaries). |
+| **`render/`** | **OpenGL overlay & visual plugins — depends only on `core/` + Win32/OpenGL (zero GoldSrc hooks).** |
+| `render/gl_font.hpp/.cpp` | Dynamic `opengl32.dll` function table (`GlApi`) and GDI-rasterized OpenGL glyph atlas (`FontAtlas`). |
+| `render/overlay_render.hpp/.cpp` | `OverlayRenderer` — draws subtitles (`default` and `hl2` styles) and localized chapter titles from `core::CaptionState`. |
+| `render/hud_fbo_scaler.hpp/.cpp` | Offscreen RGBA8 FBO HUD capture and non-overlapping corner/pickup-strip scaling (`GL_ONE, GL_ONE` additive composite). |
+| `render/flashlight_gl.hpp/.cpp` | Isolated 3D projected OpenGL flashlight plugin (`GlFlashlight`) with MSAA depth resolve and inertial sway. |
+| **`goldsrc/`** | **Engine ABI, memory hooks, and sound/HUD integration — bridges `hw.dll`/`client.dll` to `core/` and `render/`.** |
+| `goldsrc/goldsrc.hpp` | Engine ABI structs (`cl_enginefunc_t`, `triangleapi_t`, `efx_api_t`, `event_api_t`, `ref_params_t`, `sfx_t`, `pmtrace_t`, `dlight_t`, `VGuiSurface`). |
+| `goldsrc/hook_x86.hpp/.cpp` | x86-32 instruction length decoder, 5-byte `JMP` inline trampolines, and PE string-xref scanner. |
+| `goldsrc/hev_restore.hpp/.cpp` | Restored unused HEV suit cues (`Battery`, `Health`, `Damage`, `WeapPickup`, `hev_voice` toggle). |
+| `goldsrc/sound_handler.hpp/.cpp` | `S_StartDynamicSound`/`S_StartStaticSound` pipeline, RIFF/WAVE `COM_LoadFile` duration probing, 2-height `EV_PlayerTrace` occlusion (`PM_GLASS_IGNORE`), and `Hook_TextMessageGet`. |
+| `goldsrc/engine_hooks.hpp/.cpp` | Central `EngineContext`, `LoadLibraryA` hook, `hw.dll`/`client.dll`/`opengl32.dll` hook installation, `HUD_Redraw`/`V_CalcRefdef`/`wglSwapBuffers` callbacks, compact armor layout, FBO bypasses, and console commands. |
+| **`proxy/`** | **Thin DLL entry point.** |
+| `proxy/main.cpp` | `DllMain` calling `goldsrc::InitMod()`. |
+| `proxy/version_proxy.cpp`, `proxy/version.def` | Win32 `version.dll` export forwarder to `%SystemRoot%\System32\version.dll`. |
 
 ---
 
 ## 3. Sound & Subtitle Pipeline Details
 
-1. **Key Normalization (`database.hpp`)**:  
+1. **Key Normalization (`core/database.cpp`)**:  
    Engine sound names arrive as `!SC_HELLO`, `scientist/hello.wav`, `*vox/bizwarn.wav`, etc. `Database::NormalizeKey` lowercases and strips leading `!`/`*`/`#`, `sound/`, and trailing `.wav`.
 2. **Lookup Order**:  
    `fallback_dir` (default `valve`) is loaded first, then the active mod directory (`bshift`, `gearbox`, or custom mod) overrides matching keys.
-3. **Occlusion & Scripted Scenes (`sound_handler.hpp`, `config.hpp`)**:
+3. **Occlusion & Scripted Scenes (`goldsrc/sound_handler.cpp`, `core/config.cpp`)**:
    - Sounds normally undergo distance (`max_distance`) and 2-height line-of-sight (`IsSoundOccluded`) checks, with `PM_GLASS_IGNORE` within `glass_max_distance`.
    - Keys matching `no_occlusion_prefixes` bypass occlusion and get extended range (`effMaxDist`). Use this in `subtitles.ini` for scripted scenes behind locked doors, glass, or walls.
    - Keys in `ambientSpecial` (e.g., `tride/`, `nihilanth/`, `intro/`, `intro_`, `radio/`, `rd_`) are treated as global (`isGlobal = true`).
@@ -60,7 +70,7 @@ HLCC is compiled as a 32-bit `version.dll` proxy placed next to `hl.exe`:
 - **Data-Driven Mod Profiles (`[Mod:<gameDir>]` in `subtitles.ini`)**:  
   Global defaults leave the HUD untouched (`hud_compact_armor=0`, `hud_scale=1.0`) so vanilla `valve` and unknown mods stay clean. Per-mod overrides (`[Mod:bshift]`, `[Mod:gearbox]`, `[Mod:hl1mmod]`) control `hud_scale`, `hud_compact_armor`, `enable_gl_flashlight`, `enable_hev`, `restore_unused_hev`, and `no_occlusion_max_distance` without hardcoding mod names in C++.
 - **Compact Armor (`hud_compact_armor=1`)**:  
-  `CompactHudAdjustX` in `main.cpp` tracks the rightmost X of Health sprites and leftmost X of Armor sprites in `HUD_Redraw`, shifting Armor closer to Health on widescreen resolutions (`>= 800px`).
+  `CompactHudAdjustX` in `goldsrc/engine_hooks.cpp` tracks the rightmost X of Health sprites and leftmost X of Armor sprites in `HUD_Redraw`, shifting Armor closer to Health on widescreen resolutions (`>= 800px`).
 - **FBO HUD Scaling (`hud_scale=1.5`)**:  
   `HudFboScaler` captures `HUD_Redraw` into an RGBA8 FBO and composites 5 scaled corner/pickup-strip regions (Bottom-Left, Bottom-Right, Top-Left, Top-Right, Middle-Right pickup history) plus 5 non-overlapping 1:1 unscaled center strips.  
   - Full-screen `FillRGBA` (`width >= g_screenW / 2` or `>= 64x64`), `pTriAPI->Begin`/`End`, and `pfnDrawCharacter` (`titles.txt` credits/messages) pause FBO capture so full-screen tints (Night Vision) and credits never get clipped or doubled.

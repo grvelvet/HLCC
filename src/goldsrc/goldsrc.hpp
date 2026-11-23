@@ -1,4 +1,6 @@
 #pragma once
+
+#include <cstddef>
 #include <cstdint>
 
 struct sfx_t {
@@ -50,12 +52,12 @@ struct ref_params_t {
 
 // GoldSrc event_api_t (offsets verified against hw.dll: Push=0x2c, Pop=0x30, Solid=0x34, Hull=0x38, Trace=0x3c)
 struct event_api_t {
-    int version;                        // 0x00
-    void* _pad04[10];                   // 0x04..0x28 (10 entries)
-    void (*EV_PushPMStates)(void);      // 0x2c
-    void (*EV_PopPMStates)(void);       // 0x30
+    int version;                               // 0x00
+    void* _pad04[10];                          // 0x04..0x28 (10 entries)
+    void (*EV_PushPMStates)(void);             // 0x2c
+    void (*EV_PopPMStates)(void);              // 0x30
     void (*EV_SetSolidPlayers)(int playernum); // 0x34
-    void (*EV_SetTraceHull)(int hull);  // 0x38
+    void (*EV_SetTraceHull)(int hull);         // 0x38
     void (*EV_PlayerTrace)(float* start, float* end, int traceFlags, int ignore_pe, pmtrace_t* tr); // 0x3c
 };
 
@@ -77,7 +79,6 @@ struct efx_api_t {
     dlight_t* (*CL_AllocDlight)(int key); // 0xD0
 };
 
-// Standard GoldSrc cl_enginefunc_t (partial up to pEventAPI)
 struct triangleapi_t {
     int   version;
     void  (*RenderMode)(int mode);
@@ -90,6 +91,7 @@ struct triangleapi_t {
     void  (*Vertex3f)(float x, float y, float z);
 };
 
+// Standard GoldSrc cl_enginefunc_t (partial up to pEventAPI)
 struct cl_enginefunc_t {
     int   (*pfnSPR_Load)(const char* szPicName);
     int   (*pfnSPR_Frames)(int hPic);
@@ -178,7 +180,7 @@ struct cl_enginefunc_t {
     event_api_t* pEventAPI;
 };
 
-// VGUI_Surface026 vtable wrapper (slots verified against vgui2.dll / version.dll.bak)
+// VGUI_Surface026 vtable wrapper (slots verified against vgui2.dll)
 struct VGuiSurface {
     template <typename Fn>
     Fn Slot(size_t idx) const {

@@ -1,16 +1,10 @@
-#pragma once
-#include <windows.h>
-#include <algorithm>
-#include <array>
-#include <bit>
-#include <cstdint>
+#include "goldsrc/hook_x86.hpp"
+
 #include <cstring>
-#include <span>
 
 namespace hook {
 
-// Minimal x86-32 instruction length decoder for function prologues (bounds-checked via std::span)
-inline size_t InsnLen32(std::span<const uint8_t> code) {
+size_t InsnLen32(std::span<const uint8_t> code) {
     if (code.empty()) return 0;
     size_t idx = 0;
     uint8_t op = code[idx];
@@ -70,14 +64,7 @@ inline size_t InsnLen32(std::span<const uint8_t> code) {
     return 0; // unknown
 }
 
-template <typename T>
-inline T ReadUnaligned(std::span<const uint8_t> bytes) {
-    std::array<uint8_t, sizeof(T)> buf{};
-    std::copy_n(bytes.begin(), sizeof(T), buf.begin());
-    return std::bit_cast<T>(buf);
-}
-
-inline void* InstallInlineHook(void* target, void* detour) {
+void* InstallInlineHook(void* target, void* detour) {
     if (!target || !detour) return nullptr;
     uint8_t* src = static_cast<uint8_t*>(target);
     std::span<const uint8_t> codeWindow{src, 32};
@@ -97,7 +84,7 @@ inline void* InstallInlineHook(void* target, void* detour) {
     // Fixup if first instruction was rel32 call/jmp
     if (stolen == 5 && (src[0] == 0xE8 || src[0] == 0xE9)) {
         int32_t orig_disp = ReadUnaligned<int32_t>(codeWindow.subspan(1, 4));
-        uintptr_t orig_target = reinterpret_cast<uintptr_t>(src + 5) + orig_disp;
+        uintptr_t orig_target = reinterpret_cast<uintptr_t>(src + 5) + static_cast<uintptr_t>(orig_disp);
         int32_t new_disp = static_cast<int32_t>(orig_target - reinterpret_cast<uintptr_t>(tramp + 5));
         std::memcpy(tramp + 1, &new_disp, 4);
     }
@@ -122,7 +109,7 @@ inline void* InstallInlineHook(void* target, void* detour) {
     return tramp;
 }
 
-inline void* FindFunctionByStringXref(HMODULE mod, std::string_view needle) {
+void* FindFunctionByStringXref(HMODULE mod, std::string_view needle) {
     if (!mod || needle.empty()) return nullptr;
     auto base = reinterpret_cast<const uint8_t*>(mod);
     auto dos  = reinterpret_cast<const IMAGE_DOS_HEADER*>(base);
