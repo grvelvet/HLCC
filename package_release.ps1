@@ -12,7 +12,7 @@ if (Test-Path $zipPath) { Remove-Item -Force $zipPath }
 
 New-Item -ItemType Directory -Force -Path $stage, "$stage\valve", "$stage\gearbox", "$stage\bshift" | Out-Null
 
-Copy-Item -Force (Join-Path $root "version.dll"), (Join-Path $root "subtitles.ini"), (Join-Path $root "README.md") $stage
+Copy-Item -Force (Join-Path $root "version.dll"), (Join-Path $root "subtitles.ini"), (Join-Path $root "README.md"), (Join-Path $root "LICENSE") $stage
 Copy-Item -Force (Join-Path $root "valve\subtitles_ru.tsv"), (Join-Path $root "valve\subtitles_en.tsv"), (Join-Path $root "valve\titles_ru.tsv") "$stage\valve"
 Copy-Item -Force (Join-Path $root "gearbox\subtitles_ru.tsv"), (Join-Path $root "gearbox\subtitles_en.tsv"), (Join-Path $root "gearbox\titles_ru.tsv") "$stage\gearbox"
 Copy-Item -Force (Join-Path $root "bshift\subtitles_ru.tsv"), (Join-Path $root "bshift\subtitles_en.tsv"), (Join-Path $root "bshift\titles_ru.tsv") "$stage\bshift"

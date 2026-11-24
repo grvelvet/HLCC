@@ -58,10 +58,13 @@ The codebase is split into four strictly layered directories with acyclic depend
    Engine sound names arrive as `!SC_HELLO`, `scientist/hello.wav`, `*vox/bizwarn.wav`, etc. `Database::NormalizeKey` lowercases and strips leading `!`/`*`/`#`, `sound/`, and trailing `.wav`.
 2. **Lookup Order**:  
    `fallback_dir` (default `valve`) is loaded first, then the active mod directory (`bshift`, `gearbox`, or custom mod) overrides matching keys.
-3. **Occlusion & Scripted Scenes (`goldsrc/sound_handler.cpp`, `core/config.cpp`)**:
-   - Sounds normally undergo distance (`max_distance`) and 2-height line-of-sight (`IsSoundOccluded`) checks, with `PM_GLASS_IGNORE` within `glass_max_distance`.
-   - Keys matching `no_occlusion_prefixes` bypass occlusion and get extended range (`effMaxDist`). Use this in `subtitles.ini` for scripted scenes behind locked doors, glass, or walls.
+3. **Acoustics, Occlusion & Scripted Scenes (`goldsrc/sound_handler.cpp`, `core/caption_state.cpp`)**:
+   - With `use_attenuation_cutoff=1` (default), GoldSrc `SND_Spatialize` attenuation (`ComputePerceivedVolume`) is the primary filter, scaled by `ComputeOcclusionFactor()` (`1.0` direct line-of-sight, `0.70` behind glass via `PM_GLASS_IGNORE`, `0.35` behind solid walls/corners) so loud nearby explosions around corners still show up while quiet or distant sounds drop out naturally below `min_volume` / `sfx_min_volume`.
+   - Keys matching `no_occlusion_prefixes` bypass occlusion (`1.0`) and get extended range (`no_occlusion_max_distance`).
    - Keys in `ambientSpecial` (e.g., `tride/`, `nihilanth/`, `intro/`, `intro_`, `radio/`, `rd_`) are treated as global (`isGlobal = true`).
+   - Creature SFX cooldowns (`sfx_creature_groups`) split death sounds into `<group>:die` so a monster's death caption is never suppressed by its own attack cooldown.
+4. **Context-Aware `hl2` Speakers (`core/caption_state.cpp`, `render/overlay_render.cpp`)**:
+   - In `style=hl2`, `[Intercom]` / `[Radio]` lines (`RoleCat::VOX`) render in italic with brackets, named NPCs (`[Rosenberg]`, `[Otis]`, `[G-Man]`) keep their brackets, solo generic NPCs omit the speaker prefix and rely on role color, and generic NPCs engaged in a nearby dialogue (`<= 300u`, active caption or `<= 4s`) receive automatic scene numbers (`[Scientist 1]`, `[Scientist 2]`).
 
 ---
 
@@ -111,9 +114,9 @@ The codebase is split into four strictly layered directories with acyclic depend
 
 | Game | Subtitles Source (English) | HUD Titles Reference |
 | :--- | :--- | :--- |
-| Half-Life (`valve`) | `valve/subtitles_en.tsv` (1,806 keys) | `valve/titles_ru.tsv` (66 keys) |
-| Blue Shift (`bshift`) | `bshift/subtitles_en.tsv` (455 keys) | `bshift/titles_ru.tsv` (28 keys) |
-| Opposing Force (`gearbox`) | `gearbox/subtitles_en.tsv` (557 keys) | `gearbox/titles_ru.tsv` (35 keys) |
+| Half-Life (`valve`) | `valve/subtitles_en.tsv` (1,912 keys) | `valve/titles_ru.tsv` (66 keys) |
+| Blue Shift (`bshift`) | `bshift/subtitles_en.tsv` (464 keys) | `bshift/titles_ru.tsv` (28 keys) |
+| Opposing Force (`gearbox`) | `gearbox/subtitles_en.tsv` (625 keys) | `gearbox/titles_ru.tsv` (35 keys) |
 
 > Because `subtitles.ini` sets `fallback_dir=valve`, shared Half-Life lines are automatically inherited by `bshift` and `gearbox` and do not need to be duplicated.
 
@@ -124,15 +127,15 @@ The codebase is split into four strictly layered directories with acyclic depend
 - **`titles_<lang>.tsv`**: 2 tab-separated (`\t`) columns — `KEY<TAB>TEXT_WITH_\n` (use literal `\n` for multi-line cards; `#` lines are comments).
 
 ### Speaker & SFX Tags
-- **Spoken lines** begin with a bracketed speaker tag (e.g. `[Scientist]`, `[Security]`, `[HECU]`, `[Black Ops]`, `[Otis]`, `[Rosenberg]`, `[G-Man]`, `[HEV]`, `[Announcement]`). Translate the label consistently while keeping `[...]`.
-- **Sound effects (SFX)** are wrapped completely in brackets (e.g. `[Headcrab screech]`).
+- **Spoken lines** begin with a bracketed speaker tag (e.g. `[Scientist]`, `[Security]`, `[HECU]`, `[Black Ops]`, `[Otis]`, `[Rosenberg]`, `[G-Man]`, `[HEV]`, `[Intercom]`). Translate the label consistently while keeping `[...]`.
+- **Sound effects (SFX)** are wrapped completely in brackets (e.g. `[Headcrab!]`, `[Barnacle hisses]`).
 - **Role colors** are matched by the **sound key** (not the translated tag text), so colors work in any language automatically.
 
 ### Testing & Validation
-1. Place `subtitles_<lang>.tsv` and `titles_<lang>.tsv` in `valve/`, `bshift/`, `gearbox/`, and update `[Files]` in `subtitles.ini`:
+1. Place `subtitles_<lang>.tsv` and `titles_<lang>.tsv` in `valve/`, `bshift/`, `gearbox/`, comment out `language=auto`, and set the patterns under `[Files]` in `subtitles.ini`:
    ```ini
    [Files]
-   language=auto
+   ; language=auto
    fallback_dir=valve
    subtitles_pattern=subtitles_de.tsv
    titles_pattern=titles_de.tsv
