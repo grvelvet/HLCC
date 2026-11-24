@@ -40,6 +40,7 @@ struct RoleRule {
 
 struct Config {
     // [Filtering]
+    std::string captions_mode = "full"; // "full" or "dialogue"
     float max_distance = 650.0f;
     float glass_max_distance = 320.0f;
     float no_occlusion_max_distance = 1500.0f;

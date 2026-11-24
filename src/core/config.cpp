@@ -231,7 +231,12 @@ void Config::InitDefaultRoles() {
 }
 
 bool Config::ApplySettingKey(const std::string& k, std::string_view v) {
-    if (k == "max_distance") max_distance = std::max(0.0f, ParseFloat(v, max_distance));
+    if (k == "captions_mode") {
+        std::string m = Lower(v);
+        captions_mode = (m == "dialogue" || m == "dialog" || m == "speech" || m == "speech_only")
+            ? "dialogue" : "full";
+    }
+    else if (k == "max_distance") max_distance = std::max(0.0f, ParseFloat(v, max_distance));
     else if (k == "glass_max_distance") glass_max_distance = std::max(0.0f, ParseFloat(v, glass_max_distance));
     else if (k == "no_occlusion_max_distance") no_occlusion_max_distance = std::max(0.0f, ParseFloat(v, no_occlusion_max_distance));
     else if (k == "min_volume") min_volume = std::clamp(ParseFloat(v, min_volume), 0.0f, 1.0f);
@@ -375,7 +380,9 @@ std::pair<Rgb, RoleCat> Config::Classify(std::string_view normKey, std::string_v
 bool Config::IsCategoryEnabled(RoleCat cat) const noexcept {
     if (cat == RoleCat::VOX) return enable_vox;
     if (cat == RoleCat::HEV) return enable_hev;
-    if (cat == RoleCat::SFX || cat == RoleCat::SFX_DANGER) return enable_sfx;
+    if (cat == RoleCat::SFX || cat == RoleCat::SFX_DANGER) {
+        return (captions_mode == "full") && enable_sfx;
+    }
     return enable_npc;
 }
 

@@ -37,7 +37,7 @@ Changes hot-reload in-game within ~1 second (or run `subtitles_reload` in the co
 | `[Visual]` `bottom_margin_pct` / `max_width_pct` / `max_lines` | Screen position, plate width (`%`), and max visible lines |
 | `[Visual]` `bg_color` / `bg_alpha` / `bg_radius` | Plate RGB background color, opacity (`0..255`), and corner radius |
 | `[Colors]` `color_scientist`, `color_hev`, `color_sfx`, ... | Custom RGB colors per speaker/SFX role |
-| `[Filtering]` `min_volume` / `use_attenuation_cutoff` / `check_occlusion` | Perceived-volume threshold (`SND_Spatialize`) and line-of-sight wall/glass attenuation |
+| `[Filtering]` `captions_mode` / `min_volume` / `check_occlusion` | `full` (speech + SFX) or `dialogue` (speech only), audibility threshold (`use_attenuation_cutoff`), wall/glass occlusion |
 | `[Filtering]` `restore_unused_hev` / `auto_wav_timing` | Restores unused HEV suit cues; optional `.wav` duration probing (`1`) |
 | `[HUD]` `hud_scale` / `hud_compact_armor` / `enable_gl_flashlight` | Offscreen FBO HUD scaling, compact armor spacing, and 3D OpenGL flashlight |
 | `[Mod:<gameDir>]` | Per-mod overrides (e.g. `[Mod:bshift]`, `[Mod:gearbox]`, `[Mod:hl1mmod]`) |
@@ -68,7 +68,7 @@ Architecture, building from source (`LLVM-MinGW`), mod adaptation, and translati
 | `[Visual]` `bottom_margin_pct` / `max_width_pct` / `max_lines` | Отступ снизу (`%`), ширина плашки (`%`) и лимит строк на экране |
 | `[Visual]` `bg_color` / `bg_alpha` / `bg_radius` | Цвет фона (RGB), прозрачность (`0..255`) и скругление углов |
 | `[Colors]` `color_scientist`, `color_hev`, `color_sfx`, ... | RGB-цвета для каждой роли и SFX |
-| `[Filtering]` `min_volume` / `use_attenuation_cutoff` / `check_occlusion` | Порог слышимой громкости (`SND_Spatialize`) и учёт стен/стекла |
+| `[Filtering]` `captions_mode` / `min_volume` / `check_occlusion` | `full` (речь + SFX) или `dialogue` (только реплики), порог слышимости (`use_attenuation_cutoff`), учёт стен/стекла |
 | `[Filtering]` `restore_unused_hev` / `auto_wav_timing` | Восстановление неиспользуемых фраз HEV; замер длительности по `.wav` (`1`) |
 | `[HUD]` `hud_scale` / `hud_compact_armor` / `enable_gl_flashlight` | Масштаб HUD через FBO, компактная броня и 3D OpenGL-фонарик |
 | `[Mod:<gameDir>]` | Переопределения под конкретный мод (`[Mod:bshift]`, `[Mod:gearbox]`, `[Mod:hl1mmod]`) |
