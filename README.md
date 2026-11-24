@@ -1,4 +1,5 @@
-# Half-Life Closed Captions
+# Half-Life Closed Captions (HLCC)
+
 <p align="center">
   <img src="docs/hlcc_logo.jpg" alt="HLCC — Closed Captions Engine" width="640">
 </p>
@@ -7,102 +8,64 @@
   <a href="#english">English</a> | <a href="#русский">Русский</a>
 </p>
 
----
-
-A proxy plugin mod subtitles (`version.dll`) for the **Half-Life**, **Opposing Force**, and **Blue Shift** Steam trilogy without modifying original game files:
-
-- **HL2-Style Closed Captions:** NPC dialogue, radio, VOX, suit (HEV/PCV), and key gameplay SFX with anti-spam protection.
-- **Distance & Occlusion Filtering:** filters out sounds behind solid walls while handling glass and scripted scenes properly.
-- **Two OpenGL Render Styles:** dynamic plate (`default`) or fixed-width box with smooth vertical scrolling (`hl2`).
-- **Auto-Localization (EN/RU):** automatic language selection from Steam settings, chapter/title translation, and optional `.wav` auto-timing for third-party voiceovers.
-- **HUD & Graphics Enhancements:** FBO HUD scaling and compact armor layout for the expansions (`bshift`, `gearbox`), plus a 3D projected OpenGL flashlight.
-
-### Preview
 ![HLCC Preview](docs/screenshots/preview.gif)
 
 | English (`hl2`) | Русский (`hl2`) | Combat / Multi-role (`default`) |
 | :---: | :---: | :---: |
 | ![English](docs/screenshots/preview_en.jpg) | ![Russian](docs/screenshots/preview_ru.jpg) | ![Combat](docs/screenshots/preview_combat.jpg) |
 
+---
+
+## English
+
+**HLCC** is an external C++23 closed-captions and overlay engine for the Steam GoldSrc trilogy (**Half-Life**, **Opposing Force**, and **Blue Shift**). Because GoldSrc lacks a built-in closed-caption system and modern Unicode overlay pipeline, HLCC attaches cleanly at runtime as a `version.dll` proxy—hooking engine audio (`hw.dll`), client state (`client.dll`), and drawing subtitles directly over the OpenGL frame without modifying original game files. It supports `default` and `hl2` visual presets, **EN / RU / INT** localization (auto-detected EN/RU plus any custom language via `subtitles_*.tsv` patterns in `[Files]`), per-mod `[Mod:*]` profiles, and optional extras such as FBO HUD scaling and a projected 3D OpenGL flashlight.
+
 ### Installation
-1. Download `HLCC-win32.zip` from the **Releases** page.
-2. Extract its contents into the **Half-Life** root directory (next to `hl.exe`), overwriting if prompted.
-3. Launch the game in **OpenGL** mode.
-4. **For Linux / Steam Deck (Steam Proton):** enable **Proton** in the game's Steam Compatibility properties (the native Linux `hl_linux` binary does not load `version.dll`) and add to Launch Options:
+1. Download `HLCC-win32.zip` from **Releases** and extract it next to `hl.exe`.
+2. Launch the game in **OpenGL** video mode.
+3. **Linux / Steam Deck:** enable **Proton** in Steam compatibility properties and add to Launch Options:
    ```text
    WINEDLLOVERRIDES="version=n,b" %command%
    ```
-5. Optionally customize the font, preset, colors, `[Mod:*]` profiles, and filters in `subtitles.ini`.
 
-### Documentation & Structure
-- [MODDER_GUIDE.md](MODDER_GUIDE.md) — `version.dll` architecture, adapting HLCC to third-party GoldSrc mods, and subtitle translation guide
-- `src/` — `version.dll` C++23 source code and `build.bat`
-- `valve/`, `gearbox/`, `bshift/` — subtitle (`subtitles_ru.tsv`, `subtitles_en.tsv`) and title (`titles_ru.tsv`) databases
-- `subtitles.ini` — default configuration (including `[Mod:bshift]`, `[Mod:gearbox]`, `[Mod:hl1mmod]` profiles)
-- `package_release.ps1` — packages `release/HLCC-win32.zip`
+### Quick `subtitles.ini` Reference
+Changes hot-reload in-game within ~1 second (or run `subtitles_reload` in the console; also available: `subtitles_clear`, `hev_voice`).
 
-### Building from Source
-Requires **LLVM-MinGW (UCRT)** (`winget install MartinStorsjo.LLVM-MinGW.UCRT`) targeting `i686-w64-mingw32`:
+| Section / Key | Description |
+| :--- | :--- |
+| `[Visual]` `style` / `font_size` | `default` (dynamic rounded plate) or `hl2` (scrolling box); `0` = auto size |
+| `[Filtering]` `min_volume` / `use_attenuation_cutoff` / `check_occlusion` | Perceived-volume threshold (`SND_Spatialize`) and line-of-sight wall/glass attenuation |
+| `[Filtering]` `restore_unused_hev` / `auto_wav_timing` | Restores unused HEV suit cues; optional `.wav` duration probing (`1`) |
+| `[HUD]` `hud_scale` / `hud_compact_armor` / `enable_gl_flashlight` | Offscreen FBO HUD scaling, compact armor spacing, and 3D OpenGL flashlight |
+| `[Mod:<gameDir>]` | Per-mod overrides (e.g. `[Mod:bshift]`, `[Mod:gearbox]`, `[Mod:hl1mmod]`) |
+| `[Files]` `language` / `subtitles_pattern` / `titles_pattern` | `auto`, `ru`, `en`, or custom **INT** TSV filename patterns (`subtitles_de.tsv`) |
 
-```bat
-cd src
-build.bat
-```
-
-To package the release archive:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File package_release.ps1
-```
-
-`.github/workflows/build.yml` automatically builds `version.dll` via GitHub Actions and publishes a **GitHub Release** with `HLCC-win32.zip` when a `v*` tag is pushed.
+Architecture, building from source (`LLVM-MinGW`), mod adaptation, and translation rules: **[MODDER_GUIDE.md](MODDER_GUIDE.md)**.
 
 ---
 
-Мод-плагин субтитров (`version.dll`) для Steam-трилогии **Half-Life**, **Opposing Force** и **Blue Shift** без изменения файлов игры:
+## Русский
 
-- **Субтитры в стиле HL2:** полностью переведенная на русский язык речь NPC, радио, VOX, костюм и броня (HEV/PCV).
-- **Учёт дистанции и преград:** фильтрация звуков за глухими стенами, корректная работа через стекло и в скриптовых сценах.
-- **Два стиля рендера (OpenGL):** динамическая плашка (`default`) или фиксированное окно с плавным скроллом (`hl2`).
-- **Автолокализация (EN/RU):** переключение языка по настройкам Steam, перевод заголовков глав и автотайминги по `.wav` для сторонних озвучек.
-- **Улучшения графики и HUD:** масштабирование старого HUD и фикс ванильного HUD в дополнениях (`bshift`, `gearbox`), плюс 3D OpenGL-фонарик.
-
-### Скриншоты
-![HLCC Preview](docs/screenshots/preview.gif)
-
-| English (`hl2`) | Русский (`hl2`) | Бой / несколько ролей (`default`) |
-| :---: | :---: | :---: |
-| ![English](docs/screenshots/preview_en.jpg) | ![Russian](docs/screenshots/preview_ru.jpg) | ![Combat](docs/screenshots/preview_combat.jpg) |
+**HLCC** — внешний движок субтитров и оверлея на C++23 для Steam-трилогии на GoldSrc (**Half-Life**, **Opposing Force** и **Blue Shift**). Поскольку в самом GoldSrc нет встроенной системы субтитров и нормального рендера юникода поверх кадра, HLCC подключается на лету как прокси `version.dll`: перехватывает звук (`hw.dll`) и клиент (`client.dll`), не меняя оригинальные файлы игры, и выводит субтитры прямо в OpenGL-кадр. Поддерживаются пресеты `default` и `hl2`, локализация **RU / EN / INT** (автоопределение русского и английского + подключение любого другого перевода через паттерны `subtitles_*.tsv` в `[Files]`), профили модов `[Mod:*]`, а также опциональные FBO-масштабирование HUD и 3D OpenGL-фонарик.
 
 ### Установка
-1. Скачайте архив `HLCC-win32.zip` со страницы **Releases**.
-2. Распакуйте содержимое в корневую папку **Half-Life** (рядом с `hl.exe`) с заменой файлов.
-3. Запускайте игру в режиме **OpenGL**.
-4. **Для Linux / Steam Deck (Steam Proton):** в свойствах игры включите **Proton** (нативный Linux-билд `hl_linux` не загружает `version.dll`) и добавьте в параметры запуска:
+1. Скачайте `HLCC-win32.zip` из **Releases** и распакуйте в корневую папку с `hl.exe`.
+2. Запускайте игру в режиме **OpenGL**.
+3. **Linux / Steam Deck:** включите **Proton** в свойствах совместимости Steam и добавьте в параметры запуска:
    ```text
    WINEDLLOVERRIDES="version=n,b" %command%
    ```
-5. При необходимости настройте шрифт, пресет, цвета, профили `[Mod:*]` и фильтры в `subtitles.ini`.
 
-### Документация и структура
-- [MODDER_GUIDE.md](MODDER_GUIDE.md) — архитектура `version.dll`, адаптация под сторонние GoldSrc-моды и руководство по переводу субтитров на другие языки (EN)
-- `src/` — исходный код `version.dll` (C++23) и скрипт сборки `build.bat`
-- `valve/`, `gearbox/`, `bshift/` — базы субтитров (`subtitles_ru.tsv`, `subtitles_en.tsv`) и заголовков (`titles_ru.tsv`)
-- `subtitles.ini` — конфигурация по умолчанию (включая профили `[Mod:bshift]`, `[Mod:gearbox]`, `[Mod:hl1mmod]`)
-- `package_release.ps1` — скрипт сборки архива `release/HLCC-win32.zip`
+### Краткая справка по `subtitles.ini`
+Настройки подхватываются в игре автоматически за ~1 секунду (либо командой `subtitles_reload` в консоли; также доступны `subtitles_clear` и `hev_voice`).
 
-### Сборка из исходников
-Требуется **LLVM-MinGW (UCRT)** (`winget install MartinStorsjo.LLVM-MinGW.UCRT`) с таргетом `i686-w64-mingw32`:
+| Секция / Ключ | Назначение |
+| :--- | :--- |
+| `[Visual]` `style` / `font_size` | Пресет `default` (динамическая плашка) или `hl2` (окно со скроллом); `0` = авторазмер |
+| `[Filtering]` `min_volume` / `use_attenuation_cutoff` / `check_occlusion` | Порог слышимой громкости (`SND_Spatialize`) и учёт стен/стекла |
+| `[Filtering]` `restore_unused_hev` / `auto_wav_timing` | Восстановление неиспользуемых фраз HEV; замер длительности по `.wav` (`1`) |
+| `[HUD]` `hud_scale` / `hud_compact_armor` / `enable_gl_flashlight` | Масштаб HUD через FBO, компактная броня и 3D OpenGL-фонарик |
+| `[Mod:<gameDir>]` | Переопределения под конкретный мод (`[Mod:bshift]`, `[Mod:gearbox]`, `[Mod:hl1mmod]`) |
+| `[Files]` `language` / `subtitles_pattern` / `titles_pattern` | `auto`, `ru`, `en` или свой **INT**-перевод (`subtitles_de.tsv`, `titles_de.tsv`) |
 
-```bat
-cd src
-build.bat
-```
-
-Для упаковки релизного архива:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File package_release.ps1
-```
-
-В `.github/workflows/build.yml` также настроена автоматическая сборка в GitHub Actions и публикация **GitHub Release** с `HLCC-win32.zip` при пуше тега `v*`.
+Архитектура (`core` / `render` / `goldsrc` / `proxy`), сборка из исходников (`LLVM-MinGW`) и руководство для моддеров: **[MODDER_GUIDE.md](MODDER_GUIDE.md)**.
