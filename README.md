@@ -33,14 +33,17 @@ Changes hot-reload in-game within ~1 second (or run `subtitles_reload` in the co
 
 | Section / Key | Description |
 | :--- | :--- |
-| `[Visual]` `style` / `font_size` | `default` (dynamic rounded plate) or `hl2` (scrolling box); `0` = auto size |
+| `[Visual]` `style` / `font_name` / `font_size` | `default` (dynamic rounded plate) or `hl2` (scrolling box); GDI font face and height (`0` = auto) |
+| `[Visual]` `bottom_margin_pct` / `max_width_pct` / `max_lines` | Screen position, plate width (`%`), and max visible lines |
+| `[Visual]` `bg_color` / `bg_alpha` / `bg_radius` | Plate RGB background color, opacity (`0..255`), and corner radius |
+| `[Colors]` `color_scientist`, `color_hev`, `color_sfx`, ... | Custom RGB colors per speaker/SFX role |
 | `[Filtering]` `min_volume` / `use_attenuation_cutoff` / `check_occlusion` | Perceived-volume threshold (`SND_Spatialize`) and line-of-sight wall/glass attenuation |
 | `[Filtering]` `restore_unused_hev` / `auto_wav_timing` | Restores unused HEV suit cues; optional `.wav` duration probing (`1`) |
 | `[HUD]` `hud_scale` / `hud_compact_armor` / `enable_gl_flashlight` | Offscreen FBO HUD scaling, compact armor spacing, and 3D OpenGL flashlight |
 | `[Mod:<gameDir>]` | Per-mod overrides (e.g. `[Mod:bshift]`, `[Mod:gearbox]`, `[Mod:hl1mmod]`) |
 | `[Files]` `language` / `subtitles_pattern` / `titles_pattern` | `auto`, `ru`, `en`, or custom **INT** TSV filename patterns (`subtitles_de.tsv`) |
 
-Architecture, building from source (`LLVM-MinGW`), mod adaptation, and translation rules: **[MODDER_GUIDE.md](MODDER_GUIDE.md)**.
+Architecture, building from source (`LLVM-MinGW`), mod adaptation, and translation rules: **[MODDER_GUIDE.md](MODDER_GUIDE.md)** · License: **[MIT](LICENSE)**.
 
 ---
 
@@ -61,11 +64,14 @@ Architecture, building from source (`LLVM-MinGW`), mod adaptation, and translati
 
 | Секция / Ключ | Назначение |
 | :--- | :--- |
-| `[Visual]` `style` / `font_size` | Пресет `default` (динамическая плашка) или `hl2` (окно со скроллом); `0` = авторазмер |
+| `[Visual]` `style` / `font_name` / `font_size` | Пресет `default` (динамическая плашка) или `hl2` (окно со скроллом); шрифт и размер (`0` = авто) |
+| `[Visual]` `bottom_margin_pct` / `max_width_pct` / `max_lines` | Отступ снизу (`%`), ширина плашки (`%`) и лимит строк на экране |
+| `[Visual]` `bg_color` / `bg_alpha` / `bg_radius` | Цвет фона (RGB), прозрачность (`0..255`) и скругление углов |
+| `[Colors]` `color_scientist`, `color_hev`, `color_sfx`, ... | RGB-цвета для каждой роли и SFX |
 | `[Filtering]` `min_volume` / `use_attenuation_cutoff` / `check_occlusion` | Порог слышимой громкости (`SND_Spatialize`) и учёт стен/стекла |
 | `[Filtering]` `restore_unused_hev` / `auto_wav_timing` | Восстановление неиспользуемых фраз HEV; замер длительности по `.wav` (`1`) |
 | `[HUD]` `hud_scale` / `hud_compact_armor` / `enable_gl_flashlight` | Масштаб HUD через FBO, компактная броня и 3D OpenGL-фонарик |
 | `[Mod:<gameDir>]` | Переопределения под конкретный мод (`[Mod:bshift]`, `[Mod:gearbox]`, `[Mod:hl1mmod]`) |
 | `[Files]` `language` / `subtitles_pattern` / `titles_pattern` | `auto`, `ru`, `en` или свой **INT**-перевод (`subtitles_de.tsv`, `titles_de.tsv`) |
 
-Архитектура (`core` / `render` / `goldsrc` / `proxy`), сборка из исходников (`LLVM-MinGW`) и руководство для моддеров: **[MODDER_GUIDE.md](MODDER_GUIDE.md)**.
+Архитектура (`core` / `render` / `goldsrc` / `proxy`), сборка из исходников (`LLVM-MinGW`) и руководство для моддеров: **[MODDER_GUIDE.md](MODDER_GUIDE.md)** · Лицензия: **[MIT](LICENSE)**.
